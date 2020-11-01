@@ -47,5 +47,5 @@ rosebox is a color theme inspired by gruvbox, but heavily modified and with the 
 </table>
 
 ### themes
-- **_Discord_** - [github pages](https://kraxen72.github.io/rosebox/discord) - [repo](https://github.com/KraXen72/rosebox/discord)
-- **_Vivaldi_** - [github pages](https://kraxen72.github.io/rosebox/vivaldi) - [repo](https://github.com/KraXen72/rosebox/vivaldi)
+- **_Discord_** - [github pages](https://kraxen72.github.io/rosebox/discord) - [repo](https://github.com/KraXen72/rosebox/tree/master/discord)
+- **_Vivaldi_** - [github pages](https://kraxen72.github.io/rosebox/vivaldi) - [repo](https://github.com/KraXen72/rosebox/tree/master/vivaldi)
