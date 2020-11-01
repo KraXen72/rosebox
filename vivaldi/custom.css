@@ -1,0 +1,76 @@
+/*remove ugly border on omnibox*/
+.vivaldi-addressfield:focus-within, .UrlBar-AddressField:focus, .UrlBar-AddressField:focus-within, .color-behind-tabs-on .SearchField:focus-within, .color-behind-tabs-on .UrlBar-AddressField:focus-within {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/*round close button idk*/
+.tab-header .close {
+    border-radius: 50%;
+}
+
+.vivaldi-v svg {transform: scale(1.025, 1);} /*vivali icon fix*/
+
+/* remove white outline on favicons if tab is active*/
+#switch button.webviewbtn img { background-color: transparent !important; }
+.theme-dark .tab-position .tab.active .tab-header .favicon {
+    filter: none !important;
+}
+.tab-header .favicon {
+    filter: none;
+    background: transparent !important;
+}
+
+/* startpage quick switch to bg*/
+.startpage {
+    transition: background 0s !important;
+}
+
+/*disable base domain highlighting*/
+/*
+.UrlFragment-Wrapper--ShouldHighlight {
+    --HighlightColor: #e3dfdb !important;
+    --LowlightColor: #e3dfdb !important;
+}
+*/
+#browser.break-mode {--colorAccentBgDarker: initial !important;}
+
+#browser, #browser ~ div[fill="currentcolor"] {fill: #e3dfdb !important;}
+
+/*f2*/
+.quick-command-search-hint {
+    background: transparent;
+}
+
+.tab:not(.active) .tab-header .title {
+    color: var(--colorFg);
+}
+
+button[title="SharpBlade"] img {
+    border-radius: 100% !important;
+}
+.UrlBar-AddressField {
+    border-radius: 25px;
+}
+
+#tabs-container .tab .favicon {filter: grayscale(30%) !important;}
+
+.sync-and-trash-container {
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.tabs-container .resize:hover .sync-and-trash-container{
+    visibility: visible;
+}
+
+.window-buttongroup button svg {
+    background: #777777;
+    fill: transparent;
+    border-radius: 50%
+}
+
+.window-buttongroup button:hover svg {
+    background: #999999;
+}
+
