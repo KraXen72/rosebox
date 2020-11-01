@@ -1,0 +1,49 @@
+@import url("https://kraxen72.github.io/harmony-discord/main.css"); 
+:root {
+    /*gruvbox override*/
+    --Colleft: var(--slate-background);
+    --background-primary: var(--slate-background-light);
+    --background-primary: #262626;
+    --Colleft: #222222;
+    --background-secondary: var(--Colleft);
+    --ColAccent: #a57562;
+    --ColAccentAlpha: RGBA(165, 117, 98, 0.2);
+
+    /*set respecitve colors to Colleft - ignore*/
+    --ColServerSelBG: var(--Colleft);
+    --ColChannelList: var(--Colleft);
+    --ColTitleBar: var(--Colleft);
+    --ColMemberList:var(--background-primary);
+    --ColLink: var(--ColAccent);
+    --text-link: var(--ColLink);
+
+    --text-fix: #a3a5aa;
+
+    --text-normal: var(--text-fix);
+    --interactive-active: var(--text-fix);
+    --header-primary: var(--ColAccent);
+
+
+}
+.searchBarComponent-32dTOx, .search-36MZv- 
+{background-color: var(--background-secondary) !important;}
+
+.inspector-S2gM3e, .input-1Rv96N, .uploadModal-2ifh8j, .footer-3mqk7D.hasSpoilers-1IRtQC, .theme-dark .root-1gCeng, .message-2qRu38
+{background-color: var(--background-primary) !important}
+
+.lookFilled-1Gx00P.colorBrand-3pXr91 
+{background-color: var(--ColAccent) !important;}
+
+.autocompleteInner-zh20B_ 
+{background-color: var(--Colleft) !important;}
+
+::selection {background-color: var(--ColAccentAlpha) !important;}
+
+.selected-1Tbx07 {background-color: var(--background-modifier-selected) !important;}
+.topSectionNormal-2-vo2m {background-color: #202225 !important;}
+.body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-2gL1pp, .section-2gLsgF {background-color: #282828;}
+.connectedAccount-36nQx7 {border: 1px solid rgba(0,0,0,0.2) !important;}
+
+.colorDefault-2K3EoJ.focused-3afm-j {background-color: var(--background-modifier-selected) !important;}
+.button-1YfofB.buttonColor-7qQbGO {color: #fff !important; }
+
