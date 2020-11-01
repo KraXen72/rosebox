@@ -30,7 +30,7 @@ rosebox is a color theme inspired by gruvbox, but heavily modified and with the 
             <img src="https://cdn.discordapp.com/attachments/704792091955429426/772207016130379816/a57562.png">
         </td>
         <td>
-            accent alpha: (RGBA(165, 117, 98, 0.2)) <br/>
+            accent alpha: RGBA(165, 117, 98, 0.2) <br/>
             <img src="https://cdn.discordapp.com/attachments/704792091955429426/772207578406584351/colalpha.png">
         </td>
     </tr>
