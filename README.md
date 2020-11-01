@@ -48,4 +48,4 @@ rosebox is a color theme inspired by gruvbox, but heavily modified and with the 
 
 ### themes
 - **_Discord_** - [github pages](kraxen72.github.io/rosebox/discord) - [repo](github.com/KraXen72/rosebox/discord)
-- **_Vivaldi_** - [github pages](kraxen72.github.io/rosebox/vivalid) - [repo](github.com/KraXen72/rosebox/vivaldi)
+- **_Vivaldi_** - [github pages](kraxen72.github.io/rosebox/vivaldi) - [repo](github.com/KraXen72/rosebox/vivaldi)
