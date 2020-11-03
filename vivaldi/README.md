@@ -10,6 +10,9 @@ Create a new theme and set it up like this:
 ![theme](https://cdn.discordapp.com/attachments/704792091955429426/772485052969517066/Screenshot_2020_11.01_1639.png)  
 
 ## Custom css
-Enable custom css like this (set your own directory):
-![css](https://cdn.discordapp.com/attachments/704792091955429426/772484849277075518/Screenshot_2020_11.01_1638.png)  
+go to ``vivaldi://experiments``  
+enable  
+![this](https://cdn.discordapp.com/attachments/704792091955429426/773274932788461568/Screenshot_2020_11.03_2058.png)  
+this will show up in your settings(set your own directory):  
+![css](https://cdn.discordapp.com/attachments/704792091955429426/772484849277075518/Screenshot_2020_11.01_1638.png)   
 and put the custom.css file from this repo there  
