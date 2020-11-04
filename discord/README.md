@@ -9,9 +9,10 @@ Uses my **Harmony** theme as base:
   
 And many other tweaks from the harmony theme
 
-**install using powercord.** https://powercord.dev
+**install using powercord.** https://powercord.dev**install using powercord / betterdiscord / any other discord css injector.** https://powercord.dev / https://github.com/rauenzi/BBDInstaller/releases/
+
 ## Easy Install (recommended)
-1. go to ``Settings`` > ``Themes`` > ``Quick CSS tab``
+1. go to ``Settings`` > ``Themes`` > ``Quick CSS tab`` / ``Custom CSS`` for BD
 2. Paste this into the textarea on the first line
 ```css 
 @import url('https://kraxen72.github.io/rosebox/discord/main.css');
