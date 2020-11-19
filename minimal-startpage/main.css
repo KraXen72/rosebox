@@ -3,10 +3,10 @@ html  {
     color: #a3a5aa;
 }
 img {
-    max-width: 105.8% !important;
+    max-width: 105.8%;
 }
 .w3gridclass {
-    width: 100% !important;
+    width: 100%;
 }
 .container-outer {
     margin: auto;
@@ -19,14 +19,14 @@ img {
 }
 .left-img{
     float: left;
-    width: 30% !important
+    width: 30% 
 }
 .container {
     float: right;
     width: 70%;
 }
 h1 {
-    margin-left: 5% !important;
+    margin-left: 5%  !important;
 }
 ul {
     list-style-type: none;
@@ -41,11 +41,11 @@ a:not(span):hover {
     opacity: 0.8;
 }
 .accent {
-    color: #a57562 !important;
+    color: #a57562 ;
     padding-right: 10px;
 }
 span.accent {
-    min-width: 25px !important;
+    min-width: 25px ;
 
 }
 .right {
