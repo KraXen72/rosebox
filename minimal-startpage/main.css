@@ -1,16 +1,29 @@
 html  {
     background: #222222;
     color: #a3a5aa;
-    
 }
-.container {
+img {
+    max-width: 105.8% !important;
+}
+.w3gridclass {
+    width: 100% !important;
+}
+.container-outer {
     margin: auto;
     margin-top: 15%;
     background: #262626;
-    width: 30%;
+    width: 50%;
     height: 40%;
     border-radius: 3px;
     user-select: none;
+}
+.left-img{
+    float: left;
+    width: 30% !important
+}
+.container {
+    float: right;
+    width: 70%;
 }
 h1 {
     margin-left: 5% !important;
@@ -38,3 +51,11 @@ span.accent {
 .right {
     margin-left: -25px;
 }
+.yahallo {display: none;}
+
+/*remove yahallo*/
+/*
+.left-img{display: none;}
+.container-outer {width: 30%}
+.container{width: 100%;}
+*/
