@@ -3,17 +3,18 @@ html  {
     color: #a3a5aa;
 }
 img {
-    max-width: 105.8%;
+    height: 354.25px !important;
 }
 .w3gridclass {
     width: 100%;
 }
 .container-outer {
-    margin: auto;
-    margin-top: 15%;
     background: #262626;
-    width: 50%;
-    height: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
     border-radius: 3px;
     user-select: none;
 }
@@ -26,7 +27,7 @@ img {
     width: 70%;
 }
 h1 {
-    margin-left: 5%  !important;
+    margin-left: 10%  !important;
 }
 ul {
     list-style-type: none;
@@ -56,6 +57,5 @@ span.accent {
 /*remove yahallo*/
 /*
 .left-img{display: none;}
-.container-outer {width: 30%}
-.container{width: 100%;}
+.container{width: 105%;}
 */
