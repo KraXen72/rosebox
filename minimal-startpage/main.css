@@ -25,6 +25,8 @@ img {
 .container {
     float: right;
     width: 70%;
+    padding-left: 30px;
+    padding-right: 15px;
 }
 h1 {
     margin-left: 10%  !important;
@@ -54,8 +56,11 @@ span.accent {
 }
 .yahallo {display: none;}
 
-/*remove yahallo*/
+/*remove the anime girl*/
 /*
 .left-img{display: none;}
-.container{width: 105%;}
+.container{
+    width: 105%;
+    padding-left: 15px;
+}
 */
