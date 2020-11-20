@@ -62,8 +62,35 @@ span.accent {
 }
 .yahallo {display: none;}
 
+.toggle {
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: #a3a5aa;
+    outline: 0px transparent;
+    transition: color 0.05s;
+}
+.toggle:active {
+    background: transparent;
+    border: none;
+    color: #4f4f50;
+}
+.leftimghidden {
+    display: none !important;
+}
+.resizecontainer {
+    width: 105% !important;
+    padding-left: 15px !important;
+}
+
+
+
 /*remove the anime girl*/
 /*
+
 .left-img{display: none;}
 .container{
     width: 105%;
