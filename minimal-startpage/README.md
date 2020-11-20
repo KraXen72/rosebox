@@ -4,7 +4,7 @@ this is my minimal rosebox-themed startpage made with some html, css and a bit o
 ![waifu](https://cdn.discordapp.com/attachments/704792091955429426/779068061037887529/unknown.png)
 are anime girls not your thing? or just want to get a more minimal look like this?
 ![img](https://cdn.discordapp.com/attachments/635625925748457482/778911793014636564/unknown.png)  
-just uncomment the last few lines of the css
+there is a small button to toggle between these two in bottom right.
   
 ## installation (chrome / chromium)  
 just clone this repo and load unpacked extension. (you have to enable developer mode)  
