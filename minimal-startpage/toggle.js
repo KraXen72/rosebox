@@ -2,18 +2,18 @@ let hideWaifu = localStorage.getItem("hideWaifu");
 const waifuToggle = document.querySelector("#toggle");
 
 const hideWaifuFunc = () => {
-    var leftimage = document.getElementById("waifuimg");
+    const leftimage = document.getElementById("waifuimg");
     leftimage.classList.add("leftimghidden");
-    var containerr = document.getElementById("maincontainer");
+    const containerr = document.getElementById("maincontainer");
     containerr.classList.add("resizecontainer");
     
     localStorage.setItem("hideWaifu", "enabled");
 };
 
 const showWaifuFunc = () => {
-    var leftimage = document.getElementById("waifuimg");
+    const leftimage = document.getElementById("waifuimg");
     leftimage.classList.remove("leftimghidden");
-    var containerr = document.getElementById("maincontainer");
+    const containerr = document.getElementById("maincontainer");
     containerr.classList.remove("resizecontainer");
     
     localStorage.setItem("hideWaifu", null);
@@ -23,7 +23,7 @@ if (hideWaifu === "enabled") {
     hideWaifuFunc();
 };
 
-var outercontainer = document.getElementById("outercontainer");
+const outercontainer = document.getElementById("outercontainer");
 outercontainer.classList.add("showcontainer");
 
 waifuToggle.addEventListener("click", () => {
