@@ -1,3 +1,7 @@
+html, body {
+    background: #222222;
+}
+
 /*remove ugly border on omnibox*/
 .vivaldi-addressfield:focus-within, .UrlBar-AddressField:focus, .UrlBar-AddressField:focus-within, .color-behind-tabs-on .SearchField:focus-within, .color-behind-tabs-on .UrlBar-AddressField:focus-within {
     border-color: transparent !important;
@@ -40,6 +44,9 @@
 /*f2*/
 .quick-command-search-hint {
     background: transparent;
+}
+#modal-bg {
+    top: 36% !important;
 }
 
 .tab:not(.active) .tab-header .title {

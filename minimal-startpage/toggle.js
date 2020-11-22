@@ -23,6 +23,9 @@ if (hideWaifu === "enabled") {
     hideWaifuFunc();
 };
 
+var outercontainer = document.getElementById("outercontainer");
+outercontainer.classList.add("showcontainer");
+
 waifuToggle.addEventListener("click", () => {
     hideWaifu = localStorage.getItem('hideWaifu');
     if (hideWaifu !== "enabled") {

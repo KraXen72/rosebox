@@ -2,6 +2,9 @@ html  {
     background: #222222;
     color: #a3a5aa;
 }
+.showcontainer {
+    display: block !important;
+}
 img {
     height: 354.25px !important;
     user-drag: none; 
