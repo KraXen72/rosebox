@@ -72,6 +72,8 @@ span.accent {
     color: #a3a5aa;
     outline: 0px transparent;
     transition: color 0.05s;
+    user-select: none;
+    cursor: pointer;
 }
 .toggle:active {
     background: transparent;
