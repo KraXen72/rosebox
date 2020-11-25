@@ -43,6 +43,15 @@
     background-image: transparent !important;
 }
 
+/*calendar*/
+.calendarPicker-2yf6Ci, .calendarPicker-2yf6Ci div{
+    background: var(--Colleft) !important;
+}
+.datePicker--XZbmJ .calendarPicker-2yf6Ci .react-datepicker__day:hover {
+    background: var(--ColAccent) !important;
+}
+
+
 ::selection {background-color: var(--ColAccentAlpha) !important;}
 
 .selected-1Tbx07 {background-color: var(--background-modifier-selected) !important;}
