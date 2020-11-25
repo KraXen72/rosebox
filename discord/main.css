@@ -39,6 +39,8 @@
 
 .theme-dark .option-96V44q:after {
     background: transparent !important;
+    background-color: transparent !important;
+    background-image: transparent !important;
 }
 
 ::selection {background-color: var(--ColAccentAlpha) !important;}
