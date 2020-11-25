@@ -34,8 +34,12 @@
 .lookFilled-1Gx00P.colorBrand-3pXr91 
 {background-color: var(--ColAccent) !important;}
 
-.autocompleteInner-zh20B_ 
+.autocompleteInner-zh20B_ , .theme-dark .container-3ayLPN
 {background-color: var(--Colleft) !important;}
+
+.theme-dark .option-96V44q:after {
+    background: transparent !important;
+}
 
 ::selection {background-color: var(--ColAccentAlpha) !important;}
 
