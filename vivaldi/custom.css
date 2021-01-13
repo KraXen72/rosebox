@@ -88,3 +88,16 @@ button[title="SharpBlade"] img {
     animation-delay: 0s !important;
 }
 
+/*tasks thingy*/
+
+.mosaic-tile[style*="inset: 0% 0% 0% 80%;"] {
+    inset: 0% 0% 0% 82.5% !important;
+}
+
+.mosaic-tile[style*="inset: 0% 20% 0% 0%;"] {
+    inset: 0% 17.5% 0% 0% !important;
+}
+
+.mosaic-split[style*="inset: 0% 0% 0% 80%;"] {
+    inset: 0% 0% 0% 82.5% !important;
+}
