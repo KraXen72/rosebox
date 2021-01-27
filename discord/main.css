@@ -25,16 +25,17 @@
 
 
 }
-.searchBarComponent-32dTOx, .search-36MZv- 
-{background-color: var(--background-secondary) !important;}
 
-.inspector-S2gM3e, .input-1Rv96N, .uploadModal-2ifh8j, .footer-3mqk7D.hasSpoilers-1IRtQC, .theme-dark .root-1gCeng, .message-2qRu38
+.searchBarComponent-32dTOx, .search-36MZv-, .searchBar-3dMhjb /*search bars*/
+{background-color: var(--background-primary) !important;}
+
+.inspector-S2gM3e, .input-1Rv96N, .uploadModal-2ifh8j, .footer-3mqk7D.hasSpoilers-1IRtQC, .theme-dark .root-1gCeng, .message-2qRu38 /*color fixes*/
 {background-color: var(--background-primary) !important}
 
-.lookFilled-1Gx00P.colorBrand-3pXr91 
+.lookFilled-1Gx00P.colorBrand-3pXr91 /*stream button*/
 {background-color: var(--ColAccent) !important;}
 
-.autocompleteInner-zh20B_ , .theme-dark .container-3ayLPN
+.autocompleteInner-zh20B_ , .theme-dark .container-3ayLPN /*autocomplete i think*/
 {background-color: var(--Colleft) !important;}
 
 .theme-dark .option-96V44q:after {
@@ -44,16 +45,12 @@
 }
 
 /*calendar*/
-.calendarPicker-2yf6Ci, .calendarPicker-2yf6Ci div{
-    background: var(--Colleft) !important;
-}
-.datePicker--XZbmJ .calendarPicker-2yf6Ci .react-datepicker__day:hover {
-    background: var(--ColAccent) !important;
-}
-
+.calendarPicker-2yf6Ci, .calendarPicker-2yf6Ci div{background: var(--Colleft) !important;}
+.datePicker--XZbmJ .calendarPicker-2yf6Ci .react-datepicker__day:hover {background: var(--ColAccent) !important;}
 
 ::selection {background-color: var(--ColAccentAlpha) !important;}
 
+/*small tweaks*/
 .selected-1Tbx07 {background-color: var(--background-modifier-selected) !important;}
 .topSectionNormal-2-vo2m {background-color: #202225 !important;}
 .body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-2gL1pp, .section-2gLsgF {background-color: #282828;}
@@ -63,12 +60,7 @@
 .button-1YfofB.buttonColor-7qQbGO {color: #fff !important; }
 
 /*message box*/
-.scrollableContainer-2NUZem { 
-    background-color: var(--Colleft) !important;
-}
-
+.scrollableContainer-2NUZem { background-color: var(--Colleft) !important;}
 
 /*delete message ig*/
-.footer-2gL1pp, .focusLock-Ns3yie *.message-2qRu38 {
-    background-color: var(--Colleft) !important;
-}
+.footer-2gL1pp, .focusLock-Ns3yie *.message-2qRu38 {background-color: var(--Colleft) !important;}
