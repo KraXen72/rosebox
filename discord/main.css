@@ -1,5 +1,5 @@
 @import url("https://kraxen72.github.io/harmony-discord/main.css"); 
-:root {
+:root, .theme-dark, .focusLock-Ns3yie * {
     /*gruvbox override*/
     --Colleft: var(--slate-background);
     --background-primary: var(--slate-background-light);
@@ -62,3 +62,7 @@
 .colorDefault-2K3EoJ.focused-3afm-j {background-color: var(--background-modifier-selected) !important;}
 .button-1YfofB.buttonColor-7qQbGO {color: #fff !important; }
 
+/*delete message ig*/
+.footer-2gL1pp, .focusLock-Ns3yie *.message-2qRu38 {
+    background-color: var(--Colleft) !important;
+}
