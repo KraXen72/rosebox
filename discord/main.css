@@ -38,6 +38,8 @@
 .autocompleteInner-zh20B_ , .theme-dark .container-3ayLPN /*autocomplete i think*/
 {background-color: var(--Colleft) !important;}
 
+.attachButtonInner-PQjIyk svg path {fill: var(--col-mute);} /* attach button the same color */
+
 .theme-dark .option-96V44q:after {
     background: transparent !important;
     background-color: transparent !important;
