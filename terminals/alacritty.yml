@@ -1,4 +1,3 @@
-
 # Alacritty Colors (Rosebox Theme)
 
 colors:
@@ -11,7 +10,7 @@ colors:
   normal:
     black:      '0x262626'
     red:        '0xD08770'
-    green:      '0x#A3BE8C'
+    green:      '0xA3BE8C'
     yellow:     '0xa57562'
     blue:       '0x637A8A'
     magenta:    '0x78758A'
@@ -20,7 +19,7 @@ colors:
   bright:
     black:      '0x827e80'
     red:        '0xD08770'
-    green:      '0x#A3BE8C'
+    green:      '0xA3BE8C'
     yellow:     '0xa57562'
     blue:       '0x637A8A'
     magenta:    '0x78758A'
