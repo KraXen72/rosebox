@@ -18,14 +18,20 @@ endif
 " Palette
 
 let s:color0 = "#262626"
-let s:color8 = "#3a3a3a"
+let s:color8 = "#3F3532"
 let s:color1 = "#637A8A"
 let s:color2 = "#a57562"
 let s:color3 = "#6B8998"
-let s:color4 = "#8B8F7E"
+let s:color4 = "#637A8A"
 let s:color5 = "#877979"
 let s:color6 = "#937F74"
 let s:color7 = "#a3a5aa"
+let s:conditional = '#637A8A'
+let s:type = '#78758A'
+let s:string = '#A3BE8C'
+let s:int = '#D08770'
+let s:char = '#D08770'
+let s:comment = '#8F827C'
 
 let s:color0_term = "0"
 let s:color8_term = "8"
@@ -41,10 +47,10 @@ let s:color7_term = "7"
 " Neovim colours
 if has("nvim")
   let g:terminal_color_0 =  "#262626"
-  let g:terminal_color_1 =  "#3a3a3a"
+  let g:terminal_color_1 =  "#3F3532"
   let g:terminal_color_2 =  "#637A8A"
   let g:terminal_color_3 =  "#a57562"
-  let g:terminal_color_4 =  "#8B8F7E"
+  let g:terminal_color_4 =  "#569CD7"
   let g:terminal_color_5 =  "#877979"
   let g:terminal_color_6 =  "#937F74"
   let g:terminal_color_7 =  "#5e4c44"
@@ -133,20 +139,24 @@ call s:hl("FoldColumn", s:color6, s:color8, s:color6_term, s:color8_term, "bold"
 
 
 " Default Syntax
-call s:hl("String", s:color7, "", s:color7_term, "", "", "")
-call s:hl("Comment", s:color5, "", s:color5_term, "", "", "")
+call s:hl("String", s:string, "", s:color8_term, "", "", "")
+call s:hl("Comment", s:comment, "", s:color5_term, "", "", "")
 call s:hl("Constant", s:color7, "", s:color7_term, "", "", "")
 call s:hl("Identifier", s:color2, "", s:color2_term, "", "", "")
 call s:hl("Statement", s:color3, "", s:color3_term, "", "", "")
 call s:hl("PreProc", s:color1, "", s:color1_term, "", "", "")
-call s:hl("Type", s:color6, "", s:color6_term, "", "", "")
+call s:hl("Type", s:type, "", s:color8_term, "", "", "")
 call s:hl("Special", s:color4, "", s:color4_term, "", "", "")
-call s:hl("Conditional", s:color4, "", s:color4_term, "", "", "")
+call s:hl("Conditional", s:conditional, "", s:color8_term, "", "", "")
 call s:hl("Underlined", s:color2, "", s:color2_term, "", "underline", "")
 call s:hl("Todo", s:color0, s:color3, s:color0_term, s:color3_term, "italic", "")
 call s:hl("MatchParen", s:color0, s:color3, s:color0_term, s:color3_term, "", "")
 call s:hl("Conceal", s:color3, "", s:color3_term, "", "", "")
-call s:hl("NonText", s:color6, "", s:color6_term, "", "", "")
+call s:hl("NonText", s:color0, "", s:color0_term, "", "", "")
+call s:hl("Boolean", s:int, "", s:color8_term, "", "", "")
+call s:hl("Number", s:int, "", s:color8_term, "", "", "")
+call s:hl("Float", s:int, "", s:color8_term, "", "", "")
+call s:hl('Character', s:char, "", s:color8_term, "", "", "")
 
 
 " Other Syntax
@@ -195,7 +205,8 @@ call s:hl("javaScript", s:color4, "", s:color4_term, "", "", "")
 call s:hl("javaScriptBraces", s:color4, "", s:color4_term, "", "","")
 
 " Adding plugin support
-hi CursorLineNr term=bold ctermfg=2 gui=bold guifg=terminal_color_2
-let g:limelight_conceal_ctermfg = s:color8
+" hi CursorLineNr term=bold ctermfg=2 gui=bold guifg=terminal_color_2
+" let g:limelight_conceal_ctermfg = s:color8
+" autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 
 " TODO: Add more language-specific highlight groups
