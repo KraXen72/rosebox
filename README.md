@@ -1,10 +1,11 @@
 # rosebox - a color theme
-rosebox is a color theme inspired by gruvbox, but heavily modified and with the main focus on **being easy on the eyes**  
+rosebox is a color theme inspired by gruvbox, but with the main focus on **being easy on the eyes**  
 
+![vim and term](https://cdn.discordapp.com/attachments/803974055485112350/804283879094485032/here.png)
 ![discord2](https://cdn.discordapp.com/attachments/704792091955429426/769205102393032744/unknown.png)
 ![waifu](https://cdn.discordapp.com/attachments/704792091955429426/779291842389999616/unknown.png)
   
-### color variables:  
+### colors:
   
 <table>
     <tr>
@@ -47,8 +48,20 @@ rosebox is a color theme inspired by gruvbox, but heavily modified and with the 
     </tr>
 </table>
 
-### themes & stuff i made with it
+for the rest of the colors (syntax highlighting, etc.) for now use some from the nord <strong>frost</strong> or <strong>aurora</strong> palletes:
+<span style = "width: 100%">
+    <img src="https://cdn.discordapp.com/attachments/704792091955429426/804293553982406696/nord.png">
+
+</span>
+
+### themes
 - **_Discord_** - [github pages](https://kraxen72.github.io/rosebox/discord) - [repo](https://github.com/KraXen72/rosebox/tree/master/discord)
 - **_Vivaldi_** - [github pages](https://kraxen72.github.io/rosebox/vivaldi) - [repo](https://github.com/KraXen72/rosebox/tree/master/vivaldi)
 - **_monkeytype.com_** - [github pages](https://kraxen72.github.io/rosebox/monkeytype) - [repo](https://github.com/KraXen72/rosebox/tree/master/monkeytype)
+- **Editors** - [repo](https://github.com/KraXen72/rosebox/tree/master/editors) - supported editors: (for now)
+    - **_Vim_**
+- **Terminals** - [repo](https://github.com/KraXen72/rosebox/tree/master/terminals) - supported teminals: (for now)
+    - **_alacritty_**
+  
+### things built with rosebox
 - **_startpage_** - [link](https://kraxen72.github.io/rosebox/minimal-startpage) - [repo](https://github.com/KraXen72/rosebox/tree/master/minimal-startpage)
