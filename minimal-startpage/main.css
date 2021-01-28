@@ -37,7 +37,7 @@ img {
     padding-left: 30px;
     padding-right: 15px;
 }
-h1 {
+h1.heya {
     margin-left: 10%  !important;
 }
 ul {
@@ -65,7 +65,7 @@ span.accent {
 }
 .yahallo {display: none;}
 
-.toggle {
+.toggle, .settings {
     padding: 5px;
     position: absolute;
     bottom: 0;
@@ -78,10 +78,13 @@ span.accent {
     user-select: none;
     cursor: pointer;
 }
-.toggle:active {
+.toggle:active, .settings:active {
     background: transparent;
     border: none;
     color: #4f4f50;
+}
+.settings {
+    left: 0
 }
 .leftimghidden {
     display: none !important;
@@ -91,14 +94,109 @@ span.accent {
     padding-left: 15px !important;
 }
 
+.configcontainer {
+    display: grid;
+    grid-gap: 0px;
 
-
-/*remove the anime girl*/
-/*
-
-.left-img{display: none;}
-.container{
-    width: 105%;
-    padding-left: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
 }
-*/
+
+.grid-item {
+    padding: 12px;
+}
+
+#grid-header {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+}
+
+#grid-add-link {
+    grid-row: 3 / 5 ;
+    grid-column: 1 / 3;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 25%);
+}
+
+.add-top {grid-row:1 / 2; grid-column: 1 / 2;}
+.add-top2 {grid-row:1 / 2; grid-column: 2 / 3;}
+.add-mid {grid-row:2 / 3; grid-column: 1 / 2;}
+.add-mid2 {grid-row:2 / 3; grid-column: 2 / 3;}
+.add-bot {grid-row:5 / 6; grid-column: 1 / 2;}
+.add-bot2 {grid-row:5 / 6; grid-column: 2 / 3;}
+.json {grid-row: 3 / 4; grid-column: 1 / 2;}
+.json2 {grid-row: 3 / 4; grid-column: 2 / 3;}
+
+.jsoninp {
+    width: 64%;
+}
+
+
+#grid-right-links {
+    grid-row: 5 / 13;
+    grid-column: 2 / 3;
+}
+#grid-left-links {
+    grid-row: 5 / 13;
+    grid-column: 1 / 2;
+}
+
+.rb-button {
+    padding-inline-start: 10px !important;
+}
+
+.rb-input {
+    background-color: #232323;
+    border-color: #a57562;
+    border-radius: 5px;
+    border-style: solid;
+    color: #a3a5aa
+}
+
+/*buttons*/
+.rb-button {
+    background-color: #5e4c44;
+    border-color: #a57562;
+    border-radius: 5px;
+    border-style: solid;
+    color: #a3a5aa;
+}
+.rb-button, .rb-input {
+    outline: 0px transparent !important;
+}
+.rb-button:hover {
+    opacity: 0.9;
+}
+.rb-button:active {
+    opacity: 0.5;
+}
+.dragabble-link {
+    cursor: grab;
+    opacity: 1;
+    user-select: none;
+}
+.dragabble-link a {
+    user-select: none !important; 
+}
+
+.dragabble-link.dragging {
+    opacity: .5;
+    user-select: none !important;
+    cursor: grabbing;
+}
+.dragging a {
+    user-select: none !important;
+}
+
+.top-config {
+    width: 100%;
+}
+
+.incognito {
+    opacity: 0.001;
+}
+.incognito:hover {
+    opacity: 1;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>~</title>
+        <link rel="stylesheet" type="text/css" href="w3css.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+
+        <script src="config.js" defer></script>
+        <script src="config-loader.js"></script>
+        <scirpt src="html5sortable.es.js"></scirpt>
+        
+    </head>
+    <body>
+        <div class="w3-container container-outer configcontainer" id="outercontainer">
+
+            <div id="grid-header" class="grid-item">
+                <h1>startpage config</h1>
+                <p>drag & drop to reorder, click <span class="accent" style="padding: 0px;">x</span> to delete. <br>
+                I's recommended for a column to have <span class="accent" style="padding: 0px;">8</span> links for it to look good.</p>
+                <button class="rb-button" onclick="saveandreturn()"><strong>save</strong> and close config</button>
+            </div>
+            <div id="grid-add-link" class = "grid-item">
+                <span class = "add-top">
+                    greeting text: 
+                </span>
+                <span class = "add-top2">
+                    <input type="text" class="rb-input" id="greeting" placeholder="heya" autocomplete="off">
+                </span>
+                <span class = "add-mid">
+                    custom left image:
+                </span>
+                <span class = "add-mid2">
+                    <input type="text" class="rb-input" id="img-path" placeholder="path or link to image" autocomplete="off">
+                </span>
+                <span class = "json">
+                    <input type="text" class="rb-input jsoninp" id="importjson" placeholder="import json" autocomplete="off">
+                    <button id="json-import" class="rb-button">import</button>
+                </span>
+                <span class = "json2">
+                    <input type="text" class="rb-input jsoninp" id="exportjson" placeholder="export json" autocomplete="off">
+                    <button id="json-export" class="rb-button">export</button>
+                </span>
+                <span class = "add-bot">
+                    add:
+                    <input type="text" class="rb-input" id="name" placeholder="name" autocomplete="off">
+                </span>
+                <span class = "add-bot2">
+                    <input type="text" class="rb-input" id="url" placeholder="url" autocomplete="off">
+                    <button id="link-add" class="rb-button">add</button>
+                </span>
+            </div>
+            <div id="grid-right-links" class="grid-item">
+                <ul id="wrapper-right" class="drag-container">
+                </ul>
+            </div>
+            <div id="grid-left-links" class="grid-item">
+                <ul id="wrapper-left" class="drag-container">
+                </ul>
+            </div>  
+        </div>
+        
+       
+    </body>
+    <script>
+        configLoad("config")
+    </script>
+</html>
