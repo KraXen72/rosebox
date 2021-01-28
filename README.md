@@ -66,3 +66,5 @@ for the rest of the colors (syntax highlighting, etc.) for now use some from the
   
 ### things built with rosebox
 - **_startpage_** - [link](https://kraxen72.github.io/rosebox/minimal-startpage) - [repo](https://github.com/KraXen72/rosebox/tree/master/minimal-startpage)
+
+``made by KraXen72 and atidyshirt``
