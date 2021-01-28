@@ -59,6 +59,7 @@ for the rest of the colors (syntax highlighting, etc.) for now use some from the
 - **_Discord_** - [github pages](https://kraxen72.github.io/rosebox/discord) - [repo](https://github.com/KraXen72/rosebox/tree/master/discord)
 - **_Vivaldi_** - [github pages](https://kraxen72.github.io/rosebox/vivaldi) - [repo](https://github.com/KraXen72/rosebox/tree/master/vivaldi)
 - **_monkeytype.com_** - [github pages](https://kraxen72.github.io/rosebox/monkeytype) - [repo](https://github.com/KraXen72/rosebox/tree/master/monkeytype)
+- **_simple-bar_** - [github pages](https://kraxen72.github.io/rosebox/simple-bar-rosebox) - [repo](https://github.com/KraXen72/rosebox/tree/master/simple-bar-rosebox)
 - **Editors** - [repo](https://github.com/KraXen72/rosebox/tree/master/editors) - supported editors: (for now)
     - **_Vim_**
 - **Terminals** - [repo](https://github.com/KraXen72/rosebox/tree/master/terminals) - supported teminals: (for now)
