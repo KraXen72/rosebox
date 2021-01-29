@@ -218,5 +218,5 @@ function configLoad(mode, customjson) {
 }
 
 function showbody() {
-    document.querySelector('.outercontainer').classList.add("showcontainer");
+    document.getElementById('outercontainer').classList.add("showcontainer");
 }
