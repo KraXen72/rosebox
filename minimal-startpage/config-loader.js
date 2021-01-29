@@ -220,3 +220,7 @@ function configLoad(mode, customjson) {
 function showbody() {
     document.getElementById('outercontainer').classList.add("showcontainer");
 }
+
+function configloadnormal() {
+    configLoad("normal")
+}
