@@ -253,9 +253,5 @@ function exportjsonree(exportmode) { /*doesen't work for config exporting yet tm
     return config
 }
 
-function showbody() {
-    document.querySelector('.outercontainer').classList.add("showcontainer");
-}
-
 
 

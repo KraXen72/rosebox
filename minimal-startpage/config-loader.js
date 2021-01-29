@@ -216,3 +216,7 @@ function configLoad(mode, customjson) {
     }
 
 }
+
+function showbody() {
+    document.querySelector('.outercontainer').classList.add("showcontainer");
+}
