@@ -61,8 +61,8 @@
 .colorDefault-2K3EoJ.focused-3afm-j {background-color: var(--background-modifier-selected) !important;}
 .button-1YfofB.buttonColor-7qQbGO {color: #fff !important; }
 
-/*message box*/
-.scrollableContainer-2NUZem { background-color: var(--Colleft) !important;}
+/*message box & reply bar*/
+.scrollableContainer-2NUZem, .container-2fRDfG { background-color: var(--Colleft) !important;}
 
 /*delete message ig*/
 .footer-2gL1pp, .focusLock-Ns3yie *.message-2qRu38 {background-color: var(--Colleft) !important;}
