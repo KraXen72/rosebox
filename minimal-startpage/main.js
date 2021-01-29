@@ -4,14 +4,13 @@ const waifuToggle = document.querySelector("#toggle");
 let showSettings = false;
 const settingsToggle = document.querySelector("#settings");
 
+//loading stuff
 let localSettings = localStorage.getItem("jsonConfig")
 if (sessionStorage.getItem('savefromeditor') !== null) {
     localSettings = sessionStorage.getItem('savefromeditor')
     localStorage.setItem("jsonConfig", localSettings)
     sessionStorage.removeItem('savefromeditor')
-    window.close()
 }
-
 
 if (localSettings !== null) {
     configLoad("normal", localSettings)
@@ -23,7 +22,7 @@ if (localSettings !== null) {
     toggle.classList.add('incognito')
     settings.classList.add('incognito')
 }
-
+//image toggling
 const hideWaifuFunc = () => {
     const leftimage = document.getElementById("waifuimg");
     leftimage.classList.add("leftimghidden");
@@ -41,13 +40,9 @@ const showWaifuFunc = () => {
     
     localStorage.setItem("hideWaifu", null);
 };
-
-if (hideWaifu === "enabled") {
-    hideWaifuFunc();
-};
+if (hideWaifu === "enabled") {hideWaifuFunc();};
 
 const outercontainer = document.getElementById("outercontainer");
-outercontainer.classList.add("showcontainer");
 
 waifuToggle.addEventListener("click", () => {
     hideWaifu = localStorage.getItem('hideWaifu');
@@ -69,15 +64,23 @@ settingsToggle.addEventListener("click", () => {
         wrapper.style.padding = "10px"
 
         wrapper.innerHTML = `
-        <span>
-            <input type="text" class="rb-input jsoninp" id="importjson" placeholder="import json" autocomplete="off">
-            <button id="json-import" class="rb-button">import and save to localStorage</button>
-            <input type="text" class="rb-input jsoninp" id="exportjson" placeholder="export json" autocomplete="off">
-            <button id="json-export" class="rb-button">export</button><br>
-            make settings and toggle buttons only appear on hover: (refresh to take effect) <input type="checkbox" id="checkbox"><br><br>
-            <button onclick="gotoconfig()" class="rb-button">CONFIGURE LINKS - reorder, delete or add new links</button>
-        </span>
-        <span>
+        <div class="extrasettings">
+            <div id="vanilla-settings">
+                <input type="text" class="rb-input jsoninp" id="importjson" placeholder="import json" autocomplete="off">
+                <button id="json-import" class="rb-button">import and save to localStorage</button>
+                <input type="text" class="rb-input jsoninp" id="exportjson" placeholder="export json" autocomplete="off">
+                <button id="json-export" class="rb-button">export</button><br><br>
+                make settings and toggle buttons only appear on hover: (refresh to take effect) <input type="checkbox" id="checkbox"><br><br>
+            </div>
+            <span><button onclick="gotoconfig('save')" class="rb-button" id="gotoconfig">CONFIGURE LINKS</button><button onclick="gotoconfig('cancel')" class="rb-button" id="cancel">CANCEL</button></span>
+            <div id="config-controls"><br>
+            <p>drag & drop to reorder, click <span class="accent" style="padding: 0px;">x</span> to delete. <br>
+                I's recommended for a column to have <span class="accent" style="padding: 0px;">8</span> links for it to look good.</p>
+                add a link:<input type="text" class="rb-input" id="name" placeholder="name" autocomplete="off"><input type="text" class="rb-input" id="url" placeholder="url" autocomplete="off"><button id="link-add" class="rb-button">add</button><br>
+                greeting text:<input type="text" class="rb-input" id="greeting-inp" placeholder="heya" autocomplete="off" oninput = "updategreeting(this)"><br>
+                custom left image:<input type="text" class="rb-input" id="img-path" placeholder="path or link to image" autocomplete="off" oninput = "updateimg(this)">
+            </div>
+        </div>
         `
 
         document.body.appendChild(wrapper)
@@ -85,7 +88,6 @@ settingsToggle.addEventListener("click", () => {
         if (localStorage.getItem("hidebuttons") == "true") {
             document.getElementById("checkbox").checked = true
         }
-
         var importjsonbtn = document.getElementById('json-import').addEventListener("click", () => {
             var jsonn = document.getElementById('importjson').value
             if (jsonn != "") {
@@ -96,7 +98,7 @@ settingsToggle.addEventListener("click", () => {
         })
 
         var exportjsonbtn = document.getElementById('json-export').addEventListener("click", () => {
-            document.getElementById("exportjson").value = JSON.stringify(exportjsonree())
+            document.getElementById("exportjson").value = JSON.stringify(exportjsonree("normal"))
         })
 
         var checkbox = document.getElementById("checkbox").addEventListener("click", () => {
@@ -108,30 +110,124 @@ settingsToggle.addEventListener("click", () => {
                 console.log("shown buttons")
             }
         })
-        sessionStorage.setItem('tempjson', JSON.stringify(exportjsonree()))
+
+        document.getElementById("link-add").addEventListener("click", () => {
+            const name = document.getElementById("name").value
+            const urll = document.getElementById("url").value
+        
+            const parent = document.getElementById("wrapper-left")
+        
+            if (name == "" || urll == "") {
+                alert("please enter a name and an url for the link.")
+                return
+            }
+            console.log(urll)
+        
+            let li = document.createElement("li");
+            li.draggable = "true"
+            li.classList.add("dragabble-link")
+        
+            let a = document.createElement("a")
+            a.href = urll
+            a.innerText = name
+            a.style.cursor = "pointer"
+        
+            let span = document.createElement("span");
+            span.classList.add("accent")
+            span.innerHTML = "x"
+            span.style.cursor = "pointer"
+            
+            a.removeAttribute('href')
+            span.addEventListener("click", () => {if (window.confirm(`delete '${a.innerText}' ?`)) {li.remove()}})
+        
+            li.prepend(span)
+            li.appendChild(a)
+            parent.appendChild(li)
+        
+            a.href = urll
+           
+            document.getElementById("name").value = ""
+            document.getElementById("url").value = ""
+        
+            dragSetup()
+        })
     } else {
         document.getElementById("settings-wrapper").remove()
         showSettings = false
     }
 })
 
-function gotoconfig() {
-    var jsonn = sessionStorage.getItem('tempjson')
-    window.open("config.html")
+function updategreeting(el) {
+    document.getElementById("greeting").innerText = el.value
 }
 
-function exportjsonree() {
-    var field = document.getElementById('exportjson')
+function updateimg(el) {
+    document.querySelector('img').src = el.value
+}
+
+function gotoconfig(mode) {
+    let configbtn = document.getElementById("gotoconfig")
+    let configControls = document.getElementById("config-controls")
+    let vanillaSettings = document.getElementById("vanilla-settings")
+    let cancel = document.getElementById("cancel")
+    
+
+    if (configbtn.innerHTML == "CONFIGURE LINKS") {
+        configbtn.innerHTML = "<strong>SAVE</strong> AND RETURN TO STARTPAGE"
+        configControls.style.display = "block"
+        cancel.style.display = "block"
+        vanillaSettings.style.display = "none"
+
+        configLoad("config")
+        console.log(config)
+
+        //if we are missing anything from config.config, fill it in by defaults
+        if (!('config' in config) || typeof config.config.greeting === "undefined" || typeof config.config.img === "undefined") { 
+            config.config = {};
+            config.config.greeting = document.querySelector('#greeting').innerText
+            config.config.img = document.querySelector('img').getAttribute("src")
+        }
+        //load things from config to inputs
+        document.getElementById("greeting-inp").value = config.config.greeting
+        document.getElementById("img-path").value = config.config.img
+        
+    } else {
+        configbtn.innerHTML = "CONFIGURE LINKS"
+        configControls.style.display = "none"
+        vanillaSettings.style.display = "block"
+        cancel.style.display = "none"
+
+        if (mode == "save") { /*save the config into localstorage*/
+            let bruh = JSON.stringify(exportjsonree("config"))
+            console.log(bruh)
+            configLoad("normal", bruh)
+            localStorage.setItem("jsonConfig", bruh)
+        } else {
+            configLoad("normal")
+        }
+    }
+}
+
+function exportjsonree(exportmode) { /*doesen't work for config exporting yet tm*/
     var config = {}
 
     const leftLinks = [...document.getElementById('wrapper-left').children]
     const rightLinks = [...document.getElementById('wrapper-right').children]
-    const imgPath = document.querySelector('img').getAttribute('src')
-    const greeting = document.querySelector('h1').innerText
 
+    var imgPath = ""
+    var greeting = ""
+
+    if (exportmode == "config") {
+        imgPath = document.getElementById("img-path").value
+        greeting = document.getElementById("greeting-inp").value
+    } else {
+        imgPath = document.querySelector('img').getAttribute('src')
+        greeting = document.querySelector('#greeting').innerText
+    }
+    
     if (greeting != "" || imgPath != "") {
         config.config = {
-            "greeting": greeting.slice(0,greeting.length-2), 
+            "greeting": greeting, 
             "img": imgPath
         }
         if (greeting == ""){delete config.config.greeting}
@@ -156,4 +252,10 @@ function exportjsonree() {
 
     return config
 }
+
+function showbody() {
+    outercontainer.classList.add("showcontainer");
+}
+
+
 

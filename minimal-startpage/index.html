@@ -11,16 +11,16 @@
     <body>
         <div class="container-outer" hidden id="outercontainer">
             <div class="left-img" id="waifuimg">
-                <img src="img/yahallo.png">
+                <img src="img/yahallo.png" draggable="false" onload = "showbody()" onerror="showbody()">
             </div>
             <div class="w3-container container" id="maincontainer">
-                <h1 class="heya">heya <span class="accent">~</span></h1>
+                <h1 class="heya"><span id="greeting">heya</span><span class="accent"> ~</span></h1>
                 <div class="w3-row w3gridclass">
-                    <div class = "w3-col s6 m6 l6">
-                        <ul id="wrapper-left"></ul>
+                    <div class = "w3-col s6 m6 l6 borderme">
+                        <ul id="wrapper-left" class = "drag-container"></ul>
                     </div>
-                    <div class = "w3-col s6 m6 l6">
-                        <ul class="right" id="wrapper-right"></ul>
+                    <div class = "w3-col s6 m6 l6 borderme">
+                        <ul class="right drag-container" id="wrapper-right"</ul>
                     </div>
                 </div>
             </div>
@@ -34,6 +34,6 @@
         </button>
         <script src="config-loader.js"></script>
         <script>configLoad("normal")</script>
-        <script src="main.js"></script>
+        <script src="main.js" defer></script>
     </body>
 </html>

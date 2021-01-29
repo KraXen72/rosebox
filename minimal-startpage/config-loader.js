@@ -75,10 +75,105 @@ var config = {
     ]
 }
 
+const parentLeft = document.getElementById("wrapper-left")
+const parentRight = document.getElementById("wrapper-right")
+
+function dragSetup() {
+    console.log("setting up drag&drop")
+    const draggables = document.querySelectorAll('.dragabble-link')
+    const containers = document.querySelectorAll('.drag-container')
+
+    draggables.forEach(link => {
+        link.addEventListener('dragstart', () => {
+            link.classList.add("dragging")
+            link.style.userSelect = "none"
+        })
+
+        link.addEventListener('dragend', () => {
+            link.classList.remove("dragging")
+            link.style.userSelect = "none"
+        })
+    })
+
+    containers.forEach(container => {
+        container.addEventListener('dragover', e => {
+            e.preventDefault()
+            const afterElement = getAfterElement(container, e.clientY)
+            const current = document.querySelector('.dragging')
+            
+            if (afterElement == null) {
+                container.appendChild(current)
+            } else {
+                container.insertBefore(current, afterElement)
+            }
+        })
+    })
+
+    function getAfterElement(c, y) {
+        const dragabbleElements = [...c.querySelectorAll(".dragabble-link:not(.dragging)")]
+
+        return dragabbleElements.reduce((closest, child) => {
+            const box = child.getBoundingClientRect()
+            const offset = y - box.top - box.height / 2
+            if (offset < 0 && offset > closest.offset) {
+                return { offset: offset, element: child}
+            } else {
+                return closest
+            }
+            
+        }, {offset: Number.NEGATIVE_INFINITY}).element
+    }
+}
+
+function generateLinks(mode, config, leftright, i) {
+    let li = document.createElement("li");
+
+        if (mode == "config") {
+            li.draggable = "true"
+            li.classList.add("dragabble-link")
+            li.style.userSelect = "none";
+        }
+
+        let a = document.createElement("a")
+        a.href = config[`links-${leftright}`][i].url
+        a.id = `link-${i+1}`
+        a.innerText = config[`links-${leftright}`][i].name
+        a.style.cursor = "pointer"
+
+        let span = document.createElement("span");
+        span.classList.add("accent")
+        span.innerHTML = mode == "normal" ? "~" : "&times;"
+        span.style.cursor = "pointer"
+        if (mode == "config") {
+            a.removeAttribute('href');
+            a.style.cursor = "grab"
+            span.addEventListener("click", () => {if (window.confirm(`delete '${a.innerText}' ?`)) {li.remove()}})
+        }
+        if (mode == "config") {
+            li.prepend(span)
+            li.appendChild(a)
+            if (leftright == "left") {
+                parentLeft.appendChild(li)
+            } else {
+                parentRight.appendChild(li)
+            }
+            
+        } else {
+            a.prepend(span)
+            li.appendChild(a)
+            if (leftright == "left") {
+                parentLeft.appendChild(li)
+            } else {
+                parentRight.appendChild(li)
+            }
+        }
+}
+
 
 function configLoad(mode, customjson) {
-    const parentLeft = document.getElementById("wrapper-left")
-    const parentRight = document.getElementById("wrapper-right")
+    
+    parentLeft.innerHTML = ""
+    parentRight.innerHTML = ""
 
     if (typeof customjson !== "undefined") {
         config = JSON.parse(customjson)
@@ -90,88 +185,34 @@ function configLoad(mode, customjson) {
 
     if ('config' in config) {
         if ('greeting' in config["config"]) {
-            if (mode == "normal") {
-                document.querySelector('h1').innerHTML = config.config.greeting + ` <span class="accent">~</span>`
-            } else if (mode == "config") {
-                document.getElementById('greeting').value = config.config.greeting
-            } 
+                document.querySelector('#greeting').innerText = config.config.greeting
         }
         if ('img' in config["config"]) {
-            if (mode == "normal") {
                 document.querySelector('img').src = config.config.img
-            } else if (mode == "config") {
-                document.getElementById('img-path').value = config.config.img
-            }
         }
+    }
+
+    let borderme = document.querySelectorAll(".borderme")
+    let marginleft = document.querySelector(".w3gridclass")
+
+    if (mode == "config") {
+        borderme.forEach(e => {e.classList.add("borderme-bordered")});
+        marginleft.classList.add("marginleft194")
+    } else {
+        borderme.forEach(e => {e.classList.remove("borderme-bordered")});
+        marginleft.classList.remove("marginleft194")
     }
 
     for (let i = 0; i < Object.keys(config["links-left"]).length; i++) {
-        let li = document.createElement("li");
-
-        if (mode == "config") {
-            li.draggable = "true"
-            li.classList.add("dragabble-link")
-        }
-
-        let a = document.createElement("a")
-        a.href = config["links-left"][i].url
-        a.id = `link-${i+1}`
-        a.innerText = config["links-left"][i].name
-        a.style.cursor = "pointer"
-
-        let span = document.createElement("span");
-        span.classList.add("accent")
-        span.innerHTML = mode == "normal" ? "~" : "x"
-        span.style.cursor = "pointer"
-        if (mode == "config") {
-            //a.removeAttribute('href')
-            span.addEventListener("click", () => {if (window.confirm(`delete '${a.innerText}' ?`)) {li.remove()}})
-        }
-
-        if (mode == "config") {
-            li.prepend(span)
-            li.appendChild(a)
-            parentLeft.appendChild(li)
-        } else {
-            a.prepend(span)
-            li.appendChild(a)
-            parentLeft.appendChild(li)
-        }
+        generateLinks(mode, config, "left", i)
     }
 
     for (let i = 0; i < Object.keys(config["links-right"]).length; i++) {
-        let li = document.createElement("li");
-        if (mode == "config") {
-            li.draggable = "true"
-            li.classList.add("dragabble-link")
-        }
-            
-
-        let a = document.createElement("a")
-        a.href = config["links-right"][i].url
-        a.id = `link-${i+1}`
-        a.innerText = config["links-right"][i].name
-        a.style.cursor = "pointer"
-        
-
-        let span = document.createElement("span");
-        span.classList.add("accent")
-        span.innerHTML = mode == "normal" ? "~" : "x"
-        span.style.cursor = "pointer"
-        if (mode == "config") {
-            //a.removeAttribute('href')
-            span.addEventListener("click", () => {if (window.confirm(`delete '${a.innerText}' ?`)) {li.remove()}})
-        }
-
-        if (mode == "config") {
-            li.prepend(span)
-            li.appendChild(a)
-            parentRight.appendChild(li)
-        } else {
-            a.prepend(span)
-            li.appendChild(a)
-            parentRight.appendChild(li)
-        }
-        
+        generateLinks(mode, config, "right", i)
     }
+
+    if (mode == "config") {
+        dragSetup()
+    }
+
 }
