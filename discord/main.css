@@ -64,3 +64,14 @@
 
 .button-1YfofB.buttonColor-7qQbGO {color: #fff !important; }
 
+/*sticky home button*/
+div .tutorialContainer-1v44GL {
+    position: sticky;
+    top: -12px;
+    padding-top: 12px;
+    padding-bottom: 1px !important;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 100;
+    background: var(--Colleft) !important;
+  }
