@@ -1,4 +1,3 @@
-const showbody = () => {document.getElementById('outercontainer').classList.add("showcontainer");}
 var config = {
     "config": {
         "greeting": "heya",

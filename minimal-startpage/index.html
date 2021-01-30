@@ -6,10 +6,13 @@
         <link rel="stylesheet" type="text/css" href="main.css" media="screen">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <meta charset="UTF-8">
+
+        
     </head>
     <body>
         <div class="container-outer" hidden id="outercontainer">
             <div class="left-img" id="waifuimg">
+                <script>function showbody() {document.getElementById('outercontainer').classList.add("showcontainer");}</script>
                 <img src="img/yahallo.png" draggable="false" onload = "showbody()" onerror="showbody()">
             </div>
             <div class="w3-container container" id="maincontainer">
@@ -31,7 +34,7 @@
             &#9881;
         </button>
         <script src="config-loader.js"></script>
-        <script>configloadnormal()</script>
         <script src="main.js" defer></script>
+        <script>configloadnormal()</script>
     </body>
 </html>
