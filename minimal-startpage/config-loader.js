@@ -1,3 +1,4 @@
+const showbody = () => {document.getElementById('outercontainer').classList.add("showcontainer");}
 var config = {
     "config": {
         "greeting": "heya",
@@ -144,6 +145,7 @@ function generateLinks(mode, config, leftright, i) {
     span.innerHTML = mode == "normal" ? "~" : "&times;"
     span.style.cursor = "pointer"
     if (mode == "config") {
+        a.setAttribute("url", a.getAttribute("href"))
         a.removeAttribute('href');
         a.style.cursor = "grab"
         span.addEventListener("click", () => {if (window.confirm(`delete '${a.innerText}' ?`)) {li.remove()}})
@@ -212,6 +214,4 @@ function configLoad(mode, customjson) {
         dragSetup()
     }
 }
-
-function showbody() {document.getElementById('outercontainer').classList.add("showcontainer");}
 function configloadnormal() {configLoad("normal")}

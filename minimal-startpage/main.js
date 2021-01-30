@@ -121,7 +121,6 @@ settingsToggle.addEventListener("click", () => {
                 alert("please enter a name and an url for the link.")
                 return
             }
-            console.log(urll)
         
             let li = document.createElement("li");
             li.draggable = "true"
@@ -179,7 +178,6 @@ function gotoconfig(mode) {
         vanillaSettings.style.display = "none"
 
         configLoad("config")
-        console.log(config)
 
         //if we are missing anything from config.config, fill it in by defaults
         if (!('config' in config) || typeof config.config.greeting === "undefined" || typeof config.config.img === "undefined") { 
@@ -199,7 +197,6 @@ function gotoconfig(mode) {
 
         if (mode == "save") { /*save the config into localstorage*/
             let bruh = JSON.stringify(exportjsonree("config"))
-            console.log(bruh)
             configLoad("normal", bruh)
             localStorage.setItem("jsonConfig", bruh)
         } else {
@@ -238,15 +235,16 @@ function exportjsonree(exportmode) { /*doesen't work for config exporting yet tm
     config["links-left"] = []
 
     leftLinks.forEach(link => {
+        console.log(link)
         config["links-left"].push({
             name: link.innerText.slice(1),
-            url: link.querySelector('a').href
+            url: link.querySelector('a').getAttribute("href") != null ? link.querySelector('a').getAttribute("href") : link.querySelector('a').getAttribute("url")
         })
     })
     rightLinks.forEach(link => {
         config["links-right"].push({
             name: link.innerText.slice(1),
-            url: link.querySelector('a').href
+            url: link.querySelector('a').getAttribute("href") != null ? link.querySelector('a').getAttribute("href") : link.querySelector('a').getAttribute("url")
         })
     })
 
