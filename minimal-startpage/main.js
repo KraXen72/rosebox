@@ -72,7 +72,7 @@ settingsToggle.addEventListener("click", () => {
                 <button id="json-export" class="rb-button">export</button><br><br>
                 make settings and toggle buttons only appear on hover: (refresh to take effect) <input type="checkbox" id="checkbox"><br><br>
             </div>
-            <span><button onclick="gotoconfig('save')" class="rb-button" id="gotoconfig">CONFIGURE LINKS</button><button onclick="gotoconfig('cancel')" class="rb-button" id="cancel">CANCEL</button></span>
+            <span><button onclick="gotoconfig('save')" class="rb-button" id="gotoconfig">CONFIGURE LINKS</button><button onclick="gotoconfig('cancel')" class="rb-button" id="cancel">CANCEL</button>  <button onclick="document.querySelector('#settings').click()" id="close-settings" class="rb-button"><strong>&times;</strong></button></span>
             <div id="config-controls"><br>
             <p>drag & drop to reorder, click <span class="accent" style="padding: 0px;">x</span> to delete. <br>
                 I's recommended for a column to have <span class="accent" style="padding: 0px;">8</span> links for it to look good.</p>
@@ -173,9 +173,14 @@ function gotoconfig(mode) {
 
     if (configbtn.innerHTML == "CONFIGURE LINKS") {
         configbtn.innerHTML = "<strong>SAVE</strong> AND RETURN TO STARTPAGE"
+
+        //show elements
         configControls.style.display = "block"
         cancel.style.display = "block"
+
+        //hide elements
         vanillaSettings.style.display = "none"
+        document.querySelector('#close-settings').style.display = "none"
 
         configLoad("config")
 
@@ -191,10 +196,15 @@ function gotoconfig(mode) {
         
     } else {
         configbtn.innerHTML = "CONFIGURE LINKS"
-        configControls.style.display = "none"
-        vanillaSettings.style.display = "block"
-        cancel.style.display = "none"
 
+        //show elements
+        vanillaSettings.style.display = "block"
+        document.querySelector('#close-settings').style.display = "inline-block"
+        
+        //hide elements
+        configControls.style.display = "none"
+        cancel.style.display = "none"
+        
         if (mode == "save") { /*save the config into localstorage*/
             let bruh = JSON.stringify(exportjsonree("config"))
             configLoad("normal", bruh)
