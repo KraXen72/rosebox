@@ -7,72 +7,35 @@ rosebox is a color theme inspired by gruvbox, but with the main focus on **being
 ![waifu](https://cdn.discordapp.com/attachments/704792091955429426/804774082418966568/unknown.png)
   
 ### colors:
-<div class = "grid-wrapper">
-    <div class="grid-item primary-bg"> 
+<div style = "display: grid; grid-template-rows: repeat(4, 1fr); grid-template-columns: repeat(4, 1fr); grid-gap: 2px;">
+    <div style = "display: grid; text-align: center; color: #a3a5aa; background: #262626;"> 
         primary-bg <br> #262626
     </div>
-    <div class="grid-item secondary-bg"> 
+    <div style = "display: grid; text-align: center; color: #a3a5aa; background: #222222;"> 
         secondary-bg <br> #222222 <br> (some sort of side list)
     </div>
-    <div class="grid-item secondary-bg-alt"> 
+    <div style = "display: grid; text-align: center; color: #a3a5aa; background: #232323;"> 
         secondary-bg-alt <br> #232323
     </div>
-    <div class="grid-item tertiary-bg"> 
+    <div style = "display: grid; text-align: center; color: #a3a5aa; background: #282828;"> 
         tertiary-bg <br> #282828 <br> (popups, modals ..)
     </div>
-    <div class="grid-item accent"> 
+    <div style = "display: grid; text-align: center; color: #262626; background: #a57562;"> 
         accent <br> #a57562
     </div>
-    <div class="grid-item accent-bg"> 
+    <div style = "display: grid; text-align: center; color: #a3a5aa; background: #5e4c44;"> 
         accent-bg <br> #5e4c44
     </div>
-    <div class="grid-item accent-a"> 
+    <div style = "display: grid; text-align: center; color: #262626; background: rgba(165, 117, 98, 0.2)"> 
         accent-alpha <br> accent color on 0.2 alpha <br> (selected item)
     </div>
-    <div class="grid-item accent-a2"> 
+    <div style = "display: grid; text-align: center; color: #262626; background: rgba(165, 117, 98, 0.1)"> 
         accent-alpha-alt <br> accent color on 0.1 alpha <br> (hover on item)
     </div>
-    <div class="grid-item text-primary"> 
+    <div style = "display: grid; text-align: center; color: #262626; background: #a3a5aa;"> 
         primary-text <br> #a3a5aa <br>
     </div>
-
 </div>
-<style>
-.grid-wrapper {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2px;
-}
-.grid-item {
-    display: grid;
-    text-align: center;
-    color: #a3a5aa;
-    vertical-align: center;
-}
-.primary-bg {background: #262626;}
-.secondary-bg {background: #222222;}
-.secondary-bg-alt {background: #232323;}
-.tertiary-bg {background: #282828;}
-.accent {
-    color: #262626;
-    background: #a57562;
-}
-.accent-bg {background: #5e4c44}
-.accent-a {
-    color: black;
-    background: rgba(165, 117, 98, 0.2)
-}
-.accent-a2 {
-    color: #262626;
-    background: rgba(165, 117, 98, 0.1)
-}
-.text-primary {
-    background: #a3a5aa;
-    color: #262626;
-}
-</style>
-
 
 for the rest of the colors (syntax highlighting, etc.) for now use some from the nord <strong>frost</strong> or <strong>aurora</strong> palletes:
 <span style = "width: 100%">
