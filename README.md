@@ -7,47 +7,72 @@ rosebox is a color theme inspired by gruvbox, but with the main focus on **being
 ![waifu](https://cdn.discordapp.com/attachments/704792091955429426/804774082418966568/unknown.png)
   
 ### colors:
-  
-<table>
-    <tr>
-        <td>
-          main background: (#262626)  
-                <img src="https://cdn.discordapp.com/attachments/704792091955429426/772205866967105566/262626.png">
-        </td>
-        <td>
-              secondary background: (#222222)  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772206545244782622/222222.png">
-        </td>
-        <td>
-            alt secondary bg: (#232323)  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772419833819824128/232323.png" >
-        </td>
-    </tr>
-    <tr>
-        <td>
-            tertiary background: (#282828)  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772209107791904768/282828.png" >
-        </td>
-        <td>
-             accent color: (#a57562)  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772207016130379816/a57562.png">
-        </td>
-        <td>
-            accent-a: RGBA(165, 117, 98, 0.2)  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772207578406584351/colalpha.png">
-        </td>
-    </tr>
-    <tr>
-        <td>
-          accent background: (#5e4c44)  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772208562717327410/5e4c44.png" >
-        </td>
-        <td>
-            text (WIP): (#a3a5aa)  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772209544658419742/a3a5aa.png" >
-        </td>
-    </tr>
-</table>
+<div class = "grid-wrapper">
+    <div class="grid-item primary-bg"> 
+        primary-bg <br> #262626
+    </div>
+    <div class="grid-item secondary-bg"> 
+        secondary-bg <br> #222222 <br> (some sort of side list)
+    </div>
+    <div class="grid-item secondary-bg-alt"> 
+        secondary-bg-alt <br> #232323
+    </div>
+    <div class="grid-item tertiary-bg"> 
+        tertiary-bg <br> #282828 <br> (popups, modals ..)
+    </div>
+    <div class="grid-item accent"> 
+        accent <br> #a57562
+    </div>
+    <div class="grid-item accent-bg"> 
+        accent-bg <br> #5e4c44
+    </div>
+    <div class="grid-item accent-a"> 
+        accent-alpha <br> accent color on 0.2 alpha <br> (selected item)
+    </div>
+    <div class="grid-item accent-a2"> 
+        accent-alpha-alt <br> accent color on 0.1 alpha <br> (hover on item)
+    </div>
+    <div class="grid-item text-primary"> 
+        primary-text <br> #a3a5aa <br>
+    </div>
+
+</div>
+<style>
+.grid-wrapper {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+}
+.grid-item {
+    display: grid;
+    text-align: center;
+    color: #a3a5aa;
+    vertical-align: center;
+}
+.primary-bg {background: #262626;}
+.secondary-bg {background: #222222;}
+.secondary-bg-alt {background: #232323;}
+.tertiary-bg {background: #282828;}
+.accent {
+    color: #262626;
+    background: #a57562;
+}
+.accent-bg {background: #5e4c44}
+.accent-a {
+    color: black;
+    background: rgba(165, 117, 98, 0.2)
+}
+.accent-a2 {
+    color: #262626;
+    background: rgba(165, 117, 98, 0.1)
+}
+.text-primary {
+    background: #a3a5aa;
+    color: #262626;
+}
+</style>
+
 
 for the rest of the colors (syntax highlighting, etc.) for now use some from the nord <strong>frost</strong> or <strong>aurora</strong> palletes:
 <span style = "width: 100%">
