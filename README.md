@@ -10,38 +10,38 @@ rosebox is a color theme inspired by gruvbox, but with the main focus on **being
 <table>
     <tr>
         <td>
-          main background: <br> #262626) 
-                <img src="https://cdn.discordapp.com/attachments/704792091955429426/772205866967105566/262626.png">
+          main background: <br> #262626) <br>
+                <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763189373796372/262626.png">
         </td>
         <td>
-              secondary background: <br> #222222  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772206545244782622/222222.png">
+              secondary background: <br> #222222 <br>  
+            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763186546835496/222222.png">
         </td>
         <td>
-            alt secondary bg: <br> #232323
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772419833819824128/232323.png" >
+            alt secondary bg: <br> #232323 <br>
+            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763188019167272/232323.png" >
         </td>
         <td>
-            tertiary background: <br> #282828  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772209107791904768/282828.png" >
+            tertiary background: <br> #282828 <br>
+            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763190690152478/282828.png" >
         </td>
     </tr>
     <tr>
         <td>
-             accent color: <br> #a57562  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772207016130379816/a57562.png">
+             accent color: <br> #a57562 <br>
+            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763193500336128/a57562.png">
         </td>
         <td>
-          accent background: <br> #5e4c44  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772208562717327410/5e4c44.png" >
+          accent background: <br> #5e4c44 <br>
+            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763185300733982/5e4c44.png" >
         </td>
         <td>
-            accent-alpha: <br> rgba(165, 117, 98, 0.2)  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772207578406584351/colalpha.png">
+            accent-alpha: <br> rgba(165, 117, 98, 0.2) <br>
+            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763194671071283/colalpha.png">
         </td>
         <td>
-            text (WIP): <br> #a3a5aa
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/772209544658419742/a3a5aa.png" >
+            text (WIP): <br> #a3a5aa <br>
+            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763192074272809/a3a5aa.png" >
         </td>
     </tr>
 </table>
