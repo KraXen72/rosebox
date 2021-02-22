@@ -61,10 +61,11 @@ for the rest of the colors (syntax highlighting, etc.) for now use some from the
     - **_Vim_**
 - **Terminals** - [repo](https://github.com/KraXen72/rosebox/tree/master/terminals) - supported teminals: (for now)
     - **_alacritty_**
-- **CSS themes for websites** - [repo](https://github.com/KraXen72/rosebox/tree/master/css-themes)
+- **_CSS themes for websites_** - [repo](https://github.com/KraXen72/rosebox/tree/master/css-themes)
 
   
 ### things built with rosebox
-- **_startpage_** - [link](https://kraxen72.github.io/rosebox/minimal-startpage) - [repo](https://github.com/KraXen72/rosebox/tree/master/minimal-startpage)
+- **_startpage_** - a simple startpage - [link](https://kraxen72.github.io/rosebox/minimal-startpage) - [repo](https://github.com/KraXen72/rosebox/tree/master/minimal-startpage)
+- **_animetwist-dl-electron_** - an anime downloader from twist.moe - [repo](https://github.com/KraXen72/animetwist-dl-electron)
 
 if you want to contribute, DM me on discord ``KraXen72#9190``
