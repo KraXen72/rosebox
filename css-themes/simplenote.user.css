@@ -1,0 +1,169 @@
+/* ==UserStyle==
+@name           rosebox simplenote
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    rosebox theme for simplenote
+@author         KraXen72
+==/UserStyle== */
+
+@-moz-document domain("app.simplenote.com") {
+    /*main variables */
+    :root {
+        --primary-bg: #262626;
+        --secondary-bg: #222222;
+        --primary-fg: #a57562;
+        --primary-text: #a3a5aa;
+        --alpha-bg: rgba(165, 117, 98, 0.2);
+        --alpha-bg-2: rgba(165, 117, 98, 0.1);
+    }
+
+    /*applying colors*/
+
+    .theme-dark, 
+    .theme-dark .theme-color-bg:not(.app-layout__source-column),
+    .theme-dark .theme-color-bg-lighter,
+    .theme-dark ::-webkit-scrollbar-thumb:hover,
+    .theme-dark a,
+    .theme-dark .note-detail-markdown .hljs-formula,
+    .monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input,
+    .monaco-editor .margin
+    {
+        background-color: var(--primary-bg) !important;
+    }
+    .theme-dark .search-results {
+        color: #c3c4c7;
+        border-color: #2c3338;
+        background-color: var(--primary-bg) !important
+    }
+
+    .theme-dark .app-layout__source-column, 
+    .theme-dark .sort-order-selector select,
+    .theme-dark .tag-chip,
+    .theme-dark .tab-panels__tab-list,
+    .theme-dark .dialog-title-bar,
+    .toggle-control .toggle-control-knob {
+        background: var(--secondary-bg) !important;
+        background-color: var(--secondary-bg) !important;
+        border-color: var(--secondary-bg) !important;
+    }
+    .theme-dark .checkbox-control-base {background: var(--secondary-bg)}
+
+    .theme-dark .theme-color-border:not(.settings-items):not(.settings-item), .theme-dark.theme-color-border,.theme-dark .button {
+        border-color: transparent;
+    }
+    .settings-items, .settings-item {
+        border-color: var(--secondary-bg) !important;
+    }
+
+    .theme-dark .theme-color-fg,
+    .theme-dark a.button,
+    .theme-dark input,
+    .theme-dark .navigation-bar-item button,
+    .theme-dark .navigation-bar-item.is-selected button,
+    .theme-dark .note-list .note-list-item-selected .note-list-item-excerpt,
+    .theme-dark .note-list .note-list-item-selected .note-list-item-published-icon,
+    .theme-dark .note-list .note-list-item-selected .note-list-item-pending-changes,
+    .theme-dark .note-list .note-list-item-selected.note-list-item-pinned .note-list-item-pinner,
+    .theme-dark .settings-group p, .mtk1
+    {
+        color: var(--primary-text) /*!important*/;
+    }
+    .toggle-control .toggle-control-unchecked-color {background-color: var(--primary-text)}
+
+    .theme-dark .navigation-bar-item.is-selected svg[class^='icon-'] 
+    {
+        fill: var(--primary-text)
+    }
+
+    .theme-dark .navigation-bar-item.is-selected,
+    .theme-dark .note-list .note-list-item-selected
+    {
+        background-color: var(--alpha-bg)
+    }
+
+    .theme-dark .note-list .note-list-item:not(.note-list-item-selected):hover,
+    .theme-dark .note-detail-markdown table tr:nth-child(2n),
+    .theme-dark .navigation-bar-item:hover:not(.is-selected)
+    {
+        background-color: var(--alpha-bg-2)   
+    }
+
+    .button-borderless,
+    .note-list .note-list-item-pinned:not(.note-list-item-selected) .note-list-item-pinner,
+    .note-list-placeholder button,
+    .tab-panels__tab-list li.is-active
+    {
+        color: var(--primary-fg) !important;
+    }
+    .search-match, 
+    .button-primary,
+    .checkbox-control .checkbox-control-checked,
+    .toggle-control .toggle-control-checked-color
+    {
+        background-color: var(--primary-fg) !important;
+    }
+
+    .theme-dark .search-results button svg,
+    .theme-dark .navigation-bar-item svg[class^='icon-'],
+    .theme-dark .note-list .note-list-item-selected.note-list-item-pinned .note-list-item-pinner svg {
+        fill: var(--primary-fg) !important;
+    }
+
+    .tab-panels__tab-list li.is-active {
+        border-color: var(--primary-fg)
+    }
+
+    .theme-dark ::-webkit-scrollbar-thumb {
+        background-color: #2c3338;
+        border-color: #50575e;
+    }
+
+    .theme-dark .note-detail-markdown .hljs {
+        background: var(--primary-bg) !important;
+        color: var(--primary-text) !important;
+    }
+
+    /*staying*/
+    .theme-dark .theme-color-fg-dim,
+    .theme-dark .transparent-input:-ms-input-placeholder, .theme-dark input:-ms-input-placeholder,
+    .theme-dark .transparent-input::placeholder,.theme-dark input::placeholder
+     { /*merge this with rosebox??*/
+        color: #8c8f94;
+    }
+
+    .theme-dark .note-list-header {
+        color: #8c8f94;
+    }
+
+    /*concerning borders tbh*/
+    .theme-dark .note-detail-markdown hr,
+    .theme-dark .note-detail-markdown blockquote,
+    .theme-dark .note-detail-markdown pre,
+    .theme-dark .note-detail-markdown table th,.theme-dark .note-detail-markdown table td
+     {
+        border-color: #2c3338
+    }
+
+    /*custom fixes*/
+    .sort-order-selector select {
+        appearance: menulist-button !important;
+        -webkit-appearance: menulist-button !important;
+    }
+    .note-list-item {border-radius: 5px;}
+    .simplenote-app {transition: transform 0s linear;}
+
+    /*scrollbars*/
+    :not(.theme-light) ::-webkit-scrollbar-thumb {
+        border-width: 0px 4px 0px 4px;
+        min-width: 4px !important;
+        border-color: var(--secondary-bg);
+        border-radius: 5.5px;
+        background-color: var(--primary-bg);
+    }
+    .react-monaco-editor-container .scrollbar.vertical .slider {
+        border-color: var(--primary-bg)
+    }
+    :not(.theme-light) ::-webkit-scrollbar-thumb:active {
+        background-color: #646970 !important;
+    }
+}
