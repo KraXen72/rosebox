@@ -59,10 +59,24 @@
 /*small tweaks*/
 .selected-1Tbx07, .colorDefault-2K3EoJ.focused-3afm-j {background-color: var(--background-modifier-selected) !important;}
 .topSectionNormal-2-vo2m {background-color: #202225 !important;}
-.body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-2gL1pp, .section-2gLsgF {background-color: #282828;}
+.body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-2gL1pp, .section-2gLsgF,
+.userPopout-3XzG_A .headerNormal-1l1Znk, 
+.userPopout-3XzG_A .headerNormal-1l1Znk .headerTop-2y3V6H 
+{background-color: #282828;}
 .connectedAccount-36nQx7 {border: 1px solid rgba(0,0,0,0.2) !important;}
 
 .button-1YfofB.buttonColor-7qQbGO {color: #fff !important; }
+.userPopout-3XzG_A .headerNormal-1l1Znk .headerTop-2y3V6H {
+    border-bottom: 0px solid transparent !important;
+}
+.headerNormal-1l1Znk .avatarPositionNormal-1CZUPk .avatar-22FtUu {
+    border: 6px solid #282828;
+}
+
+.theme-dark .newPopoutActivityStyles {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 
 /*sticky home button*/
 div .tutorialContainer-1v44GL {
