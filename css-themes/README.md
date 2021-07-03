@@ -4,5 +4,6 @@ Use Stylus (for example) to apply them. Stylus: [chrome](https://chrome.google.c
 
 Currently available themes:
 ### Simplenote
-``simplenote.user.css``  
+``simplenote.user.css``    
+use with light theme since dark theme is wierd at the moment
 ![stylus](https://cdn.discordapp.com/attachments/704792091955429426/813366754591375410/unknown.png)
