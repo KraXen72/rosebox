@@ -1,3 +1,15 @@
+/**
+ * @name rosebox
+ * @author KraXen72
+ * @version 6
+ * @description rosebox discord theme
+ * @source https://github.com/KraXen72/rosebox
+*/
+
+/*@import url('https://kraxen72.github.io/rosebox/discord/main.css');
+
+.emojiItemDisabled-1FvFuF {filter: grayscale(0)}*/
+
 @import url("https://kraxen72.github.io/harmony-discord/main.css"); 
 :root, .theme-dark, .focusLock-Ns3yie * {
     /*gruvbox override*/
@@ -20,7 +32,6 @@
     --text-fix: #a3a5aa;
 
     --text-normal: var(--text-fix);
-    --interactive-active: var(--text-fix);
     --header-primary: var(--ColAccent);
 
 
@@ -69,19 +80,20 @@
 
 .connectedAccount-36nQx7 {border: 1px solid rgba(0,0,0,0.2) !important;}
 
+/*color fixes*/
 .button-1YfofB.buttonColor-7qQbGO {color: #fff !important; }
+.modeUnread-1qO3K1 .name-23GUGE {color: var(--text-fix) !important;} /*unread channels*/
+
 .headerTop-2y3V6H { border-bottom: 0px solid transparent !important; }
 .avatar-22FtUu { border: 6px solid #282828; }
 
-/*sticky home button*/
-div .tutorialContainer-1v44GL {
-    position: sticky;
-    top: -12px;
-    padding-top: 12px;
-    padding-bottom: 1px !important;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    z-index: 100;
-    background: var(--Colleft) !important;
-  }
+/*user popout*/
+.userPopout-xaxa6l, .footer-3UKYOU, .bodyInnerWrapper-26fQXj { background-color: #282828; }
+.input-2_SIlA, .connectedAccount-2Jb-Z0 { background-color: var(--Colleft); }
+
+/*user profile*/
+.nameTag-ECvD8P, .topSection-y3p-_D, .infoScroller-1Qu30O, .listScroller-3GmIYj {
+    background-color: var(--background-primary);
+}
+
   
