@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //load config
     if (localSettings !== null) { //if we already have something saved, load it
         dataHandler.configLoad("normal", localSettings)
+    } else {
+        dataHandler.configLoad("normal", config)
     }
 
     //image toggling
