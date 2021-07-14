@@ -15,9 +15,9 @@ let settingsHTML = `
     </div>
     <span>
         ${/*CONFIGURE, CANCEL and X buttons*/""}
-        <button onclick="confHandler.gotoconfig('save')" class="rb-button" id="gotoconfig">CONFIGURE LINKS</button>
-        <button onclick="confHandler.gotoconfig('cancel')" class="rb-button" id="cancel">CANCEL</button>
-        <button onclick="document.querySelector('#settings').click()" id="close-settings" class="rb-button"><strong>&times;</strong></button>
+        <button class="rb-button" id="gotoconfig">CONFIGURE LINKS</button>
+        <button class="rb-button" id="cancel">CANCEL</button>
+        <button class="rb-button" id="close-settings"><strong>&times;</strong></button>
     </span>
     ${/*Config settigns*/""}
     <div id="config-controls">
@@ -28,8 +28,8 @@ let settingsHTML = `
         </p>
         add a link:<input type="text" class="rb-input" id="name" placeholder="name" autocomplete="off" /><input type="text" class="rb-input" id="url" placeholder="url" autocomplete="off" />
         <button id="link-add" class="rb-button">add</button><br />
-        greeting text:<input type="text" class="rb-input" id="greeting-inp" placeholder="heya" autocomplete="off" oninput="confHandler.updategreeting(this)" /><br />
-        custom left image:<input type="text" class="rb-input" id="img-path" placeholder="path or link to image" autocomplete="off" oninput="confHandler.updateimg(this)" />
+        greeting text:<input type="text" class="rb-input" id="greeting-inp" placeholder="heya" autocomplete="off" /><br />
+        custom left image:<input type="text" class="rb-input" id="img-path" placeholder="path or link to image" autocomplete="off" />
     </div>
 </div>
 
@@ -37,6 +37,7 @@ let settingsHTML = `
 
 /**
  * generates json from curretnly configured stuffs
+ * @param {String} exportmode 'normal' or 'config'
  */
 confHandler.exportjsonree = (exportmode) => { /*doesen't work for config exporting yet tm*/
     var config = {}
@@ -118,7 +119,7 @@ confHandler.exportjsonree = (exportmode) => { /*doesen't work for config exporti
         }
     })
 
-    //config settings
+    
     //import json
     document.getElementById('json-import').addEventListener("click", () => {
         var jsonn = document.getElementById('importjson').value
@@ -141,7 +142,13 @@ confHandler.exportjsonree = (exportmode) => { /*doesen't work for config exporti
     document.getElementById('json-export').addEventListener("click", () => {
         document.getElementById("exportjson").value = JSON.stringify(confHandler.exportjsonree("normal"))
     })
+
+    //close settings
+    document.getElementById('close-settings').addEventListener("click", () => {
+        document.querySelector('#settings').click()
+    })
     
+    //config settings
     //add link
     document.getElementById("link-add").addEventListener("click", () => {
         const name = document.getElementById("name").value
@@ -182,6 +189,26 @@ confHandler.exportjsonree = (exportmode) => { /*doesen't work for config exporti
         document.getElementById("url").value = ""
 
         spHandler.dragSetup() //re-setup dragging to also make the new link draggable
+    })
+
+    //save
+    document.getElementById('gotoconfig').addEventListener("click", () => {
+        confHandler.gotoconfig('save')
+    })
+
+    //cancel
+    document.getElementById('cancel').addEventListener("click", () => {
+        confHandler.gotoconfig('cancel')
+    })
+
+    //greeting input
+    document.getElementById('greeting-inp').addEventListener("input", () => {
+        confHandler.updategreeting(document.getElementById('greeting-inp'))
+    })
+
+    //img-path input
+    document.getElementById('img-path').addEventListener("input", () => {
+        confHandler.updateimg(document.getElementById('img-path'))
     })
 }
 
