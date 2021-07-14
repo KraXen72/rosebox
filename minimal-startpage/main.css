@@ -158,3 +158,12 @@ span.accent {min-width: 25px ;}
     padding: 10px;
     border-radius: 5px;
 }
+
+/*uncomment this if you have a tall image*/
+/*
+img {
+    width: 277px;
+    object-fit: cover;
+    object-position: top;
+}
+*/
