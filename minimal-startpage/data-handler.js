@@ -1,3 +1,6 @@
+// this file is used to handle all localStorage logic, data saving and loading, all saving and loading utility functions
+
+//the main object which has all the data in it
 var config = {
     "config": {
         "greeting": "heya",
@@ -75,101 +78,18 @@ var config = {
     ]
 }
 
-const parentLeft = document.getElementById("wrapper-left")
-const parentRight = document.getElementById("wrapper-right")
+//main Handler object which will house all the methods.
+const dataHandler = {}
 
-function dragSetup() {
-    console.log("setting up drag&drop")
-    const draggables = document.querySelectorAll('.dragabble-link')
-    const containers = document.querySelectorAll('.drag-container')
-
-    draggables.forEach(link => {
-        link.addEventListener('dragstart', () => {
-            link.classList.add("dragging")
-            link.style.userSelect = "none"
-        })
-
-        link.addEventListener('dragend', () => {
-            link.classList.remove("dragging")
-            link.style.userSelect = "none"
-        })
-    })
-
-    containers.forEach(container => {
-        container.addEventListener('dragover', e => {
-            e.preventDefault()
-            const afterElement = getAfterElement(container, e.clientY)
-            const current = document.querySelector('.dragging')
-            
-            if (afterElement == null) {
-                container.appendChild(current)
-            } else {
-                container.insertBefore(current, afterElement)
-            }
-        })
-    })
-
-    function getAfterElement(c, y) {
-        const dragabbleElements = [...c.querySelectorAll(".dragabble-link:not(.dragging)")]
-
-        return dragabbleElements.reduce((closest, child) => {
-            const box = child.getBoundingClientRect()
-            const offset = y - box.top - box.height / 2
-            if (offset < 0 && offset > closest.offset) {
-                return { offset: offset, element: child}
-            } else {
-                return closest
-            }
-        }, {offset: Number.NEGATIVE_INFINITY}).element
-    }
-}
-
-function generateLinks(mode, config, leftright, i) {
-    let li = document.createElement("li");
-
-    if (mode == "config") {
-        li.draggable = "true"
-        li.classList.add("dragabble-link")
-        li.style.userSelect = "none";
-    }
-
-    let a = document.createElement("a")
-    a.href = config[`links-${leftright}`][i].url
-    a.id = `link-${i+1}`
-    a.innerText = config[`links-${leftright}`][i].name
-    a.style.cursor = "pointer"
-
-    let span = document.createElement("span");
-    span.classList.add("accent")
-    span.innerHTML = mode == "normal" ? "~" : "&times;"
-    span.style.cursor = "pointer"
-    if (mode == "config") {
-        a.setAttribute("url", a.getAttribute("href"))
-        a.removeAttribute('href');
-        a.style.cursor = "grab"
-        span.addEventListener("click", () => {if (window.confirm(`delete '${a.innerText}' ?`)) {li.remove()}})
-    }
-    if (mode == "config") {
-        li.prepend(span)
-        li.appendChild(a)
-        if (leftright == "left") {
-            parentLeft.appendChild(li)
-        } else {
-            parentRight.appendChild(li)
-        }
-        
-    } else {
-        a.prepend(span)
-        li.appendChild(a)
-        if (leftright == "left") {
-            parentLeft.appendChild(li)
-        } else {
-            parentRight.appendChild(li)
-        }
-    }
-}
-
-function configLoad(mode, customjson) {
+/**
+ * load the links into the startpage from localStorage or provided json
+ * @param {String} mode "normal" or "config" normal loads everything normally, config loads stuff for configuring (drag n drop enabled etc)
+ * @param {String} customjson json (string) to load
+ */
+dataHandler.configLoad = (mode, customjson) => {
+    const parentLeft = window.globals.parentLeft
+    const parentRight = window.globals.parentRight
+    
     parentLeft.innerHTML = ""
     parentRight.innerHTML = ""
 
@@ -178,8 +98,6 @@ function configLoad(mode, customjson) {
         parentRight.innerHTML = ""
         parentLeft.innerHTML = ""
     }
-
-    console.log(config)
 
     if ('config' in config) {
         if ('greeting' in config["config"]) {
@@ -202,15 +120,20 @@ function configLoad(mode, customjson) {
     }
 
     for (let i = 0; i < Object.keys(config["links-left"]).length; i++) {
-        generateLinks(mode, config, "left", i)
+        spHandler.renderLink(mode, config, "left", i)
     }
 
     for (let i = 0; i < Object.keys(config["links-right"]).length; i++) {
-        generateLinks(mode, config, "right", i)
+        spHandler.renderLink(mode, config, "right", i)
     }
 
     if (mode == "config") {
-        dragSetup()
+        spHandler.dragSetup()
     }
+
+    console.log("loaded config: ", config)
 }
 function configloadnormal() {configLoad("normal")}
+
+console.log("init data-handler"/*, dataHandler*/)
+

@@ -4,14 +4,18 @@
         <title>~</title>
         <link rel="stylesheet" type="text/css" href="w3css.css" media="screen">
         <link rel="stylesheet" type="text/css" href="main.css" media="screen">
-        <!--<link rel="icon" href="favicon.ico" type="image/x-icon">-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <meta charset="UTF-8">
+
+        <script src="startpage-handler.js"></script>
+        <script src="data-handler.js"></script>
+        <script src="config-handler.js"></script>
+        <script src="main.js"></script>
     </head>
     <body>
         <div class="container-outer" hidden id="outercontainer">
             <div class="left-img" id="waifuimg">
-                <script>function showbody() {document.getElementById('outercontainer').classList.add("showcontainer");}</script>
-                <img src="img/yahallo.png" draggable="false" onload = "showbody()" onerror="showbody()">
+                <img src="img/yahallo.png" draggable="false">
             </div>
             <div class="w3-container container" id="maincontainer">
                 <h1 class="heya"><span id="greeting">heya</span><span class="accent"> ~</span></h1>
@@ -31,8 +35,5 @@
         <button class="settings" id="settings" aria-label="show settings">
             &#9881;
         </button>
-        <script src="config-loader.js"></script>
-        <script src="main.js" defer></script>
-        <script>configloadnormal()</script>
     </body>
 </html>
