@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.globals.leftimage = document.getElementById("waifuimg");
     window.globals.maincontainer = document.getElementById("maincontainer");
 
-    document.getElementById('outercontainer').classList.add("showcontainer"); //show the container on load
+    document.querySelector('img').onload = showbody
+    document.querySelector('img').onerror = showbody
 
     //if we checked "make settings and toggle buttons only appear on hover", then add .incognito to them
     if (localStorage.getItem("hidebuttons") == "true") {
@@ -52,5 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 })
+
+function showbody() {
+    document.getElementById('outercontainer').classList.add("showcontainer"); //show the container on image load
+}
 
 console.log("---------- loaded main ----------")
