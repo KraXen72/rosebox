@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localSettings !== null) { //if we already have something saved, load it
         dataHandler.configLoad("normal", localSettings)
     } else {
-        dataHandler.configLoad("normal", config)
+        dataHandler.configLoad("normal", JSON.stringify(config))
     }
 
     //image toggling
