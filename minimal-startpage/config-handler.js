@@ -173,7 +173,7 @@ confHandler.exportjsonree = (exportmode) => { /*doesen't work for config exporti
 
         let span = document.createElement("span");
         span.classList.add("accent")
-        span.innerHTML = "x"
+        span.innerHTML = "&times;"
         span.style.cursor = "pointer"
         
         a.removeAttribute('href')
