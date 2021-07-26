@@ -281,3 +281,5 @@ confHandler.gotoconfig = (mode) => {
         }
     }
 }
+
+console.log("init config-handler")
