@@ -1,3 +1,15 @@
+/**
+ * @name rosebox
+ * @author KraXen72
+ * @version 6
+ * @description rosebox discord theme
+ * @source https://github.com/KraXen72/rosebox
+*/
+
+/*@import url('https://kraxen72.github.io/rosebox/discord/main.css');
+
+.emojiItemDisabled-1FvFuF {filter: grayscale(0)}*/
+
 @import url("https://kraxen72.github.io/harmony-discord/main.css"); 
 :root, .theme-dark, .focusLock-Ns3yie * {
     /*gruvbox override*/
@@ -20,7 +32,6 @@
     --text-fix: #a3a5aa;
 
     --text-normal: var(--text-fix);
-    --interactive-active: var(--text-fix);
     --header-primary: var(--ColAccent);
 
 
@@ -35,8 +46,13 @@
 .lookFilled-1Gx00P.colorBrand-3pXr91 /*stream button*/
 {background-color: var(--ColAccent) !important;}
 
-.autocompleteInner-zh20B_ , .theme-dark .container-3ayLPN /*autocomplete i think*/
-{background-color: var(--Colleft) !important;}
+/*all Colleft stuff*/
+
+.autocompleteInner-zh20B_ , .theme-dark .container-3ayLPN, .jumpToPresentBar-G1R9s6, .barBase-1c2Rfb,
+.calendarPicker-2yf6Ci, .calendarPicker-2yf6Ci div,
+.scrollableContainer-2NUZem, .container-2fRDfG, /*message box & reply bar*/
+.footer-2gL1pp, .focusLock-Ns3yie *.message-2qRu38 /*delete message ig*/
+{background: var(--Colleft) !important;}
 
 .attachButtonInner-PQjIyk svg path {fill: var(--col-mute);} /* attach button the same color */
 
@@ -47,22 +63,37 @@
 }
 
 /*calendar*/
-.calendarPicker-2yf6Ci, .calendarPicker-2yf6Ci div{background: var(--Colleft) !important;}
 .datePicker--XZbmJ .calendarPicker-2yf6Ci .react-datepicker__day:hover {background: var(--ColAccent) !important;}
 
 ::selection {background-color: var(--ColAccentAlpha) !important;}
 
 /*small tweaks*/
-.selected-1Tbx07 {background-color: var(--background-modifier-selected) !important;}
+.selected-1Tbx07, .colorDefault-2K3EoJ.focused-3afm-j {background-color: var(--background-modifier-selected) !important;}
 .topSectionNormal-2-vo2m {background-color: #202225 !important;}
-.body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-2gL1pp, .section-2gLsgF {background-color: #282828;}
+.body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-2gL1pp, .section-2gLsgF,
+.headerNormal-1l1Znk, 
+.headerTop-2y3V6H
+{background-color: #282828;}
+.aboutMeSection-3bipSD {
+    background: #282828 !important;
+}
+
 .connectedAccount-36nQx7 {border: 1px solid rgba(0,0,0,0.2) !important;}
 
-.colorDefault-2K3EoJ.focused-3afm-j {background-color: var(--background-modifier-selected) !important;}
+/*color fixes*/
 .button-1YfofB.buttonColor-7qQbGO {color: #fff !important; }
+.modeUnread-1qO3K1 .name-23GUGE {color: var(--text-fix) !important;} /*unread channels*/
 
-/*message box*/
-.scrollableContainer-2NUZem { background-color: var(--Colleft) !important;}
+.headerTop-2y3V6H { border-bottom: 0px solid transparent !important; }
+.avatar-22FtUu { border: 6px solid #282828; }
 
-/*delete message ig*/
-.footer-2gL1pp, .focusLock-Ns3yie *.message-2qRu38 {background-color: var(--Colleft) !important;}
+/*user popout*/
+.userPopout-xaxa6l, .footer-3UKYOU, .bodyInnerWrapper-26fQXj { background-color: #282828; }
+.input-2_SIlA, .connectedAccount-2Jb-Z0 { background-color: var(--Colleft); }
+
+/*user profile*/
+.nameTag-ECvD8P, .topSection-y3p-_D, .infoScroller-1Qu30O, .listScroller-3GmIYj {
+    background-color: var(--background-primary);
+}
+
+  
