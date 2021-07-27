@@ -40,11 +40,6 @@ if &term == "screen-256color" || &term == "tmux-256color" || &term == "screen" |
     map! <esc>[1;5C <C-Right>
 endif
 
-" Setting status line for TMUX
-hi MyGrey guifg=#222222 guibg=#a3a5aa
-let g:tpipeline_statusline = '%#MyGrey# %t '
-let g:tpipeline_preservebg = 1
-
 colorscheme rosebox
 set background=dark
 
