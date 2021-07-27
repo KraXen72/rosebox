@@ -1,6 +1,6 @@
 # Editors
 
-![vim preview](https://cdn.discordapp.com/attachments/803974055485112350/804282038441738300/end_result.png)
+![vim preview](https://cdn.discordapp.com/attachments/803974055485112350/869205081210380298/Screen_Shot_2021-07-27_at_1.09.53_AM.png)
 
 ## Vim
 
