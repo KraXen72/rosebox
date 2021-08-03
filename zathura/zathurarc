@@ -1,0 +1,48 @@
+#!/bin/config
+
+set selection-clipboard clipboard # Enables clipboard
+set guioptions "" # Disables window decorations
+set scroll-step 12
+set statusbar-h-padding 15
+set statusbar-v-padding 15
+
+set notification-error-bg       "#262626" # bg
+set notification-error-fg       "#D08770" # bright:red
+set notification-warning-bg     "#262626" # bg
+set notification-warning-fg     "#bebebe" # bright:yellow
+set notification-bg             "#262626" # bg
+set notification-fg             "#A3BE8C" # bright:green
+
+set completion-bg               "#3a3a3a" # bg2
+set completion-fg               "#bab5b7" # fg
+set completion-group-bg         "#3a3a3a" # bg1
+set completion-group-fg         "#928374" # gray
+set completion-highlight-bg     "#637a8a" # bright:blue
+set completion-highlight-fg     "#3a3a3a" # bg2
+
+# Define the color in index mode
+set index-bg                    "#3a3a3a" # bg2
+set index-fg                    "#bab5b7" # fg
+set index-active-bg             "#A3BE8C" # bright:blue
+set index-active-fg             "#3a3a3a" # bg2
+
+set inputbar-bg                 "#262626" # bg
+set inputbar-fg                 "#bab5b7" # fg
+
+set statusbar-bg                "#504945" # bg2
+set statusbar-fg                "#bab5b7" # fg
+
+set highlight-color             "#bebebe" # bright:yellow
+set highlight-active-color      "#8b8f7e" # bright:orange
+
+set default-bg                  "#262626" # bg
+set default-fg                  "#bab5b7" # fg
+set render-loading              true
+set render-loading-bg           "#262626" # bg
+set render-loading-fg           "#bab5b7" # fg
+
+# Recolor book content's color
+set recolor-lightcolor          "#262626" # bg
+set recolor-darkcolor           "#bab5b7" # fg
+set recolor                     "true"
+# set recolor-keephue             true      # keep original color
