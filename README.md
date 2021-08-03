@@ -61,6 +61,7 @@ for the rest of the colors (syntax highlighting, etc.) for now use some from the
     - **_Vim_**
 - **Terminals** - [repo](https://github.com/KraXen72/rosebox/tree/master/terminals) - supported teminals: (for now)
     - **_alacritty_**
+    - **_kitty_**
 - **_CSS themes for websites_** - [repo](https://github.com/KraXen72/rosebox/tree/master/css-themes)
 
   
