@@ -2,7 +2,11 @@
     --max-width-col: 35rem;
     --max-width-ext: 60rem;
     --spacer: 1.5rem;
-    --radius: 10px;
+    --radius: 5px;
+    --border-size: 2px;
+
+    --rb-primary-bg: #262626;
+    --rb-accent-fg: #a57562;
 }
 html  {
     background: #222222;
@@ -25,9 +29,6 @@ img {
 .w3gridclass {
     width: 100%;
 }
-.marginleft194 {
-    margin-left: 1.94%;
-}
 
 body {
     position: relative;
@@ -49,11 +50,9 @@ body {
     position: relative;
 
     width: max-content;
-
-    border-radius: var(--radius);
-    background: #262626;
     padding: 0 !important;
 }
+/*inner container in the outer container, so js doesent fuck up*/
 #maincontainer {
     box-sizing: border-box;
     display: grid;
@@ -62,10 +61,11 @@ body {
     "image title title"
     "image links links";
 
-    
     max-width: var(--max-width-ext);
     width: 100%;
     padding: 0;
+    border-radius: var(--radius);
+    background: var(--rb-primary-bg);
 }
 #maincontainer.noimage {
     max-width: var(--max-width-col);
@@ -84,7 +84,7 @@ h1.heya {
     display: grid;
     grid-template: 1fr / 1fr 1fr;
     grid-template-areas: "left right";
-    gap: var(--spacer);
+    gap: calc( var(--spacer) / 2);
 }
 /*link holders*/
 .linkstop { /*links top*/
@@ -95,24 +95,21 @@ h1.heya {
 #rightlinks { grid-area: right; }
 
 
-
 ul {
     list-style-type: none;
     font-size: 20px;
     user-select: none;
 }
-
 li{user-select: none;}
 a {text-decoration: none ;}
 a:not(span):hover {opacity: 0.8;}
 .accent {
-    color: #a57562 ;
+    color: var(--rb-accent-fg) ;
     padding-right: 10px;
 }
 
 /*tweaks*/
 span.accent {min-width: 25px ;}
-.right {margin-left: -25px;}
 .jsoninp {width: 50%;}
 
 .toggle, .settings { /*small buttons*/
@@ -141,8 +138,8 @@ span.accent {min-width: 25px ;}
 /*rosebox buttons and inputs*/
 .rb-button {
     background-color: #5e4c44;
-    border-color: #a57562;
-    border-radius: 5px;
+    border-color: var(--rb-accent-fg);
+    border-radius: var(--radius);
     border-style: solid;
     color: #a3a5aa;
 }
@@ -151,8 +148,8 @@ span.accent {min-width: 25px ;}
 .rb-button:active {opacity: 0.5;}
 .rb-input {
     background-color: #232323;
-    border-color: #a57562;
-    border-radius: 5px;
+    border-color: var(--rb-accent-fg);
+    border-radius: var(--radius);
     border-style: solid;
     color: #a3a5aa
 }
@@ -182,13 +179,13 @@ span.accent {min-width: 25px ;}
 
 /*config stuff*/
 .borderme {
-    transition: all, 0.6s;
+    transition: all, 0.2s;
     transition-timing-function: ease-in;
 }
 .borderme-bordered {
     border: 2px dashed rgba(211, 211, 211, 0.534);
-    border-radius: 5px;
-    /*margin: 5px;*/
+    border-radius: var(--radius);
+    padding: 0 .5rem;
 }
 #config-controls {
     display: none;
@@ -206,12 +203,39 @@ span.accent {min-width: 25px ;}
     margin: 0;
 }
 .extrasettings {
-    width: var(--max-width-col) !important;
+    width: var(--max-width-ext) !important;
     margin: auto;
     background: #282828;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: var(--radius);
 }
+
+/*search*/
+.search {
+    padding: 1rem;
+    background-color: var(--rb-primary-bg);
+    margin-bottom: var(--spacer);
+    border-radius: var(--radius);
+    overflow: hidden;
+    font-family: Verdana,sans-serif;
+    font-size: 20px;
+
+    border: var(--border-size) solid var(--rb-primary-bg);
+  }
+  /*.search:hover { border: var(--border-size) solid var(--rb-accent-fg);}*/
+  .search form { display: inline; }
+  .search input {
+    font-family: Verdana,sans-serif;
+    background: none;
+    display: inline;
+    border: none;
+    color: var(--rb-accent-fg);
+    margin: 0 /*1rem*/;
+    font-size: 20px;
+  }
+  .search input:focus { outline: none; }
+  .search input[type="text"] { width: 80%;}
+  
 
 /*uncomment this if you have a tall image*/
 /*

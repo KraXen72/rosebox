@@ -109,14 +109,11 @@ dataHandler.configLoad = (mode, customjson) => {
     }
 
     let borderme = document.querySelectorAll(".borderme")
-    let marginleft = document.querySelector(".w3gridclass")
 
     if (mode == "config") {
         borderme.forEach(e => {e.classList.add("borderme-bordered")});
-        marginleft.classList.add("marginleft194")
     } else {
         borderme.forEach(e => {e.classList.remove("borderme-bordered")});
-        marginleft.classList.remove("marginleft194")
     }
 
     for (let i = 0; i < Object.keys(config["links-left"]).length; i++) {
