@@ -2,6 +2,7 @@
 
 const confHandler = {}
 
+//TODO rewrite in createelement manner
 let settingsHTML = `
 <div class="extrasettings">
     <div id="vanilla-settings">${/*these are the normal settings that show initailly*/""}
@@ -39,7 +40,7 @@ let settingsHTML = `
  * generates json from curretnly configured stuffs
  * @param {String} exportmode 'normal' or 'config'
  */
-confHandler.exportjsonree = (exportmode) => { /*doesen't work for config exporting yet tm*/
+confHandler.exportjsonree = (exportmode) => {
     var config = {}
 
     const leftLinks = [...document.getElementById('wrapper-left').children]
@@ -94,10 +95,11 @@ confHandler.exportjsonree = (exportmode) => { /*doesen't work for config exporti
     let wrapper = document.createElement('div')
     wrapper.id = "settings-wrapper"
     wrapper.innerText = "settings"
-    wrapper.style.padding = "10px"
+    //wrapper.style.padding = "10px"
 
     wrapper.innerHTML = settingsHTML
 
+    //document.body.prependChild(wrapper)
     document.body.appendChild(wrapper)
 
     //check the checkbox if localstorage has it checked

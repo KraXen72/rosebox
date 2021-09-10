@@ -1,15 +1,26 @@
+:root {
+    --max-width-col: 35rem;
+    --max-width-ext: 60rem;
+    --spacer: 1.5rem;
+    --radius: 10px;
+}
 html  {
     background: #222222;
     color: #a3a5aa;
 }
 .showcontainer {display: block !important;}
 img {
-    height: 354.25px !important;
+    /*height: 354.25px !important;*/
+    height: 358px;
+    width: auto;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
 }
 .w3gridclass {
     width: 100%;
@@ -17,29 +28,74 @@ img {
 .marginleft194 {
     margin-left: 1.94%;
 }
-.container-outer {
-    background: #262626;
+
+body {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+#settings-wrapper {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: max-content;
-    border-radius: 3px;
+    bottom: var(--spacer) !important;
+}
+.container-outer {
+    box-sizing: border-box;
     user-select: none;
+    position: relative;
+
+    width: max-content;
+
+    border-radius: var(--radius);
+    background: #262626;
+    padding: 0 !important;
 }
-.left-img{
-    float: left;
-    width: 30% 
+#maincontainer {
+    box-sizing: border-box;
+    display: grid;
+    grid-template: min-content 1fr / min-content 1fr 1fr;
+    grid-template-areas:
+    "image title title"
+    "image links links";
+
+    
+    max-width: var(--max-width-ext);
+    width: 100%;
+    padding: 0;
 }
-.container {
-    float: right;
-    width: 70%;
-    padding-left: 30px;
-    padding-right: 15px;
+#maincontainer.noimage {
+    max-width: var(--max-width-col);
+    width: 100%;
 }
-h1.heya {
-    margin-left: 10%  !important;
+
+.left-img{ grid-area: image; }
+h1.heya { 
+    grid-area: title; 
+    padding: calc( var(--spacer) / 2 ) var(--spacer) calc( var(--spacer) / 2 ) var(--spacer) !important;
 }
+.linkholder {
+    grid-area: links;
+    padding: 0 var(--spacer) var(--spacer) var(--spacer) !important;
+    
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-template-areas: "left right";
+    gap: var(--spacer);
+}
+/*link holders*/
+.linkstop { /*links top*/
+    width: 100%;
+    box-sizing: border-box;
+} 
+#leftlinks { grid-area: left; }
+#rightlinks { grid-area: right; }
+
+
+
 ul {
     list-style-type: none;
     font-size: 20px;
@@ -81,10 +137,6 @@ span.accent {min-width: 25px ;}
 
 /*resizing when img is hidden*/
 .leftimghidden {display: none !important;}
-.resizecontainer {
-    width: 105% !important;
-    padding-left: 15px !important;
-}
 
 /*rosebox buttons and inputs*/
 .rb-button {
@@ -150,9 +202,11 @@ span.accent {min-width: 25px ;}
 .drag-container {
     min-height: 7vh;
     min-width: 100%;
+    padding-inline-start: 0px;
+    margin: 0;
 }
 .extrasettings {
-    width: max-content !important;
+    width: var(--max-width-col) !important;
     margin: auto;
     background: #282828;
     padding: 10px;

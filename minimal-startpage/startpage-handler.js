@@ -116,13 +116,13 @@ spHandler.dragSetup = () => {
 //show and hide the left image respectively
 spHandler.waifu.show = () => {
     window.globals.leftimage.classList.remove("leftimghidden");
-    window.globals.maincontainer.classList.remove("resizecontainer");
+    window.globals.maincontainer.classList.remove("noimage");
     
     localStorage.setItem("hideWaifu", null);
 }
 spHandler.waifu.hide = () => {
     window.globals.leftimage.classList.add("leftimghidden");
-    window.globals.maincontainer.classList.add("resizecontainer");
+    window.globals.maincontainer.classList.add("noimage");
     
     localStorage.setItem("hideWaifu", "enabled");
 }
