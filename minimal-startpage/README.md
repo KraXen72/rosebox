@@ -1,6 +1,11 @@
-# heya ~
+# HEADS UP! new startpage is done!  
+this is my old startpage, however i have completely rewritten it to be modular. you can find it [here](https://github.com/KraXen72/startpage-new).  
+this part of the rosebox repo (minimal-startpage) will no longer be updated.
+[https://github.com/KraXen72/glide](https://github.com/KraXen72/glide)
+    
+# heya ~  
 this is my minimal rosebox-themed startpage made with HTML, CSS, W3.CSS and JS.  
-  
+
 - click **bottom right &#9680;** to toggle the visibility of the image
 - click **bottom left &#9881;** to open the settings popup 
 - you can make these buttons **invisible but clickable** in the settings.
