@@ -271,6 +271,8 @@
  .modeUnread-1qO3K1 .icon-1DeIlz>path[d^="M5.88657"], .modeUnread-1qO3K1 .icon-1DeIlz>path[d^="M14 8C14"] {
    d: path("M 5.88657 21 C 5.57547 21 5.3399 20.7189 5.39427 20.4126 L 6.00001 17 H 2.59511 C 2.28449 17 2.04905 16.7198 2.10259 16.4138 L 2.27759 15.4138 C 2.31946 15.1746 2.52722 15 2.77011 15 H 6.35001 L 7.41001 9 H 4.00511 C 3.69449 9 3.45905 8.71977 3.51259 8.41381 L 3.68759 7.41381 C 3.72946 7.17456 3.93722 7 4.18011 7 H 7.76001 L 8.39677 3.41262 C 8.43914 3.17391 8.64664 3 8.88907 3 H 9.87344 C 10.1845 3 10.4201 3.28107 10.3657 3.58738 L 9.76001 7 H 15.76 L 16.3968 3.41262 C 16.4391 3.17391 16.6466 3 16.8891 3 H 17.8734 C 18.1845 3 18.4201 3.28107 18.3657 3.58738 L 17.76 7 H 21.1649 C 21.4755 7 21.711 7.28023 21.6574 7.58619 L 21.4824 8.58619 C 21.4406 8.82544 21.2328 9 20.9899 9 H 17.41 L 16.35 15 H 19.7549 C 20.0655 15 20.301 15.2802 20.2474 15.5862 L 20.0724 16.5862 C 20.0306 16.8254 19.8228 17 19.5799 17 H 16 L 15.3632 20.5874 C 15.3209 20.8261 15.1134 21 14.8709 21 H 13.8866 C 13.5755 21 13.3399 20.7189 13.3943 20.4126 L 14 17 H 8.00001 L 7.36325 20.5874 C 7.32088 20.8261 7.11337 21 6.87094 21 H 5.88657 Z M 9.41045 9 L 8.35045 15 H 14.3504 L 15.4104 9 H 9.41045 Z") !important;
  }
+
+ 
  
  /*remove a lot of stuff*/
  a[href="https://support.discord.com"],
@@ -297,3 +299,19 @@
  .bodyTitle-Y0qMQz  {text-transform: capitalize;font-size: 15px;}                                                        /*change some text from all caps to only fist letter cap*/
  .protip-YaFfgO {display: none;}                                                                                         /*hide protips bc im a pro*/
  * {outline: 0px solid transparent !important;}                                                                          /*remove all outlines just because chrome*/
+
+ /*old wordmark because poggers*/
+.wordmark-2iDDfm svg {width: 0px;}
+.wordmark-2iDDfm::after {
+    position: absolute;
+    font-family: "Discordinated";
+    content: "Discord";
+    top: 3px;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--wordmark-text-color);
+    height: 19px;
+    width: 235px;
+    transform: translateY(-8%);
+    line-height: 20px;
+}
