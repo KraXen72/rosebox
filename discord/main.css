@@ -66,7 +66,7 @@
  :root {
    --brand-experiment-30a: var(--accent-color-a) !important;
    --brand-experiment-200: var(--accent-color) !important;
-  --interactive-active: #fff !important;
+  /*--interactive-active: #fff !important;*/
  }
  .scroller-RmtA4e, .panels-j1Uci_ { background: var(--background-2) !important; } /*make channel list bg2*/
  .members-1998pB, .members-1998pB>div { background: var(--background-secondary) !important; }
