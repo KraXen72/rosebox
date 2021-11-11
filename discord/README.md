@@ -1,6 +1,10 @@
 # rosebox theme for Discord
 A discord theme that builds on [Zelk](https://github.com/schnensch0/zelk) theme, but with the rosebox color scheme. this new version is still wip so check bottom of readme for old version.
 
+**PLEASE DON'T ACTUALLY USE THIS YET, USE THE OLD VERSION FOR NOW THIS ONE IS SUPER WIP AND REALLY BAD**  
+old version: the old version of this theme, build on my harmony theme can be found [here](https://github.com/KraXen72/rosebox-discord)  
+i wanna do a proper rewrite of the old one, not just a lazy theme reskin but i don't have much time rn.
+
 ![main](https://cdn.discordapp.com/attachments/704792091955429426/769205102393032744/unknown.png)
 ![frend](https://cdn.discordapp.com/attachments/704792091955429426/769205114556383262/unknown.png)
 
