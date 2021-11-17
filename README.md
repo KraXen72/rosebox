@@ -66,7 +66,7 @@ for the rest of the colors (syntax highlighting, etc.) for now use some from the
 
   
 ### things built with rosebox
-- **_startpage_** - a simple startpage - [link](https://kraxen72.github.io/rosebox/minimal-startpage) - [repo](https://github.com/KraXen72/rosebox/tree/master/minimal-startpage)
+- **_glide_** - a modular but comfy startpage for many scenarios - [repo](https://github.com/KraXen72/glide)
 - **_animetwist-dl-electron_** - an anime downloader from twist.moe - [repo](https://github.com/KraXen72/animetwist-dl-electron)  
 - **_playlist-manager_** - offline playlist manager - [repo](https://github.com/KraXen72/playlist-manager)
 - **_roseboxlib_** - a (mostly) css and some js utils library i use in my electron projects - [link](https://kraxen72.github.io/roseboxlib/) - [repo](https://github.com/KraXen72/roseboxlib)
