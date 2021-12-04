@@ -6,7 +6,9 @@
 this theme consists of 2 main parts:  
   
 ## Vivaldi theme: 
-Create a new theme and set it up like this:
+Create a new theme and set it up like this:  
+> **vivaldi 5.0 and up: [apply from vivaldi theme store](https://themes.vivaldi.net/themes/g1OJ53DlAob)** 
+   
 ![theme](https://cdn.discordapp.com/attachments/704792091955429426/772485052969517066/Screenshot_2020_11.01_1639.png)  
 
 ## Custom css
