@@ -2,8 +2,8 @@
 rosebox css for discord.
 built on the ashes of Harmony, my first discord theme, but now **rewritten in scss!**
 
-![main](https://cdn.discordapp.com/attachments/704792091955429426/769205102393032744/unknown.png)
-![frend](https://cdn.discordapp.com/attachments/704792091955429426/769205114556383262/unknown.png)
+![main](https://cdn.discordapp.com/attachments/704792091955429426/920341533692133507/unknown.png)
+![frend](https://cdn.discordapp.com/attachments/704792091955429426/920341817063510037/unknown.png)
 
 **install using powercord.** https://powercord.dev**install using powercord / betterdiscord / any other discord css injector.** https://powercord.dev / https://github.com/rauenzi/BBDInstaller/releases/
 
@@ -35,10 +35,6 @@ if this doesent work copy the contents of the link into the css file.
 ## Setting up the dev env
 1. you need [this extension](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass) for vs code
 2. if you want live reload, use something like betterdiscord. modify the paths in ``scripts/watcher.js`` to point at this directory and at the betterdiscord install directory. then run watcher.js while sass extension is watching
-
-## My other Themes
-<blockquote class="embedly-card"><h4><a href="https://github.com/KraXen72/deep-blue-discord">KraXen72/deep-blue-discord</a></h4><p>A theme for discord Based off the new Deep Blue Discord Concept art on their webpage: https://discord.com/new, Uses my Harmony theme as base</p></blockquote>
-<blockquote class="embedly-card"><h4><a href="https://github.com/KraXen72/harmony-discord">KraXen72/harmony-discord</a></h4><p>a frequently updated theme that keeps the vanilla discord experience, but brings harmony and many tweaks into it. install using powercord. https://powercord.dev</p></blockquote>
 
 the old version of this theme in vanilla css can be found [here](https://github.com/KraXen72/rosebox-discord)
 for questions contact KraXen72#9190 on Discord    
