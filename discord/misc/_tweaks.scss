@@ -109,4 +109,10 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
     margin-left: .25rem;
     margin-right: .25rem;
     border-radius: 2rem;
+    
+    --interactive-active: #{$rb-fg-accent};
+
+    .gm-spotify-controls-playback-thumb {
+        background: $rb-fg-accent !important;
+    }
 }
