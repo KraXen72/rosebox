@@ -1,5 +1,5 @@
 # HEADS UP! new startpage is done!  
-this is my old startpage, however i have completely rewritten it to be modular. you can find it [here](https://github.com/KraXen72/startpage-new).  
+this is my old startpage, however i have completely rewritten it to be modular. you can find it [here](https://github.com/KraXen72/glide).  
 this part of the rosebox repo (minimal-startpage) will no longer be updated.
 [https://github.com/KraXen72/glide](https://github.com/KraXen72/glide)
     
