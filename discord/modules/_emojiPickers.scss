@@ -1,0 +1,82 @@
+/*----//---- EMOJI PICKERS----------*/
+/*credit to emma🌺#0968 for the code */
+//seriously the code from emma is carrying this shit in 2021. after 2 hours of writing my own implementation i just returned to this one becaue mine didn't work
+
+
+/* remove nav*/
+
+
+//stuff im too afraid to remove tbh
+.header-1nkwgG,
+.header-8ilj5e,
+.header-1TOWci {
+    --webkit-shadow: none;
+    box-shadow: none !important;
+    filter: none;
+}
+.header-8ilj5e {
+    padding-top: 16px;
+}
+div#popout_7505 {
+    top: 500px !important;
+    right: 265px !important;
+}
+
+.contentWrapper-SvZHNd {
+    grid-template-rows: auto;
+    min-height: 442px !important;
+
+    .nav-7UD0KD {display: none !important}
+    .navList-2UtuhC {display: none;}
+}
+
+.drawerSizingWrapper-27qFHb {
+    height: 442px !important;
+    max-width: 424px;
+    .resizeHandle-3NRr0z {
+        //disable, resize and reenable this if ur emoji FAT
+        display: none;
+        cursor: default;
+    }
+}
+
+#emoji-picker-tab-panel {
+    .wrapper-2Gsate.categoryList-2Kzf65{
+        transform: rotate(-90deg);
+        transform: rotate(-90deg) translateX(-143px) translateY(190px);
+        height: 430px;
+        padding-top: 0px !important;
+    
+        .listItems-1uJgMC .categoryItem-1D0nxC,
+        .unicodeShortcut-15J8Ck {
+            transform: rotate(90deg);
+        }
+        .unicodeShortcut-15J8Ck, .scroller-3gAZLs, .listItems-1uJgMC {
+            background: $rb-bg-secondary-d !important;
+        }
+    }
+    .emojiPicker-3PwZFl {
+        grid-template-rows: 46px auto calc(calc(48px * 2) + 8px) !important;
+        grid-template-columns: 0 auto !important;
+        position: relative !important;
+        height: 440px;
+        width: 428px;
+        border-radius: 5px !important;
+    
+        .emoji-AAbs8r {margin-left: -5px !important;} //emoji preview center it
+
+        .searchBar-5di9mG, .inspector-3LQtX9 {
+            background: $rb-bg-primary !important;
+        }
+    }
+}
+
+#gif-picker-tab-panel {
+    .searchBar--fTZYa {
+        background: $rb-bg-primary !important;
+    }
+}
+
+.container-2XeR5Z, .inner-3ErfOT {
+    background: $rb-bg-primary !important;
+}

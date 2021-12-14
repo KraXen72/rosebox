@@ -1,0 +1,131 @@
+/*----//----SMALL TWEAKS----------*/
+//.wrapper-1F5TKx[aria-hidden="true"] { visibility: hidden;}                                                              /*placeholder messages delet*/
+.searchResultsWrap-3-pOjs{ width: 500px; }                                                                              /*Wider search results section */
+.verified-1eC5dy:not(.disableColor-MwOAZf) > svg path { fill: #7289DA}                                                /*Bring Back Blurple Verified Badge */
+.scrollerBase-289Jih::-webkit-scrollbar-track {background-color: transparent  !important;}                              /*scroller quick fix*/
+.expandedFolderBackground-2sPsd-, .folder-21wGz3 {background-color: var(--background-primary);transition: all 0.3s;}    /*server folder*/
+::selection {background: #a5b3ff; color: var(--text-normal); }                                                        /*better selection*/
+.toolbar-1t6TWx [aria-label="Member List"] { display: none;}                                                            /*member list toggle hide*/
+.participant-1lOCsd { transform: scale(1.3, 1.3) !important;margin-left: 20px;margin-right: 20px}                       /*scale the circular calling state*/
+.recentMentionsPopout-3rCiI6, .messagesPopoutWrap-1MQ1bW {max-height: 93vh !important;}                                 /*inbox*/
+.sidebar-2K8pFh {background-color: var(--Colleft);}                                                                     /*new server discovery */
+.searchBarComponent-32dTOx, .search-36MZv-, .searchBar-3dMhjb {background-color: var(--background-primary) !important}  /*search bars*/
+.botTagVerified-1klIIt {border-top-left-radius: 3px;border-bottom-left-radius: 3px;}                                    /*bot tag fix*/
+.jumpToPresentBar-G1R9s6, .barBase-1c2Rfb {width: 88%; margin-left: auto; margin-right: auto;}                          /*bottom jump to present bar is slightly shorter*/
+.embedSuppressButton-1FonMn {cursor: pointer;display: none;}                                                            /*hide remove embed button*/
+.input-2VB9rf {Background-Color: #36383d;}                                                                            /*ctrl + K quick switcher made the input a bit darker*/
+.bodyTitle-Y0qMQz  {text-transform: capitalize;font-size: 15px;}                                                        /*change some text from all caps to only fist letter cap*/
+.protip-YaFfgO {display: none;}                                                                                         /*hide protips bc im a pro*/
+* {outline: 0px solid transparent !important;}                                                                          /*remove all outlines just because chrome*/
+[aria-label="Send a gift"] {display: none;}                                                                             /*hide gift nitro button*/
+[aria-label="Open GIF picker"] {margin-top: 3px;}
+[href="https://support.discord.com"] {display: none !important }                                                        /*hide help*/   
+
+/*invert plus and minus*/
+img[src="/assets/9a43e631d506ae4818ecefc825dc02ad.svg"],
+img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] { 
+  filter: invert(1); 
+}
+
+/*calendar*/
+.datePicker--XZbmJ .calendarPicker-2yf6Ci .react-datepicker__day:hover {background: var(--ColAccent) !important;}
+
+
+/*fix emoji suggestions not being scrollable*/
+.autocompleteInner-zh20B_ {
+    overflow-y: auto;
+    max-height: 75vh;
+}
+/*nicer connected accounts*/
+.connectedAccount-36nQx7 {
+    background-color: var(--background-tertiary);
+    border: 0 !important;
+ }
+ /* Fix fade thingy for good looking titlebar snippet */
+.children-19S4PO:after {
+    background: transparent !important;
+}
+.searchResultMessage-1fxgXh.hit-1fVM9e > div > .contents-2mQqc9 img,
+    div[id^=pinned-messages-] .contents-2mQqc9 img {
+    top: 15px
+}
+/*cool gradient user popout bgs*/
+.headerPlaying-j0WQBV, .topSectionPlaying-1J5E4n {
+    z-index: 1;
+    background-image: linear-gradient(to top right,#60adff,#4453fc);
+}
+.headerSpotify-zpWxgT, .topSectionSpotify-1lI0-P {
+    z-index: 1;
+    background-image: linear-gradient(to top right,#50e498,#30ae5d);
+}
+
+/*css snipet also from the person above - old streamin color*/
+:root .headerStreaming-2FjmGz{
+    background: #593695 !important;
+}
+
+/*css snippet fix loading emojis by emma*/
+.emojiItem-14v6tW .emojiItemImageLoading-1yEIxx /* Fix Loading Emojis */ {
+    background-image: none;
+    background-color: var(--background-primary) !important;
+    border-radius: 30%;
+ }
+
+ .userInfoViewing-16kqK3 .flex-1xMQg5 .flexChild-faoVW3 .marginBottom20-32qID7 + div .selectable-2GY4I1 { /*blur email until hover*/
+    filter: blur(5px);
+    transition: filter .5s;
+}
+
+
+/*old wordmark because poggers*/
+.wordmark-2iDDfm svg {width: 0px;}
+.wordmark-2iDDfm::after {
+    position: absolute;
+    font-family: "Discordinated";
+    content: "Discord";
+    top: 3px;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--wordmark-text-color);
+    height: 19px;
+    width: 235px;
+    transform: translateY(-8%);
+    line-height: 20px;
+}
+
+/*small tweaks*/
+.selected-1Tbx07, .colorDefault-2K3EoJ.focused-3afm-j {background-color: var(--background-modifier-selected) !important;}
+.topSectionNormal-2-vo2m {background-color: #202225 !important;}
+.body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-2gL1pp, .section-2gLsgF,
+.headerNormal-1l1Znk, 
+.headerTop-2y3V6H
+{background-color: #282828;}
+.aboutMeSection-3bipSD {
+    background: #282828 !important;
+}
+
+/* quick switcher */
+.quickswitcher-3JagVE, .scroller-zPkAnE {
+    background-color: var(--background-tertiary) !important;
+  }
+  .quickswitcher-3JagVE {
+    border-radius: var(--border-radius-1);
+  }
+  .quickswitcher-3JagVE .input-2VB9rf {
+    box-shadow: none;
+  }
+  .quickswitcher-3JagVE .input-2VB9rf:focus {
+    border: 1px solid var(--accent-color);
+  }
+  .quickswitcher-3JagVE .scroller-zPkAnE {
+    margin-right: unset;
+  }
+  .resultFocused-3aIoYe .username-2hHyRL, .resultFocused-3aIoYe .miscContainer-2ptJ_C {
+    color: var(--interactive-selected);
+  }
+  .resultDefault-1ymv3u, .resultFocused-3aIoYe {
+    border-radius: var(--border-radius-2);
+  }
+  .result-oB0z--[aria-selected=true] {
+    background: var(--background-modifier-hover);
+  }

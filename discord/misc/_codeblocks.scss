@@ -1,0 +1,19 @@
+/*----//----CODEBLOCKS----------*/
+.powercord-quickcss {
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--background-tertiary);
+    background: var(--background-secondary);
+}
+:root .powercord-quickcss-header,
+:root .powercord-quickcss-footer,
+.powercord-quickcss .CodeMirror,
+.powercord-quickcss .CodeMirror-gutters {
+    background: transparent !important;
+}
+
+code, .footer-2yA7Ep,
+.embedWrapper-lXpS3L .textContainer-C0szpm {
+    background: $rb-bg-secondary !important;
+    border-color: rgba(0,0,0,0.2);
+}

@@ -1,0 +1,32 @@
+/*----//---- MUTE, DEAFEN AND DISCONNECT BUTTON AREA----------*/
+.panels-j1Uci_ {
+    /*username, mute, deafen and settings panel*/
+    background-color: $rb-bg-secondary-d;
+}
+/*mute, deafen and settings button hover to circle - Also inspired from Customa*/
+.container-3baos1 button:not([aria-label=Unmute]):not([aria-label=Undeafen]):hover {
+    border-radius: 50%;
+}
+
+// yeet border bottom from userArea
+.activityPanel-28dQGo, .container-1giJp5 {
+    border-bottom: none !important;
+}
+
+/*----//----MESSAGE INPUT BOX AND RELATED CHANGES----------*/
+.scrollableContainer-2NUZem { /*main input bar*/
+    border-radius: 25px;
+    background: $col-dcweb-6;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.channelTextArea-rNsIhG {background: transparent;}
+.attachButton-2WznTc,
+.attachWrapper-2TRKBi { border-right: none;} /*remove divider from attachbutton*/
+.buttons-3JBrkn {margin-right: 5px !important;} /*add back margin to emoji button*/
+
+
+.autocomplete-1vrmpx {background-color: $rb-bg-secondary-d;} /*autocomplete*/
+
+.inner-MADQqc, .scrollableContainer-2NUZem {
+    background-color: $rb-bg-secondary-d;
+}

@@ -1,0 +1,55 @@
+@import url("https://kckarnige.github.io/femboi_owo/discord-font.css");
+
+@import 'base/variables';
+@import 'base/reset';
+@import 'utils';
+@import 'layout';
+
+@import 'modules/newServerDarkmode';
+@import 'modules/homeScreen';
+@import 'modules/serverBanner';
+@import 'modules/userArea';
+@import 'modules/emojiPickers';
+@import 'modules/jumpBars';
+@import 'modules/accentColor';
+@import 'modules/userPopout';
+@import 'modules/userProfile';
+
+@import 'misc/tweaks';
+@import 'misc/scrollbars';
+@import 'misc/codeblocks';
+@import 'misc/contextMenus';
+
+:root, .theme-dark, .focusLock-Ns3yie * {
+    /*gruvbox override*/
+    --Colleft: var(--slate-background);
+    --background-primary: var(--slate-background-light);
+    --background-primary: #262626;
+    --Colleft: #222222;
+    --background-secondary: var(--Colleft);
+    --ColAccent: #a57562;
+    --ColAccentAlpha: RGBA(165, 117, 98, 0.2);
+
+    /*set respecitve colors to Colleft - ignore*/
+    --ColServerSelBG: var(--Colleft);
+    --ColChannelList: var(--Colleft);
+    --ColTitleBar: var(--Colleft);
+    --ColMemberList:var(--background-primary);
+    --ColLink: var(--ColAccent);
+    --text-link: var(--ColLink);
+
+    --text-fix: #a3a5aa;
+
+    --text-normal: var(--text-fix);
+    --header-primary: var(--ColAccent);
+}
+
+::selection {background-color: $rb-bg-accent !important;}
+
+/*
+fix mention background
+
+
+
+
+*/

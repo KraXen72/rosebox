@@ -1,0 +1,23 @@
+/*----//----PROFILE BUTTONS (SEND MESSAGE, FRIEND REQUEST etc.)----------*/
+.lookFilled-1Gx00P.colorGreen-29iAKY {background-color: $Col-dcweb-1;}
+.lookFilled-1Gx00P.colorGreen-29iAKY:hover {background-color: $Col-dcweb-1; opacity: 0.95;}
+.lookFilled-1Gx00P.colorGreen-29iAKY:active {background-color: $Col-dcweb-1; opacity: 0.90;}
+.lookFilled-1Gx00P.colorGreen-29iAKY:disabled {background-color: $Col-dcweb-1 ;color: #eee;}
+.lookInverted-2D7oAl.colorBrand-3pXr91:hover {background-color: #fff; opacity: 0.75;}
+.lookInverted-2D7oAl.colorBrand-3pXr91:active {background-color: #fff; opacity: 0.70;}
+.lookInverted-2D7oAl.colorBrand-3pXr91:disabled {background-color: rgb(255, 255, 255);}
+.lookInverted-2D7oAl.colorGreen-29iAKY:hover {background-color: #fff; opacity: 0.75;}
+.lookInverted-2D7oAl.colorGreen-29iAKY:active {background-color: #fff; opacity: 0.70;}
+
+.connectedAccount-2Jb-Z0 {
+    background: $rb-bg-secondary-d;
+}
+
+/*user profile*/
+.nameTag-ECvD8P, .topSection-y3p-_D, .infoScroller-1Qu30O, .listScroller-3GmIYj, .avatar-AvHqJA {
+    background-color: var(--background-primary);
+}
+.avatar-AvHqJA, .header-4zuFdR {
+    background: $rb-bg-primary !important;
+    border-color: $rb-bg-primary !important;
+}

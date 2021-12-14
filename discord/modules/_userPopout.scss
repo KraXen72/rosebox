@@ -1,0 +1,37 @@
+/*----//----USER POPOUT----------*/
+/*role pills*/
+.role-2irmRk{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    padding: 5px;
+
+    border-radius: 100px;
+}
+.roleCircle-3xAZ1j::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: inherit;
+    opacity: .2;
+    z-index: -1;
+    pointer-events: none;
+}
+.roleCircle-3xAZ1j {
+    margin-left: 2px;
+}
+.footer-1fjuF6{border-top: none;}
+.note-3kmerW textarea:focus { background-color: transparent;} /* fix edit note profile idk*/
+
+/*user popout*/
+.userPopout-xaxa6l, .footer-3UKYOU, .bodyInnerWrapper-26fQXj { background-color: #282828; }
+.input-2_SIlA, .connectedAccount-2Jb-Z0 { background-color: $rb-bg-secondary-d; }
+
+.avatarWrapper-3r9PdD, .avatar-37jOim  {
+    background: #282828;
+    border-color: #282828;
+}

@@ -1,9 +1,6 @@
 # rosebox theme for Discord
-A discord theme that builds on [Zelk](https://github.com/schnensch0/zelk) theme, but with the rosebox color scheme. this new version is still wip so check bottom of readme for old version.
-
-**PLEASE DON'T ACTUALLY USE THIS YET, USE THE OLD VERSION FOR NOW THIS ONE IS SUPER WIP AND REALLY BAD**  
-old version: the old version of this theme, build on my harmony theme can be found [here](https://github.com/KraXen72/rosebox-discord)  
-i wanna do a proper rewrite of the old one, not just a lazy theme reskin but i don't have much time rn.
+rosebox css for discord.
+built on the ashes of Harmony, my first discord theme, but now **rewritten in scss!**
 
 ![main](https://cdn.discordapp.com/attachments/704792091955429426/769205102393032744/unknown.png)
 ![frend](https://cdn.discordapp.com/attachments/704792091955429426/769205114556383262/unknown.png)
@@ -14,7 +11,7 @@ i wanna do a proper rewrite of the old one, not just a lazy theme reskin but i d
 1. go to ``Settings`` > ``Themes`` > ``Quick CSS tab`` / ``Custom CSS`` for BD
 2. Paste this into the textarea on the first line
 ```css 
-@import url('https://kraxen72.github.io/rosebox/discord/main.css');
+@import url('https://kraxen72.github.io/rosebox/discord/dist/main.css');
 ```   
 3. enjoy
   
@@ -23,7 +20,7 @@ i wanna do a proper rewrite of the old one, not just a lazy theme reskin but i d
 2. put in ``powercord/src/themes/rosebox``
 3. put this into your css file:  
 ```css 
-@import url('https://kraxen72.github.io/rosebox/discord/main.css');
+@import url('https://kraxen72.github.io/rosebox/discord/dist/main.css');
 ```  
 
 ```diff
@@ -35,13 +32,15 @@ if this doesent work copy the contents of the link into the css file.
 6. If you want to turn the theme off or on, also switch themes, i recommend installing this plugin: https://github.com/LandenStephenss/Themer.  
 7. enjoy
 
+## Setting up the dev env
+1. you need [this extension](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass) for vs code
+2. if you want live reload, use something like betterdiscord. modify the paths in ``scripts/watcher.js`` to point at this directory and at the betterdiscord install directory. then run watcher.js while sass extension is watching
+
 ## My other Themes
 <blockquote class="embedly-card"><h4><a href="https://github.com/KraXen72/deep-blue-discord">KraXen72/deep-blue-discord</a></h4><p>A theme for discord Based off the new Deep Blue Discord Concept art on their webpage: https://discord.com/new, Uses my Harmony theme as base</p></blockquote>
 <blockquote class="embedly-card"><h4><a href="https://github.com/KraXen72/harmony-discord">KraXen72/harmony-discord</a></h4><p>a frequently updated theme that keeps the vanilla discord experience, but brings harmony and many tweaks into it. install using powercord. https://powercord.dev</p></blockquote>
 
-the old version of this theme, build on my harmony theme can be found [here](https://github.com/KraXen72/rosebox-discord)
-
-  
+the old version of this theme in vanilla css can be found [here](https://github.com/KraXen72/rosebox-discord)
 for questions contact KraXen72#9190 on Discord    
 
 

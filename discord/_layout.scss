@@ -1,0 +1,91 @@
+.container-3w7J-x, //channels bar
+.wrapper-3NnKdC.guilds-1SWlCJ, .scroller-1Bvpku, //server bar
+.withFrame-haYltI, .wordmark-2iDDfm,//top bar
+#app-mount, body, .bg-h5JY_x //app bg idk
+{
+    background-color: $rb-bg-secondary-d !important;
+}
+
+/*----//----applying respecive color variables----------*/
+.scroller-2TZvBN {
+    /*server selector*/
+    background-color: $rb-bg-secondary-d !important;
+}
+.categoryWrapper-UZ5YNj,
+.header-8ilj5e,
+.nav-2KnmHb,
+.header-1TOWci,
+.container-2lgZY8,
+.privateChannels-1nO12o,
+.container-PNkimc,
+.searchBar-6Kv8R2 {
+    background-color: $rb-bg-secondary-d !important;
+}
+.inspector-S2gM3e, .input-1Rv96N, .uploadModal-2ifh8j, .footer-3mqk7D.hasSpoilers-1IRtQC, .theme-dark .root-1gCeng, .message-2qRu38 /*color fixes*/ {
+    background-color: var(--background-primary) !important;
+}
+
+.searchBarComponent-32dTOx, .search-36MZv-, .searchBar-3dMhjb /*search bars*/ {
+    background-color: var(--background-primary) !important;
+}
+
+.autocompleteInner-zh20B_ , .theme-dark .container-3ayLPN, .jumpToPresentBar-G1R9s6, .barBase-1c2Rfb,
+.calendarPicker-2yf6Ci, .calendarPicker-2yf6Ci div,
+.scrollableContainer-2NUZem, .container-2fRDfG, /*message box & reply bar*/
+.footer-2gL1pp, .focusLock-Ns3yie *.message-2qRu38 /*delete message ig*/ {
+    background: $rb-bg-secondary-d !important;
+}
+
+.header-8ilj5e,
+.header-1TOWci {
+    background-color: var(--background-secondary) !important;
+}
+
+.members-1998pB,
+.membersWrap-2h-GB4 *:not(.botText-1526X_):not(.botTagVerified-1klIIt):not(.botTag-3W9SuW) {
+    /*fix bot tag stuff idk + members list*/
+    background-color: var(--background-primary) !important;
+}
+.membersGroup-v9BXpm span:not(.nameAndDecorators-5FJ2dg) {
+    color: $rb-fg-accent;
+}
+
+//.titleBar-AC4pGV {background-color: var(--ColTitleBar); background:transparent;}
+
+.scroller-1JbKMe {
+    background-color: unset;
+}
+.tabBody-3YRQ8W, .pageWrapper-1PgVDX {
+    background: var(--background-primary) !important;
+}
+
+//discord home button
+#bd-pub-button,
+.childWrapper-anI2G9 {
+    background: $rb-bg-accent;
+}
+
+.theme-dark .option-96V44q:after {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: transparent !important;
+}
+
+.connectedAccount-36nQx7 {
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+/*color fixes*/
+.button-1YfofB.buttonColor-7qQbGO {
+    color: #fff !important;
+}
+.modeUnread-1qO3K1 .name-23GUGE {
+    color: var(--text-fix) !important;
+} /*unread channels*/
+
+.headerTop-2y3V6H {
+    border-bottom: 0px solid transparent !important;
+}
+.avatar-22FtUu {
+    border: 6px solid #282828;
+}

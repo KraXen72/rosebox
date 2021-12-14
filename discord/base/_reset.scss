@@ -1,0 +1,52 @@
+/*normalizing and reseting related mixins and stuff*/
+@mixin fullscreen($position : absolute) { //fullscreen a div and reset its stuff
+    height: 100vh !important;
+    width: 100vw !important;
+    @include padmar;
+    
+    position: $position !important;
+    top: initial !important;
+    bottom: initial !important;
+    left: initial !important;
+    right: initial !important;
+}
+
+@mixin unUiScale() { //remove ui scale from uiBase
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    transform: scale(1) !important;
+}
+
+@mixin normalize($position : relative, $important : false) { //normalize an elements position, padding and margin
+    @if $important == true {
+        position: $position !important;
+        @include padmar;
+    } @else {
+        position: $position;
+    }
+    top: initial !important;
+    bottom: initial !important;
+    left: initial !important;
+    right: initial !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+@mixin unborder() { //remove border
+    border: 0px solid transparent !important;
+}
+@mixin untransform($imp: false) { //remove transforms
+    $suffix: if($imp, "", "!important");
+    transform: translate(0, 0) translateX(0) translateY(0) scale(1) $suffix;
+}
+
+//fixes
+.matchVote, #matchVoteHolder * {
+    pointer-events: all !important;
+}
+.endCard .tabBody  {
+    max-height: 100% !important;
+    overflow-y: auto !important;
+} //fix max height on end tab

@@ -1,0 +1,43 @@
+/*----//----server title bar, banner, channel header----------*/
+.title-3qD0b- {
+    /*channel title bar hosting search etc.*/
+    border-top-left-radius: 15px !important;
+}
+//server header
+.header-2o-2hj,
+.searchBar-6Kv8R2, 
+.container-1taM1r, .container-3w7J-x, .sidebar-2K8pFh{
+    z-index: 99;
+    box-shadow: none;
+    background-color: var(--ColChannelList);
+    border-top-right-radius: 8px !important; //add another corner smol
+}
+.bannerVisible-14J9lQ { /*remove shadow if banner is visible*/
+    box-shadow: none;
+    filter: none;
+    position: relative;
+}
+.animatedContainer-1pJv5C {
+    /*add rounded corner to banner*/
+    border-top-right-radius: 8px;
+}
+.header-2V-4Sw {
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+/* add a small rounded corner thing? to message titlebar*/
+.chat-3bRxxu,
+.container-1D34oG,
+.libraryHeader-3g95kE,
+.container-1r6BKw,
+.homeWrapper-3-Wh5T
+.title-3qD0b-,
+.applicationStore-1pNvnv,
+.scroller-1d5FgU,
+.pageHeaderDrag-OPlmbm,
+.pageWrapper-1PgVDX {
+    border-top-left-radius: 10px !important;
+}
+.scroller-2FKFPG.scroller-2TZvBN {
+    border-top-left-radius: 0px !important;
+}
