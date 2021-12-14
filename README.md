@@ -3,8 +3,8 @@ rosebox is a color theme inspired by gruvbox, but with the main focus on **being
 
 ![vim and term](https://cdn.discordapp.com/attachments/803974055485112350/804283879094485032/here.png)
 ![discord2](https://cdn.discordapp.com/attachments/704792091955429426/920341533692133507/unknown.png)
-![overal rosebox](https://cdn.discordapp.com/attachments/803974055485112350/804294643826032690/overall_rosebox.png)
-![waifu](https://cdn.discordapp.com/attachments/704792091955429426/804774082418966568/unknown.png)
+![overal rosebox](https://cdn.discordapp.com/attachments/803974055485112350/887255898437857280/2021-09-13-121824_2560x1440_scrot.png)
+![waifu](https://cdn.discordapp.com/attachments/704792091955429426/920344032322916392/main.png)
   
 ### colors:
 <table>
@@ -52,7 +52,7 @@ for the rest of the colors (syntax highlighting, etc.) for now use some from the
 
 </span>
 
-### themes
+## themes
 - **_Discord_** - [github pages](https://kraxen72.github.io/rosebox/discord) - [repo](https://github.com/KraXen72/rosebox/tree/master/discord)
 - **_Vivaldi_** - [github pages](https://kraxen72.github.io/rosebox/vivaldi) - [repo](https://github.com/KraXen72/rosebox/tree/master/vivaldi)
 - **_monkeytype.com_** - [github pages](https://kraxen72.github.io/rosebox/monkeytype) - [repo](https://github.com/KraXen72/rosebox/tree/master/monkeytype)
@@ -65,7 +65,7 @@ for the rest of the colors (syntax highlighting, etc.) for now use some from the
 - **_CSS themes for websites_** - [repo](https://github.com/KraXen72/rosebox/tree/master/css-themes)
 
   
-### things built with rosebox
+## things built with rosebox
 - **_glide_** - a modular but comfy startpage for many scenarios - [repo](https://github.com/KraXen72/glide)
 - **_animetwist-dl-electron_** - an anime downloader from twist.moe - [repo](https://github.com/KraXen72/animetwist-dl-electron)  
 - **_playlist-manager_** - offline playlist manager - [repo](https://github.com/KraXen72/playlist-manager)
