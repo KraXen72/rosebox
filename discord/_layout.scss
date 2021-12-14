@@ -79,13 +79,37 @@
 .button-1YfofB.buttonColor-7qQbGO {
     color: #fff !important;
 }
-.modeUnread-1qO3K1 .name-23GUGE {
-    color: var(--text-fix) !important;
-} /*unread channels*/
+
 
 .headerTop-2y3V6H {
     border-bottom: 0px solid transparent !important;
 }
 .avatar-22FtUu {
     border: 6px solid #282828;
+}
+
+/*unread channels*/
+.modeUnread-1qO3K1 .name-23GUGE {
+    color: var(--text-fix) !important;
+} 
+//unread channel indicators
+:root .unread-2lAfLh {
+  top: 54%;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  z-index: 1;
+  border-radius: 10px;
+  animation: 2s channel-unread infinite;
+}
+@keyframes channel-unread {
+  0% {
+    box-shadow: 0 0 0 0 var(--unread-color);
+  }
+  70% {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }

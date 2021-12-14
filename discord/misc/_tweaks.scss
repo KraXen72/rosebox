@@ -19,7 +19,7 @@
 * {outline: 0px solid transparent !important;}                                                                          /*remove all outlines just because chrome*/
 [aria-label="Send a gift"] {display: none;}                                                                             /*hide gift nitro button*/
 [aria-label="Open GIF picker"] {margin-top: 3px;}
-[href="https://support.discord.com"] {display: none !important }                                                        /*hide help*/   
+[href="https://support.discord.com"] {display: none !important }                                                        /*hide help*/
 
 /*invert plus and minus*/
 img[src="/assets/9a43e631d506ae4818ecefc825dc02ad.svg"],
@@ -103,29 +103,3 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
 .aboutMeSection-3bipSD {
     background: #282828 !important;
 }
-
-/* quick switcher */
-.quickswitcher-3JagVE, .scroller-zPkAnE {
-    background-color: var(--background-tertiary) !important;
-  }
-  .quickswitcher-3JagVE {
-    border-radius: var(--border-radius-1);
-  }
-  .quickswitcher-3JagVE .input-2VB9rf {
-    box-shadow: none;
-  }
-  .quickswitcher-3JagVE .input-2VB9rf:focus {
-    border: 1px solid var(--accent-color);
-  }
-  .quickswitcher-3JagVE .scroller-zPkAnE {
-    margin-right: unset;
-  }
-  .resultFocused-3aIoYe .username-2hHyRL, .resultFocused-3aIoYe .miscContainer-2ptJ_C {
-    color: var(--interactive-selected);
-  }
-  .resultDefault-1ymv3u, .resultFocused-3aIoYe {
-    border-radius: var(--border-radius-2);
-  }
-  .result-oB0z--[aria-selected=true] {
-    background: var(--background-modifier-hover);
-  }
