@@ -2,7 +2,7 @@
 rosebox is a color theme inspired by gruvbox, but with the main focus on **being easy on the eyes**  
 
 ![vim and term](https://cdn.discordapp.com/attachments/803974055485112350/804283879094485032/here.png)
-![discord2](https://cdn.discordapp.com/attachments/704792091955429426/769205102393032744/unknown.png)
+![discord2](https://cdn.discordapp.com/attachments/704792091955429426/920341533692133507/unknown.png)
 ![overal rosebox](https://cdn.discordapp.com/attachments/803974055485112350/804294643826032690/overall_rosebox.png)
 ![waifu](https://cdn.discordapp.com/attachments/704792091955429426/804774082418966568/unknown.png)
   
