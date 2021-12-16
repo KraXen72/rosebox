@@ -19,8 +19,16 @@
 }
 .checkbox-1ix_J3[style*="rgba(67, 181, 129, 0.15)"],
 .folderIconWrapper-226oVY[style="background-color: rgba(114, 137, 218, 0.4);"] {
-    background: $rb-bg-accent!important
+    background: $rb-bg-accent !important
 }
+//reply message hover 
+.message-2qnXI6.ephemeral-1PsL1r.selected-2P5D_Z, 
+.message-2qnXI6.replying-1x3H0T.selected-2P5D_Z, 
+.mouse-mode.full-motion .ephemeral-1PsL1r:hover, 
+.mouse-mode.full-motion .replying-1x3H0T:hover {
+    background: $rb-bg-accent1 !important
+}
+
 .highlight {
     background-color: $rb-bg-accent;
     filter: brightness(3)
@@ -54,9 +62,10 @@
 .mediaBarProgress-1xaPtl,
 .mediaBarProgress-1xaPtl::after,
 .mediaBarProgress-1xaPtl::before,
-.mention-1f5kbO,
+.mention-1f5kbO, //mentioned
 .mention-1f5kbO:active,
 .mentioned-xhSam7::before,
+//replying
 .replying-1x3H0T::before,
 .newMessagesBar-mujexs,
 .progressBar-2Hd4f8 .barForeground-3KglC8,
@@ -82,6 +91,8 @@
 .wrapper-3WhCwL:hover, .unread-2lAfLh {
     background-color: $rb-fg-accent;
 }
+
+
 /* ping indicators with numbers*/
 .item-26Dhrx[style*="rgb(114, 137, 218)"],
 .languageCheckbox .checkbox-1ix_J3.checked-3_4uQ9,
@@ -196,12 +207,6 @@
 .content-1o0f9g,
 .mention:hover {
     /*fix the -----date----new bar .mention:hover*/
-    color: white !important;
-}
-
-//buttons
-.lookFilled-1Gx00P, .lookInverted-2D7oAl, .selectorButtonSelected-t5V9On {
-    background-color: $rb-fg-accent !important;
     color: white !important;
 }
 

@@ -7,6 +7,7 @@ $rb-bg-4: #393939;
 $rb-bg-5: #313131;
 
 $rb-bg-accent: rgba(165, 117, 98, 0.2);
+$rb-bg-accent1: rgba(165, 117, 98, 0.1);
 $rb-fg-accent: #a57562;
 $rb-text: #a3a5aa;
 
@@ -20,7 +21,7 @@ $col-dcweb-7: #2f3136; /*original embeds color*/
 
 /*from app*/
 $Col-dcapp-1: var(--background-primary); /*main chat window*/
-$COl-dcapp-2: var(--background-secondary); /*channel list*/
+$Col-dcapp-2: var(--background-secondary); /*channel list*/
 $Col-dcapp-3: var(--background-tertiary); /*server selector bg*/
 
 /*fron slate*/

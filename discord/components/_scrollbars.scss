@@ -5,18 +5,31 @@
     height: 3px!important;
     display: block;
 }
-::-webkit-scrollbar-track-piece {
-    background-color: rgba(0, 0, 0, 0)!important;
+::-webkit-scrollbar-track-piece,
+.auto-Ge5KZx::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0) !important;
     border: none !important;
 }
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-track {
     border: none !important;
 }
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
 /*show scrollbar only on hover*/
 .messages-3amgkR::-webkit-scrollbar-thumb {
     visibility: hidden !important;
 }
 .messages-3amgkR:hover::-webkit-scrollbar-thumb {
     visibility: visible !important;
+}
+
+//make some scroller bgs transparent
+.scrollerBase-289Jih::-webkit-scrollbar-track,
+.content-3YMskv::-webkit-scrollbar-track,
+.scroller-zPkAnE::-webkit-scrollbar-track {
+    background-color: transparent  !important;
+    background: transparent !important;
 }

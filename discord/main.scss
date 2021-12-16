@@ -5,8 +5,14 @@
 @import 'utils';
 @import 'layout';
 
+@import 'components/codeblocks';
+@import 'components/contextMenus';
+@import 'components/scrollbars';
+@import 'components/buttons';
+
 @import 'modules/newServerDarkmode';
 @import 'modules/homeScreen';
+@import 'modules/quickSwitcher';
 @import 'modules/serverBanner';
 @import 'modules/userArea';
 @import 'modules/emojiPickers';
@@ -16,10 +22,7 @@
 @import 'modules/userProfile';
 @import 'modules/call';
 
-@import 'misc/tweaks';
-@import 'misc/scrollbars';
-@import 'misc/codeblocks';
-@import 'misc/contextMenus';
+@import 'tweaks';
 
 :root, .theme-dark, .focusLock-Ns3yie * {
     /*gruvbox override*/
@@ -46,11 +49,3 @@
 }
 
 ::selection {background-color: $rb-bg-accent !important;}
-
-/*
-fix mention background
-
-
-
-
-*/

@@ -2,9 +2,7 @@
 /*credit to emma🌺#0968 for the code */
 //seriously the code from emma is carrying this shit in 2021. after 2 hours of writing my own implementation i just returned to this one becaue mine didn't work
 
-
 /* remove nav*/
-
 
 //stuff im too afraid to remove tbh
 .header-1nkwgG,
@@ -54,6 +52,12 @@ div#popout_7505 {
         .unicodeShortcut-15J8Ck, .scroller-3gAZLs, .listItems-1uJgMC {
             background: $rb-bg-secondary-d !important;
         }
+
+        //spacing between and recent. doesen't work because they are wrapped in listItem and have  forced width, height and viewbox.
+        /*.categoryItemDefaultCategory-aBZ6nJ:last-child {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+        }*/
     }
     .emojiPicker-3PwZFl {
         grid-template-rows: 46px auto calc(calc(48px * 2) + 8px) !important;
@@ -79,4 +83,10 @@ div#popout_7505 {
 
 .container-2XeR5Z, .inner-3ErfOT {
     background: $rb-bg-primary !important;
+}
+
+.emojiItem-14v6tW .emojiItemImageLoading-1yEIxx /* Fix Loading Emojis */ {
+    background-image: none;
+    background-color: var(--background-primary) !important;
+    border-radius: 30%;
 }

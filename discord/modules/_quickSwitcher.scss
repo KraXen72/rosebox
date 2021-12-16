@@ -1,0 +1,17 @@
+
+.container-3qKHyN {
+    .quickswitcher-3JagVE {
+        background: $rb-bg-primary !important;
+    
+        .input-2VB9rf { //searchbox
+            background: #191919;
+        }
+        .content-3YMskv { //results list
+            background: $rb-bg-primary !important;
+            .result-oB0z--[aria-selected="true"] {
+                background: $rb-bg-accent !important;
+            }
+        }
+        
+    }
+}

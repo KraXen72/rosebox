@@ -1,9 +1,11 @@
 .container-3w7J-x, //channels bar
-.wrapper-3NnKdC.guilds-1SWlCJ, .scroller-1Bvpku, //server bar
-.withFrame-haYltI, .wordmark-2iDDfm,//top bar
+.wrapper-3NnKdC.guilds-1SWlCJ, .scroller-1Bvpku, //server bar //top bar
 #app-mount, body, .bg-h5JY_x //app bg idk
 {
     background-color: $rb-bg-secondary-d !important;
+}
+.withFrame-haYltI, .wordmark-2iDDfm {
+    background-color: transparent;
 }
 
 /*----//----applying respecive color variables----------*/
