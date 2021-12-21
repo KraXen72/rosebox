@@ -1,8 +1,8 @@
 {
     "name": "rosebox discord theme",
     "description": "a discord theme that builds on my Harmony theme, but has a modified gruvbox with rose gold accents as a color scheme.",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "author": "KraXen72#9190",
-    "license": "WTFPL v2",
-    "theme": "./main.css"
+    "license": "AGPL",
+    "theme": "./dist/main.css"
 }

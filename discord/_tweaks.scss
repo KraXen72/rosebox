@@ -66,28 +66,10 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
     transition: filter .5s;
 }
 
-
-/*old wordmark because poggers*/
-.wordmark-2iDDfm svg {width: 0px;}
-.wordmark-2iDDfm::after {
-    position: absolute;
-    font-family: "Discordinated";
-    content: "Discord";
-    top: 3px;
-    font-size: 14px;
-    font-weight: normal;
-    color: var(--wordmark-text-color);
-    height: 19px;
-    width: 235px;
-    transform: translateY(-8%);
-    line-height: 20px;
-}
-
 /*small tweaks*/
 .selected-1Tbx07, .colorDefault-2K3EoJ.focused-3afm-j {background-color: var(--background-modifier-selected) !important;}
 .topSectionNormal-2-vo2m {background-color: #202225 !important;}
 .body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-2gL1pp, .section-2gLsgF, .headerNormal-1l1Znk,  .headerTop-2y3V6H {background-color: #282828;}
-.aboutMeSection-3bipSD { background: #282828 !important; }
 
 //goosemod spotify
 .gm-spotify-controls-playback-bar {
@@ -100,9 +82,4 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
     .gm-spotify-controls-playback-thumb {
         background: $rb-fg-accent !important;
     }
-}
-
-//bot tags
-.botTagRegular-2HEhHi {
-    background: $rb-fg-accent;
 }
