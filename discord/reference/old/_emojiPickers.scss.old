@@ -6,13 +6,13 @@
 
 //stuff im too afraid to remove tbh
 .header-1nkwgG,
-.header-11eigE,
-.header-JHwfVI {
+.header-8ilj5e,
+.header-1TOWci {
     --webkit-shadow: none;
     box-shadow: none !important;
     filter: none;
 }
-.header-11eigE {
+.header-8ilj5e {
     padding-top: 16px;
 }
 div#popout_7505 {
@@ -20,18 +20,18 @@ div#popout_7505 {
     right: 265px !important;
 }
 
-.contentWrapper-3vHNP2 {
+.contentWrapper-SvZHNd {
     grid-template-rows: auto;
     min-height: 442px !important;
 
-    .nav-1zWVQw {display: none !important}
-    .navList-YSb9UB {display: none;}
+    .nav-7UD0KD {display: none !important}
+    .navList-2UtuhC {display: none;}
 }
 
 .drawerSizingWrapper-27qFHb {
     height: 442px !important;
     max-width: 424px;
-    .resizeHandle-T_gFJR {
+    .resizeHandle-3NRr0z {
         //disable, resize and reenable this if ur emoji FAT
         display: none;
         cursor: default;
@@ -39,27 +39,27 @@ div#popout_7505 {
 }
 
 #emoji-picker-tab-panel {
-    .wrapper-22rqw6.categoryList-2qRrlj{
+    .wrapper-2Gsate.categoryList-2Kzf65{
         transform: rotate(-90deg);
         transform: rotate(-90deg) translateX(-143px) translateY(190px);
         height: 430px;
         padding-top: 0px !important;
     
-        .listItems-6eZzQ1 .categoryItem-1sHzUv,
-        .unicodeShortcut-3N8oDe {
+        .listItems-1uJgMC .categoryItem-1D0nxC,
+        .unicodeShortcut-15J8Ck {
             transform: rotate(90deg);
         }
-        .unicodeShortcut-3N8oDe, .scroller-2MALzE, .listItems-6eZzQ1 {
+        .unicodeShortcut-15J8Ck, .scroller-3gAZLs, .listItems-1uJgMC {
             background: $rb-bg-secondary-d !important;
         }
 
         //spacing between and recent. doesen't work because they are wrapped in listItem and have  forced width, height and viewbox.
-        /*.categoryItemDefaultCategory-3haEDq:last-child {
+        /*.categoryItemDefaultCategory-aBZ6nJ:last-child {
             margin-left: 0.25rem;
             margin-right: 0.25rem;
         }*/
     }
-    .emojiPicker-6YCk8a {
+    .emojiPicker-3PwZFl {
         grid-template-rows: 46px auto calc(calc(48px * 2) + 8px) !important;
         grid-template-columns: 0 auto !important;
         position: relative !important;
@@ -67,25 +67,25 @@ div#popout_7505 {
         width: 428px;
         border-radius: 5px !important;
     
-        .emoji-4YP39J {margin-left: -5px !important;} //emoji preview center it
+        .emoji-AAbs8r {margin-left: -5px !important;} //emoji preview center it
 
-        .searchBar-2M9mRP, .inspector-2A2Chb {
+        .searchBar-5di9mG, .inspector-3LQtX9 {
             background: $rb-bg-primary !important;
         }
     }
 }
 
 #gif-picker-tab-panel {
-    .searchBar-gJe8lY {
+    .searchBar--fTZYa {
         background: $rb-bg-primary !important;
     }
 }
 
-.container-1SX9VC, .inner-1NoIT5 {
+.container-2XeR5Z, .inner-3ErfOT {
     background: $rb-bg-primary !important;
 }
 
-.emojiItem-277VFM .emojiItemImageLoading-1yEIxx /* Fix Loading Emojis */ {
+.emojiItem-14v6tW .emojiItemImageLoading-1yEIxx /* Fix Loading Emojis */ {
     background-image: none;
     background-color: var(--background-primary) !important;
     border-radius: 30%;

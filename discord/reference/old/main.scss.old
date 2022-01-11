@@ -24,7 +24,7 @@
 
 @import 'tweaks';
 
-:root, .theme-dark, .focusLock-2tveLW * {
+:root, .theme-dark, .focusLock-Ns3yie * {
     /*gruvbox override*/
     --Colleft: var(--slate-background);
     --background-primary: var(--slate-background-light);

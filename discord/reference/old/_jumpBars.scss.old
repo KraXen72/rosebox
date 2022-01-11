@@ -1,39 +1,39 @@
 /*----//----JUMP BARS----------*/
 .jumpToPresentBar-9P20AM {padding-bottom: 0px;}
-.form-3gdLxP:before {display: none;}
+.form-2fGMdU:before {display: none;}
 
 .jumpToPresentBar-9P20AM,
-.jumpToPresentBar-1cEnH0,
-.newMessagesBar-1hF-9G,
+.jumpToPresentBar-G1R9s6,
+.newMessagesBar-265mhP,
 #NewMessagesBarJumpToNewMessages_803, //just to be sure
-.searchBar-zdmu7v,
-.searchBarComponent-3N7dCG {
+.searchBar-3dMhjb,
+.searchBarComponent-32dTOx {
     background-color: $rb-bg-secondary-d !important;
     border: 1px solid rgba(0,0,0,0.2);
     opacity: 1;
 }
 
-.innerDisabled-2dbG11,
-.scrollableContainer-15eg7h {
+.innerDisabled-1YTFPN,
+.scrollableContainer-2NUZem {
     opacity: 1 !important;
 }
 
-.newMessagesBar-1hF-9G {
+.newMessagesBar-265mhP {
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
 
-    .barButtonAlt-TQoCdZ {
+    .barButtonAlt-mYL1lj {
         color: $rb-fg-accent !important;
     }
-    /**.barButtonMain-2GIx4o {
+    /**.barButtonMain-3K-jeJ {
         color: $Col-dcweb-2;
     }*/
 }
-.jumpToPresentBar-1cEnH0 {
-    .barButtonAlt-TQoCdZ {
+.jumpToPresentBar-G1R9s6 {
+    .barButtonAlt-mYL1lj {
         color: $rb-fg-accent !important;
     }
-    /*.barButtonMain-2GIx4o {
+    /*.barButtonMain-3K-jeJ {
         color: $Col-dcweb-2;
     }*/
 }
@@ -41,30 +41,30 @@
 
 
 /*reply bar*/
-.clipContainer-31nYlH {
+.clipContainer-eeROt0 {
     padding-top: 0px !important;
-    .container-A2jo65 {
+    .container-2fRDfG {
         padding-top: 3px;
         background-color: $rb-bg-primary !important;
         opacity: 1;
         border: 1px solid $rb-bg-primary;
     }
 }
-.attachedBars-2BCP3l {
+.attachedBars-tZDmyV {
     background: transparent;
 }
-.replyBar-1oi75v, .container-A2jo65 {
+.replyBar-1YLQ2F, .container-2fRDfG {
     border-top-left-radius: 6px !important;
     border-top-right-radius: 6px !important;
     background-color: $rb-bg-primary;
 }
-/*.replyBar-1oi75v {
+/*.replyBar-1YLQ2F {
     //border: 1px solid rgba(0,0,0,0.2);
 }*/
-.closeButton-3IEry2 {color:rgb(240, 71, 71);} 
-//.name-3DDHNY {color: $Col-dcweb-1}
+.closeButton-37O8QC {color:rgb(240, 71, 71);} 
+//.name-hpTFiv {color: $Col-dcweb-1}
 
 /*----//----NEW REPLIES-----------*/
-.repliedMessage-3Z6XBG.da-repliedMessage {
+.repliedMessage-VokQwo.da-repliedMessage {
     font-size: inherit !important;
 }

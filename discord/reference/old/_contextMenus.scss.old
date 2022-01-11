@@ -1,9 +1,9 @@
 /*----//----STATUS PICKER AND SERVER CONTEXT MENU----------*/
-.statusItem-2hiCNB[aria-label="Hide Game Activity"] svg,
-.statusItem-2hiCNB[aria-label="Show Game Activity"] svg {
+.statusItem-33LqPf[aria-label="Hide Game Activity"] svg,
+.statusItem-33LqPf[aria-label="Show Game Activity"] svg {
     margin-left: -2px;
 }
-.separator-1So4YB, .description-3Cwkxk { /*hide the thingers  that explain status*/
+.separator-2I32lJ, .description-2L932D { /*hide the thingers  that explain status*/
     display: none;
 }
 foreignObject[mask="url(#svg-mask-status-offline)"] { /*fixed svg colors for status picker*/
@@ -29,6 +29,6 @@ path[d="M10.418 13L12.708 15.294L11.292 16.706L6.586 11.991L11.294 7.292L12.707 
     fill: #f04747;
 }
 div#guild-header-popout-invite-people { color: #677bc4 !important;}/*invite people server context menu*/
-.selected-3H3-RC, .colorDefault-CDqZdO:active:not(.hideInteraction-2jPGL_) {background-color: var(--background-modifier-selected) !important;}
-.colorDefault-CDqZdO.focused-3qFvc8 {background-color: var(--background-modifier-selected) !important;}
-.colorDanger-3n-KnP.focused-3qFvc8 {color: var(--interactive-normal) !important;}
+.selected-1Tbx07, .colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) {background-color: var(--background-modifier-selected) !important;}
+.colorDefault-2K3EoJ.focused-3afm-j {background-color: var(--background-modifier-selected) !important;}
+.colorDanger-2qLCe1.focused-3afm-j {color: var(--interactive-normal) !important;}

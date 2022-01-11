@@ -6,7 +6,7 @@
     display: block;
 }
 ::-webkit-scrollbar-track-piece,
-.auto-2K3UW5::-webkit-scrollbar-track-piece {
+.auto-Ge5KZx::-webkit-scrollbar-track-piece {
     background-color: rgba(0, 0, 0, 0) !important;
     border: none !important;
 }
@@ -27,9 +27,9 @@
 }
 
 //make some scroller bgs transparent
-.scrollerBase-_bVAAt::-webkit-scrollbar-track,
-.content-2a4AW9::-webkit-scrollbar-track,
-.scroller-2qwVWY::-webkit-scrollbar-track {
+.scrollerBase-289Jih::-webkit-scrollbar-track,
+.content-3YMskv::-webkit-scrollbar-track,
+.scroller-zPkAnE::-webkit-scrollbar-track {
     background-color: transparent  !important;
     background: transparent !important;
 }

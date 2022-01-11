@@ -12,8 +12,8 @@
     background: transparent !important;
 }
 
-code, .footer-GXWBBp,
-.embedWrapper-1MtIDg .textContainer-36wgKK {
+code, .footer-2yA7Ep,
+.embedWrapper-lXpS3L .textContainer-C0szpm {
     background: $rb-bg-secondary !important;
     border-color: rgba(0,0,0,0.2);
 }

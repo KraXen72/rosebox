@@ -1,18 +1,18 @@
 //small tweaks and snippets you can toggle on and off
 
-//.wrapper-1F5TKx[aria-hidden="true"] { visibility: hidden;}                                                            /*placeholder messages delet*/
-.searchResultsWrap-3-pOjs{ width: 500px; }                                                                              /*Wider search results section */
-.verified-1eC5dy:not(.disableColor-MwOAZf) > svg path { fill: #7289DA}                                                /*Bring Back Blurple Verified Badge */
+//.wrapper-15CKyy[aria-hidden="true"] { visibility: hidden;}                                                            /*placeholder messages delet*/
+.searchResultsWrap-5RVOkx{ width: 500px; }                                                                              /*Wider search results section */
+.verified-1Jv_7P:not(.disableColor-MwOAZf) > svg path { fill: #7289DA}                                                /*Bring Back Blurple Verified Badge */
 //.expandedFolderBackground-2sPsd-, .folder-21wGz3 {background-color: var(--background-primary);transition: all 0.3s;}  /*server folder*/
-.recentMentionsPopout-3rCiI6, .messagesPopoutWrap-1MQ1bW {max-height: 93vh !important;}                                 /*inbox*/
-.sidebar-2K8pFh {background-color: var(--Colleft);}                                                                     /*new server discovery */
-.searchBarComponent-32dTOx, .search-36MZv-, .searchBar-3dMhjb {background-color: var(--background-primary) !important}  /*search bars*/
-.botTagVerified-1klIIt {border-top-left-radius: 3px;border-bottom-left-radius: 3px;}                                    /*bot tag fix*/
-.jumpToPresentBar-G1R9s6, .barBase-1c2Rfb {width: 88%; margin-left: auto; margin-right: auto;}                          /*bottom jump to present bar is slightly shorter*/
-.embedSuppressButton-1FonMn {cursor: pointer;display: none;}                                                            /*hide remove embed button*/
-.input-2VB9rf {Background-Color: #36383d;}                                                                            /*ctrl + K quick switcher made the input a bit darker*/
+.recentMentionsPopout-2bI1ZN, .messagesPopoutWrap-3zryHW {max-height: 93vh !important;}                                 /*inbox*/
+.sidebar-1tnWFu {background-color: var(--Colleft);}                                                                     /*new server discovery */
+.searchBarComponent-3N7dCG, .search-39IXmY, .searchBar-zdmu7v {background-color: var(--background-primary) !important}  /*search bars*/
+.botTagVerified-2KCPMa {border-top-left-radius: 3px;border-bottom-left-radius: 3px;}                                    /*bot tag fix*/
+.jumpToPresentBar-1cEnH0, .barBase-3xxDXu {width: 88%; margin-left: auto; margin-right: auto;}                          /*bottom jump to present bar is slightly shorter*/
+.embedSuppressButton-1rZHq6 {cursor: pointer;display: none;}                                                            /*hide remove embed button*/
+.input-3r5zZY {Background-Color: #36383d;}                                                                            /*ctrl + K quick switcher made the input a bit darker*/
 .bodyTitle-Y0qMQz  {text-transform: capitalize;font-size: 15px;}                                                        /*change some text from all caps to only fist letter cap*/
-.protip-YaFfgO/*, .protip-1b9XPC*/ {display: none;}                                                                     /*hide protips bc im a pro*/
+.protip-YaFfgO/*, .protip-1jXzAl*/ {display: none;}                                                                     /*hide protips bc im a pro*/
 * {outline: 0px solid transparent !important;}                                                                          /*remove all outlines just because chrome*/
 [aria-label="Send a gift"] {display: none;}                                                                             /*hide gift nitro button*/
 [aria-label="Open GIF picker"] {margin-top: 3px;}                                                                       /*gif picker realign*/
@@ -25,10 +25,10 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
 }
 
 /*calendar*/
-.datePicker--XZbmJ .calendarPicker-2yf6Ci .react-datepicker__day:hover {background: var(--ColAccent) !important;}
+.datePicker-70cO23 .calendarPicker-sDhzdi .react-datepicker__day:hover {background: var(--ColAccent) !important;}
 
 /*fix emoji suggestions not being scrollable*/
-.autocompleteInner-zh20B_ {
+.autocompleteInner-y1mjDl {
     overflow-y: auto;
     max-height: 75vh;
 }
@@ -38,11 +38,11 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
     border: 0 !important;
  }
  /* Fix fade thingy for good looking titlebar snippet */
-.children-19S4PO:after {
+.children-3xh0VB:after {
     background: transparent !important;
 }
-.searchResultMessage-1fxgXh.hit-1fVM9e > div > .contents-2mQqc9 img,
-    div[id^=pinned-messages-] .contents-2mQqc9 img {
+.searchResultMessage-1fxgXh.hit-1fVM9e > div > .contents-2MsGLg img,
+    div[id^=pinned-messages-] .contents-2MsGLg img {
     top: 15px
 }
 /*cool gradient user popout bgs*/
@@ -61,15 +61,15 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
 }
 
 
-.userInfoViewing-16kqK3 .flex-1xMQg5 .flexChild-faoVW3 .marginBottom20-32qID7 + div .selectable-2GY4I1 { /*blur email until hover*/
+.userInfoViewing-16kqK3 .flex-2S1XBF .flexChild-3PzYmX .marginBottom20-315RVT + div .selectable-2GODwY { /*blur email until hover*/
     filter: blur(5px);
     transition: filter .5s;
 }
 
 /*small tweaks*/
-.selected-1Tbx07, .colorDefault-2K3EoJ.focused-3afm-j {background-color: var(--background-modifier-selected) !important;}
+.selected-3H3-RC, .colorDefault-CDqZdO.focused-3qFvc8 {background-color: var(--background-modifier-selected) !important;}
 .topSectionNormal-2-vo2m {background-color: #202225 !important;}
-.body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-2gL1pp, .section-2gLsgF, .headerNormal-1l1Znk,  .headerTop-2y3V6H {background-color: #282828;}
+.body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-31IekZ, .section-3G9aLW, .headerNormal-1l1Znk,  .headerTop-2y3V6H {background-color: #282828;}
 
 //goosemod spotify
 .gm-spotify-controls-playback-bar {

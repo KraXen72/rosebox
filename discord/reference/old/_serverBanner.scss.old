@@ -1,12 +1,12 @@
 /*----//----server title bar, banner, channel header----------*/
-.title-31SJ6t {
+.title-3qD0b- {
     /*channel title bar hosting search etc.*/
     border-top-left-radius: 15px !important;
 }
 //server header
 .header-2o-2hj,
-.searchBar-3TnChZ, 
-.container-1-ERn5, .container-1NXEtd, .sidebar-1tnWFu{
+.searchBar-6Kv8R2, 
+.container-1taM1r, .container-3w7J-x, .sidebar-2K8pFh{
     z-index: 99;
     box-shadow: none;
     background-color: var(--ColChannelList);
@@ -21,21 +21,21 @@
     /*add rounded corner to banner*/
     border-top-right-radius: 8px;
 }
-.header-3OsQeK {
+.header-2V-4Sw {
 	-webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
 /* add a small rounded corner thing? to message titlebar*/
-.chat-2ZfjoI,
-.container-2cd8Mz,
-.libraryHeader-2loraV,
-.container-ZMc96U,
-.homeWrapper-L4ors0
-.title-31SJ6t,
-.applicationStore-2nk7Lo,
-.scroller-3j5xK2,
-.pageHeaderDrag-3HG1-5,
-.pageWrapper-2PwDoS {
+.chat-3bRxxu,
+.container-1D34oG,
+.libraryHeader-3g95kE,
+.container-1r6BKw,
+.homeWrapper-3-Wh5T
+.title-3qD0b-,
+.applicationStore-1pNvnv,
+.scroller-1d5FgU,
+.pageHeaderDrag-OPlmbm,
+.pageWrapper-1PgVDX {
     border-top-left-radius: 10px !important;
 }
 .scroller-2FKFPG.scroller-2TZvBN {

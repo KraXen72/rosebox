@@ -1,6 +1,6 @@
 /*----//----USER POPOUT----------*/
 /*role pills*/
-.role-2TIOKu{
+.role-2irmRk{
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -9,7 +9,7 @@
 
     border-radius: 100px;
 }
-.roleCircle-1EgnFN::before{
+.roleCircle-3xAZ1j::before{
     content: "";
     position: absolute;
     top:0;
@@ -21,17 +21,17 @@
     z-index: -1;
     pointer-events: none;
 }
-.roleCircle-1EgnFN {
+.roleCircle-3xAZ1j {
     margin-left: 2px;
 }
 .footer-1fjuF6{border-top: none;}
 .note-3kmerW textarea:focus { background-color: transparent;} /* fix edit note profile idk*/
 
 /*user popout*/
-.userPopout-2j1gM4, .footer-3naVBw, .bodyInnerWrapper-2bQs1k { background-color: #282828; }
-.input-2z42oC, .connectedAccount-1xKpli { background-color: $rb-bg-secondary-d; }
+.userPopout-xaxa6l, .footer-3UKYOU, .bodyInnerWrapper-26fQXj { background-color: #282828; }
+.input-2_SIlA, .connectedAccount-2Jb-Z0 { background-color: $rb-bg-secondary-d; }
 
-.avatarWrapper-eenWra, .avatar-2Vndt_  {
+.avatarWrapper-3r9PdD, .avatar-37jOim  {
     background: #282828;
     border-color: #282828;
 }

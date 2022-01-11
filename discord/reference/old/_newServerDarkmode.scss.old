@@ -1,5 +1,5 @@
 /*----//----remove light theme for new server----*/
-.layer-1Ixpg3 .theme-light, .layer-1Ixpg3 .theme-light *, .focusLock-2tveLW, .focusLock-2tveLW *  { /*overwrite light theme colors*/
+.layer-2KE1M9 .theme-light, .layer-2KE1M9 .theme-light *, .focusLock-Ns3yie, .focusLock-Ns3yie *  { /*overwrite light theme colors*/
     --header-primary: #fff;
     --header-secondary: #b9bbbe;
     --text-normal: #dcddde;
@@ -45,7 +45,7 @@
     --activity-card-background: #202225;
     --textbox-markdown-syntax: #8e9297;
 }
-.layer-1Ixpg3 .theme-light .root-g14mjS {background: var(--background-primary) !important}
-.container-x8Y1ix, .regionSelectModal-12e-57 {background: var(--Colleft) !important}
-.theme-light .footer-31IekZ {background-color: var(--background-primary) !important;
+.layer-2KE1M9 .theme-light .root-1gCeng {background: var(--background-primary) !important}
+.container-UC8Ug1, .regionSelectModal-12e-57 {background: var(--Colleft) !important}
+.theme-light .footer-2gL1pp {background-color: var(--background-primary) !important;
 box-shadow: none !important; -webkit-box-shadow: none !important;}
