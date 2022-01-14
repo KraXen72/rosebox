@@ -1,22 +1,55 @@
 //small tweaks and snippets you can toggle on and off
 
-//.wrapper-15CKyy[aria-hidden="true"] { visibility: hidden;}                                                            /*placeholder messages delet*/
-.searchResultsWrap-5RVOkx{ width: 500px; }                                                                              /*Wider search results section */
-.verified-1Jv_7P:not(.disableColor-MwOAZf) > svg path { fill: #7289DA}                                                /*Bring Back Blurple Verified Badge */
-//.expandedFolderBackground-2sPsd-, .folder-21wGz3 {background-color: var(--background-primary);transition: all 0.3s;}  /*server folder*/
-.recentMentionsPopout-2bI1ZN, .messagesPopoutWrap-3zryHW {max-height: 93vh !important;}                                 /*inbox*/
-.sidebar-1tnWFu {background-color: var(--Colleft);}                                                                     /*new server discovery */
-.searchBarComponent-3N7dCG, .search-39IXmY, .searchBar-zdmu7v {background-color: var(--background-primary) !important}  /*search bars*/
-.botTagVerified-2KCPMa {border-top-left-radius: 3px;border-bottom-left-radius: 3px;}                                    /*bot tag fix*/
-.jumpToPresentBar-1cEnH0, .barBase-3xxDXu {width: 88%; margin-left: auto; margin-right: auto;}                          /*bottom jump to present bar is slightly shorter*/
-.embedSuppressButton-1rZHq6 {cursor: pointer;display: none;}                                                            /*hide remove embed button*/
-.input-3r5zZY {Background-Color: #36383d;}                                                                            /*ctrl + K quick switcher made the input a bit darker*/
-.bodyTitle-Y0qMQz  {text-transform: capitalize;font-size: 15px;}                                                        /*change some text from all caps to only fist letter cap*/
-.protip-YaFfgO/*, .protip-1jXzAl*/ {display: none;}                                                                     /*hide protips bc im a pro*/
-* {outline: 0px solid transparent !important;}                                                                          /*remove all outlines just because chrome*/
-[aria-label="Send a gift"] {display: none;}                                                                             /*hide gift nitro button*/
-[aria-label="Open GIF picker"] {margin-top: 3px;}                                                                       /*gif picker realign*/
-[href="https://support.discord.com"] {display: none !important }                                                        /*hide help*/
+/*placeholder messages delet*/
+//.wrapper-15CKyy[aria-hidden="true"] { visibility: hidden;}
+
+/*Wider search results section */
+.searchResultsWrap-5RVOkx{ width: 500px; }
+
+/*Bring Back Blurple Verified Badge */
+.verified-1Jv_7P:not(.disableColor-MwOAZf) > svg path { fill: #7289DA}
+
+/*server folder*/
+//.expandedFolderBackground-2sPsd-, .folder-21wGz3 {background-color: var(--background-primary);transition: all 0.3s;}
+
+/*inbox*/
+.recentMentionsPopout-2bI1ZN, .messagesPopoutWrap-3zryHW {max-height: 93vh !important;}
+
+/*new server discovery */
+.sidebar-1tnWFu {background-color: var(--Colleft);}
+
+/*search bars*/
+.searchBarComponent-3N7dCG, .search-39IXmY, .searchBar-zdmu7v {background-color: var(--background-primary) !important}
+
+/*bot tag fix*/
+.botTagVerified-2KCPMa {border-top-left-radius: 3px;border-bottom-left-radius: 3px;}
+
+/*bottom jump to present bar is slightly shorter*/
+.jumpToPresentBar-1cEnH0, .barBase-3xxDXu {width: 88%; margin-left: auto; margin-right: auto;}
+
+/*hide remove embed button*/
+.embedSuppressButton-1rZHq6 {cursor: pointer;display: none;}
+
+/*ctrl + K quick switcher made the input a bit darker*/
+.input-3r5zZY {Background-Color: #36383d;}
+
+/*change some text from all caps to only fist letter cap*/
+.bodyTitle-Y0qMQz  {text-transform: capitalize;font-size: 15px;}
+
+/*hide protips bc im a pro*/
+.protip-YaFfgO/*, .protip-1jXzAl*/ {display: none;}
+
+/*remove all outlines just because chrome*/
+* {outline: 0px solid transparent !important;}
+
+/*hide gift nitro button*/
+[aria-label="Send a gift"] {display: none;}
+
+/*gif picker realign*/
+[aria-label="Open GIF picker"] {margin-top: 3px;}
+
+/*hide help*/
+[href="https://support.discord.com"] {display: none !important }
 
 /*invert plus and minus*/
 img[src="/assets/9a43e631d506ae4818ecefc825dc02ad.svg"],
