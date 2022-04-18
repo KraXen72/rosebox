@@ -68,3 +68,8 @@
 .repliedMessage-3Z6XBG.da-repliedMessage {
     font-size: inherit !important;
 }
+//new replies fix channel mention # icon
+.repliedTextContent-2hOYMB .mention.iconMentionText-1_WCtN svg { 
+    width: 1rem; 
+    height: 1rem  
+}
