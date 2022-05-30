@@ -1,0 +1,8 @@
+{
+    "name": "rosebox",
+    "version": "1.2.0",
+    "license": "AGPL-2.0",
+    "author": "KraXen72",
+    "theme": "./main.css",
+    "description": "rosebox is a color theme inspired by gruvbox, but with the main focus on being easy on the eyes"
+}
