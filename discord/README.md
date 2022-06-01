@@ -22,8 +22,4 @@ import link:
 2. if you want live reload, use something like betterdiscord. modify the paths in `scripts/watcher.js` to point at this directory and at the betterdiscord install directory. then run watcher.js while sass extension is watching
 
 the old version of this theme in vanilla css can be found [here](https://github.com/KraXen72/rosebox-discord)
-for questions contact KraXen72#9190 on Discord    
-
-
-
-S
+for questions contact KraXen72#9190 on Discord.
