@@ -46,6 +46,9 @@
 
     --text-normal: var(--text-fix);
     --header-primary: var(--ColAccent);
+
+    --brand-experiment-15a: $rb-bg-accent;
+    --brand-experiment: $rb-fg-accent;
 }
 
 ::selection {background-color: $rb-bg-accent !important;}
