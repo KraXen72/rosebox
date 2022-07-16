@@ -31,7 +31,7 @@
     --background-primary: #262626;
     --Colleft: #222222;
     --background-secondary: var(--Colleft);
-    --ColAccent: #a57562;
+    --ColAccent: $rb-fg-accent;
     --ColAccentAlpha: RGBA(165, 117, 98, 0.2);
 
     /*set respecitve colors to Colleft - ignore*/
@@ -42,13 +42,14 @@
     --ColLink: var(--ColAccent);
     --text-link: var(--ColLink);
 
-    --text-fix: #a3a5aa;
+    --text-fix: $rb-text;
 
-    --text-normal: var(--text-fix);
+    --text-normal: $rb-text;
     --header-primary: var(--ColAccent);
 
-    --brand-experiment-15a: $rb-bg-accent;
-    --brand-experiment: $rb-fg-accent;
+    --brand-experiment-15a: $rb-bg-accent !important; /* reaction bg */
+    --brand-experiment: $rb-bg-accent !important; /* reaction border + general accent */
+    --brand-experiment-200: $rb-text !important; /* reaction text */
 }
 
 ::selection {background-color: $rb-bg-accent !important;}
