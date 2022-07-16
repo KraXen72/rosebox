@@ -31,7 +31,7 @@
     --background-primary: #262626;
     --Colleft: #222222;
     --background-secondary: var(--Colleft);
-    --ColAccent: $rb-fg-accent;
+    --ColAccent: #{$rb-fg-accent};
     --ColAccentAlpha: RGBA(165, 117, 98, 0.2);
 
     /*set respecitve colors to Colleft - ignore*/
