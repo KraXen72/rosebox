@@ -1,23 +1,25 @@
 /*----//----USER POPOUT----------*/
 /*role pills by Cynthia*/
-.role-2irmRk {
+/* updated once again by the awesome Cynthia (Davri#0015)*/
+.role-2TIOKu:not(.addButton-1_dZYu) {
     position: relative;
     overflow: hidden;
-    border: none;
-    padding: 5px;
+    background: none;
+    border-radius: 50px;
 }
-.roleCircle-3xAZ1j::before {
-    content: '';
+.roleRemoveButton-17oXnT {
+    position: static;
+}
+.roleCircle-3K9O3d::after {
+    content: "";
+    inset: 0;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: inherit;
-    opacity: .2;
-    pointer-events: none;
+    opacity: 0.25;
 }
-.footer-1fjuF6 { border-top: none; }
+.roleName-2ZJJYR, .roleIcon-3-WL_I {
+    z-index: 1;
+}
 
 .note-3kmerW textarea:focus { background-color: transparent;} /* fix edit note profile idk*/
 
