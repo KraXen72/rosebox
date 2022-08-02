@@ -7,10 +7,10 @@
     background: none;
     border-radius: 50px;
 }
-.roleRemoveButton-17oXnT {
-    position: static;
-}
-.roleCircle-3K9O3d::after {
+.roleRemoveButton-17oXnT { position: static; }
+
+/* don't do the after for role add popout     */
+.role-2TIOKu .roleCircle-3K9O3d:not([class*="popoutRoleCircle-"])::after {
     content: "";
     inset: 0;
     position: absolute;
@@ -20,6 +20,9 @@
 .roleName-2ZJJYR, .roleIcon-3-WL_I {
     z-index: 1;
 }
+
+/* put the remove role button back in roleCircle     */
+.roleRemoveIcon-387wKV { left: 14px; }
 
 .note-3kmerW textarea:focus { background-color: transparent;} /* fix edit note profile idk*/
 
