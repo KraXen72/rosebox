@@ -26,8 +26,13 @@
 
 .note-3kmerW textarea:focus { background-color: transparent;} /* fix edit note profile idk*/
 
-/*user popout*/
-.userPopout-2j1gM4, .footer-3naVBw, .bodyInnerWrapper-2bQs1k { background-color: #282828; }
+.userPopout-2j1gM4, .footer-3naVBw, .bodyInnerWrapper-2bQs1k, .headerTop-2y3V6H, /*user popout*/
+.menu-1QACrS.menu-2-eHMB { // your profile popout
+    background-color: #282828; 
+}
+.menu-1QACrS.menu-2-eHMB { width: 300px }
+.scrollerBase-_bVAAt { overflow: initial scroll }
+
 .input-2z42oC, .connectedAccount-1xKpli { background-color: $rb-bg-secondary-d; }
 
 .avatarWrapper-eenWra, .avatar-2Vndt_  {
@@ -35,3 +40,4 @@
     border-color: #282828;
 }
 .aboutMeSection-3bipSD { background: #282828 !important; }
+
