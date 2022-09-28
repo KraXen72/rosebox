@@ -12,10 +12,13 @@ import link:
 @import url('https://kraxen72.github.io/rosebox/discord/dist/main.css');
 ```  
 **this can be installed using any discord mod you like. if you don't have any yet, try some of these:**
-- powercord: [link](https://powercord.dev) `Quick CSS` tab > paste this link in.
-- goosemod: [link](https://goosemod.com) `Custom CSS` plugin > paste this link in.
-- Betterdiscord: [link](https://github.com/rauenzi/BBDInstaller/releases/) `Custom CSS` tab > paste this link in.
-- topaz: [link](https://github.com/KraXen72/rosebox/tree/master/discord) `Themes` > paste in `https://github.com/KraXen72/rosebox/tree/master/discord`
+- openasar: [link](https://openasar.dev) > `OpenAsar Config` > `Theming` > paste this link in.
+- ~~powercord/replugged: [link](https://powercord.dev) `Quick CSS` tab > paste this link in.~~
+- ~~goosemod: [link](https://goosemod.com) `Custom CSS` plugin > paste this link in.~~
+- ~~Betterdiscord: [link](https://github.com/rauenzi/BBDInstaller/releases/) `Custom CSS` tab > paste this link in.~~
+- ~~topaz: [link](https://github.com/KraXen72/rosebox/tree/master/discord) `Themes` > paste in `https://github.com/KraXen72/rosebox/tree/master/discord`~~
+  
+mods that are crossed out either had EOL or are broken, they might work but not providing support for those
 
 ## Setting up the dev env
 1. you need [this extension](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass) for vs code
