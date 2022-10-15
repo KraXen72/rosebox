@@ -75,6 +75,17 @@ div#popout_7505 {
     }
 }
 
+
+// popout
+[id*="popout"] #emoji-picker-tab-panel {
+	.wrapper-22rqw6.categoryList-2qRrlj {
+		transform: rotate(-90deg) translateX(-157px) translateY(190px);
+	}
+	.emojiPicker-6YCk8a {
+        grid-template-rows: 0 auto min-content !important;
+	}
+}
+
 #gif-picker-tab-panel {
     .searchBar-gJe8lY {
         background: $rb-bg-primary !important;
