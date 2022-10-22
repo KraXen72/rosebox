@@ -27,10 +27,8 @@
 
 :root, .theme-dark, .focusLock-2tveLW * {
     /*gruvbox override*/
-    --Colleft: var(--slate-background);
-    --background-primary: var(--slate-background-light);
     --background-primary: #{$rb-bg-primary};
-    --Colleft: $rb-bg-secondary-d;
+    --Colleft: #{$rb-bg-secondary-d};
     --background-secondary: var(--Colleft);
     --ColAccent: #{$rb-fg-accent};
     --ColAccentAlpha: RGBA(165, 117, 98, 0.2);
