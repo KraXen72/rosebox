@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $rb-bg-primary: #262626;
 $rb-bg-primarya: #262626de;
 $rb-bg-secondary: #232323;
@@ -49,3 +51,9 @@ $bg-image-icon-size: 50%;
 
 $main-row-gap: 1.5vh;
 $col-spacer: 1rem;
+
+$btn-bg-green: #5f7e44;
+$btn-bg-green-dark: color.adjust($btn-bg-green, $lightness: -10%);
+
+$btn-bg-red: #ad515a;
+$btn-bg-red-dark: color.adjust($btn-bg-red, $lightness: -10%);

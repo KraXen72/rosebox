@@ -21,6 +21,7 @@
 @import 'modules/userPopout';
 @import 'modules/userProfile';
 @import 'modules/call';
+@import 'modules/settings';
 
 @import 'tweaks';
 
@@ -28,8 +29,8 @@
     /*gruvbox override*/
     --Colleft: var(--slate-background);
     --background-primary: var(--slate-background-light);
-    --background-primary: #262626;
-    --Colleft: #222222;
+    --background-primary: #{$rb-bg-primary};
+    --Colleft: $rb-bg-secondary-d;
     --background-secondary: var(--Colleft);
     --ColAccent: #{$rb-fg-accent};
     --ColAccentAlpha: RGBA(165, 117, 98, 0.2);
@@ -50,6 +51,8 @@
     --brand-experiment-15a: #{$rb-bg-accent} !important; /* reaction bg */
     --brand-experiment: #{$rb-bg-accent} !important; /* reaction border + general accent */
     --brand-experiment-200: #{$rb-text} !important; /* reaction text */
+
+	--background-modifier-selected: var(--input-background);
 }
 
 ::selection {background-color: $rb-bg-accent !important;}

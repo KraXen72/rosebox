@@ -2,6 +2,15 @@
 .lookFilled-yCfaCM, .lookInverted-2mDUMi, .selectorButtonSelected-3Z0WNU {
     background-color: $rb-fg-accent !important;
     color: white !important;
+
+	&.colorRed-rQXKgM {
+		background-color: $btn-bg-red !important;
+		&:hover { background-color: $btn-bg-red-dark !important; }
+	}
+	&.colorGreen-3y-Z79 {
+		background-color: $btn-bg-green !important;
+		&:hover { background-color: $btn-bg-green-dark !important; }
+	}
 }
 .toolbar-37BrJ5 > .lookFilled-yCfaCM {
     background-color: transparent !important;
