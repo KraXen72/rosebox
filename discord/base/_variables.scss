@@ -52,8 +52,8 @@ $bg-image-icon-size: 50%;
 $main-row-gap: 1.5vh;
 $col-spacer: 1rem;
 
-$btn-bg-green: #5f7e44;
+$btn-bg-green: hsl(139,47.3%, 43.9%);
 $btn-bg-green-dark: color.adjust($btn-bg-green, $lightness: -10%);
 
-$btn-bg-red: #ad515a;
+$btn-bg-red: hsl(359, 82.6%, 59.4%);
 $btn-bg-red-dark: color.adjust($btn-bg-red, $lightness: -10%);
