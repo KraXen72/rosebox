@@ -8,6 +8,10 @@
     border-radius: 50px;
 }
 .roleRemoveButton-17oXnT { position: static; }
+.rolePill-2IJ1vo.addButton-1_dZYu {
+	border-radius: 50px; 
+	width: 22px
+}
 
 /* don't do the after for role add popout     */
 .role-2TIOKu .roleCircle-3K9O3d:not([class*="popoutRoleCircle-"])::after {
@@ -21,23 +25,78 @@
     z-index: 1;
 }
 
+.rolePillBorder-RiRiuN {
+    border: 1px solid;
+    border-color: var(--profile-message-input-border-color);
+}
+
 /* put the remove role button back in roleCircle     */
 .roleRemoveIcon-387wKV { left: 14px; }
 
-.note-3kmerW textarea:focus { background-color: transparent;} /* fix edit note profile idk*/
+// userPopout
+.userPopoutOuter-3AVBmJ {
+	background-color: $rb-bg-quarterary;
+	--profile-note-background-color: #{$rb-bg-quarterary} !important;
 
-.userPopout-2j1gM4, .footer-3naVBw, .bodyInnerWrapper-2bQs1k, .headerTop-2y3V6H, /*user popout*/
-.menu-1QACrS.menu-2-eHMB { // your profile popout
-    background-color: #282828; 
+	.userPopoutInner-1hXSeY {
+		background-color: inherit;
+		border-radius: 4px;
+
+		.bannerSVGWrapper-qc0szY .popoutBannerPremium-2RvDNZ {
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+		}
+		.profileBadges-31rDHI {
+			background-color: $rb-bg-5;
+		}
+		.note-6O4w9y {
+			border: 1px solid transparent;
+			&:hover { border: 1px solid var(--profile-message-input-border-color); }
+			border-radius: 4px;
+			padding: 5px
+		}
+	}
+	.pencilContainer-11Kuga { display: none; }
 }
-.menu-1QACrS.menu-2-eHMB { width: 300px }
-.scrollerBase-_bVAAt { overflow: initial scroll }
 
-.input-2z42oC, .connectedAccount-1xKpli { background-color: $rb-bg-secondary-d; }
-
-.avatarWrapper-eenWra, .avatar-2Vndt_  {
-    background: #282828;
-    border-color: #282828;
+.userProfileInnerThemedNonPremium-1gT-zY { // overwrite non-premium gradient (or, lack there-of)
+	background: $rb-bg-quarterary !important;
 }
-.aboutMeSection-3bipSD { background: #282828 !important; }
+[class*="userProfileInnerThemedWithBanner"] { // premiums don't get any gradients >:)
+	background: $rb-bg-quarterary !important;
+	--profile-gradient-primary-color: #{$rb-bg-quarterary};
+	--profile-gradient-secondary-color: #{$rb-bg-quarterary};
+	--profile-gradient-overlay-color: #{$rb-bg-quarterary};
+	--profile-message-input-border-color: var(--background-modifier-accent) !important;
+	// .userTagUsernameNoNickname-2e_xaO {
+	// 	color: 
+	// }
+}
+.userProfileOuterThemed-3EfHmv.theme-light {
+	--interactive-normal: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
+	--interactive-active: hsl(0,calc(var(--saturation-factor, 1)*0%),100%);
+	--interactive-muted: hsl(217,calc(var(--saturation-factor, 1)*7.6%),33.5%);
+	--header-secondary: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
+	--header-primary: #{$rb-fg-accent};
+	--text-normal: #{$rb-text};
+	--background-secondary-alt: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%);
 
+	.avatarHoverTarget-l77PhT svg circle[fill="white"] { fill: transparent; }
+}
+.userProfileOuterThemed-3EfHmv { padding: 4px; }
+
+.userPopoutOverlayBackground-dKOOda {
+	background-color: $rb-bg-quarterary;
+	margin: 1rem 0 0 0;
+}
+
+// mode where there are no borders for premiums
+
+.userProfileOuterThemed-3EfHmv.userPopoutOuter-3AVBmJ,
+.userProfileOuterThemed-3EfHmv.userProfileOuter-1K_BYU {
+	padding: 0; // instead of 4
+	.avatarWrapper-3y0KZ1 {
+		left: calc(22px - 4px);
+		top: calc(76px - 4px);
+	}
+}
