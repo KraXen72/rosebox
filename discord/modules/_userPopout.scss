@@ -33,6 +33,8 @@
 /* put the remove role button back in roleCircle     */
 .roleRemoveIcon-387wKV { left: 14px; }
 
+
+
 // userPopout
 .userPopoutOuter-3AVBmJ {
 	background-color: $rb-bg-quarterary;
@@ -48,25 +50,27 @@
 			width: 100%;
 			height: 100%;
 		}
+		.bannerSVGWrapper-qc0szY {
+			.popoutBannerPremium-2RvDNZ, foreignObject, .popoutNoBannerPremium-2TQa6P,
+			:is(.imageUploaderInner-IIRaFr, 
+				.bannerUploader-1sbyBg, 
+				.imageUploaderFileInput-18YkLC, 
+				.imageUploaderHint-33zkjZ
+			) {
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
 
-		.bannerSVGWrapper-qc0szY .popoutBannerPremium-2RvDNZ,
-		.bannerSVGWrapper-qc0szY foreignObject,
-		.bannerSVGWrapper-qc0szY :is(.imageUploaderInner-IIRaFr, 
-			.bannerUploader-1sbyBg, 
-			.imageUploaderFileInput-18YkLC, 
-			.imageUploaderHint-33zkjZ
-		) {
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
+				width: 300px;
+				$banner-height: 105.88px;
+				height: $banner-height;
+				min-height: $banner-height;
 
-			width: 300px;
-			$banner-height: 105.88px;
-			height: $banner-height;
-			min-height: $banner-height;
-
-			background-position: 50%;
-			background-size: cover;
+				background-position: 50%;
+				background-size: cover;
+			}
 		}
+		
+
 		.upsellVisible-evDwII { display: none; }
 		.profileBadges-31rDHI {
 			background-color: $rb-bg-5;
@@ -88,9 +92,28 @@
 	.pencilContainer-11Kuga { display: none; }
 }
 
-.userProfileInnerThemedNonPremium-1gT-zY { // overwrite non-premium gradient (or, lack there-of)
+// overwrite non-premium gradient (or, lack there-of)
+.userProfileInnerThemedNonPremium-1gT-zY { 
 	background: $rb-bg-quarterary !important;
 }
+
+// premium without banner
+.userProfileInnerThemedPremiumWithoutBanner-1yMS1H {
+	.avatarPositionPremiumNoBanner-nWzERs {
+		top: 42px !important;
+	}
+	.divider-1tWBgZ, .note-6O4w9y, .messageInputContainer-2rGDH8, .rolePillBorder-RiRiuN {
+		--profile-message-input-border-color: var(--background-modifier-accent) !important;
+	}
+	.bannerSVGWrapper-qc0szY {
+		min-width: 300px;
+	}
+	.popoutNoBannerPremium-2TQa6P, foreignObject, .bannerSVGWrapper-qc0szY {
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+}
+
 [class*="userProfileInnerThemedWithBanner"] { // premiums don't get any gradients >:)
 	background: $rb-bg-quarterary !important;
 	--profile-gradient-primary-color: #{$rb-bg-quarterary};
@@ -102,6 +125,7 @@
 	// }
 }
 .userProfileOuterThemed-3EfHmv {
+	--background-modifier-accent: hsla(217,calc(var(--saturation-factor, 1)*7.6%),33.5%,0.48);
 	&.theme-light {
 		--interactive-normal: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
 		--interactive-active: hsl(0,calc(var(--saturation-factor, 1)*0%),100%);
@@ -111,21 +135,16 @@
 		--text-normal: #{$rb-text};
 		--background-secondary-alt: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%);
 		--background-floating: #18191c;
-
-		
 	}
-	.avatarPositionPremiumBanner-2nq2Fy > svg circle[fill="black"] {
-		fill: transparent !important;
+	.avatarPositionPremiumBanner-2nq2Fy {
+		svg > rect:nth-child(2),
+		svg > circle[fill="white"],
+		svg > circle[fill="black"] {
+			fill: transparent !important;
+		}
 	}
-	.avatarPositionPremiumBanner-2nq2Fy svg > rect:nth-child(2),
-	.avatarPositionPremiumBanner-2nq2Fy svg > circle[fill="white"] {
-		fill: transparent !important;
-	}
-
-	// .avatarHoverTarget-l77PhT, .avatar-1YsFQ1 {
-	// 	svg[class^="mask"] { circle[fill="white"], rect[fill="black"], circle[fill="black"] { fill: transparent; } }
-	// } 
 }
+
 .userProfileOuterThemed-3EfHmv { padding: 4px; }
 .userProfileOuter-1K_BYU.theme-light {
 	--background-floating: #18191c !important; 
@@ -141,6 +160,8 @@
 
 .userProfileOuterThemed-3EfHmv.userPopoutOuter-3AVBmJ,
 .userProfileOuterThemed-3EfHmv.userProfileOuter-1K_BYU {
+	box-sizing: border-box;
+	// overflow: initial;
 	padding: 0; // instead of 4
 	.avatarWrapper-3y0KZ1,
 	.avatarUploaderPremium-2v2k2d {

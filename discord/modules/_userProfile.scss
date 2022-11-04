@@ -21,3 +21,17 @@
     background: $rb-bg-primary !important;
     border-color: $rb-bg-primary !important;
 }
+.tabBarContainer-2UG0vy {
+	margin-top: 12px;
+	.tabBarItem-3VvT2z {
+		height: 1.5rem;
+	}
+}
+
+// user profile status thing
+.userProfileModalInner-3fh3QA header div.avatar-1YsFQ1 svg {
+	circle[fill="black"], rect[fill="black"] {
+		&:not(.pointerEvents-9SZWKj) { fill: transparent !important; }
+	}
+	
+}
