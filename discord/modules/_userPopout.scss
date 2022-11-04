@@ -49,6 +49,7 @@
 		&::before {
 			width: 100%;
 			height: 100%;
+			border-radius: 4px;
 		}
 		.bannerSVGWrapper-qc0szY {
 			.popoutBannerPremium-2RvDNZ, foreignObject, .popoutNoBannerPremium-2TQa6P,
@@ -136,7 +137,8 @@
 		--background-secondary-alt: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%);
 		--background-floating: #18191c;
 	}
-	.avatarPositionPremiumBanner-2nq2Fy {
+	.avatarPositionPremiumBanner-2nq2Fy,
+	.avatarPositionPremiumNoBanner-nWzERs {
 		svg > rect:nth-child(2),
 		svg > circle[fill="white"],
 		svg > circle[fill="black"] {

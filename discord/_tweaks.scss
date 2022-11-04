@@ -31,7 +31,11 @@
 .embedSuppressButton-1rZHq6 {cursor: pointer;}
 
 /*ctrl + K quick switcher made the input a bit darker*/
-.input-3r5zZY {Background-Color: #36383d;}
+.input-3r5zZY {background-color: #36383d;}
+.focusLock-2tveLW, .container-qBnZJg { 
+	border: none !important;
+	background: transparent;
+}
 
 /*change some text from all caps to only fist letter cap*/
 .bodyTitle-Y0qMQz  {text-transform: capitalize;font-size: 15px;}

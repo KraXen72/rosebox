@@ -30,8 +30,11 @@
 
 // user profile status thing
 .userProfileModalInner-3fh3QA header div.avatar-1YsFQ1 svg {
-	circle[fill="black"], rect[fill="black"] {
+	circle[fill="black"], rect[fill="black"], circle[fill="white"]  {
 		&:not(.pointerEvents-9SZWKj) { fill: transparent !important; }
 	}
 	
+}
+.partnered-23cXFN { //partnered badge thing
+	color: $rb-fg-accent;
 }
