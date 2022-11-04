@@ -40,6 +40,7 @@
 	background-color: $rb-bg-quarterary;
 	--profile-note-background-color: #{$rb-bg-quarterary} !important;
 	width: 300px;
+	border-radius: 8px;
 
 	.userPopoutInner-1hXSeY {
 		background-color: inherit;
@@ -49,7 +50,7 @@
 		&::before {
 			width: 100%;
 			height: 100%;
-			border-radius: 4px;
+			border-radius: 8px;
 		}
 		.bannerSVGWrapper-qc0szY {
 			.popoutBannerPremium-2RvDNZ, foreignObject, .popoutNoBannerPremium-2TQa6P,
@@ -113,6 +114,12 @@
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
 	}
+	.lastSection-3_1yKt {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	
 }
 
 [class*="userProfileInnerThemedWithBanner"] { // premiums don't get any gradients >:)
@@ -136,6 +143,7 @@
 		--text-normal: #{$rb-text};
 		--background-secondary-alt: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%);
 		--background-floating: #18191c;
+		--profile-role-pill-background-color: var(--background-secondary-alt) !important;
 	}
 	.avatarPositionPremiumBanner-2nq2Fy,
 	.avatarPositionPremiumNoBanner-nWzERs {
@@ -145,6 +153,10 @@
 			fill: transparent !important;
 		}
 	}
+	--profile-gradient-primary-color: #{$rb-bg-quarterary} !important;
+	--profile-gradient-secondary-color: #{$rb-bg-quarterary} !important;
+	--profile-gradient-button-color: #{$rb-bg-quarterary} !important;
+	--profile-gradient-overlay-color: transparent !important;
 }
 
 .userProfileOuterThemed-3EfHmv { padding: 4px; }
