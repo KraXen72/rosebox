@@ -41,3 +41,16 @@
 .scroller-2FKFPG.scroller-2TZvBN {
     border-top-left-radius: 0px !important;
 }
+
+// upsell popup
+.upsellTooltipWrapper-1wqikQ {
+	background: $rb-bg-accent-opaque;
+	color: $rb-text;
+
+	.upsellTooltipHeader-28hJ7J, .upsellTooltipText-SIthpf, .text-sm-normal-3Zj3Iv {
+		color: rgba(255, 255, 255, 0.847) !important;
+	}
+}
+.upsellTooltipWrapper-1wqikQ.caretTopCenter-1wqGIE:after {
+	border-bottom-color: $rb-bg-accent-opaque !important;
+}

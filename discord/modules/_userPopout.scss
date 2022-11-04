@@ -37,17 +37,46 @@
 .userPopoutOuter-3AVBmJ {
 	background-color: $rb-bg-quarterary;
 	--profile-note-background-color: #{$rb-bg-quarterary} !important;
+	width: 300px;
 
 	.userPopoutInner-1hXSeY {
 		background-color: inherit;
 		border-radius: 4px;
+		width: 300px;
 
-		.bannerSVGWrapper-qc0szY .popoutBannerPremium-2RvDNZ {
+		&::before {
+			width: 100%;
+			height: 100%;
+		}
+
+		.bannerSVGWrapper-qc0szY .popoutBannerPremium-2RvDNZ,
+		.bannerSVGWrapper-qc0szY foreignObject,
+		.bannerSVGWrapper-qc0szY :is(.imageUploaderInner-IIRaFr, 
+			.bannerUploader-1sbyBg, 
+			.imageUploaderFileInput-18YkLC, 
+			.imageUploaderHint-33zkjZ
+		) {
 			border-top-left-radius: 4px;
 			border-top-right-radius: 4px;
+
+			width: 300px;
+			$banner-height: 105.88px;
+			height: $banner-height;
+			min-height: $banner-height;
+
+			background-position: 50%;
+			background-size: cover;
 		}
+		.upsellVisible-evDwII { display: none; }
 		.profileBadges-31rDHI {
 			background-color: $rb-bg-5;
+		}
+		.scroller-1jBQYo {
+			&::-webkit-scrollbar-thumb,
+			&::-webkit-scrollbar {
+				width: 0 !important;
+			}
+			
 		}
 		.note-6O4w9y {
 			border: 1px solid transparent;
@@ -80,10 +109,17 @@
 	--header-primary: #{$rb-fg-accent};
 	--text-normal: #{$rb-text};
 	--background-secondary-alt: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%);
+	--background-floating: #18191c;
 
-	.avatarHoverTarget-l77PhT svg circle[fill="white"] { fill: transparent; }
+	.avatarHoverTarget-l77PhT, .avatar-1YsFQ1 {
+		& svg circle[fill="white"] { fill: transparent; }
+	} 
 }
 .userProfileOuterThemed-3EfHmv { padding: 4px; }
+.userProfileOuter-1K_BYU.theme-light {
+	--background-floating: #18191c !important; 
+	--profile-body-background-color: var(--background-floating) !important;
+}
 
 .userPopoutOverlayBackground-dKOOda {
 	background-color: $rb-bg-quarterary;
@@ -95,7 +131,8 @@
 .userProfileOuterThemed-3EfHmv.userPopoutOuter-3AVBmJ,
 .userProfileOuterThemed-3EfHmv.userProfileOuter-1K_BYU {
 	padding: 0; // instead of 4
-	.avatarWrapper-3y0KZ1 {
+	.avatarWrapper-3y0KZ1,
+	.avatarUploaderPremium-2v2k2d {
 		left: calc(22px - 4px);
 		top: calc(76px - 4px);
 	}
