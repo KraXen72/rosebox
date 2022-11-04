@@ -71,18 +71,18 @@
 		.profileBadges-31rDHI {
 			background-color: $rb-bg-5;
 		}
+		.divider-1tWBgZ { background-color: var(--profile-message-input-border-color); }
 		.scroller-1jBQYo {
-			&::-webkit-scrollbar-thumb,
-			&::-webkit-scrollbar {
-				width: 0 !important;
-			}
-			
+			&::-webkit-scrollbar-thumb, &::-webkit-scrollbar { width: 0 !important; }
 		}
+
 		.note-6O4w9y {
-			border: 1px solid transparent;
-			&:hover { border: 1px solid var(--profile-message-input-border-color); }
+			// border: 1px solid transparent;
+			// &:hover { border: 1px solid var(--profile-message-input-border-color); }
+			border: 1px solid var(--profile-message-input-border-color);
 			border-radius: 4px;
-			padding: 5px
+			padding: 5px;
+			&::placeholder { color: var(--header-secondary) }
 		}
 	}
 	.pencilContainer-11Kuga { display: none; }
@@ -101,19 +101,30 @@
 	// 	color: 
 	// }
 }
-.userProfileOuterThemed-3EfHmv.theme-light {
-	--interactive-normal: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
-	--interactive-active: hsl(0,calc(var(--saturation-factor, 1)*0%),100%);
-	--interactive-muted: hsl(217,calc(var(--saturation-factor, 1)*7.6%),33.5%);
-	--header-secondary: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
-	--header-primary: #{$rb-fg-accent};
-	--text-normal: #{$rb-text};
-	--background-secondary-alt: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%);
-	--background-floating: #18191c;
+.userProfileOuterThemed-3EfHmv {
+	&.theme-light {
+		--interactive-normal: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
+		--interactive-active: hsl(0,calc(var(--saturation-factor, 1)*0%),100%);
+		--interactive-muted: hsl(217,calc(var(--saturation-factor, 1)*7.6%),33.5%);
+		--header-secondary: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
+		--header-primary: #{$rb-fg-accent};
+		--text-normal: #{$rb-text};
+		--background-secondary-alt: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%);
+		--background-floating: #18191c;
 
-	.avatarHoverTarget-l77PhT, .avatar-1YsFQ1 {
-		& svg circle[fill="white"] { fill: transparent; }
-	} 
+		
+	}
+	.avatarPositionPremiumBanner-2nq2Fy > svg circle[fill="black"] {
+		fill: transparent !important;
+	}
+	.avatarPositionPremiumBanner-2nq2Fy svg > rect:nth-child(2),
+	.avatarPositionPremiumBanner-2nq2Fy svg > circle[fill="white"] {
+		fill: transparent !important;
+	}
+
+	// .avatarHoverTarget-l77PhT, .avatar-1YsFQ1 {
+	// 	svg[class^="mask"] { circle[fill="white"], rect[fill="black"], circle[fill="black"] { fill: transparent; } }
+	// } 
 }
 .userProfileOuterThemed-3EfHmv { padding: 4px; }
 .userProfileOuter-1K_BYU.theme-light {
