@@ -49,7 +49,9 @@
     --brand-experiment-15a: #{$rb-bg-accent} !important; /* reaction bg */
     --brand-experiment: #{$rb-bg-accent} !important; /* reaction border + general accent */
     --brand-experiment-200: #{$rb-text} !important; /* reaction text */
-	--modal-background: #{$rb-bg-5} !important; 
+
+	--modal-background: #{$rb-bg-5} !important;
+	--background-secondary-alt: #{$rb-bg-5} !important;
 }
 
 ::selection {background-color: $rb-bg-accent !important;}

@@ -14,10 +14,13 @@
 }
 
 /*----//----MESSAGE INPUT BOX AND RELATED CHANGES----------*/
-.scrollableContainer-15eg7h { /*main input bar*/
-    border-radius: 25px;
+.scrollableContainer-15eg7h { // edit & message input
+	border-radius: 0.5rem;
     background: $col-dcweb-6;
     border: 1px solid rgba(0,0,0,0.2);
+}
+.form-3gdLxP .scrollableContainer-15eg7h { /*main input bar*/
+	border-radius: 25px;
 }
 .channelTextArea-1FufC0 {background: transparent;}
 .attachButton-_ACFSu,
