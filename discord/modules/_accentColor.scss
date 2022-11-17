@@ -174,11 +174,6 @@
     border: 2px dashed $rb-fg-accent;
     border-radius: 10px;
 }
-/* i don't use powercord anymore so i can't test this, Mathias says it looks better like this, so ig.
-.powercord-spotify-playlist:hover {
-    background-color: var(--ColTransparent1)!important;
-    border-color: $rb-fg-accent!important
-}*/
 .regionSelect-3lf4eE button,
 /* what is .wrapper-2ZbzR9 and .downloadApps-14IgKV ?*/
 .wrapper-2ZbzR9 .header-3ZP1MY,
@@ -217,3 +212,6 @@
 .barInner-3dHef4 {
     background-color: $rb-fg-accent !important;
 }
+// #vc-spotify-player {
+// 	--vc-spotify-green: #{$rb-fg-accent} !important;
+// }

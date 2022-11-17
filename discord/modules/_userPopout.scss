@@ -1,6 +1,9 @@
 /*----//----USER POPOUT----------*/
 /*role pills by Cynthia*/
 /* updated once again by the awesome Cynthia (Davri#0015)*/
+
+$up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
+
 .role-2TIOKu:not(.addButton-1_dZYu) {
     position: relative;
     overflow: hidden;
@@ -25,19 +28,19 @@
     z-index: 1;
 }
 
-.rolePillBorder-RiRiuN {
+.rolePillBorder-RiRiuN, .rolePill-2IJ1vo {
     border: 1px solid;
-    border-color: var(--profile-message-input-border-color);
+    border-color: $up-border-color;
 }
 
 /* put the remove role button back in roleCircle     */
 .roleRemoveIcon-387wKV { left: 14px; }
 
 
-
 // userPopout
 .userPopoutOuter-3AVBmJ {
 	background-color: $rb-bg-quarterary;
+	// --profile-note-background-color: #{$rb-bg-quarterary} !important;
 	--profile-note-background-color: #{$rb-bg-quarterary} !important;
 	width: 300px;
 	border-radius: 8px;
@@ -86,13 +89,56 @@
 			&::-webkit-scrollbar-thumb, &::-webkit-scrollbar { width: 0 !important; }
 		}
 
+		.activityUserPopoutV2-3eKqzY {
+			position: relative;
+			.buttonsWrapper-2ARRp1 {
+				position: absolute;
+				right: 1.40rem;
+				height: min-content;
+				width: min-content;
+				margin-top: 0;
+				top: 0;
+			}
+			button.lookFilled-yCfaCM {
+				&:not(.iconButtonSize-1-pz2t) { display: none; }
+				&.iconButtonSize-1-pz2t {
+					@include padmar();
+					padding-top: 0.25rem !important;
+					max-width: 24px !important;
+					max-height: 24px !important;
+					width: 24px !important;
+					height: 24px !important;
+					min-width: 0 !important;
+					min-height: 0 !important;
+					z-index: 2;
+					background-color: transparent !important;
+					align-items: center;
+					.listenAlongIcon-aXq1MH { color: $rb-text; }
+					&:hover { 
+						background-color: $rb-fg-accent !important;
+						opacity: 1 !important;
+						.listenAlongIcon-aXq1MH { color: white; }
+					}
+				}
+			}
+			
+		}
+
 		.note-6O4w9y {
 			// border: 1px solid transparent;
 			// &:hover { border: 1px solid var(--profile-message-input-border-color); }
 			border: 1px solid var(--profile-message-input-border-color);
 			border-radius: 4px;
-			padding: 5px;
-			&::placeholder { color: var(--header-secondary) }
+			padding: 0 5px;
+			height: min-content;
+			min-height: 40px;
+			display: flex;
+			align-items: center;
+			
+			textarea {
+				&::placeholder { color: var(--input-placeholder-text) !important; }
+				padding: 9px 4px;
+			} 
 		}
 	}
 	.pencilContainer-11Kuga { display: none; }
@@ -122,8 +168,6 @@
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 	}
-	
-	
 }
 
 [class*="userProfileInnerThemedWithBanner"] { // premiums don't get any gradients >:)

@@ -97,10 +97,8 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
     background: #593695 !important;
 }
 
-
-.userInfoViewing-16kqK3 .flex-2S1XBF .flexChild-3PzYmX .marginBottom20-315RVT + div .selectable-2GODwY { /*blur email until hover*/
-    filter: blur(5px);
-    transition: filter .5s;
+.timestamp-6-ptG3 {
+	background-color: $rb-bg-accent;
 }
 
 /*small tweaks*/
@@ -108,18 +106,6 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
 .topSectionNormal-2-vo2m {background-color: #202225 !important;}
 .body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-31IekZ, .section-3G9aLW, .headerNormal-1l1Znk {background-color: #282828;}
 
-//goosemod spotify
-.gm-spotify-controls-playback-bar {
-    margin-left: .25rem;
-    margin-right: .25rem;
-    border-radius: 2rem;
-    
-    --interactive-active: #{$rb-fg-accent};
-
-    .gm-spotify-controls-playback-thumb {
-        background: $rb-fg-accent !important;
-    }
-}
 .message-2CShn3 .username-u-ebrn { // join msg
 	color: $rb-fg-accent;
 }
