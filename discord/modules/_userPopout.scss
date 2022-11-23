@@ -28,7 +28,7 @@ $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
     z-index: 1;
 }
 
-.rolePillBorder-RiRiuN, .rolePill-2IJ1vo {
+.rolePillBorder-RiRiuN { //, .rolePill-2IJ1vo {
     border: 1px solid;
     border-color: $up-border-color;
 }
@@ -89,41 +89,6 @@ $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 			&::-webkit-scrollbar-thumb, &::-webkit-scrollbar { width: 0 !important; }
 		}
 
-		.activityUserPopoutV2-3eKqzY {
-			position: relative;
-			.buttonsWrapper-2ARRp1 {
-				position: absolute;
-				right: 1.40rem;
-				height: min-content;
-				width: min-content;
-				margin-top: 0;
-				top: 0;
-			}
-			button.lookFilled-yCfaCM {
-				&:not(.iconButtonSize-1-pz2t) { display: none; }
-				&.iconButtonSize-1-pz2t {
-					@include padmar();
-					padding-top: 0.25rem !important;
-					max-width: 24px !important;
-					max-height: 24px !important;
-					width: 24px !important;
-					height: 24px !important;
-					min-width: 0 !important;
-					min-height: 0 !important;
-					z-index: 2;
-					background-color: transparent !important;
-					align-items: center;
-					.listenAlongIcon-aXq1MH { color: $rb-text; }
-					&:hover { 
-						background-color: $rb-fg-accent !important;
-						opacity: 1 !important;
-						.listenAlongIcon-aXq1MH { color: white; }
-					}
-				}
-			}
-			
-		}
-
 		.note-6O4w9y {
 			// border: 1px solid transparent;
 			// &:hover { border: 1px solid var(--profile-message-input-border-color); }
@@ -142,6 +107,42 @@ $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 		}
 	}
 	.pencilContainer-11Kuga { display: none; }
+}
+
+// spotify activity
+.activityUserPopoutV2-3eKqzY {
+	position: relative;
+	.buttonsWrapper-2ARRp1 {
+		position: absolute;
+		right: 1.40rem;
+		height: min-content;
+		width: min-content;
+		margin-top: 0;
+		top: 0;
+	}
+	button.lookFilled-yCfaCM {
+		&:not(.iconButtonSize-1-pz2t) { display: none; }
+		&.iconButtonSize-1-pz2t {
+			@include padmar();
+			padding-top: 0.25rem !important;
+			max-width: 24px !important;
+			max-height: 24px !important;
+			width: 24px !important;
+			height: 24px !important;
+			min-width: 0 !important;
+			min-height: 0 !important;
+			z-index: 2;
+			background-color: transparent !important;
+			align-items: center;
+			.listenAlongIcon-aXq1MH { color: $rb-text; }
+			&:hover { 
+				background-color: $rb-fg-accent !important;
+				opacity: 1 !important;
+				.listenAlongIcon-aXq1MH { color: white; }
+			}
+		}
+	}
+	
 }
 
 // overwrite non-premium gradient (or, lack there-of)
