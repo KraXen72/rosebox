@@ -49,6 +49,7 @@ rosebox is a color theme inspired by gruvbox, but with the main focus on **being
 for the rest of the colors (syntax highlighting, etc.) for now use some from the nord <strong>frost</strong> or <strong>aurora</strong> palletes:
 <span style = "width: 100%">
     <img src="https://cdn.discordapp.com/attachments/704792091955429426/804293553982406696/nord.png">
+i have more colors i found, i just need to tweak them & test before making them part of the official theme.
 
 </span>
 
