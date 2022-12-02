@@ -98,6 +98,11 @@
 	background: $rb-bg-primary !important;
 }
 
+// fix medium emoji grid row distribution
+.emojiListRow-3hshyU.emojiListRowMediumSize-2_-xbz {
+    justify-content: space-evenly;
+}
+
 // .emojiItem-277VFM .emojiItemImageLoading-1yEIxx /* Fix Loading Emojis */ {
 //     background-image: none;
 //     background-color: var(--background-primary) !important;

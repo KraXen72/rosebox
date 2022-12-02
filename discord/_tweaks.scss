@@ -1,16 +1,9 @@
 //small tweaks and snippets you can toggle on and off
 
-/*placeholder messages delet*/
-//.wrapper-15CKyy[aria-hidden="true"] { visibility: hidden;}
-
 /*Wider search results section */
 .searchResultsWrap-5RVOkx{ width: 500px; }
 
-/*Bring Back Blurple Verified Badge */
-.verified-1Jv_7P:not(.disableColor-MwOAZf) > svg path { fill: #7289DA}
-
-/*server folder*/
-//.expandedFolderBackground-2sPsd-, .folder-21wGz3 {background-color: var(--background-primary);transition: all 0.3s;}
+// :root, body, html { letter-spacing: 0.009rem; }
 
 /*inbox*/
 .recentMentionsPopout-2bI1ZN, .messagesPopoutWrap-3zryHW {max-height: 93vh !important;}
@@ -38,7 +31,7 @@
 }
 
 /*change some text from all caps to only fist letter cap*/
-.bodyTitle-Y0qMQz  {text-transform: capitalize;font-size: 15px;}
+.bodyTitle-Y0qMQz  {text-transform: capitalize; font-size: 15px;}
 
 /*hide protips bc im a pro*/
 .protip-YaFfgO/*, .protip-1jXzAl*/ {display: none;}
