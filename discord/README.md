@@ -14,6 +14,7 @@ import link:
 **this can be installed using any discord mod you like. if you don't have any yet, try some of these:**
 - openasar: [link](https://openasar.dev) > `OpenAsar Config` > `Theming` > paste this link in.
 - vencord: [link](https://github.com/Vendicated/Vencord) > `Settings` > `Vencord` > Enable `Use QuickCss` > Click `Open QuickCss File` > paste this link in.
+- vencord (themes): [link](https://github.com/Vendicated/Vencord) > `Settings` > `Vencord` > `Themes` > paste this link in.
 - ~~powercord/replugged: [link](https://powercord.dev) `Quick CSS` tab > paste this link in.~~
 - ~~goosemod: [link](https://goosemod.com) `Custom CSS` plugin > paste this link in.~~
 - ~~Betterdiscord: [link](https://github.com/rauenzi/BBDInstaller/releases/) `Custom CSS` tab > paste this link in.~~
