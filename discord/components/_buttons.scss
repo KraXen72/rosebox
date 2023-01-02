@@ -12,6 +12,10 @@
 		&:hover { background-color: $btn-bg-green-dark !important; }
 	}
 }
-.toolbar-37BrJ5 > .lookFilled-yCfaCM {
-    background-color: transparent !important;
+
+// markdown editing toolbar
+.toolbar-37BrJ5, #slate-toolbar {
+	.lookFilled-yCfaCM {
+		background-color: transparent !important;
+	}
 }
