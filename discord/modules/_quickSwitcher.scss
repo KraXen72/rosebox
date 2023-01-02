@@ -1,11 +1,10 @@
 .container-qBnZJg {
     .quickswitcher-pKcM9U {
         background: $rb-bg-primary !important;
-    
-        .input-3r5zZY { //searchbox
-            background: #191919;
-        }
-        .content-2a4AW9 { //results list
+		
+        .input-3r5zZY { background: #191919; } // searchbox
+		.scroller-2qwVWY { max-height: 400px; } // results list
+        .content-2a4AW9 { // also the result list apparently lol
             background: $rb-bg-primary !important;
             .result-u66Ywh[aria-selected="true"] {
                 background: $rb-bg-accent !important;
