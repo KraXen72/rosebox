@@ -1,35 +1,40 @@
-/*----//----SCROLLBARS IDK----------*/
-/*scrollbars form Customa - big thanks to emma*/
+/*scrollbars from Customa - thanks to emma*/
+// modified by me
+
 ::-webkit-scrollbar {
-    width: 5px!important;
-    height: 3px!important;
-    display: block;
+	width: 5px !important;
+	height: 3px !important;
+	display: block;
 }
+
 ::-webkit-scrollbar-track-piece,
 .auto-2K3UW5::-webkit-scrollbar-track-piece {
-    background-color: rgba(0, 0, 0, 0) !important;
-    border: none !important;
+	background-color: rgba(0, 0, 0, 0) !important;
+	border: none !important;
 }
+
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-track {
-    border: none !important;
+	border: none !important;
 }
+
 ::-webkit-scrollbar-track {
-    background: transparent !important;
+	background: transparent !important;
 }
 
 /*show scrollbar only on hover*/
 .messages-3amgkR::-webkit-scrollbar-thumb {
-    visibility: hidden !important;
+	visibility: hidden !important;
 }
+
 .messages-3amgkR:hover::-webkit-scrollbar-thumb {
-    visibility: visible !important;
+	visibility: visible !important;
 }
 
 //make some scroller bgs transparent
 .scrollerBase-_bVAAt::-webkit-scrollbar-track,
 .content-2a4AW9::-webkit-scrollbar-track,
 .scroller-2qwVWY::-webkit-scrollbar-track {
-    background-color: transparent  !important;
-    background: transparent !important;
+	background-color: transparent !important;
+	background: transparent !important;
 }

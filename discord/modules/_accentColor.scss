@@ -1,4 +1,6 @@
-/*----//----CUSTOMA ACCENT COLOR SYSTEM----------*/
+// this chunk of code for applying the accent color in various spaces was taken from emma's theme customa - big thanks to her
+// i did modify it quite a bit but most of the classnames are from her theme
+
 /*alpha*/
 .buffer-3eVqKK,
 .buffer-3eVqKK::after,
@@ -107,7 +109,7 @@
 .switch-3wwwcV.valueChecked-m-4IJZ[style*="rgb(67, 181, 129)"],
 .tabBar-ra-EuL .item-3mHhwr[style*="background-color: rgb(67, 181, 129);"], 
 .botTag-2mryIa, .listContent-2_qb-y .botText-1fD6Qk, .listContent-2_qb-y .botTagVerified-2KCPMa  {
-    background-color: $rb-fg-accent!important
+    background-color: $rb-fg-accent !important;
 }
 .attachButtonPlay-1ATmb5,
 /*server plus and search button is the only thing i can notice*/
@@ -123,14 +125,16 @@
 .tierHeaderContent-2-YfvN .tierUnlocked-27DwHo,
 .unreadPill-3nEWYM .unreadPillCapStroke-1nE1Q8,
 .updateIconForeground-2V_zo4,
+.message-2CShn3 .username-u-ebrn, // join msg username
 .wrapper-1ZcZW- {
     color: $rb-fg-accent;
 }
+
 .reaction-2A2y9y.reactionMe-3I9gFK {
     border-color: transparent !important;
 }
 .expandedFolderIconWrapper-1xLaU- svg[style="color: rgb(114, 137, 218);"], .theme-dark .wrapper-1ZcZW- {
-    color: $rb-fg-accent!important
+    color: $rb-fg-accent !important
 }
 .checkbox-1ycfTw,
 .checkboxInner-1aRh1d,

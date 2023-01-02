@@ -1,24 +1,3 @@
-/*normalizing and reseting related mixins and stuff*/
-@mixin fullscreen($position : absolute) { //fullscreen a div and reset its stuff
-    height: 100vh !important;
-    width: 100vw !important;
-    @include padmar;
-    
-    position: $position !important;
-    top: initial !important;
-    bottom: initial !important;
-    left: initial !important;
-    right: initial !important;
-}
-
-@mixin unUiScale() { //remove ui scale from uiBase
-    width: 100vw !important;
-    height: 100vh !important;
-    max-width: 100vw !important;
-    max-height: 100vh !important;
-    transform: scale(1) !important;
-}
-
 @mixin normalize($position : relative, $important : false) { //normalize an elements position, padding and margin
     @if $important == true {
         position: $position !important;
@@ -71,3 +50,13 @@
     transform: translateY(-8%);
     line-height: 20px;
 }
+
+// hiding elements
+.toolbar-3_r2xA [href="https://support.discord.com"],
+[aria-label="Send a gift"],
+.protip-YaFfgO, .protip-1jXzAl {
+	display: none !important
+}
+
+/*remove all outlines just because chrome*/
+* {outline: 0px solid transparent !important;}

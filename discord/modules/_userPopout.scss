@@ -1,6 +1,7 @@
 /*----//----USER POPOUT----------*/
-/*role pills by Cynthia*/
-/* updated once again by the awesome Cynthia (Davri#0015)*/
+/* role pills by Cynthia */
+/* updated once again by the awesome Cynthia (Davri#0015) in 2022 */
+// uses some slightly sketchy pseudo element hack to color 
 
 $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 
@@ -28,14 +29,12 @@ $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
     z-index: 1;
 }
 
-.rolePillBorder-RiRiuN { //, .rolePill-2IJ1vo {
-    border: 1px solid;
-    border-color: $up-border-color;
+.rolePillBorder-RiRiuN, .rolePill-2IJ1vo {
+    border: 1px solid transparent;
 }
 
 /* put the remove role button back in roleCircle     */
 .roleRemoveIcon-387wKV { left: 14px; }
-
 
 // userPopout
 .userPopoutOuter-3AVBmJ {

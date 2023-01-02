@@ -1,31 +1,35 @@
-/*----//----server title bar, banner, channel header----------*/
-.title-31SJ6t {
-    /*channel title bar hosting search etc.*/
-    border-top-left-radius: 15px !important;
-}
-//server header
+// the layout is as follows:
+// (left corner rounded) server banner (right corner rounded) (left corner rounded) chat title/channel title |end|
+
+// server header
 .header-2o-2hj,
 .searchBar-3TnChZ, 
 .container-1-ERn5, .container-1NXEtd, .sidebar-1tnWFu{
     z-index: 99;
     box-shadow: none;
     background-color: var(--ColChannelList);
-    border-top-right-radius: 8px !important; //add another corner smol
+    border-top-right-radius: 10px !important; //add another corner smol
 }
-.bannerVisible-14J9lQ { /*remove shadow if banner is visible*/
-    box-shadow: none;
-    filter: none;
-    position: relative;
+
+.animatedContainer-2laTjx, .bannerImage-ubW8K-, // round banner image
+.header-3OsQeK // round header (no banner image) 
+{ 
+    border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 }
-.animatedContainer-1pJv5C {
-    /*add rounded corner to banner*/
-    border-top-right-radius: 8px;
-}
-.header-3OsQeK {
+
+// remove shadow
+.header-3OsQeK, .bannerVisible-14J9lQ  {
 	-webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
-/* add a small rounded corner thing? to message titlebar*/
+
+.bannerVisible-14J9lQ { 
+    filter: none;
+    position: relative;
+}
+
+// round left corner of message titlebar
 .chat-2ZfjoI,
 .container-2cd8Mz,
 .libraryHeader-2loraV,
@@ -38,6 +42,7 @@
 .pageWrapper-2PwDoS {
     border-top-left-radius: 10px !important;
 }
+
 .scroller-2FKFPG.scroller-2TZvBN {
     border-top-left-radius: 0px !important;
 }
