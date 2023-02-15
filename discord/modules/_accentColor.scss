@@ -76,7 +76,7 @@
 .result-3OpoO7 .result-3OpoO7 .selectorButtonSelected-1j4DmC,
 .selectorButtonSelected-336oUc,
 .side-2ur1Qk .role-3pGE29.selected-g-kMVV.item-3XjbnG,
-.sidebar-nqHbhN .side-2ur1Qk .selected-g-kMVV.item-3XjbnG,
+.sidebar-nqHbhN .side-2ur1Qk .selected-g-kMVV.item-3XjbnG, // settings bar selected
 .switch-3wwwcV.valueChecked-m-4IJZ,
 .tooltip-14MtrL.tooltipBrand-20XsMA,
 .topSectionPlaying-1J5E4n,
@@ -92,6 +92,10 @@
 .wrapper-2olG5t,
 .wrapper-1ZcZW-:hover, .unread-36eUEm {
     background-color: $rb-fg-accent;
+}
+//settings selected item hover
+.side-2ur1Qk .selected-g-kMVV.themed-2-lozF.item-3XjbnG:hover:not(.disabled-1nofHP) {
+	background-color: $rb-fg-accent-hover;
 }
 //bot tags
 .botTagRegular-kpctgU {
@@ -213,7 +217,9 @@
 }
 
 //spotify progress bar
-.barInner-3dHef4 {
+.barFill-3RgCsY, // vencord's spotify player
+.barInner-3dHef4 // profile spotify player
+{
     background-color: $rb-fg-accent !important;
 }
 // #vc-spotify-player {

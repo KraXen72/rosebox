@@ -1,7 +1,10 @@
 // buttons
-.lookFilled-yCfaCM, .lookInverted-2mDUMi, .selectorButtonSelected-3Z0WNU {
+.lookFilled-yCfaCM, .lookInverted-2mDUMi, 
+.lookFilled-1H2Jvj.colorBrand-2M3O3N,
+.selectorButtonSelected-3Z0WNU {
     background-color: $rb-fg-accent !important;
     color: white !important;
+	&:hover { background-color: $rb-fg-accent-hover !important; }
 
 	&.colorRed-rQXKgM {
 		background-color: $btn-bg-red !important;
@@ -11,6 +14,11 @@
 		background-color: $btn-bg-green !important;
 		&:hover { background-color: $btn-bg-green-dark !important; }
 	}
+}
+
+// rpc / spotify cta buttons
+.buttonColor-XIRMbp {
+	background-color: $rb-fg-accent !important;
 }
 
 // markdown editing toolbar
