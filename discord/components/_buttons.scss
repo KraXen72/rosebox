@@ -4,7 +4,7 @@
 .selectorButtonSelected-3Z0WNU {
     background-color: $rb-fg-accent !important;
     color: white !important;
-	&:hover { background-color: $rb-fg-accent-hover !important; }
+	&:hover:not(:disabled) { background-color: $rb-fg-accent-hover !important; }
 
 	&.colorRed-rQXKgM {
 		background-color: $btn-bg-red !important;
