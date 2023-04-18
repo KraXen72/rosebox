@@ -3,9 +3,13 @@
         background: $rb-bg-primary !important;
 		
         .input-3r5zZY { background: #191919; } // searchbox
-		.scroller-2qwVWY { max-height: 400px; } // results list
-        .content-2a4AW9 { // also the result list apparently lol
-            background: $rb-bg-primary !important;
+		.scroller-2qwVWY { // results list
+			background: $rb-bg-primary;
+			max-height: 400px; 
+			margin-right: 0;
+		} 
+        .content-yjf30S { // also the result list apparently lol
+            background: $rb-bg-secondary !important;
             .result-u66Ywh[aria-selected="true"] {
                 background: $rb-bg-accent !important;
             }
