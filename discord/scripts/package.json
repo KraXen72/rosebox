@@ -3,27 +3,14 @@
   "version": "1.0.0",
   "description": "scripts for rosebox scss",
   "main": "watcher.js",
-  "dependencies": {
-    "anymatch": "^3.1.2",
-    "binary-extensions": "^2.2.0",
-    "braces": "^3.0.2",
-    "chokidar": "^3.5.2",
-    "colors": "^1.4.0",
-    "fill-range": "^7.0.1",
-    "glob-parent": "^5.1.2",
-    "is-binary-path": "^2.1.0",
-    "is-extglob": "^2.1.1",
-    "is-glob": "^4.0.1",
-    "is-number": "^7.0.0",
-    "normalize-path": "^3.0.0",
-    "picomatch": "^2.3.0",
-    "readdirp": "^3.6.0",
-    "to-regex-range": "^5.0.1"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "KraXen72",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "colors": "^1.4.0",
+    "node-fetch": "^3.3.1"
+  }
 }
