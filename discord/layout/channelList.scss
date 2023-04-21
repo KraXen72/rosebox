@@ -1,0 +1,14 @@
+/*unread channels have the same colors as normal channels*/
+%channelWrapperUnread %channelName {
+    color: $rb-text !important;
+} 
+
+//unread channel indicators
+%channelUnreadPill {
+  top: 54%;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  z-index: 1;
+  border-radius: 10px;
+}

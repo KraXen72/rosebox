@@ -70,38 +70,3 @@
 .tabBody-2dgbAs, .pageWrapper-2PwDoS {
     background: var(--background-primary) !important;
 }
-
-// SERVER LIST
-
-//discord home button custom bg
-%guildChildWrapper {
-    background: $rb-bg-accent;
-}
-
-.connectedAccount-36nQx7 {
-    border: 1px solid rgba(0, 0, 0, 0.2) !important;
-}
-
-/*color fixes*/
-.button-1EGGcP.buttonColor-3bP3fX { color: #fff !important; }
-.headerTop-2y3V6H { border-bottom: 0px solid transparent !important; }
-.avatar-22FtUu { border: 6px solid #282828; }
-.topSectionNormal-2-vo2m {background-color: #202225 !important;}
-.body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-31IekZ, .section-3G9aLW, .headerNormal-1l1Znk {background-color: #282828;}
-
-// CHANNELS
-
-/*unread channels have the same colors as normal channels*/
-%channelWrapperUnread %channelName {
-    color: $rb-text !important;
-} 
-
-//unread channel indicators
-%channelUnreadPill {
-  top: 54%;
-  left: 5px;
-  width: 6px;
-  height: 6px;
-  z-index: 1;
-  border-radius: 10px;
-}
