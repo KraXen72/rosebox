@@ -29,6 +29,9 @@
 @import 'tweaks';
 
 // TODO once finalized, update rosebox colors in the readme
+// https://github.com/rose-pine/discord/blob/main/rose-pine.theme.css
+// ^^ define all the varibles here, use it's overrides except for font
+// use classes as little as possible
 :root, .theme-dark, .focusLock-2tveLW * {
 	// $scss-variables > --discord-variables
 
