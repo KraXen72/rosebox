@@ -1,26 +1,3 @@
-@mixin normalize($position : relative, $important : false) { //normalize an elements position, padding and margin
-    @if $important == true {
-        position: $position !important;
-        @include padmar;
-    } @else {
-        position: $position;
-    }
-    top: initial !important;
-    bottom: initial !important;
-    left: initial !important;
-    right: initial !important;
-    box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-}
-
-@mixin unborder() { //remove border
-    border: 0px solid transparent !important;
-}
-@mixin untransform($imp: false) { //remove transforms
-    $suffix: if($imp, "", "!important");
-    transform: translate(0, 0) translateX(0) translateY(0) scale(1) $suffix;
-}
-
 //fixes
 .matchVote, #matchVoteHolder * {
     pointer-events: all !important;
@@ -54,9 +31,6 @@
 // hiding elements
 .toolbar-3_r2xA [href="https://support.discord.com"],
 [aria-label="Send a gift"],
-.protip-YaFfgO, .protip-1jXzAl {
+[class^="protip-1jXzAl"] {
 	display: none !important
 }
-
-/*remove all outlines just because chrome*/
-* {outline: 0px solid transparent !important;}
