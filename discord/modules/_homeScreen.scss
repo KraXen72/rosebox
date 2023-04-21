@@ -3,7 +3,7 @@
 }
 
 .wrapper-2RrXDg {
-    background-color: var(--Colleft) !important;
+    background-color: $rb-bg-secondary-d !important; // used to be colleft
     margin: 16px;
     border-radius: 10px;
     box-shadow: unset;

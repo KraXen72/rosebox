@@ -2,6 +2,8 @@
 /* role pills by Cynthia */
 /* updated once again by the awesome Cynthia (Davri#0015) in 2022 */
 // uses some slightly sketchy pseudo element hack to color 
+// TODO rewrite / simplify a lot
+// TODO rewrite rolepills to use mappings
 
 $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 
@@ -18,7 +20,7 @@ $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 }
 
 /* don't do the after for role add popout     */
-.role-2TIOKu .roleCircle-3K9O3d:not([class*="popoutRoleCircle-"])::after {
+.role-2TIOKu .roleCircle-3TFUOr:not([class*="popoutRoleCircle-"])::after {
     content: "";
     inset: 0;
     position: absolute;
@@ -37,14 +39,14 @@ $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 .roleRemoveIcon-387wKV { left: 14px; }
 
 // userPopout
-.userPopoutOuter-3AVBmJ {
+.userPopoutOuter-1OHwPL {
 	background-color: $rb-bg-quarterary;
 	// --profile-note-background-color: #{$rb-bg-quarterary} !important;
 	--profile-note-background-color: #{$rb-bg-quarterary} !important;
 	width: 300px;
 	border-radius: 8px;
 
-	.userPopoutInner-1hXSeY {
+	.userPopoutInner-nv9Y92 {
 		background-color: inherit;
 		border-radius: 4px;
 		width: 300px;
@@ -54,7 +56,7 @@ $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 			height: 100%;
 			border-radius: 8px;
 		}
-		.bannerSVGWrapper-qc0szY {
+		.bannerSVGWrapper-2CLfzN {
 			.popoutBannerPremium-2RvDNZ, foreignObject, .popoutNoBannerPremium-2TQa6P,
 			:is(.imageUploaderInner-IIRaFr, 
 				.bannerUploader-1sbyBg, 

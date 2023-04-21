@@ -4,9 +4,10 @@
 {
     background-color: $rb-bg-secondary-d !important;
 }
-.withFrame-2dL45i, .wordmark-2u86JB {
-    background-color: transparent;
-}
+
+// .withFrame-2dL45i, .wordmark-2u86JB {
+//     background-color: transparent;
+// }
 
 /*----//----applying respecive color variables----------*/
 
@@ -63,8 +64,6 @@
     color: $rb-fg-accent;
 }
 
-//.titleBar-1it3bQ {background-color: var(--ColTitleBar); background:transparent;}
-
 .scroller-WSmht3 {
     background-color: unset;
 }
@@ -72,16 +71,11 @@
     background: var(--background-primary) !important;
 }
 
-//discord home button
-#bd-pub-button,
-.childWrapper-1j_1ub {
-    background: $rb-bg-accent;
-}
+// SERVER LIST
 
-.theme-dark .option-2KkUJO:after {
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: transparent !important;
+//discord home button custom bg
+%guildChildWrapper {
+    background: $rb-bg-accent;
 }
 
 .connectedAccount-36nQx7 {
@@ -95,34 +89,19 @@
 .topSectionNormal-2-vo2m {background-color: #202225 !important;}
 .body-3ND3kc, .theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6, .theme-dark .footer-31IekZ, .section-3G9aLW, .headerNormal-1l1Znk {background-color: #282828;}
 
-/*unread channels*/
-.modeUnread-3Cxepe .name-28HaxV {
-    color: var(--text-fix) !important;
+// CHANNELS
+
+/*unread channels have the same colors as normal channels*/
+%channelWrapperUnread %channelName {
+    color: $rb-text !important;
 } 
+
 //unread channel indicators
-:root .unread-36eUEm {
+%channelUnreadPill {
   top: 54%;
   left: 5px;
   width: 6px;
   height: 6px;
   z-index: 1;
   border-radius: 10px;
-  animation: 2s channel-unread infinite;
-}
-@keyframes channel-unread {
-  0% {
-    box-shadow: 0 0 0 0 var(--unread-color);
-  }
-  70% {
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
-
-//topic channel mentions
-.topic-11NuQZ .channelIcon-3I2O7O {
-    width: 18px !important;
-    height: 18px !important;
 }

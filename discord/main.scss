@@ -1,13 +1,12 @@
-@import url("https://cdn.jsdelivr.net/gh/Overimagine1/old-discord-font/source.min.css");
-
-@import 'base/variables';
-@import 'base/reset';
 @import 'base/fonts';
+@import 'base/variables';
+@import 'lib/mappings';
+
+@import 'base/reset';
 @import 'utils';
 @import 'layout';
 
 @import 'components/codeblocks';
-@import 'components/contextMenus';
 @import 'components/scrollbars';
 @import 'components/buttons';
 
@@ -26,35 +25,35 @@
 
 @import 'tweaks';
 
+// TODO once finalized, update rosebox colors in the readme
 :root, .theme-dark, .focusLock-2tveLW * {
-    /*gruvbox override*/
+	// $scss-variables > --discord-variables
+
     --background-primary: #{$rb-bg-primary};
-    --Colleft: #{$rb-bg-secondary-d};
-    --background-secondary: var(--Colleft);
-    --ColAccent: #{$rb-fg-accent};
-    --ColAccentAlpha: RGBA(165, 117, 98, 0.2);
+    --background-secondary: #{$rb-bg-secondary-d};
+	--background-secondary-alt: #{$rb-bg-5} !important;
+	--modal-background: #{$rb-bg-5} !important;
+	// --background-tertiary: ;
+	// --background-floating: ;
+	// --background-modifier-selected: ;
 
-    /*set respecitve colors to Colleft - ignore*/
-    --ColServerSelBG: var(--Colleft);
-    --ColChannelList: var(--Colleft);
-    --ColTitleBar: var(--Colleft);
-    --ColMemberList:var(--background-primary);
-    --ColLink: var(--ColAccent);
-    --text-link: var(--ColLink);
+	--header-primary: #{$rb-fg-accent};
+    // --header-secondary: ;
+    // --header-spotify: ;
 
-    --text-fix: #{$rb-text};
-
-    --text-normal: #{$rb-text};
-    --header-primary: var(--ColAccent);
-	// --accent: #{$rb-bg-accent-opaque}; // to fix oa buttons yesyes
-
-    --brand-experiment-15a: #{$rb-bg-accent} !important; /* reaction bg */
+	// --interactive-normal: ;
+    // --interactive-hover: ;
+    // --interactive-active: ;
+	
+	--text-link: #{$rb-fg-accent};
+	--text-normal: #{$rb-text};
+	// --text-muted: ;
+	
     --brand-experiment: #{$rb-bg-accent} !important; /* reaction border + general accent */
+    --brand-experiment-15a: #{$rb-bg-accent} !important; /* reaction bg */
     --brand-experiment-200: #{$rb-text} !important; /* reaction text */
 	--control-brand-foreground: #{$rb-fg-accent} !important; /* some accents*/
-
-	--modal-background: #{$rb-bg-5} !important;
-	--background-secondary-alt: #{$rb-bg-5} !important;
+	// --ping: #eb6f92;
 }
 
-::selection {background-color: $rb-bg-accent !important;}
+::selection { background-color: $rb-bg-accent !important; }

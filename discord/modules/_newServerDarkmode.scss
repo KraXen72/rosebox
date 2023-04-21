@@ -1,4 +1,5 @@
 /*----//----remove light theme for new server----*/
+// can be removed
 .layer-1Ixpg3 .theme-light, .layer-1Ixpg3 .theme-light *, .focusLock-2tveLW, .focusLock-2tveLW *  { /*overwrite light theme colors*/
     --header-primary: #fff;
     --header-secondary: #b9bbbe;
@@ -46,6 +47,6 @@
     --textbox-markdown-syntax: #8e9297;
 }
 .layer-1Ixpg3 .theme-light .root-g14mjS {background: var(--background-primary) !important}
-.container-x8Y1ix, .regionSelectModal-12e-57 {background: var(--Colleft) !important}
+.container-x8Y1ix, .regionSelectModal-12e-57 {background: $rb-bg-secondary-d !important}
 .theme-light .footer-31IekZ {background-color: var(--background-primary) !important;
 box-shadow: none !important; -webkit-box-shadow: none !important;}

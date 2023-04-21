@@ -1,5 +1,6 @@
 @use "sass:color";
 
+// rosebox colors used throughout the theme
 $rb-bg-primary: #262626;
 $rb-bg-primarya: #262626de;
 $rb-bg-secondary: #232323;
@@ -16,37 +17,7 @@ $rb-fg-accent: #a57562;
 $rb-fg-accent-hover: #885f4e;
 $rb-text: #a3a5aa;
 
-$Col-dcweb-1: #7289DA; /*blue*/
-$Col-dcweb-2: #99AAB5; /*grey*/
-$Col-dcweb-3: #2C2F33; /*more grey*/
-$Col-dcweb-4: #23272A; /*not quite black*/
-$col-dcweb-5: #36393f; /*original grey color from discord*/
-$col-dcweb-6: #40444b; /*original chatbox color from discord*/
-$col-dcweb-7: #2f3136; /*original embeds color*/
-
-/*from app*/
-$Col-dcapp-1: var(--background-primary); /*main chat window*/
-$Col-dcapp-2: var(--background-secondary); /*channel list*/
-$Col-dcapp-3: var(--background-tertiary); /*server selector bg*/
-
-/*fron slate*/
-$slate-background-light: #2f363d;
-$slate-background: #24292e;
-$slate-background-alt: #2a3036;
-$slate-background-dark: #1d2125;
-
-/*form last time*/
-$Colr: #1d1e1f; /*messenger grey bg*/
-
-/*my color variables*/
-$Col1: var(--Col-dcweb-4);
-$Col2: var(--background-secondary);
-$Col3: var(--Colr);
-$Col4: var(--Col-dcweb-1);
-$Col5: #121212;
-
-//misc
-
+// misc/util
 $border-color: #333131;
 $br-small: 5px; //border radius small
 $br-big: 1rem; //border radius big
