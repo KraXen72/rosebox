@@ -3,16 +3,18 @@
 
 // TODO change these to the newly-mapped placeholders
 
-/*alpha*/
-.buffer-3eVqKK,
-.buffer-3eVqKK::after,
-.buffer-3eVqKK::before,
-.content-3dzVd8.isMentioned-N-h9aa,
-.mediaBarPreview-1gUbVy,
-.mediaBarPreview-1gUbVy::after,
-.mediaBarPreview-1gUbVy::before,
-.mentioned-Tre-dv,
-.replying-eZ7p5z,
+// alpha accent color
+%playerMediaBarBuffer,
+%playerMediaBarPreview {
+	&, &::before, &::after {		
+		background-color: $rb-bg-accent
+	}
+}
+%mentioned,
+%replyingToIndicator {
+	background-color: $rb-bg-accent;
+}
+
 .message-2CShn3.replying-eZ7p5z:hover,
 .message-2CShn3.mentioned-Tre-dv.selected-2LX7Jy,
 .mouse-mode .message-2CShn3.mentioned-Tre-dv:hover,
