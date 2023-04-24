@@ -20,7 +20,7 @@
 }
 
 // markdown editing toolbar
-.toolbar-37BrJ5, #slate-toolbar {
+%markdownEditToolbar, #slate-toolbar {
 	%buttonFilled {
 		background-color: transparent !important;
 		&:hover { background-color: rgba(255, 255, 255, 0.1) !important; }
