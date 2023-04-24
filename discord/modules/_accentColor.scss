@@ -2,42 +2,22 @@
 // i did modify it quite a bit but most of the classnames are from her theme
 
 // TODO change these to the newly-mapped placeholders
-
-// alpha accent color
-%playerMediaBarBuffer,
-%playerMediaBarPreview {
-	&, &::before, &::after {		
-		background-color: $rb-bg-accent
-	}
-}
-%mentioned,
-%replyingToIndicator {
-	background-color: $rb-bg-accent;
-}
-
-.message-2CShn3.replying-eZ7p5z:hover,
-.message-2CShn3.mentioned-Tre-dv.selected-2LX7Jy,
+// .message-2CShn3.replying-eZ7p5z:hover,
+// .message-2CShn3.mentioned-Tre-dv.selected-2LX7Jy,
 .mouse-mode .message-2CShn3.mentioned-Tre-dv:hover,
 .reaction-2A2y9y.reactionMe-3I9gFK,
 .theme-dark .wrapper-1ZcZW-,
 .wrapper-1ZcZW- {
-    background-color: $rb-bg-accent
+	background-color: $rb-bg-accent
 }
-.checkbox-f1HnKB[style*="rgba(67, 181, 129, 0.15)"],
+
 .folderIconWrapper-226oVY[style="background-color: rgba(114, 137, 218, 0.4);"] {
-    background: $rb-bg-accent !important
-}
-//reply message hover 
-.message-2CShn3.ephemeral-2nDdnn.selected-2LX7Jy, 
-.message-2CShn3.replying-eZ7p5z.selected-2LX7Jy, 
-.mouse-mode.full-motion .ephemeral-2nDdnn:hover, 
-.mouse-mode.full-motion .replying-eZ7p5z:hover {
-    background: $rb-bg-accent1 !important
+	background: $rb-bg-accent !important
 }
 
 .highlight {
-    background-color: $rb-bg-accent;
-    filter: brightness(3)
+	background-color: $rb-bg-accent;
+	filter: brightness(3)
 }
 /*normal*/
 .barFill-2Bh7CX,
@@ -95,7 +75,7 @@
 .wrapper-3kah-n:hover .childWrapper-1j_1ub,
 .wrapper-2olG5t,
 .wrapper-1ZcZW-:hover, .unread-36eUEm {
-    background-color: $rb-fg-accent;
+	background-color: $rb-fg-accent;
 }
 //settings selected item hover
 .side-2ur1Qk .selected-g-kMVV.themed-2-lozF.item-3XjbnG:hover:not(.disabled-1nofHP) {
@@ -103,7 +83,7 @@
 }
 //bot tags
 .botTagRegular-kpctgU {
-    background: $rb-fg-accent;
+	background: $rb-fg-accent;
 }
 
 /* ping indicators with numbers*/
@@ -117,7 +97,7 @@
 .switch-3wwwcV.valueChecked-m-4IJZ[style*="rgb(67, 181, 129)"],
 .tabBar-ra-EuL .item-3mHhwr[style*="background-color: rgb(67, 181, 129);"], 
 .botTag-2mryIa, .listContent-2_qb-y .botText-1fD6Qk, .listContent-2_qb-y .botTagVerified-2KCPMa  {
-    background-color: $rb-fg-accent !important;
+	background-color: $rb-fg-accent !important;
 }
 .attachButtonPlay-1ATmb5,
 /*server plus and search button is the only thing i can notice*/
@@ -135,14 +115,14 @@
 .updateIconForeground-2V_zo4,
 .message-2CShn3 .username-u-ebrn, // join msg username
 .wrapper-1ZcZW- {
-    color: $rb-fg-accent;
+	color: $rb-fg-accent;
 }
 
 .reaction-2A2y9y.reactionMe-3I9gFK {
-    border-color: transparent !important;
+	border-color: transparent !important;
 }
 .expandedFolderIconWrapper-1xLaU- svg[style="color: rgb(114, 137, 218);"], .theme-dark .wrapper-1ZcZW- {
-    color: $rb-fg-accent !important
+	color: $rb-fg-accent !important
 }
 .checkbox-1ycfTw,
 .checkboxInner-1aRh1d,
@@ -161,70 +141,70 @@
 .select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b,
 .select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b:hover,
 .select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV:focus {
-    border-color: $rb-fg-accent
+	border-color: $rb-fg-accent
 }
 .lookLink-15mFoz.colorBrand-I6CyqQ:hover {
-    border-bottom: 1px solid $rb-fg-accent;
+	border-bottom: 1px solid $rb-fg-accent;
 }
 .border-2BJQjd.video-3SrWSI.speaking-3RWJBr,
 .border-2BJQjd.voice-3bPYC-.speaking-3RWJBr,
 .content-1CboaJ .focused-q9B2e4::after,
 .content-1CboaJ .result-3OpoO7:hover::after,
 .tile-2silOL:hover .sourceThumbnail-14Iubx {
-    box-shadow: inset 0 0 0 3px $rb-fg-accent;
+	box-shadow: inset 0 0 0 3px $rb-fg-accent;
 }
 .tabBar-ra-EuL .item-3mHhwr[style*="background-color: rgba(67, 181, 129, 0.2);"] {
-    background-color: $rb-bg-accent!important;
-    color: $rb-fg-accent !important
+	background-color: $rb-bg-accent!important;
+	color: $rb-fg-accent !important
 }
 .uploadModal-2ie9O_ .inner-rBP-MS .file-163EuR .icon-HW4tZ-.image-2ssF8k {
-    /*upload 2nd screen border around preview*/
-    border: 2px solid $rb-fg-accent
+	/*upload 2nd screen border around preview*/
+	border: 2px solid $rb-fg-accent
 }
 .uploadModal-2ie9O_ .inner-rBP-MS,
 .uploadModalIn-2w48Zf .uploadDropModal-13Kd20 .inner-rBP-MS {
-    border: 2px dashed $rb-fg-accent;
-    border-radius: 10px;
+	border: 2px dashed $rb-fg-accent;
+	border-radius: 10px;
 }
 .regionSelect-3lf4eE button,
 /* what is .wrapper-2ZbzR9 and .downloadApps-14IgKV ?*/
 .wrapper-2ZbzR9 .header-3ZP1MY,
 .wrapper-2ZbzR9 .sampleLink-KPFu3I,
 .wrapper-2ZbzR9 .slide-2pHaq5 h5 {
-    color: $rb-fg-accent
+	color: $rb-fg-accent
 }
 .regionSelectWrapper-1favwk .regionSelect-3lf4eE:hover .regionSelectInner-24f4Ce,
 .regionSelectWrapper-1favwk .regionSelect-3lf4eE:hover button {
-    border-color: $rb-fg-accent
+	border-color: $rb-fg-accent
 }
 .powercord .check-K_srvn::after {
-    content: "\f00c";
-    color: $rb-fg-accent;
-    font-weight: 900;
-    font-family: "Font Awesome 5 Pro", sans-serif!important
+	content: "\f00c";
+	color: $rb-fg-accent;
+	font-weight: 900;
+	font-family: "Font Awesome 5 Pro", sans-serif!important
 }
 .container svg path .unreadPillCapStroke-1nE1Q8,
 .unreadPillCap-2-iI4h {
-    color: $rb-fg-accent;
-    stroke: $rb-fg-accent !important;
+	color: $rb-fg-accent;
+	stroke: $rb-fg-accent !important;
 }
 .flowerStar-2tNFCR path,
 .selectorNitroIcon-3FDeDE g path,
 .unreadPill-3nEWYM .unreadPillCapStroke-1nE1Q8,
 .updateIconForeground-2V_zo4 {
-    fill: currentColor
+	fill: currentColor
 }
 .content-3spvdd,
 .mention:hover {
-    /*fix the -----date----new bar .mention:hover*/
-    color: white !important;
+	/*fix the -----date----new bar .mention:hover*/
+	color: white !important;
 }
 
 //spotify progress bar
 .barFill-3RgCsY, // vencord's spotify player
 .barInner-3dHef4 // profile spotify player
 {
-    background-color: $rb-fg-accent !important;
+	background-color: $rb-fg-accent !important;
 }
 // #vc-spotify-player {
 // 	--vc-spotify-green: #{$rb-fg-accent} !important;

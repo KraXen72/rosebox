@@ -55,10 +55,19 @@
 	--text-normal: #{$rb-text};
 	// --text-muted: ;
 	
-    --brand-experiment: #{$rb-bg-accent} !important; /* reaction border + general accent */
+    --brand-experiment: #{$rb-fg-accent}; /* reaction border + general accent */
+	--brand-experiment-500: #{$rb-fg-accent}; // checked checkboxes among other things
+	--brand-experiment-400: #{$rb-fg-accent}; // checkbox border
+
+	--background-mentioned: #{$rb-bg-accent};
+	--brand-experiment-10a: #{$rb-bg-accent25}; // hover on replying message
     --brand-experiment-15a: #{$rb-bg-accent} !important; /* reaction bg */
+
+	--background-message-highlight: #{$rb-bg-accent} !important; // reacting to bg
     --brand-experiment-200: #{$rb-text} !important; /* reaction text */
 	--control-brand-foreground: #{$rb-fg-accent} !important; /* some accents*/
+
+	
 	// --ping: #eb6f92;
 }
 
