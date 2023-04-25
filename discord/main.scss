@@ -15,7 +15,6 @@
 @import 'layout/channelList.scss';
 @import 'layout/floating';
 
-@import 'modules/newServerDarkmode';
 @import 'modules/homeScreen';
 @import 'modules/quickSwitcher';
 @import 'modules/serverBanner';
@@ -25,7 +24,6 @@
 @import 'modules/accentColor';
 @import 'modules/userPopout';
 @import 'modules/userProfile';
-@import 'modules/call';
 @import 'modules/settings';
 
 @import 'tweaks';
@@ -42,7 +40,7 @@
 	--background-secondary-alt: #{$rb-bg-5} !important;
 	--background-tertiary: #{$rb-bg-4};
 	--modal-background: #{$rb-bg-5} !important;
-	// --background-floating: ;
+	--background-floating: #{$rb-bg-secondary};
 	// --background-modifier-selected: ;
 
 	--header-primary: #{$rb-fg-accent};
@@ -57,20 +55,26 @@
 	--text-normal: #{$rb-text};
 	// --text-muted: ;
 	
+	// [@Username] message
+	--mention-foreground: #{$rb-fg-accent};
+	--mention-background: #{$rb-bg-accent}; 
+	// message that mentions you
+	--background-mentioned: #{$rb-bg-accent};
+	--background-mentioned-hover: #{$rb-bg-accent25};
+
+	// discord's accent color 
 	--brand-500: #{$rb-fg-accent}; // (BETA) pill
     --brand-experiment: #{$rb-fg-accent}; // reaction border + general accent
 	--brand-experiment-500: #{$rb-fg-accent}; // checked checkboxes among other things
 	--brand-experiment-400: #{$rb-bg-accent-opaque}; // checkbox border
-
-	--background-mentioned: #{$rb-bg-accent};
-	--background-mentioned-hover: #{$rb-bg-accent25};
+	// discord's accent color alpha variants
 	--brand-experiment-10a: #{$rb-bg-accent25}; // hover on replying message
     --brand-experiment-15a: #{$rb-bg-accent} !important; // reaction bg 
 	--brand-experiment-80a: #{$rb-bg-accent80}; // gif picker favorites
 	--brand-experiment-95a: #{$rb-bg-accent95}; // gif picker favorites hover
 
 	--background-message-highlight: #{$rb-bg-accent} !important; // reacting to bg
-    --brand-experiment-200: #{$rb-text} !important; // reaction text
+    --brand-experiment-200: var(--interactive-normal) !important; // reaction text
 	--control-brand-foreground: #{$rb-fg-accent} !important; // some accents
 	
 	// --ping: #eb6f92;

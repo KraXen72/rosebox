@@ -1,3 +1,8 @@
-%messagesPopoutHeader {
+%messagesPopoutHeader,
+%searchHeader {
 	background-color: $rb-bg-tertiary;
+}
+%searchPopoutQueryContainer,
+%searchPopoutQueryContainerFocused {
+	background-color: $rb-bg-tertiary !important;
 }

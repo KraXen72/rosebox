@@ -12,6 +12,7 @@
 		background-color: $btn-bg-green !important;
 		&:hover { background-color: $btn-bg-green-dark !important; }
 	}
+	%defaultColorText { color: white; }
 }
 
 // rpc / spotify cta buttons

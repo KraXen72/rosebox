@@ -1,4 +1,5 @@
 @use 'sass:color';
+
 %searchResultHighlight {
 	background-color: rgba($color: white, $alpha: 0.15) !important;
 	color: color.adjust($rb-text, $lightness: + 20%);
@@ -10,13 +11,13 @@
 	background-color: $rb-bg-accent !important;
 }
 
-
 %numberBadge, // ping indicators with numbers - uses inline styles, !important needed
 %mentionWrapper:hover { 
 	background-color: $rb-fg-accent !important;
 }
 
 %channelUnreadPill,
+%unreadPill,
 %mentioned::before { 
 	background-color: $rb-fg-accent; 
 }
@@ -27,48 +28,43 @@
 	&:active { background-color: $rb-bg-accent-opaque; }
 }
 
-/*server plus and search button is the only thing i can notice*/
-.hasMore-3e72_v,
-.hasMoreButton-1MELpI,
-.progress-LWvunf .foreground-3_3Pgi,
-.reaction-2A2y9y.reactionMe-3I9gFK .reactionCount-1zkLcN,
-.searchBar-zdmu7v .searchAnswer-23w-CH,
-.selectorNitroIcon-3FDeDE,
-.statusGreen-168O6Q,
-.tier-12tKuZ .tierUnlocked-25K6Kv,
-.tierHeaderContent-2-YfvN .tierUnlocked-27DwHo,
-.unreadPill-3nEWYM .unreadPillCapStroke-1nE1Q8,
-.updateIconForeground-2V_zo4,
-.message-2CShn3 .username-u-ebrn, // join msg username
-.wrapper-1ZcZW- {
+%unreadPillCapStroke {
 	color: $rb-fg-accent;
 }
+%dividerUnread { // -----<new) divider
+	border-color: $rb-fg-accent;
+}
 
-.reaction-2A2y9y.reactionMe-3I9gFK {
-	border-color: transparent !important;
+// messages stuff (possibly move)
+%mention.interactive:hover { 
+	text-decoration: none !important;
 }
-.expandedFolderIconWrapper-1xLaU- svg[style="color: rgb(114, 137, 218);"], .theme-dark .wrapper-1ZcZW- {
-	color: $rb-fg-accent !important
+%reaction {
+	border-radius: $br-small;
+	%reactionCount { margin-left: 0.2rem }
+	// .emoji { margin: 0.06rem 0.12rem; }
 }
-.checkbox-1ycfTw,
-.checkboxInner-1aRh1d,
-.checkboxElement-uwAa9F:checked + span,
-.dropdown-2fxkrS .lookFilled-1h1y05.select-1Pkeg4:focus,
-.dropdown-2fxkrS .lookFilled-1h1y05.select-1Pkeg4:hover.selectOpen-hQuR6b,
-.dropdown-2fxkrS .lookFilled-1h1y05.selectOpen-hQuR6b,
-.emojiPicker-3m1S-j .categories-1feg4n .selected-39BZ4S,
-.footer-1fjuF6 .quickMessage-1yeL4E:focus,
-.horizontalAutocomplete-L5KnTN .selector-2IcQBU.selectorSelected-1_M1WV,
-.imageSelected-4Kl81J,
-.input-2g-os5.focused-1AtTHC,
-.input-2g-os5:focus,
-.isUnread-3Lojb-,
-.regionSelectModal-12e-57 .regionSelectModalOption-2DSIZ3:hover,
-.select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b,
-.select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b:hover,
-.select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV:focus {
-	border-color: $rb-fg-accent
-}
+
+// .dropdown-2fxkrS .lookFilled-1h1y05.select-1Pkeg4:focus,
+// .dropdown-2fxkrS .lookFilled-1h1y05.select-1Pkeg4:hover.selectOpen-hQuR6b,
+// .dropdown-2fxkrS .lookFilled-1h1y05.selectOpen-hQuR6b,
+// .emojiPicker-3m1S-j .categories-1feg4n .selected-39BZ4S,
+// .footer-1fjuF6 .quickMessage-1yeL4E:focus,
+// .horizontalAutocomplete-L5KnTN .selector-2IcQBU.selectorSelected-1_M1WV,
+// .imageSelected-4Kl81J,
+// .input-2g-os5.focused-1AtTHC,
+// .input-2g-os5:focus,
+// .isUnread-3Lojb-,
+// .regionSelectModal-12e-57 .regionSelectModalOption-2DSIZ3:hover,
+// .select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b,
+// .select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b:hover,
+// .select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV:focus {
+// 	border-color: $rb-fg-accent
+// }
+
+
+
+
 .lookLink-15mFoz.colorBrand-I6CyqQ:hover {
 	border-bottom: 1px solid $rb-fg-accent;
 }
@@ -102,17 +98,6 @@
 .regionSelectWrapper-1favwk .regionSelect-3lf4eE:hover .regionSelectInner-24f4Ce,
 .regionSelectWrapper-1favwk .regionSelect-3lf4eE:hover button {
 	border-color: $rb-fg-accent
-}
-.powercord .check-K_srvn::after {
-	content: "\f00c";
-	color: $rb-fg-accent;
-	font-weight: 900;
-	font-family: "Font Awesome 5 Pro", sans-serif!important
-}
-.container svg path .unreadPillCapStroke-1nE1Q8,
-.unreadPillCap-2-iI4h {
-	color: $rb-fg-accent;
-	stroke: $rb-fg-accent !important;
 }
 .flowerStar-2tNFCR path,
 .selectorNitroIcon-3FDeDE g path,

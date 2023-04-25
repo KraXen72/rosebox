@@ -1,3 +1,12 @@
 .toolbar-37BrJ5 {
 	@extend %markdownEditToolbar !optional;
 }
+.defaultColor-1EVLSt {
+	@extend %defaultColorText !optional;
+}
+
+// TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here
+// after rewrite is done
+// for now, i can reference the mappings file (it's quicker), but for the future:
+// _rbMappings.scss file is main, has all my custom mappings + a script updates matching ones from the clearvision repo
+// that way i only maintain selectors i use
