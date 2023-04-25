@@ -1,6 +1,4 @@
 @use 'sass:color';
-
-%mentioned::before { background-color: $rb-fg-accent; }
 %searchResultHighlight {
 	background-color: rgba($color: white, $alpha: 0.15) !important;
 	color: color.adjust($rb-text, $lightness: + 20%);
@@ -8,31 +6,28 @@
 %reactionMe, %forumReactionMe {
 	border-color: $rb-bg-accent-opaque !important;
 }
-%tabBarItemSelected:not(:hover) {
+%settingsSide %tabBarItemSelected:not(:hover) {
 	background-color: $rb-bg-accent !important;
 }
 
-// ping indicators with numbers - uses inline styles, !important needed
-%numberBadge {
+
+%numberBadge, // ping indicators with numbers - uses inline styles, !important needed
+%mentionWrapper:hover { 
 	background-color: $rb-fg-accent !important;
 }
-// .selectableItem-3-fmiM.selected-1l_Bxn,
-// .switch-3wwwcV.valueChecked-m-4IJZ[style*="rgb(67, 181, 129)"],
-// .tabBar-ra-EuL .item-3mHhwr[style*="background-color: rgb(67, 181, 129);"], 
-// .botTag-2mryIa, .listContent-2_qb-y .botText-1fD6Qk, .listContent-2_qb-y .botTagVerified-2KCPMa  {
-// 	background-color: $rb-fg-accent !important;
-// }
 
-.mouse-mode .message-2CShn3.mentioned-Tre-dv:hover,
-.reaction-2A2y9y.reactionMe-3I9gFK,
-.theme-dark .wrapper-1ZcZW-,
-.wrapper-1ZcZW- {
-	background-color: $rb-bg-accent
+%channelUnreadPill,
+%mentioned::before { 
+	background-color: $rb-fg-accent; 
+}
+%channelsMentionIndicator { /// (new) pill
+	opacity: 1;
+	background-color: $rb-fg-accent; 
+	&:hover { background-color: $rb-fg-accent-hover }
+	&:active { background-color: $rb-bg-accent-opaque; }
 }
 
-.attachButtonPlay-1ATmb5,
 /*server plus and search button is the only thing i can notice*/
-.circleIconButton-jET_ig,
 .hasMore-3e72_v,
 .hasMoreButton-1MELpI,
 .progress-LWvunf .foreground-3_3Pgi,

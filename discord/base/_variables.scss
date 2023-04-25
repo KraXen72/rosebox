@@ -17,7 +17,7 @@ $rb-bg-accent80: rgba(165, 117, 98, 0.8);
 $rb-bg-accent95: rgba(165, 117, 98, 0.95);
 $rb-bg-accent-opaque: #5e4c43;
 $rb-fg-accent: #a57562;
-$rb-fg-accent-hover: #885f4e;
+$rb-fg-accent-hover: #885f4e; // or color.adjust($rb-fg-accent, $lightness: -5%)
 $rb-text: #a3a5aa;
 
 // misc/util
