@@ -1,4 +1,4 @@
-/*----//---- EMOJI PICKERS----------*/
+/*---------- EMOJI PICKERS ----------*/
 // 2020 - credit to emma🌺#0968 (customa creator) for the original code
 // 2022 - thanks katlyn for fixing this
 // 2023 - rewritten (3rd time) - removed dead classes & used placeholder selectors
@@ -41,7 +41,6 @@ $edit-emoji-picker-height: 498px; // for container
 	%emojiPicker {
 		position: relative !important;
 		width: $emoji-picker-width;
-		// min-height: $emoji-picker-min-height;
 		height: 100%;
 
 		grid-template-rows: 48px auto calc(48px * 2) !important;
