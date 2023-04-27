@@ -1,0 +1,41 @@
+// edit & message input
+%channelTextAreaScrollable { 
+	border-radius: 0.5rem;
+    border: 1px solid $border-color-black;
+}
+// main input
+%chatForm {
+	%channelTextAreaScrollable { border-radius: 25px; }
+	%channelTextArea { background: transparent; }
+}
+
+
+// .attachButton-_ACFSu,
+// .attachWrapper-3slhXI { border-right: none;} /*remove divider from attachbutton*/
+
+
+.buttons-uaqb-5 {margin-right: 5px !important;} /*add back margin to emoji button*/
+
+.autocomplete-3NRXG8,
+.inner-NQg18Y, 
+%channelTextAreaScrollable {
+    background-color: $rb-bg-secondary-d;
+}
+
+
+// user input area
+#vc-spotify-player {
+	border: 1px solid var(--background-modifier-accent);
+}
+%panels, %panels %accountPanel {
+	background-color: $rb-bg-secondary-d;
+}
+%accountPanel {
+	border-style: none;
+	button:hover { border-radius: 50%; }
+}
+
+%connectionPanel {
+	background-color: var(--bg-overlay-1);
+	border: none;
+}

@@ -13,12 +13,12 @@
 
 @import 'layout/serverList.scss';
 @import 'layout/channelList.scss';
+@import 'layout/userAreaMsgInput';
 @import 'layout/floating';
 
 @import 'modules/homeScreen';
 @import 'modules/quickSwitcher';
 @import 'modules/serverBanner';
-@import 'modules/userAreaMsgInput';
 @import 'modules/emojiPickers';
 @import 'modules/jumpBars';
 @import 'modules/accentColor';
@@ -44,7 +44,8 @@
 	--input-background: #{$rb-bg-quarterary};
 	--background-floating: #{$rb-bg-secondary};
 	--primary-600: #{$rb-bg-tertiary};
-	--bg-overlay-1: #{$rb-bg-secondary};
+	--primary-630: #{$rb-bg-quarterary}; // slash command headers
+	--bg-overlay-1: #{$rb-bg-secondary}; // panel bg
 	// --background-modifier-selected: ;
 
 	--header-primary: #{$rb-fg-accent};
