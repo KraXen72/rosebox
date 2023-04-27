@@ -19,14 +19,26 @@
 .contentWrapper-2f9yME {
 	@extend %reactionEmojiPickerContentWrapper !optional;
 }
-.nav-1cHpYc {
+.nav-1zWVQw, .nav-1cHpYc { // normal, reaction
 	@extend %emojiPickerNav !optional;
 }
-.navList-3uG4ub {
+.navList-YSb9UB, .navList-3uG4ub { // normal, reaction
 	@extend %emojiPickerNavList !optional;
 }
 .positionContainerOnlyEmoji-2l5tq_ {
 	@extend %editEmojiPickerContainer !optional;
+}
+.emoji-4YP39J {
+	@extend %emojiPreview !optional;
+}
+.drawerSizingWrapper-1txdWG {
+	@extend %drawerSizingWrapper !optional;
+}
+.resizeHandle-T_gFJR {
+	@extend %emojiPickerResizeHandle !optional;
+}
+.emojiListRowMediumSize-2_-xbz {
+	@extend %emojiPickerRowMedium !optional;
 }
 
 // TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here

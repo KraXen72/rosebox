@@ -4,7 +4,8 @@
 // 2023 - rewritten (3rd time) - removed dead classes & used placeholder selectors
 
 $emoji-picker-width: 428px;
-$edit-emoji-picker-height: 498px;
+$emoji-picker-min-height: 416px; // without categoryList
+$edit-emoji-picker-height: 498px; // for container
 
 /* remove nav*/
 %emojiPickerHeader,
@@ -13,10 +14,10 @@ $edit-emoji-picker-height: 498px;
 	box-shadow: none !important;
 	filter: none;
 }
-%emojiPickerHeader { padding-top: 16px; }
 
 %emojiPickerContentWrapper,
 %reactionEmojiPickerContentWrapper {
+	box-sizing: border-box;
 	grid-template-rows: auto;
 	min-height: 442px !important;
 
@@ -28,8 +29,8 @@ $edit-emoji-picker-height: 498px;
 
 #emoji-picker-tab-panel {
 	%emojiCategoryList {
+		height: $emoji-picker-width;
 		transform: rotate(-90deg) translateX(-193px) translateY(190px);
-		height: 430px;
 		padding-top: 0 !important;
 
 		%autocompleteListItems %emojiCategoryItem,
@@ -38,62 +39,41 @@ $edit-emoji-picker-height: 498px;
 		}
 	}
 	%emojiPicker {
-		//search emoji list + preview
-		grid-template-rows: 48px auto calc(48px * 2) !important;
-		grid-template-columns: 0 auto !important;
 		position: relative !important;
 		width: $emoji-picker-width;
+		// min-height: $emoji-picker-min-height;
+		height: 100%;
+
+		grid-template-rows: 48px auto calc(48px * 2) !important;
+		grid-template-columns: 0 auto !important;
+		
 		border-radius: 5px !important;
 
-		.emoji-4YP39J { //center emoji preview
-			margin-left: -5px !important;
+		%emojiPreview { //center emoji preview
+			margin-left: -6px !important;
 		} 
-
-		.searchBar-2M9mRP,
-		.inspector-2A2Chb {
-			background: $rb-bg-primary !important;
-		}
 	}
 }
 
+// edit message emoji picker
 %editEmojiPickerContainer {
 	height: $edit-emoji-picker-height;
+	width: $emoji-picker-width !important;
 }
 
-//reaction emoji picker
+// reaction emoji picker
 [id^="popout"] %reactionEmojiPickerContentWrapper {
 	width: $emoji-picker-width !important;
-
-	#emoji-picker-tab-panel {
-		// %emojiCategoryList {
-		// 	transform: rotate(-90deg) translateX(-193px) translateY(190px);
-		// }
-	}
+	height: $edit-emoji-picker-height !important;
 }
 
 // limit max width & disable resizing
-.drawerSizingWrapper-1txdWG {
-	max-width: 424px;
-	.resizeHandle-T_gFJR {
-		//disable, resize and reenable this if ur emoji FAT
-		display: none;
-		cursor: default;
-	}
-}
-
-// // gif picker
-// #gif-picker-tab-panel {
-// 	.searchBar-gJe8lY {
-// 		background: $rb-bg-primary !important;
-// 	}
-// }
-
-.container-1SX9VC,
-.inner-1NoIT5 {
-	background: $rb-bg-primary !important;
+%drawerSizingWrapper {
+	max-width: $emoji-picker-width;
+	%emojiPickerResizeHandle { display: none; }
 }
 
 // fix medium emoji grid row distribution
-.emojiListRow-3hshyU.emojiListRowMediumSize-2_-xbz {
+%emojiPickerRowMedium {
     justify-content: space-evenly;
 }
