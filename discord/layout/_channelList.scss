@@ -1,9 +1,9 @@
-/*unread channels have the same colors as normal channels*/
+// unread channels have the same colors as normal channels
 %channelWrapperUnread %channelName {
     color: $rb-text !important;
 } 
 
-//unread channel indicators
+// unread channel indicators -> dots
 %channelUnreadPill {
   top: 54%;
   left: 5px;
@@ -12,3 +12,16 @@
   z-index: 1;
   border-radius: 10px;
 }
+
+// user input area
+#vc-spotify-player {
+	border: 1px solid var(--background-modifier-accent);
+}
+%accountPanel {
+	border-style: none;
+}
+%connectionPanel {
+	background-color: var(--bg-overlay-1);
+	border: none;
+}
+

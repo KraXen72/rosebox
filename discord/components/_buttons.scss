@@ -28,5 +28,7 @@
 	}
 }
 
-// voice channel buttons like camera, screenshare
-%panelActionButtonColor { color: #fff !important; }
+%panelActionButtonColor, // voice channel buttons like camera, screenshare
+%nitroUpsellButton { 
+	color: #fff !important; 
+}

@@ -12,6 +12,7 @@
 }
 
 %numberBadge, // ping indicators with numbers - uses inline styles, !important needed
+%quickSwitcherPingWrapper,
 %mentionWrapper:hover { 
 	background-color: $rb-fg-accent !important;
 }
@@ -62,61 +63,34 @@
 // 	border-color: $rb-fg-accent
 // }
 
+// .lookLink-15mFoz.colorBrand-I6CyqQ:hover {
+// 	border-bottom: 1px solid $rb-fg-accent;
+// }
+// .border-2BJQjd.video-3SrWSI.speaking-3RWJBr,
+// .border-2BJQjd.voice-3bPYC-.speaking-3RWJBr,
+// .content-1CboaJ .focused-q9B2e4::after,
+// .content-1CboaJ .result-3OpoO7:hover::after,
+// .tile-2silOL:hover .sourceThumbnail-14Iubx {
+// 	box-shadow: inset 0 0 0 3px $rb-fg-accent;
+// }
 
-
-
-.lookLink-15mFoz.colorBrand-I6CyqQ:hover {
-	border-bottom: 1px solid $rb-fg-accent;
-}
-.border-2BJQjd.video-3SrWSI.speaking-3RWJBr,
-.border-2BJQjd.voice-3bPYC-.speaking-3RWJBr,
-.content-1CboaJ .focused-q9B2e4::after,
-.content-1CboaJ .result-3OpoO7:hover::after,
-.tile-2silOL:hover .sourceThumbnail-14Iubx {
-	box-shadow: inset 0 0 0 3px $rb-fg-accent;
-}
-.tabBar-ra-EuL .item-3mHhwr[style*="background-color: rgba(67, 181, 129, 0.2);"] {
-	background-color: $rb-bg-accent!important;
-	color: $rb-fg-accent !important
-}
-.uploadModal-2ie9O_ .inner-rBP-MS .file-163EuR .icon-HW4tZ-.image-2ssF8k {
-	/*upload 2nd screen border around preview*/
-	border: 2px solid $rb-fg-accent
-}
-.uploadModal-2ie9O_ .inner-rBP-MS,
-.uploadModalIn-2w48Zf .uploadDropModal-13Kd20 .inner-rBP-MS {
-	border: 2px dashed $rb-fg-accent;
-	border-radius: 10px;
-}
-.regionSelect-3lf4eE button,
 /* what is .wrapper-2ZbzR9 and .downloadApps-14IgKV ?*/
-.wrapper-2ZbzR9 .header-3ZP1MY,
-.wrapper-2ZbzR9 .sampleLink-KPFu3I,
-.wrapper-2ZbzR9 .slide-2pHaq5 h5 {
-	color: $rb-fg-accent
-}
-.regionSelectWrapper-1favwk .regionSelect-3lf4eE:hover .regionSelectInner-24f4Ce,
-.regionSelectWrapper-1favwk .regionSelect-3lf4eE:hover button {
-	border-color: $rb-fg-accent
-}
-.flowerStar-2tNFCR path,
-.selectorNitroIcon-3FDeDE g path,
-.unreadPill-3nEWYM .unreadPillCapStroke-1nE1Q8,
-.updateIconForeground-2V_zo4 {
-	fill: currentColor
-}
-.content-3spvdd,
-.mention:hover {
-	/*fix the -----date----new bar .mention:hover*/
-	color: white !important;
-}
+// .wrapper-2ZbzR9 .header-3ZP1MY,
+// .wrapper-2ZbzR9 .sampleLink-KPFu3I,
+// .wrapper-2ZbzR9 .slide-2pHaq5 h5 {
+// 	color: $rb-fg-accent
+// }
 
-//spotify progress bar
-.barFill-3RgCsY, // vencord's spotify player
-.barInner-3dHef4 // profile spotify player
-{
-	background-color: $rb-fg-accent !important;
-}
-// #vc-spotify-player {
-// 	--vc-spotify-green: #{$rb-fg-accent} !important;
+// .flowerStar-2tNFCR path,
+// .selectorNitroIcon-3FDeDE g path,
+// .unreadPill-3nEWYM .unreadPillCapStroke-1nE1Q8,
+// .updateIconForeground-2V_zo4 {
+// 	fill: currentColor
+// }
+
+// //spotify progress bar
+// .barFill-3RgCsY, // vencord's spotify player
+// .barInner-3dHef4 // profile spotify player
+// {
+// 	background-color: $rb-fg-accent !important;
 // }

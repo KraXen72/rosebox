@@ -4,6 +4,15 @@
 .defaultColor-1EVLSt {
 	@extend %defaultColorText !optional;
 }
+.wrapper-2olG5t {
+	@extend %quickSwitcherPingWrapper !optional;
+}
+.header-1ffhsl {
+	@extend %inviteModalHeader !optional;
+}
+.upsellButton-36YQ7c {
+	@extend %nitroUpsellButton !optional;
+}
 
 // TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here
 // after rewrite is done
