@@ -31,9 +31,11 @@
 
 %unreadPillCapStroke {
 	color: $rb-fg-accent;
+	fill: $rb-fg-accent;
 }
 %dividerUnread { // -----<new) divider
 	border-color: $rb-fg-accent;
+	color: var(--text-muted) !important;
 }
 
 // messages stuff (possibly move)
@@ -45,52 +47,3 @@
 	%reactionCount { margin-left: 0.2rem }
 	// .emoji { margin: 0.06rem 0.12rem; }
 }
-
-// .dropdown-2fxkrS .lookFilled-1h1y05.select-1Pkeg4:focus,
-// .dropdown-2fxkrS .lookFilled-1h1y05.select-1Pkeg4:hover.selectOpen-hQuR6b,
-// .dropdown-2fxkrS .lookFilled-1h1y05.selectOpen-hQuR6b,
-// .emojiPicker-3m1S-j .categories-1feg4n .selected-39BZ4S,
-// .footer-1fjuF6 .quickMessage-1yeL4E:focus,
-// .horizontalAutocomplete-L5KnTN .selector-2IcQBU.selectorSelected-1_M1WV,
-// .imageSelected-4Kl81J,
-// .input-2g-os5.focused-1AtTHC,
-// .input-2g-os5:focus,
-// .isUnread-3Lojb-,
-// .regionSelectModal-12e-57 .regionSelectModalOption-2DSIZ3:hover,
-// .select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b,
-// .select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b:hover,
-// .select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV:focus {
-// 	border-color: $rb-fg-accent
-// }
-
-// .lookLink-15mFoz.colorBrand-I6CyqQ:hover {
-// 	border-bottom: 1px solid $rb-fg-accent;
-// }
-// .border-2BJQjd.video-3SrWSI.speaking-3RWJBr,
-// .border-2BJQjd.voice-3bPYC-.speaking-3RWJBr,
-// .content-1CboaJ .focused-q9B2e4::after,
-// .content-1CboaJ .result-3OpoO7:hover::after,
-// .tile-2silOL:hover .sourceThumbnail-14Iubx {
-// 	box-shadow: inset 0 0 0 3px $rb-fg-accent;
-// }
-
-/* what is .wrapper-2ZbzR9 and .downloadApps-14IgKV ?*/
-// .wrapper-2ZbzR9 .header-3ZP1MY,
-// .wrapper-2ZbzR9 .sampleLink-KPFu3I,
-// .wrapper-2ZbzR9 .slide-2pHaq5 h5 {
-// 	color: $rb-fg-accent
-// }
-
-// .flowerStar-2tNFCR path,
-// .selectorNitroIcon-3FDeDE g path,
-// .unreadPill-3nEWYM .unreadPillCapStroke-1nE1Q8,
-// .updateIconForeground-2V_zo4 {
-// 	fill: currentColor
-// }
-
-// //spotify progress bar
-// .barFill-3RgCsY, // vencord's spotify player
-// .barInner-3dHef4 // profile spotify player
-// {
-// 	background-color: $rb-fg-accent !important;
-// }

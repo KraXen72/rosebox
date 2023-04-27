@@ -13,6 +13,21 @@
 .upsellButton-36YQ7c {
 	@extend %nitroUpsellButton !optional;
 }
+.contentWrapper-3vHNP2 {
+	@extend %emojiPickerContentWrapper !optional;
+}
+.contentWrapper-2f9yME {
+	@extend %reactionEmojiPickerContentWrapper !optional;
+}
+.nav-1cHpYc {
+	@extend %emojiPickerNav !optional;
+}
+.navList-3uG4ub {
+	@extend %emojiPickerNavList !optional;
+}
+.positionContainerOnlyEmoji-2l5tq_ {
+	@extend %editEmojiPickerContainer !optional;
+}
 
 // TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here
 // after rewrite is done

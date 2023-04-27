@@ -1,9 +1,12 @@
 %messagesPopoutHeader,
-%searchHeader,
-%inviteModalHeader {
+%searchHeader {
 	background-color: $rb-bg-tertiary;
 }
 %searchPopoutQueryContainer,
 %searchPopoutQueryContainerFocused {
 	background-color: $rb-bg-tertiary !important;
+}
+// friends search bar in library & invite
+%librarySearchBar {
+	background-color: $rb-bg-tertiary;
 }

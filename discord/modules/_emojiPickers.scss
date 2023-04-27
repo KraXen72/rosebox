@@ -1,58 +1,53 @@
 /*----//---- EMOJI PICKERS----------*/
-// credit to emma🌺#0968 for the code (2020)
-// thanks katlyn for fixing this in 2022
+// 2020 - credit to emma🌺#0968 (customa creator) for the original code
+// 2022 - thanks katlyn for fixing this
+// 2023 - rewritten (3rd time) - removed dead classes & used placeholder selectors
+
+$emoji-picker-width: 428px;
+$edit-emoji-picker-height: 498px;
 
 /* remove nav*/
-.header-1nkwgG,
-.header-11eigE,
-.header-JHwfVI {
+%emojiPickerHeader,
+%gifPickerHeader {
 	--webkit-shadow: none;
 	box-shadow: none !important;
 	filter: none;
 }
-.header-11eigE {
-	padding-top: 16px;
-}
+%emojiPickerHeader { padding-top: 16px; }
 
-.contentWrapper-3vHNP2 {
+%emojiPickerContentWrapper,
+%reactionEmojiPickerContentWrapper {
 	grid-template-rows: auto;
 	min-height: 442px !important;
 
-	.nav-1zWVQw {
+	%emojiPickerNav,
+	%emojiPickerNavList {
 		display: none !important;
-	}
-	.navList-YSb9UB {
-		display: none;
 	}
 }
 
 #emoji-picker-tab-panel {
-	.wrapper-22rqw6.categoryList-2qRrlj {
-		transform: rotate(-90deg);
+	%emojiCategoryList {
 		transform: rotate(-90deg) translateX(-193px) translateY(190px);
 		height: 430px;
-		padding-top: 0px !important;
+		padding-top: 0 !important;
 
-		.listItems-6eZzQ1 .categoryItem-1sHzUv,
-		.unicodeShortcut-3N8oDe {
+		%autocompleteListItems %emojiCategoryItem,
+		%emojiCategoryUnicodeShortcut {
 			transform: rotate(90deg);
 		}
-		.unicodeShortcut-3N8oDe,
-		.scroller-2MALzE,
-		.listItems-6eZzQ1 {
-			background: $rb-bg-secondary-d !important;
-		}
 	}
-	.emojiPicker-6YCk8a {
-		grid-template-rows: 46px auto calc(calc(48px * 2) + 8px) !important;
+	%emojiPicker {
+		//search emoji list + preview
+		grid-template-rows: 48px auto calc(48px * 2) !important;
 		grid-template-columns: 0 auto !important;
 		position: relative !important;
-		width: 428px;
+		width: $emoji-picker-width;
 		border-radius: 5px !important;
 
-		.emoji-4YP39J {
+		.emoji-4YP39J { //center emoji preview
 			margin-left: -5px !important;
-		} //center emoji preview
+		} 
 
 		.searchBar-2M9mRP,
 		.inspector-2A2Chb {
@@ -61,18 +56,18 @@
 	}
 }
 
-// fix floating emoji picker height
-.positionContainerOnlyEmoji-2l5tq_ {
-	height: 498px;
+%editEmojiPickerContainer {
+	height: $edit-emoji-picker-height;
 }
 
-// reaction emoji picker has to have a custom header
-[id^="popout"] #emoji-picker-tab-panel {
-	.wrapper-22rqw6.categoryList-2qRrlj {
-		transform: rotate(-90deg) translateX(-157px) translateY(190px) !important;
-	}
-	.emojiPicker-6YCk8a {
-		grid-template-rows: 0 auto min-content !important;
+//reaction emoji picker
+[id^="popout"] %reactionEmojiPickerContentWrapper {
+	width: $emoji-picker-width !important;
+
+	#emoji-picker-tab-panel {
+		// %emojiCategoryList {
+		// 	transform: rotate(-90deg) translateX(-193px) translateY(190px);
+		// }
 	}
 }
 
@@ -86,12 +81,12 @@
 	}
 }
 
-// gif picker
-#gif-picker-tab-panel {
-	.searchBar-gJe8lY {
-		background: $rb-bg-primary !important;
-	}
-}
+// // gif picker
+// #gif-picker-tab-panel {
+// 	.searchBar-gJe8lY {
+// 		background: $rb-bg-primary !important;
+// 	}
+// }
 
 .container-1SX9VC,
 .inner-1NoIT5 {
