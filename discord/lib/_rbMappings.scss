@@ -13,6 +13,9 @@
 .upsellButton-36YQ7c {
 	@extend %nitroUpsellButton !optional;
 }
+.addFriend-emTWY1 {
+	@extend %addFriendButton !optional;
+}
 .contentWrapper-3vHNP2 {
 	@extend %emojiPickerContentWrapper !optional;
 }
@@ -48,6 +51,9 @@
 }
 .header-1ffhsl {
 	@extend %inviteModalHeader !optional;
+}
+.searchBar-2aylmZ {
+	@extend %librarySearchBar !optional;
 }
 
 //fixes

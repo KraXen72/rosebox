@@ -14,10 +14,8 @@ $edit-emoji-picker-height: 498px; // for container
 	box-shadow: none !important;
 	filter: none;
 }
-%gifPickerHeader {
-	%gifPickerSearchInput { 
-		background-color: var(--background-primary);
-	}
+%gifPickerSearchInput { 
+	background-color: var(--background-primary);
 }
 
 %emojiPickerHeader { 

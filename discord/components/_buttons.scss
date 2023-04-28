@@ -15,8 +15,8 @@
 	%defaultColorText { color: white; }
 }
 
-// rpc / spotify cta buttons
-%panelActionButtonColor {
+%panelActionButtonColor, // rpc / spotify cta buttons
+%addFriendButton {
 	background-color: $rb-fg-accent !important;
 }
 
