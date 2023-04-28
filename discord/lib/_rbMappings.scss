@@ -40,6 +40,20 @@
 .emojiListRowMediumSize-2_-xbz {
 	@extend %emojiPickerRowMedium !optional;
 }
+.buttons-uaqb-5 {
+	@extend %channelTextAreaButtons !optional;
+}
+.diversitySelector-P-W_tU {
+	@extend %emojiPickerSkintoneButton !optional;
+}
+.header-1ffhsl {
+	@extend %inviteModalHeader !optional;
+}
+
+//fixes
+.header-2TLOnc {
+	@extend %gifPickerHeader !optional;
+}
 
 // TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here
 // after rewrite is done

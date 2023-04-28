@@ -7,6 +7,10 @@
 	background-color: $rb-bg-tertiary !important;
 }
 // friends search bar in library & invite
-%librarySearchBar {
-	background-color: $rb-bg-tertiary;
+%inviteModalHeader %librarySearchBar {
+	background-color: $rb-bg-tertiary
 }
+%privateChannelsSearchBar %privateChannelsSearchBarComponent {
+	background-color: $rb-bg-quarterary !important;
+	border: 1px solid $border-color-black;
+} 

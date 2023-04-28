@@ -1,4 +1,5 @@
 // edit & message input
+%autocomplete,
 %channelTextAreaScrollable { 
 	border-radius: 0.5rem;
     border: 1px solid $border-color-black;
@@ -9,18 +10,7 @@
 	%channelTextArea { background: transparent; }
 }
 
-
-// .attachButton-_ACFSu,
-// .attachWrapper-3slhXI { border-right: none;} /*remove divider from attachbutton*/
-
-
-.buttons-uaqb-5 {margin-right: 5px !important;} /*add back margin to emoji button*/
-
-.autocomplete-3NRXG8,
-.inner-NQg18Y, 
-%channelTextAreaScrollable {
-    background-color: $rb-bg-secondary-d;
-}
+%channelTextAreaButtons { margin-right: 5px !important } // set margin to be the same as the attachButton's
 
 
 // user input area
