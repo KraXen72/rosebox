@@ -70,3 +70,8 @@
     $suffix: if($imp, "", "!important");
     transform: translate(0, 0) translateX(0) translateY(0) scale(1) $suffix;
 }
+
+@mixin no-shadow() {
+	box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}

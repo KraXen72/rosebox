@@ -34,10 +34,12 @@
 /*inbox*/
 .recentMentionsPopout-2bI1ZN, .messagesPopoutWrap-3zryHW {max-height: 93vh !important;}
 
-.autocompleteInner-y1mjDl , .theme-dark .container-2McqkF, .jumpToPresentBar-1cEnH0, .barBase-3xxDXu,
+// .autocompleteInner-y1mjDl , .theme-dark .container-2McqkF, 
+.jumpToPresentBar-1cEnH0, .barBase-3xxDXu,
 .calendarPicker-sDhzdi, .calendarPicker-sDhzdi div,
-.scrollableContainer-15eg7h, .container-A2jo65, /*message box & reply bar*/
-.footer-31IekZ, .focusLock-2tveLW *.message-G6O-Wv /*delete message ig*/ {
+// .scrollableContainer-15eg7h, .container-A2jo65, /*message box & reply bar*/
+.footer-31IekZ, .focusLock-2tveLW *.message-G6O-Wv /*delete message ig*/
+ {
     background: $rb-bg-secondary-d !important;
 }
 

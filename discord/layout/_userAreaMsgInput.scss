@@ -6,12 +6,17 @@
 }
 // main input
 %chatForm {
-	%channelTextAreaScrollable { border-radius: 25px; }
+	background: transparent !important;
+	%channelTextAreaScrollable { 
+		border-radius: 25px; 
+		opacity: 1;
+	}
 	%channelTextArea { background: transparent; }
+	&::before { display: none; }
 }
 
-%channelTextAreaButtons { margin-right: 5px !important } // set margin to be the same as the attachButton's
-
+// set margin to be the same as the attachButton's
+%channelTextAreaButtons { margin-right: 5px !important } 
 
 // user input area
 #vc-spotify-player {

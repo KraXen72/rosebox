@@ -1,66 +1,47 @@
-/*----//----JUMP BARS----------*/
-.jumpToPresentBar-9P20AM {padding-bottom: 0px;}
-.form-3gdLxP:before {display: none;}
+$jump-bar-height: 26px;
+$jump-bar-gutter: 12px;
 
-.jumpToPresentBar-9P20AM,
-.jumpToPresentBar-1cEnH0,
-.newMessagesBar-1hF-9G,
-#NewMessagesBarJumpToNewMessages_803, //just to be sure
-.searchBar-zdmu7v,
-.searchBarComponent-3N7dCG {
-    background-color: $rb-bg-secondary-d !important;
-    border: 1px solid rgba(0,0,0,0.2);
-    opacity: 1;
-}
-
-.innerDisabled-2dbG11,
-.scrollableContainer-15eg7h {
-    opacity: 1 !important;
+%jumpToPresentBar,
+%newMessagesBar,
+%replyBar {
+	background: $rb-bg-secondary-d !important;
+	border: 1px solid $border-color-black;
+	opacity: 1;
+	
+	%jumpBarMainButton {
+		color: $rb-text-vibrant;
+	}
+	%jumpBarAltButton {
+		color: $rb-fg-accent !important;
+	}
 }
 
-.newMessagesBar-1hF-9G {
-    box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-
-    .barButtonAlt-TQoCdZ {
-        color: $rb-fg-accent !important;
-    }
-}
-.jumpToPresentBar-1cEnH0 {
-    .barButtonAlt-TQoCdZ {
-        color: $rb-fg-accent !important;
-    }
+%newMessagesBar {
+	@include no-shadow;
+	height: $jump-bar-height;
 }
 
-/*reply bar*/
-.clipContainer-31nYlH {
-    padding-top: 0px !important;
-    .container-A2jo65 {
-        padding-top: 3px;
-        background-color: $rb-bg-primary !important;
-        opacity: 1;
-        border: 1px solid $rb-bg-primary;
-    }
+// the reply bar might need a rewrite in the future. it's pretty hacky & ugly but whatevs
+%replyBarClipContainer {
+	padding-top: 0px !important;
+	overflow: visible;
 }
-.attachedBars-2BCP3l {
-    background: transparent;
+%channelTextAreAttachedBar {
+	background-color: transparent !important;
 }
-.replyBar-1oi75v, .container-A2jo65 {
-    border-top-left-radius: 6px !important;
-    border-top-right-radius: 6px !important;
-    background-color: $rb-bg-primary;
-}
-/*.replyBar-1oi75v {
-    //border: 1px solid rgba(0,0,0,0.2);
-}*/
-.closeButton-3IEry2 {color:rgb(240, 71, 71);} 
-
-/*----//----NEW REPLIES-----------*/
-.repliedMessage-3Z6XBG.da-repliedMessage {
-    font-size: inherit !important;
-}
-//new replies fix channel mention # icon
-.repliedTextContent-2hOYMB .mention.iconMentionText-1_WCtN svg { 
-    width: 1rem; 
-    height: 1rem  
+%replyBar {
+	position: relative;
+	top: 1px;
+	%replyCancelButton, %replyMentionButton {
+		padding: 0 $jump-bar-gutter;
+	}
+	%replySeperator {
+		height: ($jump-bar-height / 5) * 3;
+	}
+	[class*="text-"] {
+		margin-left: $jump-bar-gutter;
+	}
+	height: $jump-bar-height;
+	align-items: center;
+	
 }

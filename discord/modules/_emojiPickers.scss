@@ -10,8 +10,7 @@ $edit-emoji-picker-height: 498px; // for container
 /* remove nav*/
 %emojiPickerHeader,
 %gifPickerHeader {
-	--webkit-shadow: none;
-	box-shadow: none !important;
+	@include no-shadow;
 	filter: none;
 }
 %gifPickerSearchInput { 

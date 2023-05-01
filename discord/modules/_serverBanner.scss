@@ -20,8 +20,7 @@
 
 // remove shadow
 .header-3OsQeK, .bannerVisible-14J9lQ  {
-	-webkit-box-shadow: none !important;
-    box-shadow: none !important;
+	@include no-shadow;
 }
 
 .bannerVisible-14J9lQ { 

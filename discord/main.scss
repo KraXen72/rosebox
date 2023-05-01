@@ -28,7 +28,8 @@
 
 @import 'tweaks';
 
-// TODO once finalized, update rosebox colors in the readme
+// TODO switch over to @use from @import in scss
+// TODO once finalized, update rosebox colors in the readme 
 :root, .theme-dark, .focusLock-2tveLW * {
 	// $scss-variables > --discord-variables
 
@@ -43,10 +44,11 @@
 	--primary-600: #{$rb-bg-tertiary};
 	--primary-630: #{$rb-bg-quarterary}; // slash command headers
 	--bg-overlay-1: #{$rb-bg-secondary}; // panel bg
+	--channeltextarea-background: #{$rb-bg-secondary-d};
 	// --background-modifier-selected: ;
 
 	--header-primary: #{$rb-fg-accent};
-    // --header-secondary: ;
+    --header-secondary: #{$rb-text-vibrant};
     // --header-spotify: ;
 
 	// --interactive-normal: ;

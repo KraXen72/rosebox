@@ -55,6 +55,15 @@
 .searchBar-2aylmZ {
 	@extend %librarySearchBar !optional;
 }
+.barButtonMain-2GIx4o {
+	@extend %jumpBarMainButton !optional;
+}
+.barButtonAlt-TQoCdZ {
+	@extend %jumpBarAltButton !optional;
+}
+.clipContainer-31nYlH {
+	@extend %replyBarClipContainer !optional;
+}
 
 //fixes
 .header-2TLOnc {
