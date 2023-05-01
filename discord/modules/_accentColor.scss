@@ -12,9 +12,11 @@
 }
 
 %numberBadge, // ping indicators with numbers - uses inline styles, !important needed
+%headerBarIconBadge,
 %quickSwitcherPingWrapper,
 %mentionWrapper:hover { 
 	background-color: $rb-fg-accent !important;
+	color: white !important;
 }
 
 %channelUnreadPill,
