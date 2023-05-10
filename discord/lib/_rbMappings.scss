@@ -64,6 +64,18 @@
 .clipContainer-31nYlH {
 	@extend %replyBarClipContainer !optional;
 }
+.quickswitcher-pKcM9U {
+	@extend %quickSwitcher !optional;
+}
+.input-3r5zZY {
+	@extend %quickSwitcherInput !optional;
+}
+.scroller-2qwVWY {
+	@extend %quickSwitcherScroller !optional;
+}
+.result-u66Ywh {
+	@extend %quickSwitcherResult !optional;
+}
 
 //fixes
 .header-2TLOnc {

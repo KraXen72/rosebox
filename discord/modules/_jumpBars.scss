@@ -36,12 +36,11 @@ $jump-bar-gutter: 12px;
 		padding: 0 $jump-bar-gutter;
 	}
 	%replySeperator {
-		height: ($jump-bar-height / 5) * 3;
+		height: calc($jump-bar-height / 5) * 3;
 	}
 	[class*="text-"] {
 		margin-left: $jump-bar-gutter;
 	}
 	height: $jump-bar-height;
 	align-items: center;
-	
 }
