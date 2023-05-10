@@ -44,15 +44,11 @@
 }
 
 // messages stuff (possibly move)
-%mention.interactive:hover { 
-	text-decoration: none !important;
-}
-%reaction {
-	border-radius: $br-small;
-	// %reactionCount { margin-left: 0.2rem }
-	// .emoji { margin: 0.06rem 0.12rem; }
-}
+%mention.interactive:hover { text-decoration: none !important; }
+%reaction { border-radius: $br-small; }
 
-%startedACallUsernameAnchor {
+%systemMessageUsernameAnchor,
+%membersGroup > span // members group title
+{
 	color: $rb-fg-accent;
 }

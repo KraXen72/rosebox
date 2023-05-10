@@ -1,3 +1,7 @@
+%channelsContainer {
+	background-color: $rb-bg-secondary-d;
+}
+
 // unread channels have the same colors as normal channels
 %channelWrapperUnread %channelName {
     color: $rb-text !important;

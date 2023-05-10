@@ -80,7 +80,13 @@
 	@extend %quickSwitcherResult !optional;
 }
 .content-vSHmMD a {
-	@extend %startedACallUsernameAnchor !optional;
+	@extend %systemMessageUsernameAnchor !optional;
+}
+.communityInfoContainer-1dMVpU {
+	@extend %serverHeaderPublicPill !optional;
+}
+.cardPrimary-pAe8Ed {
+	@extend %settingsCardPrimary !optional;
 }
 
 //fixes

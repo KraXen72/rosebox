@@ -6,6 +6,7 @@
 %searchPopoutQueryContainerFocused {
 	background-color: $rb-bg-tertiary !important;
 }
+
 // friends search bar in library & invite
 %inviteModalHeader %librarySearchBar {
 	background-color: $rb-bg-tertiary
@@ -14,3 +15,9 @@
 	background-color: $rb-bg-quarterary !important;
 	border: 1px solid $border-color-black;
 } 
+%chatSearchBar { 
+	background-color: $rb-bg-secondary !important;
+	border: 1px solid $border-color-black;
+}
+
+%recentMentionsPopout, %messagesPopoutWrap { max-height: 93vh !important; } // inbox

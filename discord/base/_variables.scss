@@ -24,12 +24,15 @@ $rb-text-vibrant: #b5bac1; // more vibrant, discord's built-in --header-secondar
 // misc/util
 $border-color: #333131;
 $border-color-black: rgba($color: black, $alpha: .2);
-$br-small: 5px; //border radius small
-$br-big: 1rem; //border radius big
-$bg-image-icon-size: 50%;
+
+// border radii
+$br-small: 5px;
+$br-medium: 8px; 
+$br-big: 1rem;
 
 $main-row-gap: 1.5vh;
 $col-spacer: 1rem;
+$bg-image-icon-size: 50%;
 
 $btn-bg-green: hsl(139,47.3%, 43.9%);
 $btn-bg-green-dark: color.adjust($btn-bg-green, $lightness: -10%);

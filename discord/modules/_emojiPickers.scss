@@ -12,8 +12,9 @@ $edit-emoji-picker-height: 498px; // for container
 %gifPickerHeader {
 	@include no-shadow;
 	filter: none;
+	background-color: $rb-bg-secondary-d;
 }
-%gifPickerSearchInput { background-color: var(--background-primary); }
+%gifPicker %gifPickerSearchInput { background-color: var(--background-primary); }
 
 // fix inconsistent serach button sizing in emoji/gif/sticker pickers
 %emojiPickerSearchBarInner { overflow: hidden auto !important; } 
@@ -38,6 +39,7 @@ $edit-emoji-picker-height: 498px; // for container
 		display: none !important;
 	}
 }
+%emojiPickerInspector { background-color: $rb-bg-primary; }
 
 #emoji-picker-tab-panel {
 	%emojiCategoryList {

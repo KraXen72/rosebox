@@ -5,7 +5,6 @@
 
 @import 'base/reset';
 @import 'utils';
-@import 'layout';
 
 @import 'components/codeblocks';
 @import 'components/scrollbars';
@@ -15,6 +14,7 @@
 @import 'layout/channelList.scss';
 @import 'layout/userAreaMsgInput';
 @import 'layout/floating';
+@import 'layout/layout';
 
 @import 'modules/homeScreen';
 @import 'modules/quickSwitcher';
