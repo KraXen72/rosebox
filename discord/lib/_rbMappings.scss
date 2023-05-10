@@ -28,6 +28,9 @@
 .navList-YSb9UB, .navList-3uG4ub { // normal, reaction
 	@extend %emojiPickerNavList !optional;
 }
+.inner-1NoIT5 {
+	@extend %emojiPickerSearchBarInner !optional;
+}
 .positionContainerOnlyEmoji-2l5tq_ {
 	@extend %editEmojiPickerContainer !optional;
 }
@@ -75,6 +78,9 @@
 }
 .result-u66Ywh {
 	@extend %quickSwitcherResult !optional;
+}
+.content-vSHmMD a {
+	@extend %startedACallUsernameAnchor !optional;
 }
 
 //fixes

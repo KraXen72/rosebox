@@ -12,6 +12,7 @@
 }
 
 %numberBadge, // ping indicators with numbers - uses inline styles, !important needed
+%inboxBadge,
 %headerBarIconBadge,
 %quickSwitcherPingWrapper,
 %mentionWrapper:hover { 
@@ -38,6 +39,8 @@
 %dividerUnread { // -----<new) divider
 	border-color: $rb-fg-accent;
 	color: var(--text-muted) !important;
+	// dm day divider new message
+	[class^="content"] { color: $rb-fg-accent; } 
 }
 
 // messages stuff (possibly move)
@@ -46,6 +49,10 @@
 }
 %reaction {
 	border-radius: $br-small;
-	%reactionCount { margin-left: 0.2rem }
+	// %reactionCount { margin-left: 0.2rem }
 	// .emoji { margin: 0.06rem 0.12rem; }
+}
+
+%startedACallUsernameAnchor {
+	color: $rb-fg-accent;
 }

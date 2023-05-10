@@ -13,9 +13,10 @@ $edit-emoji-picker-height: 498px; // for container
 	@include no-shadow;
 	filter: none;
 }
-%gifPickerSearchInput { 
-	background-color: var(--background-primary);
-}
+%gifPickerSearchInput { background-color: var(--background-primary); }
+
+// fix inconsistent serach button sizing in emoji/gif/sticker pickers
+%emojiPickerSearchBarInner { overflow: hidden auto !important; } 
 
 %emojiPickerHeader { 
 	padding: 0px 16px !important; 
