@@ -39,8 +39,8 @@
 %dividerUnread { // -----<new) divider
 	border-color: $rb-fg-accent;
 	color: var(--text-muted) !important;
-	// dm day divider new message
-	[class^="content"] { color: $rb-fg-accent; } 
+	
+	[class^="content"] { color: $rb-fg-accent; } // dm day divider new message
 }
 
 // messages stuff (possibly move)
