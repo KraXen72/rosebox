@@ -72,4 +72,8 @@ i have more colors i found, i just need to tweak them & test before making them 
 - **_playlist-manager_** - offline playlist manager - [repo](https://github.com/KraXen72/playlist-manager)
 - **_roseboxlib_** - a (mostly) css and some js utils library i use in my electron projects - [link](https://kraxen72.github.io/roseboxlib/) - [repo](https://github.com/KraXen72/roseboxlib)
 
-if you want to contribute, DM me on discord ``KraXen72#9190``
+## support me
+[![Recurring donation via Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/KraXen72)
+[![One-time donation via ko-fi.com](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/kraxen72)
+  
+Any donations are highly appreciated! <3
