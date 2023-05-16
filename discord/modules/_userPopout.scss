@@ -1,200 +1,217 @@
 /*----//----USER POPOUT----------*/
-/* role pills by Cynthia */
-/* updated once again by the awesome Cynthia (Davri#0015) in 2022 */
-// uses some slightly sketchy pseudo element hack to color 
-// TODO rewrite / simplify a lot - only reduce width & hide elements
-// try not to do extensive edits...
-// TODO rewrite rolepills to use mappings
+// role pills by Cynthia
+// updated once again by the awesome Cynthia (Davri#0015) in 2022
+// rewritten again in 2023 to use placeholder selectors, along with the rest of the theme
 
 $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
+$up-desired-width: 300px;
 
-.role-2TIOKu:not(.addButton-1_dZYu) {
+%role:not(%roleAddButton) {
     position: relative;
     overflow: hidden;
     background: none;
     border-radius: 50px;
 }
-.roleRemoveButton-17oXnT { position: static; }
-.rolePill-2IJ1vo.addButton-1_dZYu {
+
+%roleAddButton {
 	border-radius: 50px; 
 	width: 22px
 }
 
-/* don't do the after for role add popout     */
-.role-2TIOKu .roleCircle-3TFUOr:not([class*="popoutRoleCircle-"])::after {
+%roleRemoveButton { position: static; }
+
+// don't do the ::after for role add popout
+%role %roleCircle:not([class*="popoutRoleCircle-"])::after {
     content: "";
     inset: 0;
     position: absolute;
     background: inherit;
     opacity: 0.25;
 }
-.roleName-2ZJJYR, .roleIcon-3-WL_I {
-    z-index: 1;
-}
 
-.rolePillBorder-RiRiuN, .rolePill-2IJ1vo {
-    border: 1px solid transparent;
-}
+%rolePillBorder, %role { border: 1px solid $up-border-color; }
+%roleRemoveIcon { left: 14px; }
 
-/* put the remove role button back in roleCircle     */
-.roleRemoveIcon-387wKV { left: 14px; }
+
 
 // userPopout
-.userPopoutOuter-1OHwPL {
-	background-color: $rb-bg-quarterary;
-	// --profile-note-background-color: #{$rb-bg-quarterary} !important;
-	--profile-note-background-color: #{$rb-bg-quarterary} !important;
-	width: 300px;
+%userPopoutOuter {
+	width: $up-desired-width;
 	border-radius: 8px;
+	padding: 0 !important;
 
-	.userPopoutInner-nv9Y92 {
-		background-color: inherit;
-		border-radius: 4px;
-		width: 300px;
-
+	%userPopoutOverlayBackground {
+		margin: 28px 0 0 0;
+		width: $up-desired-width;
+	}
+	%userPopoutInner {
+		background: var(--profile-body-background-color);
 		&::before {
-			width: 100%;
+			width: $up-desired-width;
 			height: 100%;
-			border-radius: 8px;
-		}
-		.bannerSVGWrapper-2CLfzN {
-			.popoutBannerPremium-2RvDNZ, foreignObject, .popoutNoBannerPremium-2TQa6P,
-			:is(.imageUploaderInner-IIRaFr, 
-				.bannerUploader-1sbyBg, 
-				.imageUploaderFileInput-18YkLC, 
-				.imageUploaderHint-33zkjZ
-			) {
-				border-top-left-radius: 4px;
-				border-top-right-radius: 4px;
-
-				width: 300px;
-				$banner-height: 105.88px;
-				height: $banner-height;
-				min-height: $banner-height;
-
-				background-position: 50%;
-				background-size: cover;
-			}
-		}
-		.userTagUsernameNoNickname-2e_xaO, .nickname-2rimyL { 
-			color: $rb-fg-accent;
-			font-weight: 600; 
-		}
-			
-		// remove nitro shit
-		.upsellVisible-evDwII, .premiumIconWrapper-yyGDql.clickable-1LpIFn { display: none; }
-		.profileBadges-31rDHI {
-			background-color: $rb-bg-5;
-		}
-		.divider-1tWBgZ { background-color: var(--profile-message-input-border-color); }
-		.scroller-1jBQYo {
-			&::-webkit-scrollbar-thumb, &::-webkit-scrollbar { width: 0 !important; }
-		}
-
-		.note-6O4w9y {
-			// border: 1px solid transparent;
-			// &:hover { border: 1px solid var(--profile-message-input-border-color); }
-			border: 1px solid var(--profile-message-input-border-color);
-			border-radius: 4px;
-			padding: 0 5px;
-			height: min-content;
-			min-height: 40px;
-			display: flex;
-			align-items: center;
-			
-			textarea {
-				&::placeholder { color: var(--input-placeholder-text) !important; }
-				padding: 9px 4px;
-			} 
 		}
 	}
-	.pencilContainer-11Kuga { display: none; }
+
+	%userModalNote {
+		border: 1px solid $up-border-color;
+		border-radius: 3px;
+		padding: 5px 10px;
+	}
 }
+// .userPopoutOuter-1OHwPL {
+// 	background-color: $rb-bg-quarterary;
+// 	--profile-note-background-color: #{$rb-bg-quarterary} !important;
+// 	width: 300px;
+// 	border-radius: 8px;
+
+// 	.userPopoutInner-nv9Y92 {
+// 		background-color: inherit;
+// 		border-radius: 4px;
+// 		width: 300px;
+
+// 		&::before {
+// 			width: 100%;
+// 			height: 100%;
+// 			border-radius: 8px;
+// 		}
+// 		.bannerSVGWrapper-2CLfzN {
+// 			.popoutBannerPremium-2RvDNZ, foreignObject, .popoutNoBannerPremium-2TQa6P,
+// 			:is(.imageUploaderInner-IIRaFr, 
+// 				.bannerUploader-1sbyBg, 
+// 				.imageUploaderFileInput-18YkLC, 
+// 				.imageUploaderHint-33zkjZ
+// 			) {
+// 				border-top-left-radius: 4px;
+// 				border-top-right-radius: 4px;
+
+// 				width: 300px;
+// 				$banner-height: 105.88px;
+// 				height: $banner-height;
+// 				min-height: $banner-height;
+
+// 				background-position: 50%;
+// 				background-size: cover;
+// 			}
+// 		}
+// 		.userTagUsernameNoNickname-2e_xaO, .nickname-2rimyL { 
+// 			color: $rb-fg-accent;
+// 			font-weight: 600; 
+// 		}
+			
+// 		// remove nitro shit
+// 		.upsellVisible-evDwII, .premiumIconWrapper-yyGDql.clickable-1LpIFn { display: none; }
+// 		.profileBadges-31rDHI {
+// 			background-color: $rb-bg-5;
+// 		}
+// 		.divider-1tWBgZ { background-color: var(--profile-message-input-border-color); }
+// 		.scroller-1jBQYo {
+// 			&::-webkit-scrollbar-thumb, &::-webkit-scrollbar { width: 0 !important; }
+// 		}
+
+// 		.note-6O4w9y {
+// 			// border: 1px solid transparent;
+// 			// &:hover { border: 1px solid var(--profile-message-input-border-color); }
+// 			border: 1px solid var(--profile-message-input-border-color);
+// 			border-radius: 4px;
+// 			padding: 0 5px;
+// 			height: min-content;
+// 			min-height: 40px;
+// 			display: flex;
+// 			align-items: center;
+			
+// 			textarea {
+// 				&::placeholder { color: var(--input-placeholder-text) !important; }
+// 				padding: 9px 4px;
+// 			} 
+// 		}
+// 	}
+// 	.pencilContainer-11Kuga { display: none; }
+// }
 
 // overwrite non-premium gradient (or, lack there-of)
-.userProfileInnerThemedNonPremium-1gT-zY { 
-	background: $rb-bg-quarterary !important;
-}
+// .userProfileInnerThemedNonPremium-1gT-zY { 
+// 	background: $rb-bg-quarterary !important;
+// }
 
 // premium without banner
-.userProfileInnerThemedPremiumWithoutBanner-1yMS1H {
-	.avatarPositionPremiumNoBanner-nWzERs {
-		top: 42px !important;
-	}
-	.divider-1tWBgZ, .note-6O4w9y, .messageInputContainer-2rGDH8, .rolePillBorder-RiRiuN {
-		--profile-message-input-border-color: var(--background-modifier-accent) !important;
-	}
-	.bannerSVGWrapper-qc0szY {
-		min-width: 300px;
-	}
-	.popoutNoBannerPremium-2TQa6P, foreignObject, .bannerSVGWrapper-qc0szY {
-		border-top-left-radius: 8px;
-		border-top-right-radius: 8px;
-	}
-	.lastSection-3_1yKt {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-}
+// .userProfileInnerThemedPremiumWithoutBanner-1yMS1H {
+// 	.avatarPositionPremiumNoBanner-nWzERs {
+// 		top: 42px !important;
+// 	}
+// 	.divider-1tWBgZ, .note-6O4w9y, .messageInputContainer-2rGDH8, .rolePillBorder-RiRiuN {
+// 		--profile-message-input-border-color: var(--background-modifier-accent) !important;
+// 	}
+// 	.bannerSVGWrapper-qc0szY {
+// 		min-width: 300px;
+// 	}
+// 	.popoutNoBannerPremium-2TQa6P, foreignObject, .bannerSVGWrapper-qc0szY {
+// 		border-top-left-radius: 8px;
+// 		border-top-right-radius: 8px;
+// 	}
+// 	.lastSection-3_1yKt {
+// 		border-bottom-left-radius: 0;
+// 		border-bottom-right-radius: 0;
+// 	}
+// }
 
-[class*="userProfileInnerThemedWithBanner"] { // premiums don't get any gradients >:)
-	background: $rb-bg-quarterary !important;
-	--profile-gradient-primary-color: #{$rb-bg-quarterary};
-	--profile-gradient-secondary-color: #{$rb-bg-quarterary};
-	--profile-gradient-overlay-color: #{$rb-bg-quarterary};
-	--profile-message-input-border-color: var(--background-modifier-accent) !important;
-	// .userTagUsernameNoNickname-2e_xaO {
-	// 	color: 
-	// }
-}
-.userProfileOuterThemed-3EfHmv {
-	--background-modifier-accent: hsla(217,calc(var(--saturation-factor, 1)*7.6%),33.5%,0.48);
-	&.theme-light {
-		--interactive-normal: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
-		--interactive-active: hsl(0,calc(var(--saturation-factor, 1)*0%),100%);
-		--interactive-muted: hsl(217,calc(var(--saturation-factor, 1)*7.6%),33.5%);
-		--header-secondary: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
-		--header-primary: #{$rb-fg-accent};
-		--text-normal: #{$rb-text};
-		--background-secondary-alt: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%);
-		--background-floating: #18191c;
-		--profile-role-pill-background-color: var(--background-secondary-alt) !important;
-	}
-	.avatarPositionPremiumBanner-2nq2Fy,
-	.avatarPositionPremiumNoBanner-nWzERs {
-		svg > rect:nth-child(2),
-		svg > circle[fill="white"],
-		svg > circle[fill="black"] {
-			fill: transparent !important;
-		}
-	}
-	--profile-gradient-primary-color: #{$rb-bg-quarterary} !important;
-	--profile-gradient-secondary-color: #{$rb-bg-quarterary} !important;
-	--profile-gradient-button-color: #{$rb-bg-quarterary} !important;
-	--profile-gradient-overlay-color: transparent !important;
-}
+// [class*="userProfileInnerThemedWithBanner"] { // premiums don't get any gradients >:)
+// 	background: $rb-bg-quarterary !important;
+// 	--profile-gradient-primary-color: #{$rb-bg-quarterary};
+// 	--profile-gradient-secondary-color: #{$rb-bg-quarterary};
+// 	--profile-gradient-overlay-color: #{$rb-bg-quarterary};
+// 	--profile-message-input-border-color: var(--background-modifier-accent) !important;
+// 	// .userTagUsernameNoNickname-2e_xaO {
+// 	// 	color: 
+// 	// }
+// }
+// .userProfileOuterThemed-3EfHmv {
+// 	--background-modifier-accent: hsla(217,calc(var(--saturation-factor, 1)*7.6%),33.5%,0.48);
+// 	&.theme-light {
+// 		--interactive-normal: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
+// 		--interactive-active: hsl(0,calc(var(--saturation-factor, 1)*0%),100%);
+// 		--interactive-muted: hsl(217,calc(var(--saturation-factor, 1)*7.6%),33.5%);
+// 		--header-secondary: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
+// 		--header-primary: #{$rb-fg-accent};
+// 		--text-normal: #{$rb-text};
+// 		--background-secondary-alt: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%);
+// 		--background-floating: #18191c;
+// 		--profile-role-pill-background-color: var(--background-secondary-alt) !important;
+// 	}
+// 	.avatarPositionPremiumBanner-2nq2Fy,
+// 	.avatarPositionPremiumNoBanner-nWzERs {
+// 		svg > rect:nth-child(2),
+// 		svg > circle[fill="white"],
+// 		svg > circle[fill="black"] {
+// 			fill: transparent !important;
+// 		}
+// 	}
+// 	--profile-gradient-primary-color: #{$rb-bg-quarterary} !important;
+// 	--profile-gradient-secondary-color: #{$rb-bg-quarterary} !important;
+// 	--profile-gradient-button-color: #{$rb-bg-quarterary} !important;
+// 	--profile-gradient-overlay-color: transparent !important;
+// }
 
-.userProfileOuterThemed-3EfHmv { padding: 4px; }
-.userProfileOuter-1K_BYU.theme-light {
-	--background-floating: #18191c !important; 
-	--profile-body-background-color: var(--background-floating) !important;
-}
+// .userProfileOuterThemed-3EfHmv { padding: 4px; }
+// .userProfileOuter-1K_BYU.theme-light {
+// 	--background-floating: #18191c !important; 
+// 	--profile-body-background-color: var(--background-floating) !important;
+// }
 
-.userPopoutOverlayBackground-dKOOda {
-	background-color: $rb-bg-quarterary;
-	margin: 1rem 0 0 0;
-}
+// .userPopoutOverlayBackground-dKOOda {
+// 	background-color: $rb-bg-quarterary;
+// 	margin: 1rem 0 0 0;
+// }
 
 // mode where there are no borders for premiums
 
-.userProfileOuterThemed-3EfHmv.userPopoutOuter-3AVBmJ,
-.userProfileOuterThemed-3EfHmv.userProfileOuter-1K_BYU {
-	box-sizing: border-box;
-	// overflow: initial;
-	padding: 0; // instead of 4
-	.avatarWrapper-3y0KZ1,
-	.avatarUploaderPremium-2v2k2d {
-		left: calc(22px - 4px);
-		top: calc(76px - 4px);
-	}
-}
+// .userProfileOuterThemed-3EfHmv.userPopoutOuter-3AVBmJ,
+// .userProfileOuterThemed-3EfHmv.userProfileOuter-1K_BYU {
+// 	box-sizing: border-box;
+// 	// overflow: initial;
+// 	padding: 0; // instead of 4
+// 	.avatarWrapper-3y0KZ1,
+// 	.avatarUploaderPremium-2v2k2d {
+// 		left: calc(22px - 4px);
+// 		top: calc(76px - 4px);
+// 	}
+// }

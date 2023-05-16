@@ -88,10 +88,16 @@
 .cardPrimary-pAe8Ed {
 	@extend %settingsCardPrimary !optional;
 }
+.rolePillBorder-3R4Bb5 {
+	@extend %rolePillBorder !optional;
+}
 
 //fixes
 .header-2TLOnc {
 	@extend %gifPickerHeader !optional;
+}
+.note-1NN2aP {
+	@extend %userModalNote !optional;
 }
 
 // TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here
