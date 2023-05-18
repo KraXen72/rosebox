@@ -99,7 +99,12 @@
 .note-1NN2aP {
 	@extend %userModalNote !optional;
 }
-
+.nickname-3P1RuO {
+	@extend %userModalNickname !optional;
+}
+.avatarWrapper-eenWra {
+	@extend %decoratedAvatarWrapper !optional;
+}
 // TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here
 // after rewrite is done
 // for now, i can reference the mappings file (it's quicker), but for the future:

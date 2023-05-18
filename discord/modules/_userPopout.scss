@@ -5,6 +5,7 @@
 
 $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 $up-desired-width: 300px;
+$up-substracted-padding: 4px;
 
 %role:not(%roleAddButton) {
     position: relative;
@@ -32,13 +33,16 @@ $up-desired-width: 300px;
 %rolePillBorder, %role { border: 1px solid $up-border-color; }
 %roleRemoveIcon { left: 14px; }
 
-
+// tbh i might scrap my custom userpopouts, they're hell to maintain & there's just so many variants & edge cases.
+// even just shrinking the popout to 300px would require me to reposition several banners to be center/make the banner shorter
+// i hate the wide popouts but idk what to do bth
+// might write a vencord plugin if it's too annoying, or i'll just get used to it.
 
 // userPopout
 %userPopoutOuter {
 	width: $up-desired-width;
 	border-radius: 8px;
-	padding: 0 !important;
+	// padding: 0 !important;
 
 	%userPopoutOverlayBackground {
 		margin: 28px 0 0 0;
@@ -52,7 +56,9 @@ $up-desired-width: 300px;
 		}
 	}
 
+	%userModalNickname { color: $rb-text-vibrant; }
 	%userModalNote {
+		textarea:focus { background-color: transparent !important; }
 		border: 1px solid $up-border-color;
 		border-radius: 3px;
 		padding: 5px 10px;
