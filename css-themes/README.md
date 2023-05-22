@@ -7,3 +7,6 @@ Currently available themes:
 ``simplenote.user.css``    
 use with light theme since dark theme is wierd at the moment
 ![stylus](https://cdn.discordapp.com/attachments/704792091955429426/813366754591375410/unknown.png)
+
+### libreddit
+[libreddit](https://github.com/libreddit/libreddit) supports rosebox out of the box.
