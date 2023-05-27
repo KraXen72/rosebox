@@ -5,7 +5,9 @@
 
 $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 $up-desired-width: 300px;
-$up-spacing: 4px;
+$up-br-outer: 8px;
+$up-spacing: 4px; 
+$up-br-inner: calc($up-br-outer - $up-spacing);
 
 %role:not(%roleAddButton) {
     position: relative;
@@ -34,9 +36,10 @@ $up-spacing: 4px;
 %roleRemoveIcon { left: 14px; }
 
 // userPopout
+// discord's new userpopouts are 2 things: W I D E & sensory overload inducing. this attempts to fix it.
 %userPopoutOuter {
 	width: $up-desired-width;
-	border-radius: 8px;
+	border-radius: $up-br-outer;
 	background: $border-color;
 
 	// wrappers
@@ -44,10 +47,11 @@ $up-spacing: 4px;
 		background-color: $rb-bg-secondary;
 		margin: 28px 0 0 0;
 		width: $up-desired-width;
+		border-radius: $up-br-inner;
 	}
-
 	%userPopoutInner {
 		background-color: $border-color;
+		
 		&::before {
 			opacity: 1;
 			background-color: $border-color;
@@ -57,23 +61,39 @@ $up-spacing: 4px;
 		}
 	}
 
-	// top to bottom elements - don't wanna nest bc extra specificity could break the selectors
+	// fix some userpopouts being yeeted into oblivion, because they are 300px wide and the banner is 340px wide
+	// we have to yeet the mask bc no way to get it look right with the viewport width set to 340
+	// we partially restore the mask for non-premium banners at the bottom (only non premium bc non nitro users can't have avatar decorations - yet)
+	// avatar decorations would require custom masks
+	// this could be solved with js, by overwriting the viewport attribute, but this is a css theme...
+	%bannerSVGWrapper { 
+		min-width: $up-desired-width !important;
+		min-height: unset !important;
+		mask { display: none;  }
+	}
 
+	// top to bottom elements - don't wanna nest bc extra specificity could break the selectors
 	%userPopoutBannerPremium,
 	%userPopoutNoBannerPremium {
 		width: $up-desired-width;
 		object-position: center;
-		border-radius: 4px;
+		border-radius: $up-br-inner;
+		position: relative;
+		width: 100%;
 	}
 
+	// background for status indicators like online, offline, dnd, idle, mobile, ...
+	%decoratedAvatarWrapper { rect[fill="black"], circle[fill="black"] { fill: $rb-bg-secondary } }
 	%userModalNickname { color: $rb-text-vibrant; }
 
 	%userPopoutProfileBadges {
 		background-color: $rb-bg-secondary;
+		border-radius: $up-br-inner;
 		right: 0;
 	}
 	
 	%userModalNote {
+		textarea, textarea::placeholder { color: $rb-text; }
 		textarea:focus { background-color: transparent !important; }
 		border: 1px solid $up-border-color;
 		border-radius: 3px;
@@ -83,12 +103,26 @@ $up-spacing: 4px;
 
 	// unthemed reverts & fixes
 	&%userProfileOuterUnthemed {
-		%userPopoutInner::before { border-radius: 8px; }
+		%userPopoutInner::before { border-radius: $up-br-inner; }
 		%userPopoutProfileBadges { right: $up-spacing; }
 		%userPopoutOverlayBackground { 
 			margin: 28px $up-spacing $up-spacing $up-spacing; 
 			width: calc($up-desired-width - ($up-spacing * 2));
 		}	
+		// restore the cutout mask on color-only banners
+		// the other banners are taller, etc. i don't wanna maintain more than 1 svg cutout mask
+		// premiums/avatar decorations can go figure
+		%bannerSVGWrapper {
+			// to create this svg, i went into inkscape, made a 300*60px rectangle
+			// positioned a 80*80 circle at x:22 and y:16 (discord does)
+			// moved top & up the circle by how much i enlarged it (90*90 => x:17 y:11)
+			// selected rect & circle, path > difference
+			// resized the rectangle to 340*68 the svg has a width of 300 but a viewport-w of 340, so we have to also scale the height accordingly
+			// i then converted the svg into base64 using: https://base64.guru/converter/encode/image/svg
+			foreignObject > div { 
+				mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iMzQwIgogICBoZWlnaHQ9IjY4IgogICB2aWV3Qm94PSIwIDAgODkuOTU4MzI5IDE3Ljk5MTY2NyIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnNSIKICAgc29kaXBvZGk6ZG9jbmFtZT0iZGlzY29yZC1tYXNrLnN2ZyIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4xIChjNjhlMjJjMzg3LCAyMDIxLTA1LTIzKSIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9Im5hbWVkdmlldzciCiAgICAgcGFnZWNvbG9yPSIjNTA1MDUwIgogICAgIGJvcmRlcmNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcm9wYWNpdHk9IjEiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMCIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIxIgogICAgIGlua3NjYXBlOmRvY3VtZW50LXVuaXRzPSJtbSIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaW5rc2NhcGU6em9vbT0iMy43OTQ2ODczIgogICAgIGlua3NjYXBlOmN4PSIxNTYuNTM0NjQiCiAgICAgaW5rc2NhcGU6Y3k9IjUuMTM4NzYzMyIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjI1NjAiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iMTM3NyIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iLTgiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIxIgogICAgIHVuaXRzPSJweCIgLz4KICA8ZGVmcwogICAgIGlkPSJkZWZzMiIgLz4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSI+CiAgICA8cGF0aAogICAgICAgaWQ9InJlY3Q4NDYiCiAgICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO3N0cm9rZTojZmZmZmZmO3N0cm9rZS13aWR0aDowLjIzNDc5MztzdHJva2UtbGluZWNhcDpzcXVhcmUiCiAgICAgICBkPSJNIDAuMTE3Mzk2NTQsMC4xMTczOTY1MiBWIDE3Ljg3NDI3IEggNS4xNTg3ODE4IEEgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDUuMDk3ODcyOSwxNi43OTE5ODkgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDE4LjU5MTU0MywzLjI5ODY0MDkgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDMyLjA4NTIxMywxNi43OTE5ODkgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDMyLjAyNDMwNiwxNy44NzQyNyBIIDg5Ljg0MDkzNyBWIDAuMTE3Mzk2NTIgWiIgLz4KICA8L2c+Cjwvc3ZnPgo=")
+			}
+		}
 	}
 	
 }
