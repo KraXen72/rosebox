@@ -91,6 +91,9 @@
 .rolePillBorder-3R4Bb5 {
 	@extend %rolePillBorder !optional;
 }
+.timestamp-6-ptG3 {
+	@extend %markdownTimestamp !optional;
+}
 
 //fixes
 .header-2TLOnc {
@@ -110,6 +113,9 @@
 }
 .messageInputContainer-24qqTx {
 	@extend %userPopoutMessageInputContainer !optional;
+}
+.inputWrapper-2K8ds1 { // used for password input in change username popup
+	@extend %inputWrapper !optional;
 }
 // TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here
 // after rewrite is done

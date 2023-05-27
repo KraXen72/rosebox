@@ -26,3 +26,8 @@
     transform: translateY(-8%);
     line-height: 20px;
 }
+
+%circleIconButton { // plus & server discovery buttons
+	color: $rb-fg-accent;
+	&[class*="selected"] { background-color: $rb-fg-accent }
+}

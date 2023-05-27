@@ -11,6 +11,17 @@
 %inviteModalHeader %librarySearchBar {
 	background-color: $rb-bg-tertiary
 }
+
+
+form { // username & password edit popup
+	%multiInput, %inputWrapper, %inputWrapper > input {
+		background-color: $rb-bg-tertiary;
+		border-radius: $br-small;
+	}
+}
+
+
+
 %privateChannelsSearchBar %privateChannelsSearchBarComponent {
 	background-color: $rb-bg-quarterary !important;
 	border: 1px solid $border-color-black;

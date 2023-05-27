@@ -4,9 +4,9 @@
 // rewritten again in 2023 to use placeholder selectors, along with the rest of the theme
 
 $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
-$up-desired-width: 300px;
+$up-desired-width: 300px; // don't change. you'd have to redraw the svg (see bottom)
 $up-br-outer: 8px;
-$up-spacing: 4px; 
+$up-spacing: 4px; // themed popoutOuter's padding will still be 4px regardless of this.
 $up-br-inner: calc($up-br-outer - $up-spacing);
 
 %role:not(%roleAddButton) {
@@ -45,16 +45,19 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 	// wrappers
 	%userPopoutOverlayBackground {
 		background-color: $rb-bg-secondary;
+		border-radius: $up-br-inner;
+
 		margin: 28px 0 0 0;
 		width: $up-desired-width;
-		border-radius: $up-br-inner;
 	}
 	%userPopoutInner {
-		background-color: $border-color;
+		// background-color: $border-color;
+		background-color: red;
 		
 		&::before {
-			opacity: 1;
 			background-color: $border-color;
+			border-radius: $up-br-outer;
+			opacity: 1;
 			width: $up-desired-width;
 			margin-bottom: 0 !important;
 			border-radius: 0;
@@ -103,7 +106,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 
 	// unthemed reverts & fixes
 	&%userProfileOuterUnthemed {
-		%userPopoutInner::before { border-radius: $up-br-inner; }
+		%userPopoutInner::before { border-radius: $up-br-outer; }
 		%userPopoutProfileBadges { right: $up-spacing; }
 		%userPopoutOverlayBackground { 
 			margin: 28px $up-spacing $up-spacing $up-spacing; 

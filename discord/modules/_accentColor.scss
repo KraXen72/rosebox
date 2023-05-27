@@ -46,6 +46,7 @@
 // messages stuff (possibly move)
 %mention.interactive:hover { text-decoration: none !important; }
 %reaction { border-radius: $br-small; }
+%markdownTimestamp { background-color: $rb-bg-accent; }
 
 %systemMessageUsernameAnchor,
 %membersGroup > span // members group title

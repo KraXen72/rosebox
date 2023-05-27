@@ -1,7 +1,3 @@
-// general tweaks that don't belong anywhere else yet
-.timestamp-6-ptG3 { background-color: $rb-bg-accent; } // timestamp background color
-.sidebar-1tnWFu { background-color: $rb-bg-secondary-d; } // new server discovery
-
 // i have no idea what these do and i'm too afraid to remove them
 // TODO whenever i figure out what they do, add a comment & move them to respective file
 
@@ -21,9 +17,4 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
 .selected-3H3-RC, .colorDefault-CDqZdO.focused-3qFvc8 { 
 	background-color: var(--background-modifier-selected) !important;
 }
-
-// snippets that are currently off, and i'm testing what happens if they're off
-// .children-3xh0VB:after { /* Fix fade thingy for good looking titlebar snippet */
-//     background: transparent !important;
-// }
 
