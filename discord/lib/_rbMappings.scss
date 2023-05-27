@@ -1,0 +1,124 @@
+.toolbar-37BrJ5 {
+	@extend %markdownEditToolbar !optional;
+}
+.defaultColor-1EVLSt {
+	@extend %defaultColorText !optional;
+}
+.wrapper-2olG5t {
+	@extend %quickSwitcherPingWrapper !optional;
+}
+.header-1ffhsl {
+	@extend %inviteModalHeader !optional;
+}
+.upsellButton-36YQ7c {
+	@extend %nitroUpsellButton !optional;
+}
+.addFriend-emTWY1 {
+	@extend %addFriendButton !optional;
+}
+.contentWrapper-3vHNP2 {
+	@extend %emojiPickerContentWrapper !optional;
+}
+.contentWrapper-2f9yME {
+	@extend %reactionEmojiPickerContentWrapper !optional;
+}
+.nav-1zWVQw, .nav-1cHpYc { // normal, reaction
+	@extend %emojiPickerNav !optional;
+}
+.navList-YSb9UB, .navList-3uG4ub { // normal, reaction
+	@extend %emojiPickerNavList !optional;
+}
+.inner-1NoIT5 {
+	@extend %emojiPickerSearchBarInner !optional;
+}
+.positionContainerOnlyEmoji-2l5tq_ {
+	@extend %editEmojiPickerContainer !optional;
+}
+.emoji-4YP39J {
+	@extend %emojiPreview !optional;
+}
+.drawerSizingWrapper-1txdWG {
+	@extend %drawerSizingWrapper !optional;
+}
+.resizeHandle-T_gFJR {
+	@extend %emojiPickerResizeHandle !optional;
+}
+.emojiListRowMediumSize-2_-xbz {
+	@extend %emojiPickerRowMedium !optional;
+}
+.buttons-uaqb-5 {
+	@extend %channelTextAreaButtons !optional;
+}
+.diversitySelector-P-W_tU {
+	@extend %emojiPickerSkintoneButton !optional;
+}
+.header-1ffhsl {
+	@extend %inviteModalHeader !optional;
+}
+.searchBar-2aylmZ {
+	@extend %librarySearchBar !optional;
+}
+.barButtonMain-2GIx4o {
+	@extend %jumpBarMainButton !optional;
+}
+.barButtonAlt-TQoCdZ {
+	@extend %jumpBarAltButton !optional;
+}
+.clipContainer-31nYlH {
+	@extend %replyBarClipContainer !optional;
+}
+.quickswitcher-pKcM9U {
+	@extend %quickSwitcher !optional;
+}
+.input-3r5zZY {
+	@extend %quickSwitcherInput !optional;
+}
+.scroller-2qwVWY {
+	@extend %quickSwitcherScroller !optional;
+}
+.result-u66Ywh {
+	@extend %quickSwitcherResult !optional;
+}
+.content-vSHmMD a {
+	@extend %systemMessageUsernameAnchor !optional;
+}
+.communityInfoContainer-1dMVpU {
+	@extend %serverHeaderPublicPill !optional;
+}
+.cardPrimary-pAe8Ed {
+	@extend %settingsCardPrimary !optional;
+}
+.rolePillBorder-3R4Bb5 {
+	@extend %rolePillBorder !optional;
+}
+.timestamp-6-ptG3 {
+	@extend %markdownTimestamp !optional;
+}
+
+//fixes
+.header-2TLOnc {
+	@extend %gifPickerHeader !optional;
+}
+.note-1NN2aP {
+	@extend %userModalNote !optional;
+}
+.nickname-3P1RuO {
+	@extend %userModalNickname !optional;
+}
+.avatarWrapper-eenWra {
+	@extend %decoratedAvatarWrapper !optional;
+}
+.bannerSVGWrapper-2CLfzN {
+	@extend %bannerSVGWrapper !optional;
+}
+.messageInputContainer-24qqTx {
+	@extend %userPopoutMessageInputContainer !optional;
+}
+.inputWrapper-2K8ds1 { // used for password input in change username popup
+	@extend %inputWrapper !optional;
+}
+// TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here
+// after rewrite is done
+// for now, i can reference the mappings file (it's quicker), but for the future:
+// _rbMappings.scss file is main, has all my custom mappings + a script updates matching ones from the clearvision repo
+// that way i only maintain selectors i use

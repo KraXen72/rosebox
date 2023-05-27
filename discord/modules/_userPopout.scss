@@ -1,233 +1,131 @@
 /*----//----USER POPOUT----------*/
-/* role pills by Cynthia */
-/* updated once again by the awesome Cynthia (Davri#0015) in 2022 */
-// uses some slightly sketchy pseudo element hack to color 
+// role pills by Cynthia
+// updated once again by the awesome Cynthia (Davri#0015) in 2022
+// rewritten again in 2023 to use placeholder selectors, along with the rest of the theme
 
 $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
+$up-desired-width: 300px; // don't change. you'd have to redraw the svg (see bottom)
+$up-br-outer: 8px;
+$up-spacing: 4px; // themed popoutOuter's padding will still be 4px regardless of this.
+$up-br-inner: calc($up-br-outer - $up-spacing);
 
-.role-2TIOKu:not(.addButton-1_dZYu) {
+%role:not(%roleAddButton) {
     position: relative;
     overflow: hidden;
     background: none;
     border-radius: 50px;
 }
-.roleRemoveButton-17oXnT { position: static; }
-.rolePill-2IJ1vo.addButton-1_dZYu {
+
+%roleAddButton {
 	border-radius: 50px; 
 	width: 22px
 }
 
-/* don't do the after for role add popout     */
-.role-2TIOKu .roleCircle-3K9O3d:not([class*="popoutRoleCircle-"])::after {
+%roleRemoveButton { position: static; }
+
+// don't do the ::after for role add popout
+%role %roleCircle:not([class*="popoutRoleCircle-"])::after {
     content: "";
     inset: 0;
     position: absolute;
     background: inherit;
     opacity: 0.25;
 }
-.roleName-2ZJJYR, .roleIcon-3-WL_I {
-    z-index: 1;
-}
 
-.rolePillBorder-RiRiuN, .rolePill-2IJ1vo {
-    border: 1px solid transparent;
-}
-
-/* put the remove role button back in roleCircle     */
-.roleRemoveIcon-387wKV { left: 14px; }
+%rolePillBorder, %role { border: 1px solid $up-border-color; }
+%roleRemoveIcon { left: 14px; }
 
 // userPopout
-.userPopoutOuter-3AVBmJ {
-	background-color: $rb-bg-quarterary;
-	// --profile-note-background-color: #{$rb-bg-quarterary} !important;
-	--profile-note-background-color: #{$rb-bg-quarterary} !important;
-	width: 300px;
-	border-radius: 8px;
+// discord's new userpopouts are 2 things: W I D E & sensory overload inducing. this attempts to fix it.
+%userPopoutOuter {
+	width: $up-desired-width;
+	border-radius: $up-br-outer;
+	background: $border-color;
 
-	.userPopoutInner-1hXSeY {
-		background-color: inherit;
-		border-radius: 4px;
-		width: 300px;
+	// wrappers
+	%userPopoutOverlayBackground {
+		background-color: $rb-bg-secondary;
+		border-radius: $up-br-inner;
 
+		margin: 28px 0 0 0;
+		width: $up-desired-width;
+	}
+	%userPopoutInner {
+		// background-color: $border-color;
+		background-color: red;
+		
 		&::before {
-			width: 100%;
-			height: 100%;
-			border-radius: 8px;
+			background-color: $border-color;
+			border-radius: $up-br-outer;
+			opacity: 1;
+			width: $up-desired-width;
+			margin-bottom: 0 !important;
+			border-radius: 0;
 		}
-		.bannerSVGWrapper-qc0szY {
-			.popoutBannerPremium-2RvDNZ, foreignObject, .popoutNoBannerPremium-2TQa6P,
-			:is(.imageUploaderInner-IIRaFr, 
-				.bannerUploader-1sbyBg, 
-				.imageUploaderFileInput-18YkLC, 
-				.imageUploaderHint-33zkjZ
-			) {
-				border-top-left-radius: 4px;
-				border-top-right-radius: 4px;
+	}
 
-				width: 300px;
-				$banner-height: 105.88px;
-				height: $banner-height;
-				min-height: $banner-height;
+	// fix some userpopouts being yeeted into oblivion, because they are 300px wide and the banner is 340px wide
+	// we have to yeet the mask bc no way to get it look right with the viewport width set to 340
+	// we partially restore the mask for non-premium banners at the bottom (only non premium bc non nitro users can't have avatar decorations - yet)
+	// avatar decorations would require custom masks
+	// this could be solved with js, by overwriting the viewport attribute, but this is a css theme...
+	%bannerSVGWrapper { 
+		min-width: $up-desired-width !important;
+		min-height: unset !important;
+		mask { display: none;  }
+	}
 
-				background-position: 50%;
-				background-size: cover;
+	// top to bottom elements - don't wanna nest bc extra specificity could break the selectors
+	%userPopoutBannerPremium,
+	%userPopoutNoBannerPremium {
+		width: $up-desired-width;
+		object-position: center;
+		border-radius: $up-br-inner;
+		position: relative;
+		width: 100%;
+	}
+
+	// background for status indicators like online, offline, dnd, idle, mobile, ...
+	%decoratedAvatarWrapper { rect[fill="black"], circle[fill="black"] { fill: $rb-bg-secondary } }
+	%userModalNickname { color: $rb-text-vibrant; }
+
+	%userPopoutProfileBadges {
+		background-color: $rb-bg-secondary;
+		border-radius: $up-br-inner;
+		right: 0;
+	}
+	
+	%userModalNote {
+		textarea, textarea::placeholder { color: $rb-text; }
+		textarea:focus { background-color: transparent !important; }
+		border: 1px solid $up-border-color;
+		border-radius: 3px;
+		padding: 5px 10px;
+	}
+	%userPopoutMessageInputContainer { border-color: $up-border-color; }
+
+	// unthemed reverts & fixes
+	&%userProfileOuterUnthemed {
+		%userPopoutInner::before { border-radius: $up-br-outer; }
+		%userPopoutProfileBadges { right: $up-spacing; }
+		%userPopoutOverlayBackground { 
+			margin: 28px $up-spacing $up-spacing $up-spacing; 
+			width: calc($up-desired-width - ($up-spacing * 2));
+		}	
+		// restore the cutout mask on color-only banners
+		// the other banners are taller, etc. i don't wanna maintain more than 1 svg cutout mask
+		// premiums/avatar decorations can go figure
+		%bannerSVGWrapper {
+			// to create this svg, i went into inkscape, made a 300*60px rectangle
+			// positioned a 80*80 circle at x:22 and y:16 (discord does)
+			// moved top & up the circle by how much i enlarged it (90*90 => x:17 y:11)
+			// selected rect & circle, path > difference
+			// resized the rectangle to 340*68 the svg has a width of 300 but a viewport-w of 340, so we have to also scale the height accordingly
+			// i then converted the svg into base64 using: https://base64.guru/converter/encode/image/svg
+			foreignObject > div { 
+				mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iMzQwIgogICBoZWlnaHQ9IjY4IgogICB2aWV3Qm94PSIwIDAgODkuOTU4MzI5IDE3Ljk5MTY2NyIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnNSIKICAgc29kaXBvZGk6ZG9jbmFtZT0iZGlzY29yZC1tYXNrLnN2ZyIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4xIChjNjhlMjJjMzg3LCAyMDIxLTA1LTIzKSIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9Im5hbWVkdmlldzciCiAgICAgcGFnZWNvbG9yPSIjNTA1MDUwIgogICAgIGJvcmRlcmNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcm9wYWNpdHk9IjEiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMCIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIxIgogICAgIGlua3NjYXBlOmRvY3VtZW50LXVuaXRzPSJtbSIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaW5rc2NhcGU6em9vbT0iMy43OTQ2ODczIgogICAgIGlua3NjYXBlOmN4PSIxNTYuNTM0NjQiCiAgICAgaW5rc2NhcGU6Y3k9IjUuMTM4NzYzMyIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjI1NjAiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iMTM3NyIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iLTgiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIxIgogICAgIHVuaXRzPSJweCIgLz4KICA8ZGVmcwogICAgIGlkPSJkZWZzMiIgLz4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSI+CiAgICA8cGF0aAogICAgICAgaWQ9InJlY3Q4NDYiCiAgICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO3N0cm9rZTojZmZmZmZmO3N0cm9rZS13aWR0aDowLjIzNDc5MztzdHJva2UtbGluZWNhcDpzcXVhcmUiCiAgICAgICBkPSJNIDAuMTE3Mzk2NTQsMC4xMTczOTY1MiBWIDE3Ljg3NDI3IEggNS4xNTg3ODE4IEEgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDUuMDk3ODcyOSwxNi43OTE5ODkgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDE4LjU5MTU0MywzLjI5ODY0MDkgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDMyLjA4NTIxMywxNi43OTE5ODkgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDMyLjAyNDMwNiwxNy44NzQyNyBIIDg5Ljg0MDkzNyBWIDAuMTE3Mzk2NTIgWiIgLz4KICA8L2c+Cjwvc3ZnPgo=")
 			}
 		}
-		.userTagUsernameNoNickname-2e_xaO, .nickname-2rimyL { 
-			color: $rb-fg-accent;
-			font-weight: 600; 
-		}
-			
-		// remove nitro shit
-		.upsellVisible-evDwII, .premiumIconWrapper-yyGDql.clickable-1LpIFn { display: none; }
-		.profileBadges-31rDHI {
-			background-color: $rb-bg-5;
-		}
-		.divider-1tWBgZ { background-color: var(--profile-message-input-border-color); }
-		.scroller-1jBQYo {
-			&::-webkit-scrollbar-thumb, &::-webkit-scrollbar { width: 0 !important; }
-		}
-
-		.note-6O4w9y {
-			// border: 1px solid transparent;
-			// &:hover { border: 1px solid var(--profile-message-input-border-color); }
-			border: 1px solid var(--profile-message-input-border-color);
-			border-radius: 4px;
-			padding: 0 5px;
-			height: min-content;
-			min-height: 40px;
-			display: flex;
-			align-items: center;
-			
-			textarea {
-				&::placeholder { color: var(--input-placeholder-text) !important; }
-				padding: 9px 4px;
-			} 
-		}
 	}
-	.pencilContainer-11Kuga { display: none; }
-}
-
-// spotify activity
-// .activityUserPopoutV2-3eKqzY {
-// 	position: relative;
-// 	.buttonsWrapper-2ARRp1 {
-// 		position: absolute;
-// 		right: 1.40rem;
-// 		height: min-content;
-// 		width: min-content;
-// 		margin-top: 0;
-// 		top: 0;
-// 	}
-// 	button.lookFilled-yCfaCM {
-// 		&:not(.iconButtonSize-1-pz2t) { display: none; }
-// 		&.iconButtonSize-1-pz2t {
-// 			@include padmar();
-// 			padding-top: 0.25rem !important;
-// 			max-width: 24px !important;
-// 			max-height: 24px !important;
-// 			width: 24px !important;
-// 			height: 24px !important;
-// 			min-width: 0 !important;
-// 			min-height: 0 !important;
-// 			z-index: 2;
-// 			background-color: transparent !important;
-// 			align-items: center;
-// 			.listenAlongIcon-aXq1MH { color: $rb-text; }
-// 			&:hover { 
-// 				background-color: $rb-fg-accent !important;
-// 				opacity: 1 !important;
-// 				.listenAlongIcon-aXq1MH { color: white; }
-// 			}
-// 		}
-// 	}
 	
-// }
-
-// overwrite non-premium gradient (or, lack there-of)
-.userProfileInnerThemedNonPremium-1gT-zY { 
-	background: $rb-bg-quarterary !important;
-}
-
-// premium without banner
-.userProfileInnerThemedPremiumWithoutBanner-1yMS1H {
-	.avatarPositionPremiumNoBanner-nWzERs {
-		top: 42px !important;
-	}
-	.divider-1tWBgZ, .note-6O4w9y, .messageInputContainer-2rGDH8, .rolePillBorder-RiRiuN {
-		--profile-message-input-border-color: var(--background-modifier-accent) !important;
-	}
-	.bannerSVGWrapper-qc0szY {
-		min-width: 300px;
-	}
-	.popoutNoBannerPremium-2TQa6P, foreignObject, .bannerSVGWrapper-qc0szY {
-		border-top-left-radius: 8px;
-		border-top-right-radius: 8px;
-	}
-	.lastSection-3_1yKt {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-}
-
-[class*="userProfileInnerThemedWithBanner"] { // premiums don't get any gradients >:)
-	background: $rb-bg-quarterary !important;
-	--profile-gradient-primary-color: #{$rb-bg-quarterary};
-	--profile-gradient-secondary-color: #{$rb-bg-quarterary};
-	--profile-gradient-overlay-color: #{$rb-bg-quarterary};
-	--profile-message-input-border-color: var(--background-modifier-accent) !important;
-	// .userTagUsernameNoNickname-2e_xaO {
-	// 	color: 
-	// }
-}
-.userProfileOuterThemed-3EfHmv {
-	--background-modifier-accent: hsla(217,calc(var(--saturation-factor, 1)*7.6%),33.5%,0.48);
-	&.theme-light {
-		--interactive-normal: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
-		--interactive-active: hsl(0,calc(var(--saturation-factor, 1)*0%),100%);
-		--interactive-muted: hsl(217,calc(var(--saturation-factor, 1)*7.6%),33.5%);
-		--header-secondary: hsl(216,calc(var(--saturation-factor, 1)*3.7%),73.5%);
-		--header-primary: #{$rb-fg-accent};
-		--text-normal: #{$rb-text};
-		--background-secondary-alt: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%);
-		--background-floating: #18191c;
-		--profile-role-pill-background-color: var(--background-secondary-alt) !important;
-	}
-	.avatarPositionPremiumBanner-2nq2Fy,
-	.avatarPositionPremiumNoBanner-nWzERs {
-		svg > rect:nth-child(2),
-		svg > circle[fill="white"],
-		svg > circle[fill="black"] {
-			fill: transparent !important;
-		}
-	}
-	--profile-gradient-primary-color: #{$rb-bg-quarterary} !important;
-	--profile-gradient-secondary-color: #{$rb-bg-quarterary} !important;
-	--profile-gradient-button-color: #{$rb-bg-quarterary} !important;
-	--profile-gradient-overlay-color: transparent !important;
-}
-
-.userProfileOuterThemed-3EfHmv { padding: 4px; }
-.userProfileOuter-1K_BYU.theme-light {
-	--background-floating: #18191c !important; 
-	--profile-body-background-color: var(--background-floating) !important;
-}
-
-.userPopoutOverlayBackground-dKOOda {
-	background-color: $rb-bg-quarterary;
-	margin: 1rem 0 0 0;
-}
-
-// mode where there are no borders for premiums
-
-.userProfileOuterThemed-3EfHmv.userPopoutOuter-3AVBmJ,
-.userProfileOuterThemed-3EfHmv.userProfileOuter-1K_BYU {
-	box-sizing: border-box;
-	// overflow: initial;
-	padding: 0; // instead of 4
-	.avatarWrapper-3y0KZ1,
-	.avatarUploaderPremium-2v2k2d {
-		left: calc(22px - 4px);
-		top: calc(76px - 4px);
-	}
 }

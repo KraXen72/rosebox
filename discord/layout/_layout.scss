@@ -1,0 +1,20 @@
+#app-mount, body, %bg {
+    background-color: $rb-bg-secondary-d;
+}
+
+%pageWrapper {
+    background: $rb-bg-primary;
+}
+
+%searchResultsWrap { width: 500px; } // Wider search results section
+
+// MEMBER LIST
+%membersContainer, %members, %members [class*="member"] {
+    background-color: $rb-bg-primary !important;
+}
+
+// testing these off, we'll see later
+
+// %privateChannelsScroller {
+//     background-color: unset;
+// }

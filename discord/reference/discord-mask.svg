@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="340"
+   height="68"
+   viewBox="0 0 89.958329 17.991667"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="discord-mask.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.7946873"
+     inkscape:cx="156.53464"
+     inkscape:cy="5.1387633"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     units="px" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect846"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.234793;stroke-linecap:square"
+       d="M 0.11739654,0.11739652 V 17.87427 H 5.1587818 A 13.49367,13.493348 0 0 1 5.0978729,16.791989 13.49367,13.493348 0 0 1 18.591543,3.2986409 13.49367,13.493348 0 0 1 32.085213,16.791989 13.49367,13.493348 0 0 1 32.024306,17.87427 H 89.840937 V 0.11739652 Z" />
+  </g>
+</svg>

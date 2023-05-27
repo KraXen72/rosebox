@@ -1,19 +1,11 @@
-.container-qBnZJg {
-    .quickswitcher-pKcM9U {
-        background: $rb-bg-primary !important;
-		
-        .input-3r5zZY { background: #191919; } // searchbox
-		.scroller-2qwVWY { // results list
-			background: $rb-bg-primary;
-			max-height: 400px; 
-			margin-right: 0;
-		} 
-        .content-yjf30S { // also the result list apparently lol
-            background: $rb-bg-secondary !important;
-            .result-u66Ywh[aria-selected="true"] {
-                background: $rb-bg-accent !important;
-            }
-        }
-        
-    }
+%quickSwitcher {
+	background: $rb-bg-primary;
+	%quickSwitcherInput { background-color: $rb-bg-tertiary; }
+	%quickSwitcherScroller {
+		max-height: 400px; 
+		margin-right: 0;
+		&::-webkit-scrollbar-thumb { background-color: $rb-bg-5; }
+		&::-webkit-scrollbar-track { background-color: $rb-bg-tertiary !important; } // !important is needed, discord uses it too
+	}
+	%quickSwitcherResult[aria-selected="true"] { background: $rb-bg-accent; }
 }

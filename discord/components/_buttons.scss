@@ -1,29 +1,34 @@
 // buttons
-.lookFilled-yCfaCM, .lookInverted-2mDUMi, 
-.lookFilled-1H2Jvj.colorBrand-2M3O3N,
-.selectorButtonSelected-3Z0WNU {
+%buttonFilled, %buttonInverted {
     background-color: $rb-fg-accent !important;
     color: white !important;
 	&:hover:not(:disabled) { background-color: $rb-fg-accent-hover !important; }
 
-	&.colorRed-rQXKgM {
+	&%buttonColorRed {
 		background-color: $btn-bg-red !important;
 		&:hover { background-color: $btn-bg-red-dark !important; }
 	}
-	&.colorGreen-3y-Z79 {
+	&%buttonColorGreen {
 		background-color: $btn-bg-green !important;
 		&:hover { background-color: $btn-bg-green-dark !important; }
 	}
+	%defaultColorText { color: white; }
 }
 
-// rpc / spotify cta buttons
-.buttonColor-XIRMbp {
+%panelActionButtonColor, // rpc / spotify cta buttons
+%addFriendButton {
 	background-color: $rb-fg-accent !important;
 }
 
 // markdown editing toolbar
-.toolbar-37BrJ5, #slate-toolbar {
-	.lookFilled-yCfaCM {
+%markdownEditToolbar, #slate-toolbar {
+	%buttonFilled {
 		background-color: transparent !important;
+		&:hover { background-color: rgba(255, 255, 255, 0.1) !important; }
 	}
+}
+
+%panelActionButtonColor, // voice channel buttons like camera, screenshare
+%nitroUpsellButton { 
+	color: #fff !important; 
 }

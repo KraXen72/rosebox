@@ -1,59 +1,14 @@
-.scroller-hE2gWq {
-    background: $rb-bg-primary;
+%friendsColumn %librarySearchBar { background-color: $rb-bg-5; }
+%friendsItem { border-top-color: transparent; }
+
+%activeNowOuterCard:hover, 
+%activeNowOuterCard:hover %activeNowCardSection {
+	background-color: $rb-bg-5 !important;
+	border-color: var(--background-modifier-accent)
 }
 
-.wrapper-2RrXDg {
-    background-color: var(--Colleft) !important;
-    margin: 16px;
-    border-radius: 10px;
-    box-shadow: unset;
-    border: none;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    transition: all 0.3s;
+%activeNowCardSection { border: 1px solid transparent; }
+
+%activeNowOuterCard, %activeNowOuterCard * {
+	transition: all 0.2s;
 }
-.wrapper-2RrXDg:hover, .wrapper-2RrXDg:hover .section-3G9aLW {background-color: var(--background-secondary-alt) !important;}
-.wrapper-2RrXDg:hover .section-3G9aLW {filter: brightness(1.2)}
-.peopleListItem-u6dGxF {border-top-color: transparent;}
-.nowPlayingColumn-1eCBCN {background: var(--background-primary)}
-
-/*----//----now playing - home - friends - active now----------*/
-.itemCard-3Etziu.wrapper-2RrXDg.outer-2JOHae {
-    opacity: 0.83;
-    border-radius: 7px;
-    border-width: 1px;
-
-    background: #282828 !important;
-    border-color: $rb-bg-accent !important;
-    border-width: 1px !important;
-    border-style: solid !important;
-
-    .body-16rSsp:hover {
-        .section-3G9aLW {
-            background: $rb-bg-primary !important;
-            border-color: $rb-bg-primary !important;
-        }
-    }
-
-    .section-3G9aLW, .body-16rSsp, .separator-2OaeRP {
-        background: $rb-bg-primary;
-        border-color: $rb-bg-primary;
-
-        &:hover {
-            background: $rb-bg-primary !important;
-            border-color: $rb-bg-primary !important;
-        }
-    }
-
-}
-.itemCard-3Etziu:hover {
-    .section-3G9aLW {
-        background: #282828 !important;
-    }
-}
-.itemCard-3Etziu, .section-3G9aLW, .body-16rSsp, .itemCard-3Etziu * {
-    transition: all 0.2s !important;
-}
-

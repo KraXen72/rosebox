@@ -1,54 +1,26 @@
-// the layout is as follows:
-// (left corner rounded) server banner (right corner rounded) (left corner rounded) chat title/channel title |end|
-
-// server header
-.header-2o-2hj,
-.searchBar-3TnChZ, 
-.container-1-ERn5, .container-1NXEtd, .sidebar-1tnWFu{
-    z-index: 99;
-    box-shadow: none;
-    background-color: var(--ColChannelList);
-    border-top-right-radius: 10px !important; //add another corner smol
-}
-
-.animatedContainer-2laTjx, .bannerImage-ubW8K-, // round banner image
-.header-3OsQeK // round header (no banner image) 
-{ 
-    border-top-right-radius: 10px;
-	border-top-left-radius: 10px;
-}
-
 // remove shadow
-.header-3OsQeK, .bannerVisible-14J9lQ  {
-	-webkit-box-shadow: none !important;
-    box-shadow: none !important;
+%channelsHeader,
+%bannerAnimatedContainer,
+%privateChannelsSearchBar {
+	@include no-shadow;
 }
 
-.bannerVisible-14J9lQ { 
-    filter: none;
-    position: relative;
+%channelsSidebar,
+%channelsHeader,
+%bannerAnimatedContainer {
+	border-top-right-radius: $br-medium;
+}
+%headerBar, 
+%chat, 
+%friends,
+%pageWrapper {
+	border-top-left-radius: $br-medium;
 }
 
-// round left corner of message titlebar
-.chat-2ZfjoI,
-.container-2cd8Mz,
-.libraryHeader-2loraV,
-.container-ZMc96U,
-.homeWrapper-L4ors0
-.title-31SJ6t,
-.applicationStore-2nk7Lo,
-.scroller-3j5xK2,
-.pageHeaderDrag-3HG1-5,
-.pageWrapper-2PwDoS {
-    border-top-left-radius: 10px !important;
-}
+%serverHeaderPublicPill { display: none; } // hide public pill
 
-.scroller-2FKFPG.scroller-2TZvBN {
-    border-top-left-radius: 0px !important;
-}
-
-// hide public pill
-.communityInfoVisible-3zc5_s .communityInfoContainer-1dMVpU { display: none; }
+// this seems to only appear once in a while
+// i cannot get it to appear now, so i'll fix it if it breaks
 
 // upsell popup
 .upsellTooltipWrapper-1wqikQ {

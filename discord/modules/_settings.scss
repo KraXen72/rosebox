@@ -1,3 +1,16 @@
+%settingsCard {
+	--__card-accent-color: #{$rb-bg-accent1};
+}
+%settingsCardPrimary {
+	background-color: $rb-bg-5;
+}
+
 #vencordsetting-tab, #vencordplugins-tab {
 	--background-modifier-selected: var(--input-background);
+}
+.vc-plugins-filter-controls {
+	--input-background: #{$rb-bg-tertiary};
+	%inputWrapper {
+		height: min-content;
+	}
 }

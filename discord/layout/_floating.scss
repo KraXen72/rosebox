@@ -1,0 +1,34 @@
+%messagesPopoutHeader,
+%searchHeader {
+	background-color: $rb-bg-tertiary;
+}
+%searchPopoutQueryContainer,
+%searchPopoutQueryContainerFocused {
+	background-color: $rb-bg-tertiary !important;
+}
+
+// friends search bar in library & invite
+%inviteModalHeader %librarySearchBar {
+	background-color: $rb-bg-tertiary
+}
+
+
+form { // username & password edit popup
+	%multiInput, %inputWrapper, %inputWrapper > input {
+		background-color: $rb-bg-tertiary;
+		border-radius: $br-small;
+	}
+}
+
+
+
+%privateChannelsSearchBar %privateChannelsSearchBarComponent {
+	background-color: $rb-bg-quarterary !important;
+	border: 1px solid $border-color-black;
+} 
+%chatSearchBar { 
+	background-color: $rb-bg-secondary !important;
+	border: 1px solid $border-color-black;
+}
+
+%recentMentionsPopout, %messagesPopoutWrap { max-height: 93vh !important; } // inbox

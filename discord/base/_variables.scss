@@ -1,5 +1,6 @@
 @use "sass:color";
 
+// rosebox colors used throughout the theme
 $rb-bg-primary: #262626;
 $rb-bg-primarya: #262626de;
 $rb-bg-secondary: #232323;
@@ -11,49 +12,27 @@ $rb-bg-5: #313131;
 
 $rb-bg-accent: rgba(165, 117, 98, 0.2);
 $rb-bg-accent1: rgba(165, 117, 98, 0.1);
+$rb-bg-accent25: rgba(165, 117, 98, 0.25);
+$rb-bg-accent80: rgba(165, 117, 98, 0.8);
+$rb-bg-accent95: rgba(165, 117, 98, 0.95);
 $rb-bg-accent-opaque: #5e4c43;
 $rb-fg-accent: #a57562;
-$rb-fg-accent-hover: #885f4e;
+$rb-fg-accent-hover: #885f4e; // or color.adjust($rb-fg-accent, $lightness: -5%)
 $rb-text: #a3a5aa;
+$rb-text-vibrant: #b5bac1; // more vibrant, discord's built-in --header-secondary
 
-$Col-dcweb-1: #7289DA; /*blue*/
-$Col-dcweb-2: #99AAB5; /*grey*/
-$Col-dcweb-3: #2C2F33; /*more grey*/
-$Col-dcweb-4: #23272A; /*not quite black*/
-$col-dcweb-5: #36393f; /*original grey color from discord*/
-$col-dcweb-6: #40444b; /*original chatbox color from discord*/
-$col-dcweb-7: #2f3136; /*original embeds color*/
-
-/*from app*/
-$Col-dcapp-1: var(--background-primary); /*main chat window*/
-$Col-dcapp-2: var(--background-secondary); /*channel list*/
-$Col-dcapp-3: var(--background-tertiary); /*server selector bg*/
-
-/*fron slate*/
-$slate-background-light: #2f363d;
-$slate-background: #24292e;
-$slate-background-alt: #2a3036;
-$slate-background-dark: #1d2125;
-
-/*form last time*/
-$Colr: #1d1e1f; /*messenger grey bg*/
-
-/*my color variables*/
-$Col1: var(--Col-dcweb-4);
-$Col2: var(--background-secondary);
-$Col3: var(--Colr);
-$Col4: var(--Col-dcweb-1);
-$Col5: #121212;
-
-//misc
-
+// misc/util
 $border-color: #333131;
-$br-small: 5px; //border radius small
-$br-big: 1rem; //border radius big
-$bg-image-icon-size: 50%;
+$border-color-black: rgba($color: black, $alpha: .2);
+
+// border radii
+$br-small: 5px;
+$br-medium: 8px; 
+$br-big: 1rem;
 
 $main-row-gap: 1.5vh;
 $col-spacer: 1rem;
+$bg-image-icon-size: 50%;
 
 $btn-bg-green: hsl(139,47.3%, 43.9%);
 $btn-bg-green-dark: color.adjust($btn-bg-green, $lightness: -10%);

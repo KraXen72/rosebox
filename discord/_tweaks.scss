@@ -14,23 +14,7 @@ img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] {
   filter: invert(1); 
 }
 
-.children-3xh0VB:after { /* Fix fade thingy for good looking titlebar snippet */
-    background: transparent !important;
-}
-
 .selected-3H3-RC, .colorDefault-CDqZdO.focused-3qFvc8 { 
 	background-color: var(--background-modifier-selected) !important;
 }
-
-// snippets that are currently off, and i'm testing what happens if they're off
-
-//.bodyTitle-Y0qMQz  {text-transform: capitalize; font-size: 15px;} /*change some text from all caps to only fist letter cap*/
-//.connectedAccount-36nQx7 { /*nicer connected accounts*/
-//     background-color: var(--background-tertiary);
-//     border: 0 !important;
-// }
-
-// general tweaks that don't belong anywhere else yet
-.timestamp-6-ptG3 { background-color: $rb-bg-accent; } // timestamp background color
-.sidebar-1tnWFu { background-color: var(--Colleft); } // new server discovery
 

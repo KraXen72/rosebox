@@ -1,227 +1,55 @@
-// this chunk of code for applying the accent color in various spaces was taken from emma's theme customa - big thanks to her
-// i did modify it quite a bit but most of the classnames are from her theme
+@use 'sass:color';
 
-/*alpha*/
-.buffer-3eVqKK,
-.buffer-3eVqKK::after,
-.buffer-3eVqKK::before,
-.content-3dzVd8.isMentioned-N-h9aa,
-.mediaBarPreview-1gUbVy,
-.mediaBarPreview-1gUbVy::after,
-.mediaBarPreview-1gUbVy::before,
-.mentioned-Tre-dv,
-.replying-eZ7p5z,
-.message-2CShn3.replying-eZ7p5z:hover,
-.message-2CShn3.mentioned-Tre-dv.selected-2LX7Jy,
-.mouse-mode .message-2CShn3.mentioned-Tre-dv:hover,
-.reaction-2A2y9y.reactionMe-3I9gFK,
-.theme-dark .wrapper-1ZcZW-,
-.wrapper-1ZcZW- {
-    background-color: $rb-bg-accent
+%searchResultHighlight {
+	background-color: rgba($color: white, $alpha: 0.15) !important;
+	color: color.adjust($rb-text, $lightness: + 20%);
 }
-.checkbox-f1HnKB[style*="rgba(67, 181, 129, 0.15)"],
-.folderIconWrapper-226oVY[style="background-color: rgba(114, 137, 218, 0.4);"] {
-    background: $rb-bg-accent !important
+%reactionMe, %forumReactionMe {
+	border-color: $rb-bg-accent-opaque !important;
 }
-//reply message hover 
-.message-2CShn3.ephemeral-2nDdnn.selected-2LX7Jy, 
-.message-2CShn3.replying-eZ7p5z.selected-2LX7Jy, 
-.mouse-mode.full-motion .ephemeral-2nDdnn:hover, 
-.mouse-mode.full-motion .replying-eZ7p5z:hover {
-    background: $rb-bg-accent1 !important
+%settingsSide %tabBarItemSelected:not(:hover) {
+	background-color: $rb-bg-accent !important;
 }
 
-.highlight {
-    background-color: $rb-bg-accent;
-    filter: brightness(3)
-}
-/*normal*/
-.barFill-2Bh7CX,
-.checkbox-1ycfTw .checkboxInner-1aRh1d .checkboxElement-uwAa9F:checked + span,
-.children-1xdcWE .nowPlaying-zBamm2,
-.circleIconButton-jET_ig.selected-ugP_am,
-.container-2McqkF .datePicker-70cO23 .datePickerHint-17MnA8 .hintValue-1x-flY,
-.container-2McqkF .datePicker-70cO23 .datePickerHint-17MnA8 .hintValue-1x-flY:hover,
-.containerDragAfter-1F4fgZ::after,
-.containerDragAfter-3TEhpe::before,
-.containerDragBefore-31UGCO::before,
-.containerDragBefore-3Dzc5x::before,
-.datePicker-70cO23 .calendarPicker-sDhzdi .react-datepicker__day.react-datepicker__day--selected::after,
-.datePicker-70cO23 .calendarPicker-sDhzdi .react-datepicker__day.react-datepicker__day--selected:hover,
-.datePicker-70cO23 .calendarPicker-sDhzdi .react-datepicker__day:hover,
-.headerPlaying-j0WQBV,
-.headerSpotify-zpWxgT,
-.headerStreaming-2FjmGz,
-.headerXbox-3G-4PF,
-.iconBadge-2wi9r4.participating-NBGDkr,
-.iconBadge-3Mmg92,
-.isUnread-3Lojb- .content-3spvdd,
-.item-2LIpTv,
-.item-3eFBNF.selected-2DeaDa,
-.mediaBarGrabber-FvJKJg,
-.mediaBarInteraction-tUE5dq:hover .mediaBarGrabber-FvJKJg,
-.mediaBarInteractionDragging-3XLL8k .mediaBarGrabber-FvJKJg,
-.mediaBarProgress-38I317,
-.mediaBarProgress-38I317::after,
-.mediaBarProgress-38I317::before,
-.mention-3XBnnZ, //mentioned
-.mention-3XBnnZ:active,
-.mentioned-Tre-dv::before,
-//replying
-.replying-eZ7p5z::before,
-.newMessagesBar-mujexs,
-.progressBar-20NUv9 .barForeground-2kwBa_,
-.questionMark-CWEQZn.flexCenter-1Mwsxg,
-.questionMark-CWEQZn.flexCenter-1Mwsxg:hover,
-.result-3OpoO7 .result-3OpoO7 .selectorButtonSelected-1j4DmC,
-.selectorButtonSelected-336oUc,
-.side-2ur1Qk .role-3pGE29.selected-g-kMVV.item-3XjbnG,
-.sidebar-nqHbhN .side-2ur1Qk .selected-g-kMVV.item-3XjbnG, // settings bar selected
-.switch-3wwwcV.valueChecked-m-4IJZ,
-.tooltip-14MtrL.tooltipBrand-20XsMA,
-.topSectionPlaying-1J5E4n,
-.topSectionSpotify-1lI0-P,
-.topSectionStreaming-1Tpf5X,
-.topSectionXbox-3fWLjS,
-.unread-3zKkbm,
-.unreadPill-3nEWYM,
-.userSettingsVoice-1_dzjw .sliderBar-2T41Pw.speaking-NGQNT9,
-.wanderingCubesItem-3Us-UG,
-.wrapper-3kah-n.selected-1Drb7Z .childWrapper-1j_1ub,
-.wrapper-3kah-n:hover .childWrapper-1j_1ub,
-.wrapper-2olG5t,
-.wrapper-1ZcZW-:hover, .unread-36eUEm {
-    background-color: $rb-fg-accent;
-}
-//settings selected item hover
-.side-2ur1Qk .selected-g-kMVV.themed-2-lozF.item-3XjbnG:hover:not(.disabled-1nofHP) {
-	background-color: $rb-fg-accent-hover;
-}
-//bot tags
-.botTagRegular-kpctgU {
-    background: $rb-fg-accent;
+%numberBadge, // ping indicators with numbers - uses inline styles, !important needed
+%inboxBadge,
+%headerBarIconBadge,
+%quickSwitcherPingWrapper,
+%mentionWrapper:hover { 
+	background-color: $rb-fg-accent !important;
+	color: white !important;
 }
 
-/* ping indicators with numbers*/
-.item-2idW98[style*="rgb(114, 137, 218)"],
-.languageCheckbox .checkbox-f1HnKB.checked-1pZh2h,
-.numberBadge-37OJ3S,
-.pageControl-1aUwvK .activeButton-1BJAiN,
-.progress-xNqAjK .progressBar-1T6LYX,
-.result-3OpoO7[style*=background-color],
-.selectableItem-3-fmiM.selected-1l_Bxn,
-.switch-3wwwcV.valueChecked-m-4IJZ[style*="rgb(67, 181, 129)"],
-.tabBar-ra-EuL .item-3mHhwr[style*="background-color: rgb(67, 181, 129);"], 
-.botTag-2mryIa, .listContent-2_qb-y .botText-1fD6Qk, .listContent-2_qb-y .botTagVerified-2KCPMa  {
-    background-color: $rb-fg-accent !important;
+%channelUnreadPill,
+%unreadPill,
+%mentioned::before { 
+	background-color: $rb-fg-accent; 
 }
-.attachButtonPlay-1ATmb5,
-/*server plus and search button is the only thing i can notice*/
-.circleIconButton-jET_ig,
-.hasMore-3e72_v,
-.hasMoreButton-1MELpI,
-.progress-LWvunf .foreground-3_3Pgi,
-.reaction-2A2y9y.reactionMe-3I9gFK .reactionCount-1zkLcN,
-.searchBar-zdmu7v .searchAnswer-23w-CH,
-.selectorNitroIcon-3FDeDE,
-.statusGreen-168O6Q,
-.tier-12tKuZ .tierUnlocked-25K6Kv,
-.tierHeaderContent-2-YfvN .tierUnlocked-27DwHo,
-.unreadPill-3nEWYM .unreadPillCapStroke-1nE1Q8,
-.updateIconForeground-2V_zo4,
-.message-2CShn3 .username-u-ebrn, // join msg username
-.wrapper-1ZcZW- {
-    color: $rb-fg-accent;
+%channelsMentionIndicator { /// (new) pill
+	opacity: 1;
+	background-color: $rb-fg-accent; 
+	&:hover { background-color: $rb-fg-accent-hover }
+	&:active { background-color: $rb-bg-accent-opaque; }
 }
 
-.reaction-2A2y9y.reactionMe-3I9gFK {
-    border-color: transparent !important;
+%unreadPillCapStroke {
+	color: $rb-fg-accent;
+	fill: $rb-fg-accent;
 }
-.expandedFolderIconWrapper-1xLaU- svg[style="color: rgb(114, 137, 218);"], .theme-dark .wrapper-1ZcZW- {
-    color: $rb-fg-accent !important
-}
-.checkbox-1ycfTw,
-.checkboxInner-1aRh1d,
-.checkboxElement-uwAa9F:checked + span,
-.dropdown-2fxkrS .lookFilled-1h1y05.select-1Pkeg4:focus,
-.dropdown-2fxkrS .lookFilled-1h1y05.select-1Pkeg4:hover.selectOpen-hQuR6b,
-.dropdown-2fxkrS .lookFilled-1h1y05.selectOpen-hQuR6b,
-.emojiPicker-3m1S-j .categories-1feg4n .selected-39BZ4S,
-.footer-1fjuF6 .quickMessage-1yeL4E:focus,
-.horizontalAutocomplete-L5KnTN .selector-2IcQBU.selectorSelected-1_M1WV,
-.imageSelected-4Kl81J,
-.input-2g-os5.focused-1AtTHC,
-.input-2g-os5:focus,
-.isUnread-3Lojb-,
-.regionSelectModal-12e-57 .regionSelectModalOption-2DSIZ3:hover,
-.select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b,
-.select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV.selectOpen-hQuR6b:hover,
-.select-1Pkeg4.lookFilled-1h1y05.sizeMedium-6vZ9JV:focus {
-    border-color: $rb-fg-accent
-}
-.lookLink-15mFoz.colorBrand-I6CyqQ:hover {
-    border-bottom: 1px solid $rb-fg-accent;
-}
-.border-2BJQjd.video-3SrWSI.speaking-3RWJBr,
-.border-2BJQjd.voice-3bPYC-.speaking-3RWJBr,
-.content-1CboaJ .focused-q9B2e4::after,
-.content-1CboaJ .result-3OpoO7:hover::after,
-.tile-2silOL:hover .sourceThumbnail-14Iubx {
-    box-shadow: inset 0 0 0 3px $rb-fg-accent;
-}
-.tabBar-ra-EuL .item-3mHhwr[style*="background-color: rgba(67, 181, 129, 0.2);"] {
-    background-color: $rb-bg-accent!important;
-    color: $rb-fg-accent !important
-}
-.uploadModal-2ie9O_ .inner-rBP-MS .file-163EuR .icon-HW4tZ-.image-2ssF8k {
-    /*upload 2nd screen border around preview*/
-    border: 2px solid $rb-fg-accent
-}
-.uploadModal-2ie9O_ .inner-rBP-MS,
-.uploadModalIn-2w48Zf .uploadDropModal-13Kd20 .inner-rBP-MS {
-    border: 2px dashed $rb-fg-accent;
-    border-radius: 10px;
-}
-.regionSelect-3lf4eE button,
-/* what is .wrapper-2ZbzR9 and .downloadApps-14IgKV ?*/
-.wrapper-2ZbzR9 .header-3ZP1MY,
-.wrapper-2ZbzR9 .sampleLink-KPFu3I,
-.wrapper-2ZbzR9 .slide-2pHaq5 h5 {
-    color: $rb-fg-accent
-}
-.regionSelectWrapper-1favwk .regionSelect-3lf4eE:hover .regionSelectInner-24f4Ce,
-.regionSelectWrapper-1favwk .regionSelect-3lf4eE:hover button {
-    border-color: $rb-fg-accent
-}
-.powercord .check-K_srvn::after {
-    content: "\f00c";
-    color: $rb-fg-accent;
-    font-weight: 900;
-    font-family: "Font Awesome 5 Pro", sans-serif!important
-}
-.container svg path .unreadPillCapStroke-1nE1Q8,
-.unreadPillCap-2-iI4h {
-    color: $rb-fg-accent;
-    stroke: $rb-fg-accent !important;
-}
-.flowerStar-2tNFCR path,
-.selectorNitroIcon-3FDeDE g path,
-.unreadPill-3nEWYM .unreadPillCapStroke-1nE1Q8,
-.updateIconForeground-2V_zo4 {
-    fill: currentColor
-}
-.content-3spvdd,
-.mention:hover {
-    /*fix the -----date----new bar .mention:hover*/
-    color: white !important;
+%dividerUnread { // -----<new) divider
+	border-color: $rb-fg-accent;
+	color: var(--text-muted) !important;
+	
+	[class^="content"] { color: $rb-fg-accent; } // dm day divider new message
 }
 
-//spotify progress bar
-.barFill-3RgCsY, // vencord's spotify player
-.barInner-3dHef4 // profile spotify player
+// messages stuff (possibly move)
+%mention.interactive:hover { text-decoration: none !important; }
+%reaction { border-radius: $br-small; }
+%markdownTimestamp { background-color: $rb-bg-accent; }
+
+%systemMessageUsernameAnchor,
+%membersGroup > span // members group title
 {
-    background-color: $rb-fg-accent !important;
+	color: $rb-fg-accent;
 }
-// #vc-spotify-player {
-// 	--vc-spotify-green: #{$rb-fg-accent} !important;
-// }
