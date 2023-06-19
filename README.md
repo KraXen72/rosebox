@@ -1,57 +1,25 @@
-# rosebox - a color theme
-rosebox is a color theme inspired by gruvbox, but with the main focus on **being easy on the eyes**  
+# rosebox
+> rosebox is a color theme inspired by gruvbox, but with the main focus on **being easy on the eyes**  
 
 ![vim and term](https://cdn.discordapp.com/attachments/803974055485112350/804283879094485032/here.png)
-![discord2](https://cdn.discordapp.com/attachments/704792091955429426/920341533692133507/unknown.png)
+![discord3](https://cdn.discordapp.com/attachments/704792091955429426/1120336344053452910/image.png)
 ![overal rosebox](https://cdn.discordapp.com/attachments/803974055485112350/887255898437857280/2021-09-13-121824_2560x1440_scrot.png)
 ![waifu](https://cdn.discordapp.com/attachments/704792091955429426/920344032322916392/main.png)
   
-### colors:
-<table>
-    <tr>
-        <td>
-          main background: <br> #262626) <br>
-                <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763189373796372/262626.png">
-        </td>
-        <td>
-              secondary background: <br> #222222 <br>  
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763186546835496/222222.png">
-        </td>
-        <td>
-            alt secondary bg: <br> #232323 <br>
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763188019167272/232323.png" >
-        </td>
-        <td>
-            tertiary background: <br> #282828 <br>
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763190690152478/282828.png" >
-        </td>
-    </tr>
-    <tr>
-        <td>
-             accent color: <br> #a57562 <br>
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763193500336128/a57562.png">
-        </td>
-        <td>
-          accent background: <br> #5e4c44 <br>
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763185300733982/5e4c44.png" >
-        </td>
-        <td>
-            accent-alpha: <br> rgba(165, 117, 98, 0.2) <br>
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763194671071283/colalpha.png">
-        </td>
-        <td>
-            text (WIP): <br> #a3a5aa <br>
-            <img src="https://cdn.discordapp.com/attachments/704792091955429426/809763192074272809/a3a5aa.png" >
-        </td>
-    </tr>
-</table>
+### colors
+#### Backgrounds
+![backgrounds](https://cdn.discordapp.com/attachments/704792091955429426/1120334487650308147/image.png)  
+if unsure where to use which background color, you can check the rosebox discord theme [variables.scss](./discord/base/_variables.scss) and [main.scss](./discord/main.scss) files.
+  
+#### Accent colors
+![accent-colors](https://cdn.discordapp.com/attachments/704792091955429426/1120334549218492476/image.png)  
+mostly transparent accents are meant to be used on top of the backgrounds.
 
-for the rest of the colors (syntax highlighting, etc.) for now use some from the nord <strong>frost</strong> or <strong>aurora</strong> palletes:
-<span style = "width: 100%">
-    <img src="https://cdn.discordapp.com/attachments/704792091955429426/804293553982406696/nord.png">
-i have more colors i found, i just need to tweak them & test before making them part of the official theme.
-
-</span>
+#### Misc colors
+![misc-colors](https://cdn.discordapp.com/attachments/704792091955429426/1120334612254703626/image.png)
+rosebox does not have specific colors for syntax highlighting - you can use colors from the nord **frost** or **aurora** palletes:
+![nord](https://cdn.discordapp.com/attachments/704792091955429426/804293553982406696/nord.png)
+these color grids where generated from the [variables.scss](./discord/base/_variables.scss) file using [this svelte REPL](https://svelte.dev/repl/8b52c36d6988472bb82c36837660c3dd?version=3.59.1).
 
 ## themes
 - **_Discord_** - [github pages](https://kraxen72.github.io/rosebox/discord) - [repo](https://github.com/KraXen72/rosebox/tree/master/discord)
@@ -68,7 +36,6 @@ i have more colors i found, i just need to tweak them & test before making them 
   
 ## things built with rosebox
 - **_glide_** - a modular but comfy startpage for many scenarios - [repo](https://github.com/KraXen72/glide)
-- **_animetwist-dl-electron_** - an anime downloader from twist.moe - [repo](https://github.com/KraXen72/animetwist-dl-electron)  
 - **_playlist-manager_** - offline playlist manager - [repo](https://github.com/KraXen72/playlist-manager)
 - **_roseboxlib_** - a (mostly) css and some js utils library i use in my electron projects - [link](https://kraxen72.github.io/roseboxlib/) - [repo](https://github.com/KraXen72/roseboxlib)
 
