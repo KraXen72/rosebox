@@ -6,16 +6,16 @@
 ![overal rosebox](https://cdn.discordapp.com/attachments/803974055485112350/887255898437857280/2021-09-13-121824_2560x1440_scrot.png)
 ![waifu](https://cdn.discordapp.com/attachments/704792091955429426/920344032322916392/main.png)
   
-### colors
-#### Backgrounds
+## colors
+### Backgrounds
 ![backgrounds](https://cdn.discordapp.com/attachments/704792091955429426/1120334487650308147/image.png)  
 if unsure where to use which background color, you can check [variables.scss](./discord/base/_variables.scss) and [main.scss](./discord/main.scss).
   
-#### Accent colors
+### Accent colors
 ![accent-colors](https://cdn.discordapp.com/attachments/704792091955429426/1120334549218492476/image.png)  
 accents which are mostly transparent are meant to be used on top of the backgrounds.
 
-#### Misc colors
+### Misc colors
 ![misc-colors](https://cdn.discordapp.com/attachments/704792091955429426/1120334612254703626/image.png)
 rosebox does not provide colors for syntax highlighting - the nord **frost** or **aurora** palletes are pretty good:
 ![nord](https://cdn.discordapp.com/attachments/704792091955429426/804293553982406696/nord.png)
