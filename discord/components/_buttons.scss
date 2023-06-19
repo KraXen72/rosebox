@@ -18,6 +18,9 @@
 %panelActionButtonColor, // rpc / spotify cta buttons
 %addFriendButton {
 	background-color: $rb-fg-accent !important;
+	&[aria-selected="true"] {
+		background-color: var(--background-modifier-selected) !important;
+	} // !important needed for specificity
 }
 
 // markdown editing toolbar

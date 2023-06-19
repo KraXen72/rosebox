@@ -9,11 +9,14 @@
 
 // unread channel indicators -> dots
 %channelUnreadPill {
-  top: 54%;
-  left: 5px;
   width: 6px;
   height: 6px;
   z-index: 1;
-  border-radius: 10px;
+  border-radius: 15px;
+
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  margin: 0;
 }
 

@@ -14,7 +14,8 @@
 
 
 form { // username & password edit popup
-	%multiInput, %inputWrapper, %inputWrapper > input {
+	%multiInput, %inputWrapper, %inputWrapper > input,
+	%friendsAddFriendInputWrapper {
 		background-color: $rb-bg-tertiary;
 		border-radius: $br-small;
 	}
