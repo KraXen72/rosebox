@@ -9,21 +9,24 @@ $rb-bg-tertiary: #212121;
 $rb-bg-quarterary: #282828;
 $rb-bg-4: #393939;
 $rb-bg-5: #313131;
+$rb-bg-slate: #19191b; // from phone wallpaper
 
+$rb-fg-accent: #a57562;
+$rb-text: #a3a5aa;
+$rb-text-vibrant: #b5bac1; // more vibrant, discord's built-in --header-secondary
 $rb-bg-accent: rgba(165, 117, 98, 0.2);
 $rb-bg-accent1: rgba(165, 117, 98, 0.1);
 $rb-bg-accent25: rgba(165, 117, 98, 0.25);
 $rb-bg-accent80: rgba(165, 117, 98, 0.8);
 $rb-bg-accent95: rgba(165, 117, 98, 0.95);
 $rb-bg-accent-opaque: #5e4c43;
-$rb-fg-accent: #a57562;
 $rb-fg-accent-hover: #885f4e; // or color.adjust($rb-fg-accent, $lightness: -5%)
-$rb-text: #a3a5aa;
-$rb-text-vibrant: #b5bac1; // more vibrant, discord's built-in --header-secondary
+$rb-teal-lighter: #88a5aa;
+$rb-teal-darker: #6A8F95;
 
 // misc/util
 $border-color: #333131;
-$border-color-black: rgba($color: black, $alpha: .2);
+$border-color-black: rgba(0,0,0,0.2);
 
 // border radii
 $br-small: 5px;
