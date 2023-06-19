@@ -9,15 +9,15 @@
 ### colors
 #### Backgrounds
 ![backgrounds](https://cdn.discordapp.com/attachments/704792091955429426/1120334487650308147/image.png)  
-if unsure where to use which background color, you can check the rosebox discord theme [variables.scss](./discord/base/_variables.scss) and [main.scss](./discord/main.scss) files.
+if unsure where to use which background color, you can check [variables.scss](./discord/base/_variables.scss) and [main.scss](./discord/main.scss).
   
 #### Accent colors
 ![accent-colors](https://cdn.discordapp.com/attachments/704792091955429426/1120334549218492476/image.png)  
-mostly transparent accents are meant to be used on top of the backgrounds.
+accents which are mostly transparent are meant to be used on top of the backgrounds.
 
 #### Misc colors
 ![misc-colors](https://cdn.discordapp.com/attachments/704792091955429426/1120334612254703626/image.png)
-rosebox does not have specific colors for syntax highlighting - you can use colors from the nord **frost** or **aurora** palletes:
+rosebox does not provide colors for syntax highlighting - the nord **frost** or **aurora** palletes are pretty good:
 ![nord](https://cdn.discordapp.com/attachments/704792091955429426/804293553982406696/nord.png)
 these color grids where generated from the [variables.scss](./discord/base/_variables.scss) file using [this svelte REPL](https://svelte.dev/repl/8b52c36d6988472bb82c36837660c3dd?version=3.59.1).
 
