@@ -15,8 +15,11 @@
   border-radius: 15px;
 
   top: 50%;
-  left: 5px;
+  left: -3px;
   transform: translateY(-50%);
   margin: 0;
+}
+[class*="typeThread"] %channelUnreadPill {
+	left: -3px !important;	
 }
 
