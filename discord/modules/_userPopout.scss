@@ -93,6 +93,8 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 		background-color: $rb-bg-secondary;
 		border-radius: $up-br-inner;
 		right: 0;
+		max-width: 170px;
+		justify-content: space-evenly;
 	}
 	
 	%userModalNote {
