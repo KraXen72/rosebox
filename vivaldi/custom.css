@@ -63,12 +63,7 @@ button[title="SharpBlade"] img {
 #tabs-container .tab .favicon {filter: grayscale(30%) !important;}
 
 .sync-and-trash-container {
-    visibility: hidden;
-    transition: all 0.2s;
-}
-
-.tabs-container .resize:hover .sync-and-trash-container{
-    visibility: visible;
+    display: none;
 }
 
 .window-buttongroup button svg {
@@ -112,6 +107,7 @@ button[title="SharpBlade"] img {
 }
 .ToolbarButton-Button[title="Workspaces"] .button-title {
 	padding-right: 6px;
+	padding-left: 6px;
 }
 .ToolbarButton-Button[title="Workspaces"] .button-toolbar-menu-indicator {
 	display: none;
