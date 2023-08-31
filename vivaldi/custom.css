@@ -96,7 +96,10 @@ button[title="SharpBlade"] img {
 .mosaic-split[style*="inset: 0% 0% 0% 80%;"] {
     inset: 0% 0% 0% 82.5% !important;
 }
-
+#app .button-toolbar.workspace-popup button[title="Workspaces"] {
+	padding-left: 4px;
+	padding-right: 4px;
+}
 /* workspace switcher css */
 .ToolbarButton-Button[title="Workspaces"],
 .button-toolbar.button-menu > button.ToolbarButton-Button[title="Workspaces"]:not(.button-textonly) {
@@ -106,7 +109,6 @@ button[title="SharpBlade"] img {
 	margin: 0 3px 0 6px;
 }
 .ToolbarButton-Button[title="Workspaces"] .button-title {
-	padding-right: 6px;
 	padding-left: 6px;
 }
 .ToolbarButton-Button[title="Workspaces"] .button-toolbar-menu-indicator {
