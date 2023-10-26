@@ -118,8 +118,5 @@
 .inputWrapper__934f5 { // used for password input in change username popup
 	@extend %inputWrapper !optional;
 }
-// TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here
-// after rewrite is done
-// for now, i can reference the mappings file (it's quicker), but for the future:
-// _rbMappings.scss file is main, has all my custom mappings + a script updates matching ones from the clearvision repo
-// that way i only maintain selectors i use
+
+// TODO open a pr adding these to ClearVision's repo, but keep this file for more stuff

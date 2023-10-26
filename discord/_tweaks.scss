@@ -1,9 +1,9 @@
 // i have no idea what these do and i'm too afraid to remove them
 // TODO whenever i figure out what they do, add a comment & move them to respective file
 
-.option-ayUoaq::after { background: transparent } //remove fade
+.option_b5597b::after { background: transparent } //remove fade
 
-.focusLock-2tveLW, .container-qBnZJg { 
+.focusLock-2tveLW, .container_f03f1d { 
 	border: none !important;
 	background: transparent;
 }
@@ -12,9 +12,5 @@
 img[src="/assets/9a43e631d506ae4818ecefc825dc02ad.svg"],
 img[src="/assets/13c8662cff8e029799a35878b56e23eb.svg"] { 
   filter: invert(1); 
-}
-
-.selected-3H3-RC, .colorDefault-CDqZdO.focused-3qFvc8 { 
-	background-color: var(--background-modifier-selected) !important;
 }
 
