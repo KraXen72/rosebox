@@ -1,120 +1,121 @@
-.toolbar-37BrJ5 {
+// thanks to https://syndishanx.github.io/Website/Update_Classes.html
+.toolbar_c7b525 {
 	@extend %markdownEditToolbar !optional;
 }
-.defaultColor-1EVLSt {
+.defaultColor__77578 {
 	@extend %defaultColorText !optional;
 }
-.wrapper-2olG5t {
+.wrapper__87791 {
 	@extend %quickSwitcherPingWrapper !optional;
 }
-.header-1ffhsl {
+.header__6d5ea {
 	@extend %inviteModalHeader !optional;
 }
-.upsellButton-36YQ7c {
+.upsellButton__56757 {
 	@extend %nitroUpsellButton !optional;
 }
-.addFriend-emTWY1 {
+.addFriend__80542 {
 	@extend %addFriendButton !optional;
 }
-.contentWrapper-3vHNP2 {
+.contentWrapper__321ed {
 	@extend %emojiPickerContentWrapper !optional;
 }
-.contentWrapper-2f9yME {
+.contentWrapper_eab878 {
 	@extend %reactionEmojiPickerContentWrapper !optional;
 }
-.nav-1zWVQw, .nav-1cHpYc { // normal, reaction
+.nav__2bf35, .nav__2aafa { // normal, reaction
 	@extend %emojiPickerNav !optional;
 }
-.navList-YSb9UB, .navList-3uG4ub { // normal, reaction
+.navList__9f792, .navList__8438b { // normal, reaction
 	@extend %emojiPickerNavList !optional;
 }
-.inner-1NoIT5 {
+.inner__178b2 {
 	@extend %emojiPickerSearchBarInner !optional;
 }
-.positionContainerOnlyEmoji-2l5tq_ {
+.positionContainerOnlyEmoji_be9d5f {
 	@extend %editEmojiPickerContainer !optional;
 }
-.emoji-4YP39J {
+.emoji__92b46 {
 	@extend %emojiPreview !optional;
 }
-.drawerSizingWrapper-1txdWG {
+.drawerSizingWrapper__30274 {
 	@extend %drawerSizingWrapper !optional;
 }
-.resizeHandle-T_gFJR {
+.resizeHandle__86d9c {
 	@extend %emojiPickerResizeHandle !optional;
 }
-.emojiListRowMediumSize-2_-xbz {
+.emojiListRowMediumSize_ebc612 {
 	@extend %emojiPickerRowMedium !optional;
 }
-.buttons-uaqb-5 {
+.buttons_ce5b56 {
 	@extend %channelTextAreaButtons !optional;
 }
-.diversitySelector-P-W_tU {
+.diversitySelector__6c1b8 {
 	@extend %emojiPickerSkintoneButton !optional;
 }
-.header-1ffhsl {
+.header__6d5ea {
 	@extend %inviteModalHeader !optional;
 }
-.searchBar-2aylmZ {
+.searchBar_ff8800 {
 	@extend %librarySearchBar !optional;
 }
-.barButtonMain-2GIx4o {
+.barButtonMain__0f5c6 {
 	@extend %jumpBarMainButton !optional;
 }
-.barButtonAlt-TQoCdZ {
+.barButtonAlt__4b48f {
 	@extend %jumpBarAltButton !optional;
 }
-.clipContainer-31nYlH {
+.clipContainer__99c30 {
 	@extend %replyBarClipContainer !optional;
 }
-.quickswitcher-pKcM9U {
+.quickswitcher_a3d29a {
 	@extend %quickSwitcher !optional;
 }
-.input-3r5zZY {
+.input__848cd {
 	@extend %quickSwitcherInput !optional;
 }
-.scroller-2qwVWY {
+.scroller__52ae7 {
 	@extend %quickSwitcherScroller !optional;
 }
-.result-u66Ywh {
+.result__25f11 {
 	@extend %quickSwitcherResult !optional;
 }
-.content-vSHmMD a {
+.content__72fdc a {
 	@extend %systemMessageUsernameAnchor !optional;
 }
-.communityInfoContainer-1dMVpU {
+.communityInfoContainer__286d6 {
 	@extend %serverHeaderPublicPill !optional;
 }
-.cardPrimary-pAe8Ed {
+.cardPrimary_cb7a0e {
 	@extend %settingsCardPrimary !optional;
 }
-.rolePillBorder-3R4Bb5 {
+.rolePillBorder__00c58 {
 	@extend %rolePillBorder !optional;
 }
-.timestamp-6-ptG3 {
+.timestamp_a65714 {
 	@extend %markdownTimestamp !optional;
 }
 
 //fixes
-.header-2TLOnc {
+.header_f7f1f3 {
 	@extend %gifPickerHeader !optional;
 }
-.note-1NN2aP {
+.note_ba0c31 {
 	@extend %userModalNote !optional;
 }
-.nickname-3P1RuO {
+.nickname__3d1d7 {
 	@extend %userModalNickname !optional;
 }
-.avatarWrapper-eenWra {
+.avatarWrapper_f77579 {
 	@extend %decoratedAvatarWrapper !optional;
 }
-.bannerSVGWrapper-2CLfzN {
+.bannerSVGWrapper__3e7b0 {
 	@extend %bannerSVGWrapper !optional;
 }
-.messageInputContainer-24qqTx {
+.messageInputContainer__768e6 {
 	@extend %userPopoutMessageInputContainer !optional;
 }
-.inputWrapper-2K8ds1 { // used for password input in change username popup
+.inputWrapper__934f5 { // used for password input in change username popup
 	@extend %inputWrapper !optional;
 }
 // TODO crawl all partial files for placeholder definitions, and cherry-pick them from lib to here
