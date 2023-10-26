@@ -110,7 +110,6 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 	&%userProfileOuterUnthemed {
 		%userPopoutInner::before { border-radius: $up-br-outer; }
 		%userPopoutProfileBadges { right: $up-spacing; }
-		
 		%userPopoutOverlayBackground { 
 			margin: 28px $up-spacing $up-spacing $up-spacing; 
 			width: calc($up-desired-width - ($up-spacing * 2));
