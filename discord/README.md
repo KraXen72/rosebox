@@ -17,14 +17,17 @@ https://kraxen72.github.io/rosebox/discord/dist/main.css
 ```css 
 @import url('https://kraxen72.github.io/rosebox/discord/dist/main.css');
 ```  
-- Vencord QuickCSS: [link](https://github.com/Vendicated/Vencord) > `Settings` > `Vencord` > Enable `Use QuickCss` > Click `Open QuickCss File` > paste this link in
-- Openasar: [link](https://openasar.dev) > `OpenAsar Config` > `Theming` > paste this link in. 
+- Vencord QuickCSS: [link](https://github.com/Vendicated/Vencord) > `Settings` > `Vencord` > Enable `Use QuickCSS` > Click `Open QuickCSS File` > paste this link at the top
+- Replugged QuickCSS: [link](https://replugged.dev) > `Settings` > `QuickCSS` Tab > paste this link at the top > Click `Apply Changes` button
+- Openasar: [link](https://openasar.dev) > `OpenAsar Config` > `Theming` > paste this link at the top
 - any other mod which supports custom css.
 ### 3. UserCSS userstyle (any browser)
 - Install [Stylus](https://github.com/openstyles/stylus/) extension: [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/), [More](https://add0n.com/stylus.html)
+- Visit [this link](https://github.com/KraXen72/rosebox/raw/master/discord/dist/roseboxUserStyle.user.css)
+  - The stylus install page should pop up; if it doesen't follow the steps
 - Go to extension settings in your browser > `Stylus` > `Allow Access to File URLs`
 - `git clone https://github.com/KraXen72/rosebox` 
-  - or download this file only [roseboxUserStyle.user.css]() - [alternative link](./roseboxUserStyle.user.css)
+  - or download this file only [roseboxUserStyle.user.css](https://kraxen72.github.io/rosebox/discord/roseboxUserStyle.user.css) - [alternative link](./roseboxUserStyle.user.css)
   - or download ZIP of this repo
 - Right-click the  file > `Open in...` > Select your browser
 - Reload the page (`F5`)
@@ -43,4 +46,4 @@ https://kraxen72.github.io/rosebox/discord/dist/main.css
 2. if you want live reload, ~~use something like betterdiscord.~~ => **dev enviroment for this theme TBD** modify the paths in `scripts/watcher.js` to point at this directory and at the betterdiscord install directory. then run watcher.js while sass extension is watching
 
 the old version of this theme in vanilla css can be found [here](https://github.com/KraXen72/rosebox-discord)
-for questions contact KraXen72#9190 on Discord.
+for questions contact `kraxen72` on Discord.
