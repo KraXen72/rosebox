@@ -13,6 +13,7 @@ https://kraxen72.github.io/rosebox/discord/dist/main.css
 ```
 - Vencord Themes: [link](https://github.com/Vendicated/Vencord) > `Settings` > `Themes` > `Online Themes` > paste this link in.
 - any other mod which supports importing themes from raw links
+  
 ### 2. css with import link:
 ```css 
 @import url('https://kraxen72.github.io/rosebox/discord/dist/main.css');
@@ -21,6 +22,7 @@ https://kraxen72.github.io/rosebox/discord/dist/main.css
 - Replugged QuickCSS: [link](https://replugged.dev) > `Settings` > `QuickCSS` Tab > paste this link at the top > Click `Apply Changes` button
 - Openasar: [link](https://openasar.dev) > `OpenAsar Config` > `Theming` > paste this link at the top
 - any other mod which supports custom css.
+  
 ### 3. UserCSS userstyle (any browser)
 - Install [Stylus](https://github.com/openstyles/stylus/) extension: [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/), [More](https://add0n.com/stylus.html)
 - Visit [this link](https://github.com/KraXen72/rosebox/raw/master/discord/dist/roseboxUserStyle.user.css)
@@ -32,7 +34,7 @@ https://kraxen72.github.io/rosebox/discord/dist/main.css
 - Right-click the  file > `Open in...` > Select your browser
 - Reload the page (`F5`)
 - Hit `Install`
-
+  
 ## About the discord theme
 - this discord theme was initially built on my old [Harmony](https://github.com/KraXen72/harmony-discord) theme i made in 2020. I added a bunch of color and ui modifications on top, until it was a mess and decided to fully re-write it in scss in december 2021. 
 - The theme is split into a lot of partials and features a lot of color variables, so it should be easy-ish to modify the colors in `_variables.scss`
