@@ -7,6 +7,10 @@ $emoji-picker-width: 428px;
 $emoji-picker-min-height: 416px; // without categoryList
 $edit-emoji-picker-height: 498px; // for container
 
+$catlist-rotate: -90deg;
+$catlist-tr-x: -193px;
+$catlist-tr-y: 190px;
+
 /* remove nav*/
 %emojiPickerHeader,
 %gifPickerHeader {
@@ -44,7 +48,7 @@ $edit-emoji-picker-height: 498px; // for container
 #emoji-picker-tab-panel {
 	%emojiCategoryList {
 		height: $emoji-picker-width;
-		transform: rotate(-90deg) translateX(-193px) translateY(190px);
+		transform: rotate($catlist-rotate) translateX($catlist-tr-x) translateY($catlist-tr-y);
 		padding-top: 0 !important;
 
 		%autocompleteListItems %emojiCategoryItem,
@@ -75,11 +79,25 @@ $edit-emoji-picker-height: 498px; // for container
 }
 
 // reaction emoji picker
-[id^="popout"] %reactionEmojiPickerContentWrapper {
-	width: $emoji-picker-width !important;
-	height: $edit-emoji-picker-height !important;
+[id^="popout"] {
+	%reactionEmojiPickerContentWrapper {
+		width: $emoji-picker-width !important;
+		height: $edit-emoji-picker-height !important;
+	}
+	%emojiPickerHeader {
+		top: 2rem;
+		padding-top: 1rem !important;
+	}
+	#emoji-picker-tab-panel %emojiCategoryList {
+		transform: 
+			rotate($catlist-rotate) 
+			translateX(calc($catlist-tr-x - 3.7rem)) 
+			translateY($catlist-tr-y);
+		
+		// disord's variable btw
+		border-top-left-radius: var(--custom-emoji-picker-border-radius);
+	}
 }
-
 // limit max width & disable resizing
 %drawerSizingWrapper {
 	max-width: $emoji-picker-width;
