@@ -1,16 +1,19 @@
 {
   "name": "rosebox-css-scripts",
-  "version": "1.0.0",
+  "version": "3.0.1",
   "description": "scripts for rosebox scss",
   "main": "watcher.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node ./watcher.js",
+	"build": "node ./build.js",
+	"bump": "pnpm version patch",
+	"selectors": "node ./updateSelectors.js"
   },
   "author": "KraXen72",
   "license": "MIT",
   "dependencies": {
     "chokidar": "^3.5.3",
     "colors": "^1.4.0",
-    "node-fetch": "^3.3.1"
+    "node-fetch": "^3.3.2"
   }
 }

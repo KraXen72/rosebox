@@ -5,7 +5,8 @@ const colors = require('colors')
 
 const dist = __dirname.slice(0, __dirname.length - 7) + "dist"
 const pathToOrig = `${dist}/main.css`
-const MODE = "quickcss" // quickcss || settingsjson || userstyle
+const MODES = ["quickcss", "userstyle"] // quickcss || settingsjson || userstyle
+const packageJson = JSON.parse(fs.readFileSync('./package.json'))
 
 const pathToQuickCSSFile = `C:\\Users\\Nex\\AppData\\Roaming\\Vencord\\settings\\quickCss.css`
 const pathToSettingsJSON = `C:\\Users\\Nex\\AppData\\Roaming\\Discord\\settings.json`
@@ -15,7 +16,7 @@ const userStyleHeader = [
 	'/* ==UserStyle==',
 	'@name           rosebox discord userstyle',
 	'@namespace      https://github.com/KraXen72/rosebox',
-	'@version        3.0.0',
+	`@version        ${packageJson.version}`,
 	'@description    the rosebox discord theme as a userstyle',
 	'@author         KraXen72 and contributors',
 	'==/UserStyle== */',
@@ -29,22 +30,19 @@ chokidar.watch(pathToOrig, { ignorePermissionErrors: true }).on('all', (event, e
 	function fileWriteCallback() {
 		
 		let contents = fs.readFileSync(pathToOrig, 'utf8')
-		switch (MODE) {
-			case "settingsjson": {
-				let settingsJSON = JSON.parse(fs.readFileSync(pathToSettingsJSON))
-				settingsJSON.openasar.css = contents.replaceAll('"', "\"")
-				fs.writeFileSync(pathToSettingsJSON, JSON.stringify(settingsJSON))
-			} break;
-			case "userstyle": {
-				const outputCSS = [ ...userStyleHeader, '', '@-moz-document domain("discord.com") {', contents, '}' ].join("\n")
-				fs.writeFileSync(pathToUserStyle, outputCSS)
-			} break;
-			case "quickcss":
-			default: {
-				fs.writeFileSync(pathToQuickCSSFile, contents)
-			} break;
+		if (MODES.includes('settingsjson')) {
+			let settingsJSON = JSON.parse(fs.readFileSync(pathToSettingsJSON))
+			settingsJSON.openasar.css = contents.replaceAll('"', "\"")
+			fs.writeFileSync(pathToSettingsJSON, JSON.stringify(settingsJSON))
 		}
-		console.log(`${getTimestamp()}updated compiled.user.css`.green, `mode: ${MODE}`.cyan)
+		if (MODES.includes("userstyle")) {
+			const outputCSS = [ ...userStyleHeader, '', '@-moz-document domain("discord.com") {', contents, '}' ].join("\n")
+			fs.writeFileSync(pathToUserStyle, outputCSS)
+		}
+		if (MODES.includes("quickcss") || MODES.length === 0) {
+			fs.writeFileSync(pathToQuickCSSFile, contents)
+		}
+		console.log(`${getTimestamp()}updated compiled.user.css`.green, `modes: ${MODES.join(", ")}`.cyan)
 	}
 	//console.log(event, path);
 	if (event === "change") {
