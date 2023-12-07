@@ -25,33 +25,34 @@ const userStyleHeader = [
 const WAIT_MS = 500
 console.log(`${getTimestamp()}watching main.css`.cyan)
 
+function fileWriteCallback() {
+	let contents = fs.readFileSync(pathToOrig, 'utf8')
+	if (MODES.includes('settingsjson')) {
+		let settingsJSON = JSON.parse(fs.readFileSync(pathToSettingsJSON))
+		settingsJSON.openasar.css = contents.replaceAll('"', "\"")
+		fs.writeFileSync(pathToSettingsJSON, JSON.stringify(settingsJSON))
+	}
+	if (MODES.includes("userstyle")) {
+		const outputCSS = [...userStyleHeader, '', '@-moz-document domain("discord.com") {', contents, '}'].join("\n")
+		fs.writeFileSync(pathToUserStyle, outputCSS)
+	}
+	if (MODES.includes("quickcss") || MODES.length === 0) {
+		fs.writeFileSync(pathToQuickCSSFile, contents)
+	}
+	console.log(`${getTimestamp()}updated compiled.user.css`.green, `modes: ${MODES.join(", ")}`.cyan)
+}
+
 // One-liner for current directory
 chokidar.watch(pathToOrig, { ignorePermissionErrors: true }).on('all', (event, eventPath) => {
-	function fileWriteCallback() {
-		
-		let contents = fs.readFileSync(pathToOrig, 'utf8')
-		if (MODES.includes('settingsjson')) {
-			let settingsJSON = JSON.parse(fs.readFileSync(pathToSettingsJSON))
-			settingsJSON.openasar.css = contents.replaceAll('"', "\"")
-			fs.writeFileSync(pathToSettingsJSON, JSON.stringify(settingsJSON))
-		}
-		if (MODES.includes("userstyle")) {
-			const outputCSS = [ ...userStyleHeader, '', '@-moz-document domain("discord.com") {', contents, '}' ].join("\n")
-			fs.writeFileSync(pathToUserStyle, outputCSS)
-		}
-		if (MODES.includes("quickcss") || MODES.length === 0) {
-			fs.writeFileSync(pathToQuickCSSFile, contents)
-		}
-		console.log(`${getTimestamp()}updated compiled.user.css`.green, `modes: ${MODES.join(", ")}`.cyan)
-	}
 	//console.log(event, path);
 	if (event === "change") {
 		console.clear();
 		console.log(`${getTimestamp()}changes detected in main.css`.yellow)
-		
+
 		setTimeout(fileWriteCallback, WAIT_MS)
 	}
 }).on('error', error => console.log(`Watcher error: ${error}`));
+fileWriteCallback()
 
 function getTimestamp() {
 	let d = new Date(Date.now())

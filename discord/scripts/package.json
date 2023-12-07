@@ -1,13 +1,13 @@
 {
   "name": "rosebox-css-scripts",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "scripts for rosebox scss",
   "main": "watcher.js",
   "scripts": {
     "dev": "node ./watcher.js",
-	"build": "node ./build.js",
-	"bump": "pnpm version patch",
-	"selectors": "node ./updateSelectors.js"
+    "build": "node ./build.js",
+    "bump": "pnpm version patch",
+    "selectors": "node ./updateSelectors.js"
   },
   "author": "KraXen72",
   "license": "MIT",
