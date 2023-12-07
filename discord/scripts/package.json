@@ -1,14 +1,15 @@
 {
-  "name": "rosebox-css-scripts",
+  "name": "rosebox-discord-css",
   "version": "3.0.2",
   "description": "scripts for rosebox scss",
   "main": "watcher.js",
   "scripts": {
     "dev": "node ./watcher.js",
     "build": "node ./build.js",
-    "bump": "pnpm version patch",
+    "bump": "pnpm version patch && pnpm run dev",
     "selectors": "node ./updateSelectors.js"
   },
+  "repository": "https://github.com/KraXen72/rosebox",
   "author": "KraXen72",
   "license": "MIT",
   "dependencies": {
