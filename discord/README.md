@@ -43,9 +43,13 @@ https://kraxen72.github.io/rosebox/discord/dist/main.css
 - it might not be perfect, but it's mine :'). if something is missing/broken, report it in the issues and i'll probably fix it.
 - thanks for using the theme!
 
-## Setting up the dev env
-1. you need [this extension](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass) for vs code
-2. if you want live reload, ~~use something like betterdiscord.~~ => **dev enviroment for this theme TBD** modify the paths in `scripts/watcher.js` to point at this directory and at the betterdiscord install directory. then run watcher.js while sass extension is watching
+## Setting up the dev env (VSCode)
+1. clone this git repo
+2. install [Live Sass by glen2223](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass) extension
+3. recommended: install [Some Sass by Somewhat Stationery](https://marketplace.visualstudio.com/items?itemName=SomewhatStationery.some-sass) extension
+4. follow [steps on installing the userstyle](#3-usercss-userstyle-any-browser) (the local file part part)
+5. tick the `Live reload` box
+6. run the following commands: `cd scripts`, `pnpm i`, `pnpm dev`
 
 the old version of this theme in vanilla css can be found [here](https://github.com/KraXen72/rosebox-discord)
 for questions contact `kraxen72` on Discord.
