@@ -1,7 +1,4 @@
 // thanks to https://syndishanx.github.io/Website/Update_Classes.html
-.toolbar_c7b525 {
-	@extend %markdownEditToolbar !optional;
-}
 .defaultColor__77578 {
 	@extend %defaultColorText !optional;
 }
@@ -17,9 +14,6 @@
 .addFriend__80542 {
 	@extend %addFriendButton !optional;
 }
-.contentWrapper__321ed {
-	@extend %emojiPickerContentWrapper !optional;
-}
 .wrapper__66cd5 {
 	@extend %reactionEmojiPickerContentWrapper !optional;
 }
@@ -29,7 +23,7 @@
 .navList__9f792, .navList__8438b { // normal, reaction
 	@extend %emojiPickerNavList !optional;
 }
-.inner__178b2 {
+.inner__178b2 { // also %groupInvitePopoutSearchBarInner
 	@extend %emojiPickerSearchBarInner !optional;
 }
 .positionContainerOnlyEmoji_be9d5f {
@@ -37,9 +31,6 @@
 }
 .emoji__92b46 {
 	@extend %emojiPreview !optional;
-}
-.drawerSizingWrapper__30274 {
-	@extend %drawerSizingWrapper !optional;
 }
 .resizeHandle__86d9c {
 	@extend %emojiPickerResizeHandle !optional;
@@ -52,9 +43,6 @@
 }
 .diversitySelector__6c1b8 {
 	@extend %emojiPickerSkintoneButton !optional;
-}
-.header__6d5ea {
-	@extend %inviteModalHeader !optional;
 }
 .searchBar_ff8800 {
 	@extend %librarySearchBar !optional;
@@ -97,9 +85,6 @@
 }
 
 //fixes
-.header_f7f1f3 {
-	@extend %gifPickerHeader !optional;
-}
 .note_ba0c31 {
 	@extend %userModalNote !optional;
 }
@@ -112,11 +97,3 @@
 .bannerSVGWrapper__3e7b0 {
 	@extend %bannerSVGWrapper !optional;
 }
-.messageInputContainer__768e6 {
-	@extend %userPopoutMessageInputContainer !optional;
-}
-.inputWrapper__934f5 { // used for password input in change username popup
-	@extend %inputWrapper !optional;
-}
-
-// TODO open a pr adding these to ClearVision's repo, but keep this file for more stuff

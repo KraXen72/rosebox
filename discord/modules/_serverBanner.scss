@@ -16,6 +16,9 @@
 %pageWrapper {
 	border-top-left-radius: $br-medium;
 }
+%headerBarIconSelected %headerBarIcon {
+	color: var(--interactive-normal);
+}
 
 %serverHeaderPublicPill { display: none; } // hide public pill
 

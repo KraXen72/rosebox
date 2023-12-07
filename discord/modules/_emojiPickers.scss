@@ -32,7 +32,7 @@ $catlist-tr-y: 190px;
 	}
 }
 
-%emojiPickerContentWrapper,
+%emojiPickerWrapper,
 %reactionEmojiPickerContentWrapper {
 	box-sizing: border-box;
 	grid-template-rows: auto;
@@ -99,7 +99,7 @@ $catlist-tr-y: 190px;
 	}
 }
 // limit max width & disable resizing
-%drawerSizingWrapper {
+%emojiPickerSizer {
 	max-width: $emoji-picker-width;
 	%emojiPickerResizeHandle { display: none; }
 }

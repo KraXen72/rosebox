@@ -15,7 +15,7 @@ const userStyleHeader = [
 	'/* ==UserStyle==',
 	'@name           rosebox discord userstyle',
 	'@namespace      https://github.com/KraXen72/rosebox',
-	'@version        1.0.0',
+	'@version        3.0.0',
 	'@description    the rosebox discord theme as a userstyle',
 	'@author         KraXen72 and contributors',
 	'==/UserStyle== */',

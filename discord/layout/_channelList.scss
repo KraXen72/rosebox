@@ -23,3 +23,12 @@
 	left: -3px !important;	
 }
 
+// move y spacing in private channels to child's margin, so i can yeet shop tab
+%privateChannel {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+%privateChannelInteractive {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}

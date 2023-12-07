@@ -1,7 +1,8 @@
 // hiding elements
 %toolbar [href="https://support.discord.com"],
 [aria-label="Send a gift"],
-[class^="protip"] {
+[class^="protip"],
+%privateChannel a[data-list-item-id$="__shop"] {
 	display: none !important
 }
 
