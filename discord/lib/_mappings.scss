@@ -3305,6 +3305,9 @@ pre {
 .mask__1979f {
   @extend %avatarMask !optional;
 }
+.cursorDefault_e4f616 {
+  @extend %avatarCursorDefault !optional;
+}
 .avatar__6337f {
   @extend %avatarImage !optional;
 }
@@ -4226,6 +4229,9 @@ pre {
 }
 .text-md-normal__4afad { // OUTDATED CLASS
   @extend %textMediumNormal !optional;
+}
+.text-sm-normal_e612c7 {
+  @extend %textSmallNormal !optional;
 }
 .directoryContainer_d3edd9 {
   @extend %directoryContainer !optional;

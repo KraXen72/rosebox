@@ -2,7 +2,8 @@
 %toolbar [href="https://support.discord.com"],
 [aria-label="Send a gift"],
 [class^="protip"],
-%privateChannel a[data-list-item-id$="__shop"] {
+%privateChannel a[data-list-item-id$="__shop"],
+%profileEffects {
 	display: none !important
 }
 
