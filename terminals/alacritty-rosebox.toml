@@ -1,0 +1,27 @@
+# Rewrite of Rosebox theme in .toml
+[colors.primary]
+background = "#262626"
+foreground = "#bab5b7"
+
+[colors.cursor]
+text = "#262626"
+cursor = "#bab5b7"
+
+[colors.normal]
+black = "#262626"
+red = "#d08770"
+green = "#a3be8c"
+yellow = "#a57562"
+blue = "#637a8a"
+magenta = "#78758a"
+cyan = "#877979"
+white = "#a3a5aa"
+
+[colors.bright]
+black = "#827e80"
+red = "#d08770"
+green = "#a3be8c"
+yellow = "#a57562"
+blue = "#637a8a"
+magenta = "#78758a"
+cyan = "#877979"
