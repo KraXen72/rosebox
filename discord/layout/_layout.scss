@@ -13,6 +13,10 @@
     background-color: $rb-bg-primary !important;
 }
 
+[class^="messageAttachment_"] [class^="lazyImg_"] {
+	object-fit: contain !important;
+}
+	
 // testing these off, we'll see later
 
 // %privateChannelsScroller {
