@@ -32,12 +32,16 @@ these color grids where generated from the [variables.scss](./discord/base/_vari
     - **_alacritty_**
     - **_kitty_**
 - **_CSS themes for websites_** - [repo](https://github.com/KraXen72/rosebox/tree/master/css-themes)
-
   
 ## things built with rosebox
 - **_glide_** - a modular but comfy startpage for many scenarios - [repo](https://github.com/KraXen72/glide)
 - **_playlist-manager_** - offline playlist manager - [repo](https://github.com/KraXen72/playlist-manager)
 - **_roseboxlib_** - a (mostly) css and some js utils library i use in my electron projects - [link](https://kraxen72.github.io/roseboxlib/) - [repo](https://github.com/KraXen72/roseboxlib)
+
+## rosebox in the wild
+- **_Firefox_**/**_Floorp_** **Theme** - [Mozilla Add-ons link](https://addons.mozilla.org/en-US/firefox/addon/rosebox-floorp-edition/) (maintained by [Too Spooky](https://addons.mozilla.org/en-US/firefox/user/17821516/))
+- [This BSPWM rice with rosebox](https://old.reddit.com/r/UsabilityPorn/comments/l8uclp/bspwm_based_on_rosebox_theme_by_kraxen72/)
+- [Libreddit supports rosebox](https://github.com/libreddit/libreddit) - [reddit post about the release](https://old.reddit.com/r/rust/comments/r4jzcb/libreddit_v0200_private_frontend_for_reddit_gets/)
 
 ## support development
 [![Recurring donation via Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/KraXen72)
