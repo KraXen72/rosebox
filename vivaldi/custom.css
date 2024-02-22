@@ -56,9 +56,9 @@ html, body {
 button[title="SharpBlade"] img {
     border-radius: 100% !important;
 }
-.UrlBar-AddressField {
+/* .UrlBar-AddressField {
     border-radius: 25px;
-}
+} */
 
 #tabs-container .tab .favicon {filter: grayscale(30%) !important;}
 
@@ -83,8 +83,21 @@ button[title="SharpBlade"] img {
     animation-delay: 0s !important;
 }
 
-/*tasks thingy*/
+/* vertical tabs overrides */
+:is(#browser.address-top.tabs-left, #browser.address-top.tabs-right) {
+	.UrlBar-AddressField { margin-inline: 12px; }
+	.button-toolbar.profile-popup { margin-right: 12px; }
+	&.maximized {
+		.toolbar:has(.window-buttongroup.on-mainbar) {
+			min-height: 0;
+		}
+		.window-buttongroup {
+			height: 100%;
+		}
+	}
+}
 
+/*google tasks tab stacking override*/
 .mosaic-tile[style*="inset: 0% 0% 0% 80%;"] {
     inset: 0% 0% 0% 82.5% !important;
 }
@@ -100,6 +113,7 @@ button[title="SharpBlade"] img {
 	padding-left: 4px;
 	padding-right: 4px;
 }
+
 /* workspace switcher css */
 .ToolbarButton-Button[title="Workspaces"],
 .button-toolbar.button-menu > button.ToolbarButton-Button[title="Workspaces"]:not(.button-textonly) {
