@@ -84,7 +84,7 @@ button[title="SharpBlade"] img {
 }
 
 /* vertical tabs overrides */
-:is(#browser.address-top.tabs-left, #browser.address-top.tabs-right) {
+:is(#browser.address-top.tabs-left, #browser.address-top.tabs-right, #browser.address-top.tabs-off) {
 	.UrlBar-AddressField { margin-inline: 12px; }
 	.button-toolbar.profile-popup { margin-right: 12px; }
 	&.maximized {
