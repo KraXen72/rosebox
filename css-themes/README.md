@@ -17,5 +17,5 @@ use with light theme since dark theme is wierd at the moment
   
 ![stylus](../_screenshots/simplenote.png)  
 
-### libreddit
-[libreddit](https://github.com/libreddit/libreddit) supports rosebox out of the box.
+### Redlib
+[Redlib](https://github.com/redlib-org/redlib) supports rosebox out of the box since 2021. [relevant PR](https://github.com/libreddit/libreddit/pull/237)
