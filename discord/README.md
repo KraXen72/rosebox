@@ -2,8 +2,8 @@
 rosebox css for discord.
 built on the ashes of Harmony, my first discord theme, but now **rewritten in scss!**
 
-![main](https://cdn.discordapp.com/attachments/704792091955429426/920341533692133507/unknown.png)
-![frend](https://cdn.discordapp.com/attachments/704792091955429426/920341817063510037/unknown.png)
+![main](../_screenshots/discord2024.png)
+![frend](../_screenshots/discord_old.png)
 
 
 ## Installation

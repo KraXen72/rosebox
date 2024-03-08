@@ -1,6 +1,6 @@
 # simple-bar
 
-![bar](https://cdn.discordapp.com/attachments/803974055485112350/804290174971281428/rosebox-bar.png)
+![bar](../_screenshots/simple_bar.png)
 
 **Note:** This is a fork of Jean Tinlands wonderful Simple-Bar, all that has been altered here is the colors to match Rosebox.
 

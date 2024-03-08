@@ -1,6 +1,6 @@
 # Terminals
 
-![alacritty](https://cdn.discordapp.com/attachments/803974055485112350/804286882577252362/neofetch.png)
+![alacritty](../_screenshots/neofetch.png)
 
 **supported terminals: (for now)**
 - Alacritty
