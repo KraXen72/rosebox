@@ -52,7 +52,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 	}
 	%userPopoutInner {
 		// background-color: $border-color;
-		background-color: red;
+		// background-color: red;
 		
 		&::before {
 			background-color: $border-color;
@@ -86,7 +86,11 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 	}
 
 	// background for status indicators like online, offline, dnd, idle, mobile, ...
-	%decoratedAvatarWrapper { rect[fill="black"], circle[fill="black"] { fill: $rb-bg-secondary } }
+	%decoratedAvatarWrapper svg { 
+		rect[fill="black"], circle[fill="black"], circle[fill="white"], rect[fill="black"] { 
+			fill: $border-color;
+		} 
+	}
 	%userModalNickname { color: $rb-text-vibrant; }
 
 	%userPopoutProfileBadges {

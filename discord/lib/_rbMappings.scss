@@ -1,4 +1,5 @@
 // thanks to https://syndishanx.github.io/Website/Update_Classes.html
+
 .defaultColor__77578 {
 	@extend %defaultColorText !optional;
 }
@@ -83,8 +84,6 @@
 .timestamp_a65714 {
 	@extend %markdownTimestamp !optional;
 }
-
-//fixes
 .note_ba0c31 {
 	@extend %userModalNote !optional;
 }

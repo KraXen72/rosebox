@@ -29,7 +29,7 @@
 
 // TODO switch over to @use from @import in scss
 // TODO once finalized, update rosebox colors in the readme 
-:root, .theme-dark, .focusLock-2tveLW * {
+:root, .theme-dark, .focusLock-2tveLW *, %userPopoutOuter.theme-light {
 	// $scss-variables > --discord-variables
 
     --background-primary: #{$rb-bg-primary};
