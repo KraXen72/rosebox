@@ -3,8 +3,33 @@
 // updated once again by the awesome Cynthia (Davri#0015) in 2022
 // rewritten again in 2023 to use placeholder selectors, along with the rest of the theme
 
+// avatar decorations
+[mask="url(#svg-mask-avatar-decoration-profile-status-square-80)"] {
+    mask: url("#svg-mask-avatar-status-round-80") !important;
+}
+[mask="url(#svg-mask-avatar-decoration-profile-status-mobile-square-80)"] {
+    mask: url("#svg-mask-avatar-status-mobile-80") !important;
+}
+%avatarDecoration,
+[mask^="url(#svg-mask-avatar-decoration-status"] {
+	display: none !important;
+}
+%avatarDecorationHint {
+	left: 0px;
+    top: 0px;
+    height: 80px;
+    width: 80px;
+}
+%avatarHintInner {
+	font-size: 12px !important;
+}
+
+$banner-original-width: 340px;
+$banner-original-height: 120px;
+
 $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 $up-desired-width: 300px; // don't change. you'd have to redraw the svg (see bottom)
+$up-image-banner-height: 100px;
 $up-br-outer: 8px;
 $up-spacing: 4px; // themed popoutOuter's padding will still be 4px regardless of this.
 $up-br-inner: calc($up-br-outer - $up-spacing);
@@ -72,17 +97,23 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 	%bannerSVGWrapper { 
 		min-width: $up-desired-width !important;
 		min-height: unset !important;
-		mask { display: none;  }
+		foreignObject { 
+			top: 0;
+			mask: unset; // temp fix for not showing banners
+		} 
+		mask { display: none !important; }
 	}
 
 	// top to bottom elements - don't wanna nest bc extra specificity could break the selectors
 	%userPopoutBannerPremium,
 	%userPopoutNoBannerPremium {
-		width: $up-desired-width;
 		object-position: center;
 		border-radius: $up-br-inner;
 		position: relative;
-		width: 100%;
+	}
+	%userPopoutBannerPremium {
+		width: $banner-original-width;
+		height: $banner-original-height;
 	}
 
 	// background for status indicators like online, offline, dnd, idle, mobile, ...
@@ -98,7 +129,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 		border-radius: $up-br-inner;
 		right: 0;
 		max-width: 170px;
-		justify-content: space-evenly;
+		justify-content: start;
 	}
 	
 	%userModalNote {
@@ -127,9 +158,10 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 			// moved top & up the circle by how much i enlarged it (90*90 => x:17 y:11)
 			// selected rect & circle, path > difference
 			// resized the rectangle to 340*68 the svg has a width of 300 but a viewport-w of 340, so we have to also scale the height accordingly
-			// i then converted the svg into base64 using: https://base64.guru/converter/encode/image/svg
+			// then i minifed and escapeURIComponent-ed the svg
 			foreignObject > div { 
-				mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iMzQwIgogICBoZWlnaHQ9IjY4IgogICB2aWV3Qm94PSIwIDAgODkuOTU4MzI5IDE3Ljk5MTY2NyIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnNSIKICAgc29kaXBvZGk6ZG9jbmFtZT0iZGlzY29yZC1tYXNrLnN2ZyIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4xIChjNjhlMjJjMzg3LCAyMDIxLTA1LTIzKSIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9Im5hbWVkdmlldzciCiAgICAgcGFnZWNvbG9yPSIjNTA1MDUwIgogICAgIGJvcmRlcmNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcm9wYWNpdHk9IjEiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMCIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIxIgogICAgIGlua3NjYXBlOmRvY3VtZW50LXVuaXRzPSJtbSIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaW5rc2NhcGU6em9vbT0iMy43OTQ2ODczIgogICAgIGlua3NjYXBlOmN4PSIxNTYuNTM0NjQiCiAgICAgaW5rc2NhcGU6Y3k9IjUuMTM4NzYzMyIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjI1NjAiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iMTM3NyIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iLTgiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIxIgogICAgIHVuaXRzPSJweCIgLz4KICA8ZGVmcwogICAgIGlkPSJkZWZzMiIgLz4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSI+CiAgICA8cGF0aAogICAgICAgaWQ9InJlY3Q4NDYiCiAgICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO3N0cm9rZTojZmZmZmZmO3N0cm9rZS13aWR0aDowLjIzNDc5MztzdHJva2UtbGluZWNhcDpzcXVhcmUiCiAgICAgICBkPSJNIDAuMTE3Mzk2NTQsMC4xMTczOTY1MiBWIDE3Ljg3NDI3IEggNS4xNTg3ODE4IEEgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDUuMDk3ODcyOSwxNi43OTE5ODkgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDE4LjU5MTU0MywzLjI5ODY0MDkgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDMyLjA4NTIxMywxNi43OTE5ODkgMTMuNDkzNjcsMTMuNDkzMzQ4IDAgMCAxIDMyLjAyNDMwNiwxNy44NzQyNyBIIDg5Ljg0MDkzNyBWIDAuMTE3Mzk2NTIgWiIgLz4KICA8L2c+Cjwvc3ZnPgo=")
+				mask: url("data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20width%3D%22340%22%20height%3D%2268%22%20version%3D%221.1%22%20viewBox%3D%220%200%2089.958%2017.992%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22m0.1174%200.1174v17.757h5.0414a13.494%2013.493%200%200%201-0.060909-1.0823%2013.494%2013.493%200%200%201%2013.494-13.493%2013.494%2013.493%200%200%201%2013.494%2013.493%2013.494%2013.493%200%200%201-0.060907%201.0823h57.817v-17.757z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22square%22%20stroke-width%3D%22.23479%22%2F%3E%0A%3C%2Fsvg%3E%0A")
+				
 			}
 		}
 	}

@@ -1,11 +1,22 @@
 // thanks to https://syndishanx.github.io/Website/Update_Classes.html
 
-.defaultColor__77578 {
-	@extend %defaultColorText !optional;
-}
+// quick switcher
 .wrapper__85934.badge__63b33 {
 	@extend %quickSwitcherPingWrapper !optional;
 }
+.quickswitcher_b5bb0a {
+	@extend %quickSwitcher !optional;
+}
+.input__2a648 {
+	@extend %quickSwitcherInput !optional;
+}
+.scroller_d4b86c {
+	@extend %quickSwitcherScroller !optional;
+}
+.result__25f11 {
+	@extend %quickSwitcherResult !optional;
+}
+
 .header__5e5a6 {
 	@extend %inviteModalHeader !optional;
 }
@@ -15,6 +26,8 @@
 .addFriend__4c0a2 {
 	@extend %addFriendButton !optional;
 }
+
+// emoji picker stuff
 .wrapper__0757b {
 	@extend %reactionEmojiPickerContentWrapper !optional;
 }
@@ -39,11 +52,13 @@
 .emojiListRowMediumSize_ece94a {
 	@extend %emojiPickerRowMedium !optional;
 }
-.buttons__7ecff {
-	@extend %channelTextAreaButtons !optional;
-}
 .diversitySelector__0babb {
 	@extend %emojiPickerSkintoneButton !optional;
+}
+
+
+.buttons__7ecff {
+	@extend %channelTextAreaButtons !optional;
 }
 .searchBar__310d8 {
 	@extend %librarySearchBar !optional;
@@ -56,18 +71,6 @@
 }
 .clipContainer_ab9cf6 {
 	@extend %replyBarClipContainer !optional;
-}
-.quickswitcher_b5bb0a {
-	@extend %quickSwitcher !optional;
-}
-.input__2a648 {
-	@extend %quickSwitcherInput !optional;
-}
-.scroller_d4b86c {
-	@extend %quickSwitcherScroller !optional;
-}
-.result__25f11 {
-	@extend %quickSwitcherResult !optional;
 }
 .content__945f5 a {
 	@extend %systemMessageUsernameAnchor !optional;
@@ -84,6 +87,8 @@
 .timestamp_ff7119 {
 	@extend %markdownTimestamp !optional;
 }
+
+// modal/popout
 .note_ba0c31 {
 	@extend %userModalNote !optional;
 }
@@ -98,4 +103,15 @@
 }
 .bannerSVGWrapper__8a38c {
 	@extend %bannerSVGWrapper !optional;
+}
+.avatarDecoration_cf681a, // profile
+.avatarDecoration__8a0c2  // chat
+{
+	@extend %avatarDecoration !optional;
+}
+.avatarDecorationHint__04b99 {
+	@extend %avatarDecorationHint !optional;
+}
+.avatarHintInner_c8ddb1 {
+	@extend %avatarHintInner !optional;
 }
