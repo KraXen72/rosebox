@@ -29,7 +29,7 @@ $banner-original-height: 120px;
 
 $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
 $up-desired-width: 300px; // don't change. you'd have to redraw the svg (see bottom)
-$up-image-banner-height: 100px;
+$up-image-banner-height: calc((#{$up-desired-width} * 120) / 360);
 $up-br-outer: 8px;
 $up-spacing: 4px; // themed popoutOuter's padding will still be 4px regardless of this.
 $up-br-inner: calc($up-br-outer - $up-spacing);
@@ -103,6 +103,10 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 		} 
 		mask { display: none !important; }
 	}
+	// %serverGuideMessage is userProfileOuterThemed
+	// &%serverGuideMessage %bannerSVGWrapper { 
+	// 	min-height: $up-image-banner-height !important; 
+	// }
 
 	// top to bottom elements - don't wanna nest bc extra specificity could break the selectors
 	%userPopoutBannerPremium,
