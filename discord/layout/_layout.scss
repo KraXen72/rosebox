@@ -1,16 +1,16 @@
 #app-mount, body, %bg {
-    background-color: $rb-bg-secondary-d;
+	background-color: $rb-bg-secondary-d;
 }
 
 %pageWrapper {
-    background: $rb-bg-primary;
+	background: $rb-bg-primary;
 }
 
 %searchResultsWrap { width: 500px; } // Wider search results section
 
 // MEMBER LIST
 %membersContainer, %members, %members [class*="member"] {
-    background-color: $rb-bg-primary !important;
+	background-color: $rb-bg-primary !important;
 }
 
 [class^="messageAttachment_"] [class^="lazyImg_"] {

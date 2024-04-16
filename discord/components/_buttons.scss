@@ -1,7 +1,7 @@
 // buttons
 %buttonFilled, %buttonInverted {
-    background-color: $rb-fg-accent !important;
-    color: white !important;
+	background-color: $rb-fg-accent !important;
+	color: white !important;
 	&:hover:not(:disabled) { background-color: $rb-fg-accent-hover !important; }
 
 	&%buttonColorRed {

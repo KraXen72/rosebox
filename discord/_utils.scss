@@ -2,76 +2,76 @@
 
 //few useful mixins
 @mixin padmar($padding: 0, $margin: 0) { //remove or set the padding and margin at the same time
-    padding: $padding !important;
-    margin: $margin !important;
+	padding: $padding !important;
+	margin: $margin !important;
 }
 
 @mixin flex($align: center, $justify: center, $direction : row) { //apply flexbox to an element. center by default
-    display: flex;
-    align-items: $align;
-    justify-content: $justify;
-    flex-direction: $direction;
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
 }
 
 @mixin coverarea($important : false) { //cover the whole area
-    @if $important {
-        width: 100% !important;
-        height: 100% !important;
-        max-width: 100% !important;
-        max-height: 100% !important;
-    } @else {
-        width: 100%;
-        height: 100%;
-        max-width: 100% ;
-        max-height: 100% ;
-    }
+	@if $important {
+		width: 100% !important;
+		height: 100% !important;
+		max-width: 100% !important;
+		max-height: 100% !important;
+	} @else {
+		width: 100%;
+		height: 100%;
+		max-width: 100% ;
+		max-height: 100% ;
+	}
 }
 @mixin fs($fontsize, $important : false) { //font-size and line-height
-    @if $important {
-        font-size: $fontsize !important;
-        line-height: $fontsize !important;
-    } @else {
-        font-size: $fontsize;
-        line-height: $fontsize;
-    }
+	@if $important {
+		font-size: $fontsize !important;
+		line-height: $fontsize !important;
+	} @else {
+		font-size: $fontsize;
+		line-height: $fontsize;
+	}
 }
 //background-image ones
 @mixin bg-image-icon($url) {
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: $bg-image-icon-size !important;
-    background-image: url($url) !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: $bg-image-icon-size !important;
+	background-image: url($url) !important;
 }
 @mixin bg-image-contain() {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat !important;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat !important;
 }
 
 @mixin normalize($position : relative, $important : false) { //normalize an elements position, padding and margin
-    @if $important == true {
-        position: $position !important;
-        @include padmar;
-    } @else {
-        position: $position;
-    }
-    top: initial !important;
-    bottom: initial !important;
-    left: initial !important;
-    right: initial !important;
-    box-shadow: none !important;
-    -webkit-box-shadow: none !important;
+	@if $important == true {
+		position: $position !important;
+		@include padmar;
+	} @else {
+		position: $position;
+	}
+	top: initial !important;
+	bottom: initial !important;
+	left: initial !important;
+	right: initial !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
 }
 
 @mixin unborder() { //remove border
-    border: 0px solid transparent !important;
+	border: 0px solid transparent !important;
 }
 @mixin untransform($imp: false) { //remove transforms
-    $suffix: if($imp, "", "!important");
-    transform: translate(0, 0) translateX(0) translateY(0) scale(1) $suffix;
+	$suffix: if($imp, "", "!important");
+	transform: translate(0, 0) translateX(0) translateY(0) scale(1) $suffix;
 }
 
 @mixin no-shadow() {
 	box-shadow: none !important;
-    -webkit-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
 }

@@ -5,10 +5,10 @@
 
 // avatar decorations
 [mask="url(#svg-mask-avatar-decoration-profile-status-square-80)"] {
-    mask: url("#svg-mask-avatar-status-round-80") !important;
+	mask: url("#svg-mask-avatar-status-round-80") !important;
 }
 [mask="url(#svg-mask-avatar-decoration-profile-status-mobile-square-80)"] {
-    mask: url("#svg-mask-avatar-status-mobile-80") !important;
+	mask: url("#svg-mask-avatar-status-mobile-80") !important;
 }
 %avatarDecoration,
 [mask^="url(#svg-mask-avatar-decoration-status"] {
@@ -16,9 +16,9 @@
 }
 %avatarDecorationHint {
 	left: 0px;
-    top: 0px;
-    height: 80px;
-    width: 80px;
+	top: 0px;
+	height: 80px;
+	width: 80px;
 }
 %avatarHintInner {
 	font-size: 12px !important;
@@ -35,10 +35,10 @@ $up-spacing: 4px; // themed popoutOuter's padding will still be 4px regardless o
 $up-br-inner: calc($up-br-outer - $up-spacing);
 
 %role:not(%roleAddButton) {
-    position: relative;
-    overflow: hidden;
-    background: none;
-    border-radius: 50px;
+	position: relative;
+	overflow: hidden;
+	background: none;
+	border-radius: 50px;
 }
 
 %roleAddButton {
@@ -50,11 +50,11 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 
 // don't do the ::after for role add popout
 %role %roleCircle:not([class*="popoutRoleCircle-"])::after {
-    content: "";
-    inset: 0;
-    position: absolute;
-    background: inherit;
-    opacity: 0.25;
+	content: "";
+	inset: 0;
+	position: absolute;
+	background: inherit;
+	opacity: 0.25;
 }
 
 %rolePillBorder, %role { border: 1px solid $up-border-color; }

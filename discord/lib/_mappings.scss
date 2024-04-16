@@ -408,6 +408,9 @@
 .buttonActive_ae686f {
   @extend %panelActionButtonActive !optional;
 }
+.lottieIcon_c7076c {
+  @extend %panelActionButtonLottieIcon !optional;
+}
 .container_debb33 {
   @extend %accountPanel !optional;
 }
@@ -2478,10 +2481,10 @@ pre {
 .footer_b96583 {
   @extend %authModalFooter !optional;
 }
-.userProfileModalOuter_a65559 {
+.userProfileModalOuter__90b4a {
   @extend %userModalOuter !optional;
 }
-.userProfileModalInner__99b1e {
+.userProfileModalInner__84e47 {
   @extend %userModalInner !optional;
 }
 .profileBanner_f0f36c {
@@ -2493,7 +2496,7 @@ pre {
 .badgeList__76720 {
   @extend %userModalDMBadgeList !optional;
 }
-.overlayBackground__2666e {
+.overlayBackground__345c9 {
   @extend %userModalOverlayBackground !optional;
 }
 .body_bd4552 {
@@ -2997,13 +3000,13 @@ pre {
 .status__1c26d {
   @extend %statusPickerIcon !optional;
 }
-.userProfileOuterUnthemed_e14365 {
+.userProfileOuterUnthemed__9741c {
   @extend %userProfileOuterUnthemed !optional;
 }
-.userPanelInnerThemed_c2aed9 {
+.userPanelInnerThemed__651e4 {
   @extend %userProfileDMInnerThemed !optional;
 }
-.userPanelOverlayBackground__41589 {
+.userPanelOverlayBackground_a2b6ae {
   @extend %userProfileDMOverlayBackground !optional;
 }
 .actionColor_db400e {
@@ -3012,14 +3015,14 @@ pre {
 .translate__02873 {
   @extend %userPopoutTranslate !optional;
 }
-.userPopoutOuter__3884e {
+.userPopoutOuter_d67f56 {
   @extend %userPopoutOuter !optional;
 }
-.userPopoutInner_e90432 {
+.userPopoutInner_ac0960 {
   @extend %userPopoutInner !optional;
 }
-.userProfileInnerThemedPremiumWithoutBanner__3705a,
-.userProfileInnerThemedWithBanner__2152d {
+.userProfileInnerThemedPremiumWithoutBanner_ee8277,
+.userProfileInnerThemedWithBanner_e9e7c5 {
   @extend %userPopoutInnerThemed !optional;
 }
 .popoutBanner__3fbe8 {
@@ -3034,7 +3037,7 @@ pre {
 .profileBadges__1f2ab {
   @extend %userPopoutProfileBadges !optional;
 }
-.userPopoutOverlayBackground_bf6444 {
+.userPopoutOverlayBackground__3e7e6 {
   @extend %userPopoutOverlayBackground !optional;
 }
 .profileCustomizationPreview_a1502f {
@@ -4801,10 +4804,10 @@ pre {
 .homeContainer_c36871 {
   @extend %homeContainer !optional;
 }
-.userProfileOuterThemed__1fbd7 {
+.userProfileOuterThemed_a425f3 {
   @extend %serverGuideMessage !optional;
 }
-.userCardInner__4fd8f {
+.userCardInner_e36852 {
   @extend %serverGuideMessageInner !optional;
 }
 .headerIcon_f56272 {
@@ -5330,4 +5333,28 @@ pre {
 }
 .shyButton__30111 {
   @extend %shopNewPill !optional;
+}
+.container__0bd59 {
+  @extend %poll !optional;
+}
+.answerSelectionIcon__262f4 {
+  @extend %pollAnswerSelectionIcon !optional;
+}
+.radioForeground_e46974 {
+  @extend %pollRadioForeground !optional;
+}
+.answer__07489 {
+  @extend %pollAnswer !optional;
+}
+.answerInner_b97752 {
+  @extend %pollAnswerInner !optional;
+}
+.currentlyVoting__54b47 {
+  @extend %pollAnswerCurrentlyVoting !optional;
+}
+.selected__93ede {
+  @extend %pollAnswerSelected !optional;
+}
+.secondaryButtonPresentation_a9ebe0 {
+  @extend %pollSecondaryButton !optional;
 }
