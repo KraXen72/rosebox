@@ -159,11 +159,12 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 		%bannerSVGWrapper {
 			// to create this svg, i went into inkscape, made a 300*60px rectangle
 			// positioned a 80*80 circle at x:22 and y:16 (discord does)
-			// moved top & up the circle by how much i enlarged it (90*90 => x:17 y:11)
+			// moved left & up the circle by how much i enlarged it (90*90 => x:17 y:11)
 			// selected rect & circle, path > difference
 			// resized the rectangle to 340*68 the svg has a width of 300 but a viewport-w of 340, so we have to also scale the height accordingly
 			// then i minifed and escapeURIComponent-ed the svg
-			foreignObject > div { 
+			
+			foreignObject > div:not(%userPopoutBannerPremium) { 
 				mask: url("data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20width%3D%22340%22%20height%3D%2268%22%20version%3D%221.1%22%20viewBox%3D%220%200%2089.958%2017.992%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22m0.1174%200.1174v17.757h5.0414a13.494%2013.493%200%200%201-0.060909-1.0823%2013.494%2013.493%200%200%201%2013.494-13.493%2013.494%2013.493%200%200%201%2013.494%2013.493%2013.494%2013.493%200%200%201-0.060907%201.0823h57.817v-17.757z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22square%22%20stroke-width%3D%22.23479%22%2F%3E%0A%3C%2Fsvg%3E%0A")
 				
 			}

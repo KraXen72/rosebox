@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<style>
+		.masked-rectangle {
+			width: 340px;
+			height: 60px;
+			background-color: blue;
+		}
+	</style>
+
+	<div class="masked-rectangle"></div>
+	<script>
+		function generatePolygonClipPath(rectWidth, rectHeight, circleDim) {
+			// Calculate the coordinates of the rectangle's corners
+			const x1 = 0, y1 = 0;
+			const x2 = rectWidth, y2 = 0;
+			const x3 = rectWidth, y3 = rectHeight;
+			const x4 = 0, y4 = rectHeight;
+
+			// Calculate circle center position relative to rectangle
+			const circleX = 22 + circleDim / 2; // Adjusted X position of circle center
+			const circleY = 16 + circleDim / 2; // Adjusted Y position of circle center
+
+			// Construct the points of the polygon clip path
+			const points = `${x1}px ${y1}px, ${x2}px ${y2}px, ${x3}px ${y3}px, ${x4}px ${y4}px, ${circleX}px ${circleY}px`;
+
+			return points;
+		}
+
+		// Example usage: Assign polygon clip path to masked element
+		const clipPath = generatePolygonClipPath(340, 60, 80);
+		console.log(clipPath)
+		document.querySelector('.masked-rectangle').style.clipPath = `polygon(${clipPath})`;
+
+
+	</script>
+</body>
+
+</html>
