@@ -1715,6 +1715,9 @@
 .subText__4629e {
   @extend %memberSubText !optional;
 }
+.container__8d997 {
+  @extend %memberActivityContainer !optional;
+}
 .activity_bafb94 {
   @extend %memberActivity !optional;
 }
@@ -1744,6 +1747,12 @@
 }
 .mulitplePlaceholderUsername_d22bfe {
   @extend %memberPlaceholderUsernameMultiple !optional;
+}
+.interactionsContainer__97fe3 {
+  @extend %memberActivityInteractionsContainer !optional;
+}
+.shareToChannelButton_ee0e50 {
+  @extend %memberActivityShareToChannelButton !optional;
 }
 .addMembersIcon_d9b498 {
   @extend %addMembersIcon !optional;
@@ -2495,6 +2504,9 @@ pre {
 }
 .badgeList__76720 {
   @extend %userModalDMBadgeList !optional;
+}
+.badgeList__6b2c7 {
+  @extend %accountSettingsBadges !optional;
 }
 .overlayBackground__345c9 {
   @extend %userModalOverlayBackground !optional;
