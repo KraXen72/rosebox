@@ -87,6 +87,7 @@ button[title="SharpBlade"] img {
 :is(#browser.address-top.tabs-left, #browser.address-top.tabs-right, #browser.address-top.tabs-off) {
 	.UrlBar-AddressField { margin-inline: 12px; }
 	.button-toolbar.profile-popup { margin-right: 12px; }
+
 	&.maximized {
 		.toolbar:has(.window-buttongroup.on-mainbar) {
 			min-height: 0;
@@ -95,6 +96,9 @@ button[title="SharpBlade"] img {
 			height: 100%;
 		}
 	}
+}
+#browser.address-top.tabs-off #header > .tabbar-wrapper {
+	height: 0px;
 }
 
 /*google tasks tab stacking override*/
@@ -110,14 +114,14 @@ button[title="SharpBlade"] img {
     inset: 0% 0% 0% 82.5% !important;
 }
 #app .button-toolbar.workspace-popup button[title="Workspaces"] {
-	padding-left: 4px;
-	padding-right: 4px;
+	padding-left: 4px !important;
+	padding-right: 4px !important;
 }
 
 /* workspace switcher css */
 .ToolbarButton-Button[title="Workspaces"],
 .button-toolbar.button-menu > button.ToolbarButton-Button[title="Workspaces"]:not(.button-textonly) {
-	padding: 0 3px;
+	padding: 0 3px !important;
 }
 .ToolbarButton-Button[title="Workspaces"] .button-icon {
 	margin: 0 3px 0 6px;
