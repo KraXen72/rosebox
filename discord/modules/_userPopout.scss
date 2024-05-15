@@ -122,7 +122,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 
 	// background for status indicators like online, offline, dnd, idle, mobile, ...
 	%decoratedAvatarWrapper svg { 
-		rect[fill="black"], circle[fill="black"], circle[fill="white"], rect[fill="black"] { 
+		rect[fill="black"], circle[fill="black"], circle[fill="white"], rect[fill="white"] { 
 			fill: $border-color;
 		} 
 	}
