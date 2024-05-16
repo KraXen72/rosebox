@@ -115,3 +115,26 @@
 .avatarHintInner_c8ddb1 {
 	@extend %avatarHintInner !optional;
 }
+
+// new userpopout stuff...
+.biteSizeBanner__81518 {
+	@extend %simplifiedPopoutBanner !optional;
+}
+.body__489bc {
+	@extend %simplifiedPopoutBody !optional;
+}
+.footer_b50e3f {
+	@extend %simplifiedPopoutFooter !optional;
+}
+.biteSizeOuter_e0bb1d {
+	@extend %simplifiedPopoutOuter !optional;
+}
+.biteSizeInnerThemed__5cdaf { 
+	@extend %simplifiedPopoutInner !optional;
+}
+.showMoreButton__50b95 {
+	@extend %simplifiedPopoutMoreRolesButton !optional;
+}
+.container__665d0 {
+	@extend %simplifiedPopoutBadgeContainer !optional;
+}

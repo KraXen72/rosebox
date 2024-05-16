@@ -45,7 +45,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 	border-radius: 50px; 
 	width: 22px
 }
-
+%simplifiedPopoutMoreRolesButton { border-radius: 50px; }
 %roleRemoveButton { position: static; }
 
 // don't do the ::after for role add popout
@@ -97,11 +97,6 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 	%bannerSVGWrapper { 
 		min-width: $up-desired-width !important;
 		min-height: unset !important;
-		foreignObject { 
-			top: 0;
-			mask: unset; // temp fix for not showing banners
-		} 
-		mask { display: none !important; }
 	}
 	// %serverGuideMessage is userProfileOuterThemed
 	// &%serverGuideMessage %bannerSVGWrapper { 
@@ -119,11 +114,10 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 		width: $banner-original-width;
 		height: $banner-original-height;
 	}
-
-	// background for status indicators like online, offline, dnd, idle, mobile, ...
-	%decoratedAvatarWrapper svg { 
+// background for status indicators like online, offline, dnd, idle, mobile, ...
+	%decoratedAvatarWrapper svg, %avatarWrapper svg { 
 		rect[fill="black"], circle[fill="black"], circle[fill="white"], rect[fill="white"] { 
-			fill: $border-color;
+			fill: transparent;
 		} 
 	}
 	%userModalNickname { color: $rb-text-vibrant; }
@@ -164,11 +158,41 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 			// resized the rectangle to 340*68 the svg has a width of 300 but a viewport-w of 340, so we have to also scale the height accordingly
 			// then i minifed and escapeURIComponent-ed the svg
 			
-			foreignObject > div:not(%userPopoutBannerPremium) { 
+			foreignObject > div:not(%userPopoutBannerPremium):not(%simplifiedPopoutBanner) { 
 				mask: url("data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20width%3D%22340%22%20height%3D%2268%22%20version%3D%221.1%22%20viewBox%3D%220%200%2089.958%2017.992%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22m0.1174%200.1174v17.757h5.0414a13.494%2013.493%200%200%201-0.060909-1.0823%2013.494%2013.493%200%200%201%2013.494-13.493%2013.494%2013.493%200%200%201%2013.494%2013.493%2013.494%2013.493%200%200%201-0.060907%201.0823h57.817v-17.757z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22square%22%20stroke-width%3D%22.23479%22%2F%3E%0A%3C%2Fsvg%3E%0A")
 				
 			}
 		}
 	}
-	
+}
+
+%userPopoutOuter:not(%simplifiedPopoutOuter) {
+	%bannerSVGWrapper {
+		foreignObject { 
+			top: 0;
+			mask: unset; // temp fix for not showing banners
+		} 
+		mask { display: none !important; }
+	}
+}
+
+// new, simplified userpopout (start)
+$simplified-popout-padding: 0.5rem;
+%simplifiedPopoutOuter { 
+	border-radius: $up-br-outer; 
+}
+%simplifiedPopoutInner, %simplifiedPopoutInner::before {
+	background: $rb-bg-secondary !important;
+	border-radius: $up-br-inner !important;
+}
+
+%simplifiedPopoutBody,
+%simplifiedPopoutFooter {
+	background-color: $rb-bg-secondary;
+	padding-inline: $simplified-popout-padding;
+	padding-bottom: $simplified-popout-padding;
+}
+%simplifiedPopoutBadgeContainer {
+	background: $border-color !important;
+	border-color: transparent !important;
 }
