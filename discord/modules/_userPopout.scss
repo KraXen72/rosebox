@@ -39,6 +39,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 	overflow: hidden;
 	background: none;
 	border-radius: 50px;
+	padding: 4px;
 }
 
 %roleAddButton {
@@ -177,20 +178,66 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 }
 
 // new, simplified userpopout (start)
-$simplified-popout-padding: 0.5rem;
+$sup-inner-padding: 0.5rem;
+$sup-outer-padding: 4px;
+
 %simplifiedPopoutOuter { 
-	border-radius: $up-br-outer; 
-}
-%simplifiedPopoutInner, %simplifiedPopoutInner::before {
-	background: $rb-bg-secondary !important;
-	border-radius: $up-br-inner !important;
+	--bg-surface-overlay: #{$rb-bg-slate};
+	
+
+	padding: $sup-outer-padding;
+	background: $border-color !important;
+	border-radius: $up-br-outer !important; 
+	
+	%simplifiedPopoutInner, %simplifiedPopoutInner::before {
+		background: $rb-bg-secondary !important;
+		border-radius: $up-br-inner !important;
+	}
+	%simplifiedPopoutRpcCard, %channelTextAreaScrollable {
+		background-color: $rb-bg-slate !important;
+		border-radius: $up-br-inner;
+	}
+	%channelTextAreaScrollable {
+		background: $border-color !important;
+	}
+	
+	// restore non-nitro popouts to their former glory
+	&:not(%serverGuideMessage) {
+		box-sizing: border-box;
+		width: $up-desired-width !important;
+		max-width: $up-desired-width !important;
+		min-width: 0 !important;
+
+		%simplifiedPopoutInner, %simplifiedPopoutInner::before {
+			max-width: calc(#{$up-desired-width} - 2*#{$sup-outer-padding});
+		}
+
+		%simplifiedPopoutBanner {
+			box-sizing: border-box;
+			border-color:$border-color;
+			border-style: solid;
+			border-width: $sup-outer-padding $sup-outer-padding 0px $sup-outer-padding;
+			border-top-left-radius: $up-br-outer;
+			border-top-right-radius: $up-br-outer;
+		}
+		%bannerSVGWrapper {
+			position: relative;
+			left: - $sup-outer-padding;
+			top: - $sup-outer-padding;
+		}
+	}
+
 }
 
 %simplifiedPopoutBody,
 %simplifiedPopoutFooter {
 	background-color: $rb-bg-secondary;
-	padding-inline: $simplified-popout-padding;
-	padding-bottom: $simplified-popout-padding;
+	padding-inline: $sup-inner-padding;
+	padding-bottom: $sup-inner-padding;
+
+	%textSmallNormal {
+		color: $rb-text !important;
+	}
 }
 %simplifiedPopoutBadgeContainer {
 	background: $border-color !important;
