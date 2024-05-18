@@ -34,6 +34,7 @@ $up-br-outer: 8px;
 $up-spacing: 4px; // themed popoutOuter's padding will still be 4px regardless of this.
 $up-br-inner: calc($up-br-outer - $up-spacing);
 
+// role pills
 %role:not(%roleAddButton) {
 	position: relative;
 	overflow: hidden;
@@ -41,25 +42,23 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 	border-radius: 50px;
 	padding: 4px;
 }
-
+%rolePillBorder, %role { border: 1px solid $up-border-color; }
 %roleAddButton {
 	border-radius: 50px; 
-	width: 22px
 }
-%simplifiedPopoutMoreRolesButton { border-radius: 50px; }
 %roleRemoveButton { position: static; }
-
-// don't do the ::after for role add popout
-%role %roleCircle:not([class*="popoutRoleCircle-"])::after {
-	content: "";
-	inset: 0;
-	position: absolute;
-	background: inherit;
-	opacity: 0.25;
+%role %roleCircle:not([class*="popoutRoleCircle-"]) {
+	&::after {
+		content: "";
+		inset: 0;
+		position: absolute;
+		background: inherit;
+		opacity: 0.25;
+	}
 }
-
-%rolePillBorder, %role { border: 1px solid $up-border-color; }
-%roleRemoveIcon { left: 14px; }
+// normalize old margins with new ones
+%role > %roleRemoveButton > %roleCircle { margin: 0px 4px 0px 1px; }
+%roleRemoveIcon { left: 11px; }
 
 // userPopout
 // discord's new userpopouts are 2 things: W I D E & sensory overload inducing. this attempts to fix it.
@@ -159,7 +158,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 			// resized the rectangle to 340*68 the svg has a width of 300 but a viewport-w of 340, so we have to also scale the height accordingly
 			// then i minifed and escapeURIComponent-ed the svg
 			
-			foreignObject > div:not(%userPopoutBannerPremium):not(%simplifiedPopoutBanner) { 
+			foreignObject > div:not(%userPopoutBannerPremium):not(%bitesizePopoutBanner) { 
 				mask: url("data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20width%3D%22340%22%20height%3D%2268%22%20version%3D%221.1%22%20viewBox%3D%220%200%2089.958%2017.992%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22m0.1174%200.1174v17.757h5.0414a13.494%2013.493%200%200%201-0.060909-1.0823%2013.494%2013.493%200%200%201%2013.494-13.493%2013.494%2013.493%200%200%201%2013.494%2013.493%2013.494%2013.493%200%200%201-0.060907%201.0823h57.817v-17.757z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22square%22%20stroke-width%3D%22.23479%22%2F%3E%0A%3C%2Fsvg%3E%0A")
 				
 			}
@@ -167,7 +166,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 	}
 }
 
-%userPopoutOuter:not(%simplifiedPopoutOuter) {
+%userPopoutOuter:not(%bitesizePopoutOuter) {
 	%bannerSVGWrapper {
 		foreignObject { 
 			top: 0;
@@ -179,70 +178,61 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 
 // new, simplified userpopout (start)
 $sup-inner-padding: 0.5rem;
-$sup-outer-padding: 4px;
 
-%simplifiedPopoutOuter { 
+%bitesizePopoutOuter { 
 	--bg-surface-overlay: #{$rb-bg-slate};
-	
-	padding: $sup-outer-padding;
+	--border-strong: #{$rb-bg-4};
+
 	background: $border-color !important;
 	border-radius: $up-br-outer !important; 
 	
-	%simplifiedPopoutInner, %simplifiedPopoutInner::before {
+	// inner & banner
+	%bitesizePopoutInner, %bitesizePopoutInner::before {
 		background: $rb-bg-secondary !important;
 		border-radius: $up-br-inner !important;
 	}
-	%simplifiedPopoutRpcCard, %channelTextAreaScrollable {
-		background-color: $rb-bg-slate !important;
-		border-radius: $up-br-inner;
-	}
-	%channelTextAreaScrollable {
-		background: $border-color !important;
+	%bitesizePopoutBanner,
+	%bitesizePopoutBannerPremium {
+		border-radius: $up-br-inner !important;
 	}
 
-	%simplifiedPopoutBanner {
-		border-radius: $up-br-inner;
-	}
-	
-	// restore non-nitro popouts to their former glory
+	// normalize non-premium banner popouts
 	&:not(%serverGuideMessage) {
 		box-sizing: border-box;
 		width: $up-desired-width !important;
 		max-width: $up-desired-width !important;
 		min-width: 0 !important;
+		border-color:$border-color;
+		border-style: solid;
+		border-width: $up-spacing;
 
-		%simplifiedPopoutInner, %simplifiedPopoutInner::before {
-			max-width: calc(#{$up-desired-width} - 2*#{$sup-outer-padding});
-		}
 
-		%simplifiedPopoutBanner {
-			box-sizing: border-box;
-			border-color:$border-color;
-			border-style: solid;
-			border-width: $sup-outer-padding $sup-outer-padding 0px $sup-outer-padding;
-			border-top-left-radius: $up-br-outer;
-			border-top-right-radius: $up-br-outer;
+		%bitesizePopoutBanner {
+			max-width: calc(#{$up-desired-width} - 2*#{$up-spacing});
 		}
-		%bannerSVGWrapper {
-			position: relative;
-			left: - $sup-outer-padding;
-			top: - $sup-outer-padding;
+	}
+	
+	%bitesizePopoutBadgeContainer {
+		background: $border-color !important;
+		border-color: transparent !important;
+	}
+	%bitesizePopoutBody,
+	%bitesizePopoutFooter {
+		background-color: $rb-bg-secondary;
+		padding-inline: $sup-inner-padding;
+		padding-bottom: $sup-inner-padding;
+
+		%textSmallNormal {
+			color: $rb-text !important;
 		}
 	}
 
-}
-
-%simplifiedPopoutBody,
-%simplifiedPopoutFooter {
-	background-color: $rb-bg-secondary;
-	padding-inline: $sup-inner-padding;
-	padding-bottom: $sup-inner-padding;
-
-	%textSmallNormal {
-		color: $rb-text !important;
+	// rpc card and message input
+	%bitesizePopoutRpcCard, %channelTextAreaScrollable {
+		background-color: $rb-bg-slate !important;
+		border-radius: $up-br-inner;
 	}
-}
-%simplifiedPopoutBadgeContainer {
-	background: $border-color !important;
-	border-color: transparent !important;
+	%channelTextAreaScrollable { background: $border-color !important; }
+	
+
 }

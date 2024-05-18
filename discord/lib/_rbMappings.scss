@@ -118,29 +118,32 @@
 
 // new userpopout stuff...
 .biteSizeBanner__81518 {
-	@extend %simplifiedPopoutBanner !optional;
+	@extend %bitesizePopoutBanner !optional;
+}
+.biteSizeBannerPremium_d388ad {
+	@extend %bitesizePopoutBannerPremium !optional;
 }
 .body__489bc {
-	@extend %simplifiedPopoutBody !optional;
+	@extend %bitesizePopoutBody !optional;
 }
 .footer_b50e3f {
-	@extend %simplifiedPopoutFooter !optional;
+	@extend %bitesizePopoutFooter !optional;
 }
 .biteSizeOuter_e0bb1d {
-	@extend %simplifiedPopoutOuter !optional;
+	@extend %bitesizePopoutOuter !optional;
 }
 .biteSizeInnerThemed__5cdaf { 
-	@extend %simplifiedPopoutInner !optional;
-}
-.showMoreButton__50b95 {
-	@extend %simplifiedPopoutMoreRolesButton !optional;
+	@extend %bitesizePopoutInner !optional;
 }
 .container__665d0 {
-	@extend %simplifiedPopoutBadgeContainer !optional;
+	@extend %bitesizePopoutBadgeContainer !optional;
 }
 .activityBiteSizePopout__67f8f {
-	@extend %simplifiedPopoutRpcCard !optional;
+	@extend %bitesizePopoutRpcCard !optional;
 }
 
 // new userpopout - role
-.role__18ec9 { @extend role !optional; }
+.role__18ec9 { @extend %role !optional; }
+.roleRemoveButton_d2c56e { @extend %roleRemoveButton !optional; }
+button.button__6d63b, .showMoreButton__50b95 { @extend %roleAddButton !optional; }
+.roleRemoveIcon_edbb2e { @extend %roleRemoveIcon !optional; }
