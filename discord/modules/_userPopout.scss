@@ -115,7 +115,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 		width: $banner-original-width;
 		height: $banner-original-height;
 	}
-// background for status indicators like online, offline, dnd, idle, mobile, ...
+	// background for status indicators like online, offline, dnd, idle, mobile, ...
 	%decoratedAvatarWrapper svg, %avatarWrapper svg { 
 		rect[fill="black"], circle[fill="black"], circle[fill="white"], rect[fill="white"] { 
 			fill: transparent;
@@ -184,7 +184,6 @@ $sup-outer-padding: 4px;
 %simplifiedPopoutOuter { 
 	--bg-surface-overlay: #{$rb-bg-slate};
 	
-
 	padding: $sup-outer-padding;
 	background: $border-color !important;
 	border-radius: $up-br-outer !important; 
@@ -199,6 +198,10 @@ $sup-outer-padding: 4px;
 	}
 	%channelTextAreaScrollable {
 		background: $border-color !important;
+	}
+
+	%simplifiedPopoutBanner {
+		border-radius: $up-br-inner;
 	}
 	
 	// restore non-nitro popouts to their former glory
