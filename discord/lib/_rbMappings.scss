@@ -141,6 +141,9 @@
 .activityBiteSizePopout__67f8f {
 	@extend %bitesizePopoutRpcCard !optional;
 }
+.statusBubbleOuter__7e51b {
+	@extend %bitesizeStatusBubbleOuter !optional;
+}
 
 // new userpopout - role
 .role__18ec9 { @extend %role !optional; }

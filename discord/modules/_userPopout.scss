@@ -1,8 +1,3 @@
-/*----//----USER POPOUT----------*/
-// role pills by Cynthia
-// updated once again by the awesome Cynthia (Davri#0015) in 2022
-// rewritten again in 2023 to use placeholder selectors, along with the rest of the theme
-
 // avatar decorations
 [mask="url(#svg-mask-avatar-decoration-profile-status-square-80)"] {
 	mask: url("#svg-mask-avatar-status-round-80") !important;
@@ -35,6 +30,7 @@ $up-spacing: 4px; // themed popoutOuter's padding will still be 4px regardless o
 $up-br-inner: calc($up-br-outer - $up-spacing);
 
 // role pills
+// originally by Cynthia, fixed by Cynthia (Davri#0015) in 2022, further maintained by KraXen72
 %role:not(%roleAddButton) {
 	position: relative;
 	overflow: hidden;
@@ -178,7 +174,6 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 
 // new, simplified userpopout (start)
 $sup-inner-padding: 0.5rem;
-
 %bitesizePopoutOuter { 
 	--bg-surface-overlay: #{$rb-bg-slate};
 	--border-strong: #{$rb-bg-4};
@@ -216,6 +211,9 @@ $sup-inner-padding: 0.5rem;
 		background: $border-color !important;
 		border-color: transparent !important;
 	}
+	%bitesizeStatusBubbleOuter {
+		max-width: calc(184px - #{$up-spacing} - #{$sup-inner-padding});
+	}
 	%bitesizePopoutBody,
 	%bitesizePopoutFooter {
 		background-color: $rb-bg-secondary;
@@ -232,7 +230,9 @@ $sup-inner-padding: 0.5rem;
 		background-color: $rb-bg-slate !important;
 		border-radius: $up-br-inner;
 	}
-	%channelTextAreaScrollable { background: $border-color !important; }
+	%channelTextAreaScrollable { 
+		background: $border-color !important; 
+	}
 	
 
 }
