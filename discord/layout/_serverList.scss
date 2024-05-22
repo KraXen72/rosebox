@@ -7,8 +7,12 @@
 }
 
 // old wordmark because poggers
-%titlebarWordmark { visibility: hidden; }
+%titlebarWordmark { 
+	visibility: hidden;
+	-webkit-app-region: drag;
+}
 %titlebarWordmark::before {
+	-webkit-app-region: drag;
 	visibility: visible;
 	content: '';
 	display: block;

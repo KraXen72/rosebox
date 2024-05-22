@@ -26,19 +26,8 @@ html, body {
 }
 
 /* startpage quick switch to bg*/
-.startpage {
-    transition: background 0s !important;
-}
-
-/*disable base domain highlighting*/
-/*
-.UrlFragment-Wrapper--ShouldHighlight {
-    --HighlightColor: #e3dfdb !important;
-    --LowlightColor: #e3dfdb !important;
-}
-*/
+.startpage { transition: background 0s !important; }
 #browser.break-mode {--colorAccentBgDarker: initial !important;}
-
 #browser, #browser ~ div[fill="currentcolor"] {fill: #e3dfdb !important;}
 
 /*f2*/
@@ -56,9 +45,6 @@ html, body {
 button[title="SharpBlade"] img {
     border-radius: 100% !important;
 }
-/* .UrlBar-AddressField {
-    border-radius: 25px;
-} */
 
 #tabs-container .tab .favicon {filter: grayscale(30%) !important;}
 
@@ -87,6 +73,7 @@ button[title="SharpBlade"] img {
 :is(#browser.address-top.tabs-left, #browser.address-top.tabs-right, #browser.address-top.tabs-off) {
 	.UrlBar-AddressField { margin-inline: 12px; }
 	.button-toolbar.profile-popup { margin-right: 12px; }
+	#tabs-container .tab-strip { -webkit-app-region: drag; }
 
 	&.maximized {
 		.toolbar:has(.window-buttongroup.on-mainbar) {
