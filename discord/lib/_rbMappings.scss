@@ -89,6 +89,9 @@
 }
 
 // modal/popout
+.textAreaForUserProfile__8ffe1 {
+	@extend %userPopoutTextarea !optional;
+}
 .note_ba0c31 {
 	@extend %userModalNote !optional;
 }
@@ -150,3 +153,8 @@
 .roleRemoveButton_d2c56e { @extend %roleRemoveButton !optional; }
 button.button__6d63b, .showMoreButton__50b95 { @extend %roleAddButton !optional; }
 .roleRemoveIcon_edbb2e { @extend %roleRemoveIcon !optional; }
+
+// clan tags 
+.chipletContainerInline_fe40ef {
+	@extend %clanTag !optional;
+}

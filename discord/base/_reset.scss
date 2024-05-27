@@ -7,3 +7,26 @@
 	display: none !important
 }
 
+// remove avatar decorations
+[mask="url(#svg-mask-avatar-decoration-profile-status-square-80)"] {
+	mask: url("#svg-mask-avatar-status-round-80") !important;
+}
+[mask="url(#svg-mask-avatar-decoration-profile-status-mobile-square-80)"] {
+	mask: url("#svg-mask-avatar-status-mobile-80") !important;
+}
+%avatarDecoration,
+[mask^="url(#svg-mask-avatar-decoration-status"] {
+	display: none !important;
+}
+%avatarDecorationHint {
+	left: 0px;
+	top: 0px;
+	height: 80px;
+	width: 80px;
+}
+%avatarHintInner {
+	font-size: 12px !important;
+}
+
+// remove clan tags
+%clanTag { display: none !important; }
