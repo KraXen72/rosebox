@@ -50,18 +50,13 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 		margin: 28px 0 0 0;
 		width: $up-desired-width;
 	}
-	%userPopoutInner {
-		// background-color: $border-color;
-		// background-color: red;
-		
-		&::before {
-			background-color: $border-color;
-			border-radius: $up-br-outer;
-			opacity: 1;
-			width: $up-desired-width;
-			margin-bottom: 0 !important;
-			border-radius: 0;
-		}
+	%userPopoutInner:not(%bitesizePopoutInner)::before {
+		background-color: $border-color;
+		border-radius: $up-br-outer;
+		opacity: 1;
+		width: $up-desired-width;
+		margin-bottom: 0 !important;
+		border-radius: 0;
 	}
 
 	// fix some userpopouts being yeeted into oblivion, because they are 300px wide and the banner is 340px wide
@@ -172,19 +167,20 @@ $sup-inner-padding: 0.5rem;
 	}
 
 	// normalize non-premium banner popouts
+	// i'll fix this later...
 	&:not(%serverGuideMessage) {
-		box-sizing: border-box;
-		width: $up-desired-width !important;
-		max-width: $up-desired-width !important;
+		// box-sizing: border-box;
+		// width: $up-desired-width !important;
+		// max-width: $up-desired-width !important;
 		min-width: 0 !important;
-		border-color:$border-color;
-		border-style: solid;
-		border-width: $up-spacing;
+		// border-color:$border-color;
+		// border-style: solid;
+		// border-width: $up-spacing;
 
 
-		%bitesizePopoutBanner {
-			max-width: calc(#{$up-desired-width} - 2*#{$up-spacing});
-		}
+		// %bitesizePopoutBanner {
+		// 	max-width: calc(#{$up-desired-width} - 2*#{$up-spacing});
+		// }
 	}
 	
 	%bitesizePopoutBadgeContainer {
