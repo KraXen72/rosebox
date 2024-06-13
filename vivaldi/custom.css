@@ -1,79 +1,40 @@
-html, body {
-    background: #222222;
-}
-
-/*remove ugly border on omnibox*/
-.vivaldi-addressfield:focus-within, .UrlBar-AddressField:focus, .UrlBar-AddressField:focus-within, .color-behind-tabs-on .SearchField:focus-within, .color-behind-tabs-on .UrlBar-AddressField:focus-within {
-    border-color: transparent !important;
-    box-shadow: none !important;
-}
-
-/*round close button idk*/
-.tab-header .close {
-    border-radius: 50%;
-}
-
-.vivaldi-v svg {transform: scale(1.025, 1);} /*vivali icon fix*/
+/* mostly just tweaks, not rly related to rosebox in any way */
 
 /* remove white outline on favicons if tab is active*/
-#switch button.webviewbtn img { background-color: transparent !important; }
+#switch button.webviewbtn img {
+	background-color: transparent !important;
+}
 .theme-dark .tab-position .tab.active .tab-header .favicon {
-    filter: none !important;
+	filter: none !important;
 }
 .tab-header .favicon {
-    filter: none;
-    background: transparent !important;
+	filter: none;
+	background: transparent !important;
 }
 
-/* startpage quick switch to bg*/
-.startpage { transition: background 0s !important; }
-#browser.break-mode {--colorAccentBgDarker: initial !important;}
-#browser, #browser ~ div[fill="currentcolor"] {fill: #e3dfdb !important;}
-
-/*f2*/
-.quick-command-search-hint {
-    background: transparent;
-}
-#modal-bg {
-    top: 36% !important;
+#tabs-container .tab .favicon {
+	filter: grayscale(30%) !important;
 }
 
 .tab:not(.active) .tab-header .title {
-    color: var(--colorFg);
+	color: var(--colorFg);
 }
-
-button[title="SharpBlade"] img {
-    border-radius: 100% !important;
-}
-
-#tabs-container .tab .favicon {filter: grayscale(30%) !important;}
 
 .sync-and-trash-container {
-    display: none;
-}
-
-.window-buttongroup button svg {
-    background: #777777;
-    fill: transparent;
-    border-radius: 50%
-}
-
-.window-buttongroup button:hover svg {
-    background: #999999;
-}
-
-.button-toolbar.newtab {
-    transition-duration: 0s !important;
-    transition-delay: 0s !important;
-    animation-duration: 0s !important;
-    animation-delay: 0s !important;
+	display: none;
 }
 
 /* vertical tabs overrides */
 :is(#browser.address-top.tabs-left, #browser.address-top.tabs-right, #browser.address-top.tabs-off) {
-	.UrlBar-AddressField { margin-inline: 12px; }
-	.button-toolbar.profile-popup { margin-right: 12px; }
-	#tabs-container .tab-strip { -webkit-app-region: drag; }
+	.UrlBar-AddressField {
+		margin-inline: 12px;
+	}
+	.button-toolbar.profile-popup {
+		margin-right: 12px;
+	}
+	#tabs-container .tab-strip {
+		-webkit-app-region: drag;
+	}
 
 	&.maximized {
 		.toolbar:has(.window-buttongroup.on-mainbar) {
@@ -88,18 +49,6 @@ button[title="SharpBlade"] img {
 	height: 0px;
 }
 
-/*google tasks tab stacking override*/
-.mosaic-tile[style*="inset: 0% 0% 0% 80%;"] {
-    inset: 0% 0% 0% 82.5% !important;
-}
-
-.mosaic-tile[style*="inset: 0% 20% 0% 0%;"] {
-    inset: 0% 17.5% 0% 0% !important;
-}
-
-.mosaic-split[style*="inset: 0% 0% 0% 80%;"] {
-    inset: 0% 0% 0% 82.5% !important;
-}
 #app .button-toolbar.workspace-popup button[title="Workspaces"] {
 	padding-left: 4px !important;
 	padding-right: 4px !important;
@@ -118,4 +67,57 @@ button[title="SharpBlade"] img {
 }
 .ToolbarButton-Button[title="Workspaces"] .button-toolbar-menu-indicator {
 	display: none;
+}
+
+/* linux fixes */
+#browser.linux .window-buttongroup {
+	height: 100%;
+	top: 0;
+	right: 0;
+	button {
+		position: relative;
+		transform: none;
+		margin: 0;
+		width: 30px;
+		background-color: transparent;
+		display: flex;
+		justify-content: center;
+		padding-block: 10px;
+		border-radius: 0px;
+		/* border: 1px solid red; */
+		height: calc(34px / var(--uiZoomLevel) + 10px);
+
+		&::before {
+			z-index: -1;
+			position: absolute;
+			top: 4.5px;
+			box-sizing: border-box;
+			border-radius: 100%;
+			content: '';
+			display: block;
+			width: 21px;
+			aspect-ratio: 1/1;
+		}
+		&:hover {
+			fill: black;
+			background-color: transparent;
+		}
+	}
+	button.window-minimize,
+	button.window-maximize {
+		&:hover::before {
+			background-color: #AAAAAB;
+		}
+		&:active::before {
+			background-color: #48484A;
+		}
+	}
+	button.window-close {
+		&:hover::before {
+			background-color: #FF98A2;
+		}
+		&:active::before {
+			background-color: #6C2128;
+		}
+	}
 }

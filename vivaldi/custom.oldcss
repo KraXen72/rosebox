@@ -1,0 +1,121 @@
+html, body {
+    background: #222222;
+}
+
+/*remove ugly border on omnibox*/
+.vivaldi-addressfield:focus-within, .UrlBar-AddressField:focus, .UrlBar-AddressField:focus-within, .color-behind-tabs-on .SearchField:focus-within, .color-behind-tabs-on .UrlBar-AddressField:focus-within {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/*round close button idk*/
+.tab-header .close {
+    border-radius: 50%;
+}
+
+.vivaldi-v svg {transform: scale(1.025, 1);} /*vivali icon fix*/
+
+/* remove white outline on favicons if tab is active*/
+#switch button.webviewbtn img { background-color: transparent !important; }
+.theme-dark .tab-position .tab.active .tab-header .favicon {
+    filter: none !important;
+}
+.tab-header .favicon {
+    filter: none;
+    background: transparent !important;
+}
+
+/* startpage quick switch to bg*/
+.startpage { transition: background 0s !important; }
+#browser.break-mode {--colorAccentBgDarker: initial !important;}
+#browser, #browser ~ div[fill="currentcolor"] {fill: #e3dfdb !important;}
+
+/*f2*/
+.quick-command-search-hint {
+    background: transparent;
+}
+#modal-bg {
+    top: 36% !important;
+}
+
+.tab:not(.active) .tab-header .title {
+    color: var(--colorFg);
+}
+
+button[title="SharpBlade"] img {
+    border-radius: 100% !important;
+}
+
+#tabs-container .tab .favicon {filter: grayscale(30%) !important;}
+
+.sync-and-trash-container {
+    display: none;
+}
+
+.window-buttongroup button svg {
+    background: #777777;
+    fill: transparent;
+    border-radius: 50%
+}
+
+.window-buttongroup button:hover svg {
+    background: #999999;
+}
+
+.button-toolbar.newtab {
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+}
+
+/* vertical tabs overrides */
+:is(#browser.address-top.tabs-left, #browser.address-top.tabs-right, #browser.address-top.tabs-off) {
+	.UrlBar-AddressField { margin-inline: 12px; }
+	.button-toolbar.profile-popup { margin-right: 12px; }
+	#tabs-container .tab-strip { -webkit-app-region: drag; }
+
+	&.maximized {
+		.toolbar:has(.window-buttongroup.on-mainbar) {
+			min-height: 0;
+		}
+		.window-buttongroup {
+			height: 100%;
+		}
+	}
+}
+#browser.address-top.tabs-off #header > .tabbar-wrapper {
+	height: 0px;
+}
+
+/*google tasks tab stacking override*/
+.mosaic-tile[style*="inset: 0% 0% 0% 80%;"] {
+    inset: 0% 0% 0% 82.5% !important;
+}
+
+.mosaic-tile[style*="inset: 0% 20% 0% 0%;"] {
+    inset: 0% 17.5% 0% 0% !important;
+}
+
+.mosaic-split[style*="inset: 0% 0% 0% 80%;"] {
+    inset: 0% 0% 0% 82.5% !important;
+}
+#app .button-toolbar.workspace-popup button[title="Workspaces"] {
+	padding-left: 4px !important;
+	padding-right: 4px !important;
+}
+
+/* workspace switcher css */
+.ToolbarButton-Button[title="Workspaces"],
+.button-toolbar.button-menu > button.ToolbarButton-Button[title="Workspaces"]:not(.button-textonly) {
+	padding: 0 3px !important;
+}
+.ToolbarButton-Button[title="Workspaces"] .button-icon {
+	margin: 0 3px 0 6px;
+}
+.ToolbarButton-Button[title="Workspaces"] .button-title {
+	padding-left: 6px;
+}
+.ToolbarButton-Button[title="Workspaces"] .button-toolbar-menu-indicator {
+	display: none;
+}
