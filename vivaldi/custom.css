@@ -122,6 +122,9 @@
 	}
 }
 
+#browser.linux #tabs-container {
+	font-family: system-ui, 'Noto Sans', Cantarell, sans-serif;
+}
 /* #browser.linux,
 #browser.linux ~ div,
 #browser.linux button,
