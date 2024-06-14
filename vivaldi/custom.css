@@ -90,12 +90,12 @@
 		&::before {
 			z-index: -1;
 			position: absolute;
-			top: 4.5px;
+			top: 6px;
 			box-sizing: border-box;
 			border-radius: 100%;
 			content: '';
 			display: block;
-			width: 21px;
+			width: 20px;
 			aspect-ratio: 1/1;
 		}
 		&:hover {
