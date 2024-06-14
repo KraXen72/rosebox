@@ -20,7 +20,7 @@
 	color: var(--colorFg);
 }
 
-.sync-and-trash-container {
+#browser.tabs-top .sync-and-trash-container {
 	display: none;
 }
 
@@ -128,9 +128,5 @@
 #browser.linux input,
 #browser.linux select,
 #browser.linux textarea {
-	font-family: unset;
+	font-family: system-ui, "Noto Sans", "Cantarell", sans-serif;
 } */
-
-#browser.linux #tabs-container {
-	font-family: unset;
-}
