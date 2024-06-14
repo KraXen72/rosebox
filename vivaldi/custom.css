@@ -122,11 +122,15 @@
 	}
 }
 
-#browser.linux,
+/* #browser.linux,
 #browser.linux ~ div,
 #browser.linux button,
 #browser.linux input,
 #browser.linux select,
 #browser.linux textarea {
+	font-family: unset;
+} */
+
+#browser.linux #tabs-container {
 	font-family: unset;
 }
