@@ -3,19 +3,20 @@ const fs = require('fs');
 const path = require('path');
 const colors = require('colors')
 
-const dist = __dirname.slice(0, __dirname.length - 7) + "dist"
-const pathToOrig = `${dist}/main.css`
+const dist = path.resolve(__dirname, "..", "dist")
+const compiledCSSPath = path.resolve(dist, "main.css")
 const MODES = ["quickcss", "userstyle"] // quickcss || settingsjson || userstyle
 const packageJson = JSON.parse(fs.readFileSync('./package.json'))
 
 // const pathToQuickCSSFile = `C:\\Users\\Nex\\AppData\\Roaming\\Vencord\\settings\\quickCss.css`
+// const pathToSettingsJSON = `C:\\Users\\Nex\\AppData\\Roaming\\Discord\\settings.json`
+
 const quickCssOutPaths = [
 	`/home/nex/.config/Vencord/settings/quickCss.css`,
 	`/home/nex/.config/vesktop/settings/quickCss.css`
 ]
-// const pathToSettingsJSON = `C:\\Users\\Nex\\AppData\\Roaming\\Discord\\settings.json`
 const pathToSettingsJSON = `/home/nex/.config/discord/settings.json`
-const pathToUserStyle = path.resolve(__dirname, "..", "dist", "roseboxUserStyle.user.css")
+const pathToUserStyle = path.resolve(dist, "roseboxUserStyle.user.css")
 
 const userStyleHeader = [
 	'/* ==UserStyle==',
@@ -31,7 +32,7 @@ const WAIT_MS = 500
 console.log(`${getTimestamp()}watching main.css`.cyan)
 
 function fileWriteCallback() {
-	let contents = fs.readFileSync(pathToOrig, 'utf8')
+	let contents = fs.readFileSync(compiledCSSPath, 'utf8')
 	if (MODES.includes('settingsjson')) {
 		let settingsJSON = JSON.parse(fs.readFileSync(pathToSettingsJSON))
 		settingsJSON.openasar.css = contents.replaceAll('"', "\"")
@@ -49,8 +50,7 @@ function fileWriteCallback() {
 	console.log(`${getTimestamp()}updated compiled.user.css`.green, `modes: ${MODES.join(", ")}`.cyan)
 }
 
-// One-liner for current directory
-chokidar.watch(pathToOrig, { ignorePermissionErrors: true }).on('all', (event, eventPath) => {
+chokidar.watch(compiledCSSPath, { ignorePermissionErrors: true }).on('all', (event, eventPath) => {
 	//console.log(event, path);
 	if (event === "change") {
 		console.clear();
