@@ -13,7 +13,8 @@ const packageJson = JSON.parse(fs.readFileSync('./package.json'))
 
 const quickCssOutPaths = [
 	`/home/nex/.config/Vencord/settings/quickCss.css`,
-	`/home/nex/.config/vesktop/settings/quickCss.css`
+	'/home/nex/.var/app/dev.vencord.Vesktop/config/vesktop/settings/quickCss.css'
+	// `/home/nex/.config/vesktop/settings/quickCss.css`,
 ]
 const pathToSettingsJSON = `/home/nex/.config/discord/settings.json`
 const pathToUserStyle = path.resolve(dist, "roseboxUserStyle.user.css")
