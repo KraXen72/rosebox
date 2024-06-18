@@ -9,7 +9,10 @@ const MODES = ["quickcss", "userstyle"] // quickcss || settingsjson || userstyle
 const packageJson = JSON.parse(fs.readFileSync('./package.json'))
 
 // const pathToQuickCSSFile = `C:\\Users\\Nex\\AppData\\Roaming\\Vencord\\settings\\quickCss.css`
-const pathToQuickCSSFile = `/home/nex/.config/Vencord/settings/quickCss.css`
+const quickCssOutPaths = [
+	`/home/nex/.config/Vencord/settings/quickCss.css`,
+	`/home/nex/.config/vesktop/settings/quickCss.css`
+]
 // const pathToSettingsJSON = `C:\\Users\\Nex\\AppData\\Roaming\\Discord\\settings.json`
 const pathToSettingsJSON = `/home/nex/.config/discord/settings.json`
 const pathToUserStyle = path.resolve(__dirname, "..", "dist", "roseboxUserStyle.user.css")
@@ -39,7 +42,9 @@ function fileWriteCallback() {
 		fs.writeFileSync(pathToUserStyle, outputCSS)
 	}
 	if (MODES.includes("quickcss") || MODES.length === 0) {
-		fs.writeFileSync(pathToQuickCSSFile, contents)
+		for (p of quickCssOutPaths) {
+			fs.writeFileSync(p, contents)
+		}
 	}
 	console.log(`${getTimestamp()}updated compiled.user.css`.green, `modes: ${MODES.join(", ")}`.cyan)
 }
