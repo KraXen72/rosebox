@@ -25,6 +25,12 @@
 %mentioned::before { 
 	background-color: $rb-fg-accent; 
 }
+
+// menu items
+:is(%menuPopoutSelected:hover, %menuPopoutItemHover):not(%menuPopoutItemDanger):not(%menuPopoutItemInvite) {
+	background-color: $rb-fg-accent; 
+}
+
 %channelsMentionIndicator { /// (new) pill
 	opacity: 1;
 	background-color: $rb-fg-accent; 

@@ -8,8 +8,10 @@ const pathToOrig = `${dist}/main.css`
 const MODES = ["quickcss", "userstyle"] // quickcss || settingsjson || userstyle
 const packageJson = JSON.parse(fs.readFileSync('./package.json'))
 
-const pathToQuickCSSFile = `C:\\Users\\Nex\\AppData\\Roaming\\Vencord\\settings\\quickCss.css`
-const pathToSettingsJSON = `C:\\Users\\Nex\\AppData\\Roaming\\Discord\\settings.json`
+// const pathToQuickCSSFile = `C:\\Users\\Nex\\AppData\\Roaming\\Vencord\\settings\\quickCss.css`
+const pathToQuickCSSFile = `/home/nex/.config/Vencord/settings/quickCss.css`
+// const pathToSettingsJSON = `C:\\Users\\Nex\\AppData\\Roaming\\Discord\\settings.json`
+const pathToSettingsJSON = `/home/nex/.config/discord/settings.json`
 const pathToUserStyle = path.resolve(__dirname, "..", "dist", "roseboxUserStyle.user.css")
 
 const userStyleHeader = [

@@ -80,13 +80,14 @@ $catlist-tr-y: 190px;
 
 // reaction emoji picker
 [id^="popout"] {
+	margin-top: -48px; // temp reaction emoji picker fix
 	%reactionEmojiPickerContentWrapper {
 		width: $emoji-picker-width !important;
 		height: $edit-emoji-picker-height !important;
 	}
 	%emojiPickerHeader {
 		top: 2rem;
-		padding-top: 1rem !important;
+		padding-top: 1.25rem !important;
 	}
 	#emoji-picker-tab-panel %emojiCategoryList {
 		transform: 
