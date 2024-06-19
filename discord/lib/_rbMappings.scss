@@ -1,160 +1,160 @@
 // thanks to https://syndishanx.github.io/Website/Update_Classes.html
 
 // quick switcher
-.wrapper__85934.badge__63b33 {
+.wrapper_dc0b29.badge_f14193 {
 	@extend %quickSwitcherPingWrapper !optional;
 }
-.quickswitcher_b5bb0a {
+.quickswitcher_f4e139 {
 	@extend %quickSwitcher !optional;
 }
-.input__2a648 {
+.input_f4e139 {
 	@extend %quickSwitcherInput !optional;
 }
-.scroller_d4b86c {
+.scroller_f4e139 {
 	@extend %quickSwitcherScroller !optional;
 }
-.result__25f11 {
+.result_f14193 {
 	@extend %quickSwitcherResult !optional;
 }
 
-.header__5e5a6 {
+.header_f9a4c9 {
 	@extend %inviteModalHeader !optional;
 }
-.upsellButton__04c8a {
+.upsellButton_bb33d5 {
 	@extend %nitroUpsellButton !optional;
 }
-.addFriend__4c0a2 {
+.addFriend_c2739c {
 	@extend %addFriendButton !optional;
 }
 
 // emoji picker stuff
-.wrapper__0757b {
+.wrapper_c6ee36 {
 	@extend %reactionEmojiPickerContentWrapper !optional;
 }
-.nav_b56420, .nav__2aafa { // normal, reaction
+.nav_af5dbb, .nav__2aafa { // normal, reaction
 	@extend %emojiPickerNav !optional;
 }
-.navList__5c9f4, .navList__8438b { // normal, reaction
+.navList_af5dbb, .navList__8438b { // normal, reaction
 	@extend %emojiPickerNavList !optional;
 }
-.inner__178b2 { // also %groupInvitePopoutSearchBarInner
+.inner_effbe2 { // also %groupInvitePopoutSearchBarInner
 	@extend %emojiPickerSearchBarInner !optional;
 }
-.positionContainerOnlyEmoji_ec41a2 {
+.positionContainerOnlyEmoji_af5dbb {
 	@extend %editEmojiPickerContainer !optional;
 }
-.emoji__92b46 {
+.emoji_f48b14 {
 	@extend %emojiPreview !optional;
 }
-.resizeHandle_dd7cb9 {
+.resizeHandle_af5dbb {
 	@extend %emojiPickerResizeHandle !optional;
 }
-.emojiListRowMediumSize_ece94a {
+.emojiListRowMediumSize_fbfedd {
 	@extend %emojiPickerRowMedium !optional;
 }
-.diversitySelector__0babb {
+.diversitySelector_c6ee36 {
 	@extend %emojiPickerSkintoneButton !optional;
 }
 
 
-.buttons__7ecff {
+.buttons_d0696b {
 	@extend %channelTextAreaButtons !optional;
 }
-.searchBar__310d8 {
+.searchBar_e0840f {
 	@extend %librarySearchBar !optional;
 }
-.barButtonMain__984b4 {
+.barButtonMain_cf58b5 {
 	@extend %jumpBarMainButton !optional;
 }
-.barButtonAlt_e800ef {
+.barButtonAlt_cf58b5 {
 	@extend %jumpBarAltButton !optional;
 }
-.clipContainer_ab9cf6 {
+.clipContainer_b11c5e {
 	@extend %replyBarClipContainer !optional;
 }
-.content__945f5 a {
+.content_e62b38 a {
 	@extend %systemMessageUsernameAnchor !optional;
 }
-.communityInfoContainer__6ea3a {
+.communityInfoContainer_fd6364 {
 	@extend %serverHeaderPublicPill !optional;
 }
 .cardPrimary_cb7a0e {
 	@extend %settingsCardPrimary !optional;
 }
-.rolePillBorder_e3a889 {
+.rolePillBorder_fa2f72 {
 	@extend %rolePillBorder !optional;
 }
-.timestamp_ff7119 {
+.timestamp_d6076c {
 	@extend %markdownTimestamp !optional;
 }
 
 // modal/popout
-.textAreaForUserProfile__8ffe1 {
+.textAreaForUserProfile_d0696b {
 	@extend %userPopoutTextarea !optional;
 }
-.note_ba0c31 {
+.note_c90ad7 {
 	@extend %userModalNote !optional;
 }
-.nickname_db3773 {
+.nickname_c9ccf6 {
 	@extend %userModalNickname !optional;
 }
-.profileEffects__9b664 {
+.profileEffects_f867f9 {
 	@extend %profileEffects !optional;
 }
-.avatarWrapper__0cd44 {
+.avatarWrapper_f89da9 {
 	@extend %decoratedAvatarWrapper !optional;
 }
-.bannerSVGWrapper__8a38c {
+.bannerSVGWrapper_b32cc2 {
 	@extend %bannerSVGWrapper !optional;
 }
-.avatarDecoration_cf681a, // profile
-.avatarDecoration__8a0c2  // chat
+.avatarDecoration_c51b4e, // profile
+.avatarDecoration_ec86aa  // chat
 {
 	@extend %avatarDecoration !optional;
 }
-.avatarDecorationHint__04b99 {
+.avatarDecorationHint_f89da9 {
 	@extend %avatarDecorationHint !optional;
 }
-.avatarHintInner_c8ddb1 {
+.avatarHintInner_f89da9 {
 	@extend %avatarHintInner !optional;
 }
 
 // new userpopout stuff...
-.biteSizeBanner__81518 {
+.biteSizeBanner_c3e427 {
 	@extend %bitesizePopoutBanner !optional;
 }
-.biteSizeBannerPremium_d388ad {
+.biteSizeBannerPremium_c3e427 {
 	@extend %bitesizePopoutBannerPremium !optional;
 }
-.body__489bc {
+.body_a45fe8 {
 	@extend %bitesizePopoutBody !optional;
 }
-.footer_b50e3f {
+.footer_d5223c {
 	@extend %bitesizePopoutFooter !optional;
 }
-.biteSizeOuter_e0bb1d {
+.biteSizeOuter_c69a7b {
 	@extend %bitesizePopoutOuter !optional;
 }
-.biteSizeInnerThemed__5cdaf { 
+.biteSizeInnerThemed_c69a7b { 
 	@extend %bitesizePopoutInner !optional;
 }
-.container__665d0 {
+.container_e5a42d {
 	@extend %bitesizePopoutBadgeContainer !optional;
 }
-.activityBiteSizePopout__67f8f {
+.activityBiteSizePopout_d5089b {
 	@extend %bitesizePopoutRpcCard !optional;
 }
-.statusBubbleOuter__7e51b {
+.statusBubbleOuter_d0a252 {
 	@extend %bitesizeStatusBubbleOuter !optional;
 }
 
 // new userpopout - role
-.role__18ec9 { @extend %role !optional; }
-.roleRemoveButton_d2c56e { @extend %roleRemoveButton !optional; }
-button.button__6d63b, .showMoreButton__50b95 { @extend %roleAddButton !optional; }
-.roleRemoveIcon_edbb2e { @extend %roleRemoveIcon !optional; }
+.role_f9575e { @extend %role !optional; }
+.roleRemoveButton_f9575e { @extend %roleRemoveButton !optional; }
+button.button_edead5, .showMoreButton_c83b44 { @extend %roleAddButton !optional; }
+.roleRemoveIcon_f9575e { @extend %roleRemoveIcon !optional; }
 
 // clan tags 
-.chipletContainerInline_fe40ef {
+.chipletContainerInline_d5cb59 {
 	@extend %clanTag !optional;
 }
