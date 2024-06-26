@@ -90,6 +90,9 @@
 
 // modal/popout
 .textAreaForUserProfile_d0696b {
+	@extend %userPopoutTextareaInput !optional;
+}
+.channelTextArea_d0696b {
 	@extend %userPopoutTextarea !optional;
 }
 .note_c90ad7 {

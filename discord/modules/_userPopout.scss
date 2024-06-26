@@ -94,8 +94,14 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 		background: $border-color !important;
 		color: var(--text-normal) !important;
 	}
-	%userPopoutTextarea { 
-		--channel-text-area-placeholder: $rb-text !important; 
+	%userPopoutTextarea {
+		> %channelTextAreaScrollable {
+			border-radius: $up-br-inner;
+		}
+		%userPopoutTextareaInput { 
+			--channel-text-area-placeholder: $rb-text !important; 
+			border-radius: $up-br-inner;
+		}
 	}
 }
 
