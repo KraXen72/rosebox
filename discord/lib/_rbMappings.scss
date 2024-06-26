@@ -120,23 +120,29 @@
 }
 
 // new userpopout stuff...
+.biteSizeOuter_c69a7b {
+	@extend %bitesizePopoutOuter !optional;
+}
+.biteSizeInner_c69a7b { 
+	@extend %bitesizePopoutInner !optional;
+}
 .biteSizeBanner_c3e427 {
 	@extend %bitesizePopoutBanner !optional;
 }
 .biteSizeBannerPremium_c3e427 {
 	@extend %bitesizePopoutBannerPremium !optional;
 }
-.body_a45fe8 {
+.header_b07019 {
+	@extend %bitesizePopoutHeader !optional;
+}
+.body_b07019 {
 	@extend %bitesizePopoutBody !optional;
 }
-.footer_d5223c {
+.footer_b07019 {
 	@extend %bitesizePopoutFooter !optional;
 }
-.biteSizeOuter_c69a7b {
-	@extend %bitesizePopoutOuter !optional;
-}
-.biteSizeInnerThemed_c69a7b { 
-	@extend %bitesizePopoutInner !optional;
+.inner_dc0b43 {
+	@extend %bitesizePopoutMessageInput !optional;
 }
 .container_e5a42d {
 	@extend %bitesizePopoutBadgeContainer !optional;

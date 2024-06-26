@@ -85,8 +85,13 @@
 	--background-message-highlight: #{$rb-bg-accent} !important; // reacting to bg
 	--brand-experiment-200: var(--interactive-normal) !important; // reaction text
 	--control-brand-foreground: #{$rb-fg-accent} !important; // some accents
-	
-	// --ping: #eb6f92;
+
+	// for light-theme user popouts
+	--border-strong: rgba(255, 255, 255, 0.18);
+	--bg-surface-raised: #{$rb-bg-tertiary};
+}
+.custom-profile-theme.theme-light {
+	--bg-surface-overlay: #{$rb-bg-tertiary};
 }
 
 ::selection { background-color: $rb-bg-accent !important; }

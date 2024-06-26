@@ -2,11 +2,11 @@ $banner-original-width: 340px;
 $banner-original-height: 120px;
 
 $up-border-color: var(--background-modifier-accent); //$rb-bg-accent;
-$up-desired-width: 300px; // don't change. you'd have to redraw the svg (see bottom)
-$up-image-banner-height: calc((#{$up-desired-width} * 120) / 360);
+$up-desired-width: 300px;
 $up-br-outer: 8px;
-$up-spacing: 4px; // themed popoutOuter's padding will still be 4px regardless of this.
-$up-br-inner: calc($up-br-outer - $up-spacing);
+$up-padding: 0.5rem;
+$up-spacing-thin: 4px; // themed popoutOuter's padding will still be 4px regardless of this.
+$up-br-inner: calc($up-br-outer - $up-spacing-thin);
 
 // role pills
 // originally by Cynthia, fixed by Cynthia (Davri#0015) in 2022, further maintained by KraXen72
@@ -35,178 +35,101 @@ $up-br-inner: calc($up-br-outer - $up-spacing);
 %role > %roleRemoveButton > %roleCircle { margin: 0px 4px 0px 1px; }
 %roleRemoveIcon { left: 11px; }
 
-// userPopout
-// discord's new userpopouts are 2 things: W I D E & sensory overload inducing. this attempts to fix it.
+// userPopout attempt 3 or 4 idk
+// user popouts (new, bitesized ones)
 %userPopoutOuter {
-	width: $up-desired-width;
-	border-radius: $up-br-outer;
 	background: $border-color;
+	background-image: none;
+	max-width: $up-desired-width;
+	border-radius: $up-br-outer;
+}
+%userPopoutInner {
+	background-image: none !important;
+	background: $border-color !important;
+	row-gap: 0;
+	&::before { background-color: transparent; }
 
-	// wrappers
-	%userPopoutOverlayBackground {
-		background-color: $rb-bg-secondary;
-		border-radius: $up-br-inner;
-
-		margin: 28px 0 0 0;
-		width: $up-desired-width;
+	%bitesizePopoutHeader { 
+		background: $border-color; 
 	}
-	%userPopoutInner:not(%bitesizePopoutInner)::before {
-		background-color: $border-color;
-		border-radius: $up-br-outer;
-		opacity: 1;
-		width: $up-desired-width;
-		margin-bottom: 0 !important;
-		border-radius: 0;
-	}
-
-	// fix some userpopouts being yeeted into oblivion, because they are 300px wide and the banner is 340px wide
-	// we have to yeet the mask bc no way to get it look right with the viewport width set to 340
-	// we partially restore the mask for non-premium banners at the bottom (only non premium bc non nitro users can't have avatar decorations - yet)
-	// avatar decorations would require custom masks
-	// this could be solved with js, by overwriting the viewport attribute, but this is a css theme...
-	%bannerSVGWrapper { 
-		min-width: $up-desired-width !important;
-		min-height: unset !important;
-	}
-	// %serverGuideMessage is userProfileOuterThemed
-	// &%serverGuideMessage %bannerSVGWrapper { 
-	// 	min-height: $up-image-banner-height !important; 
-	// }
-
-	// top to bottom elements - don't wanna nest bc extra specificity could break the selectors
-	%userPopoutBannerPremium,
-	%userPopoutNoBannerPremium {
-		object-position: center;
-		border-radius: $up-br-inner;
-		position: relative;
-	}
-	%userPopoutBannerPremium {
-		width: $banner-original-width;
-		height: $banner-original-height;
-	}
-	// background for status indicators like online, offline, dnd, idle, mobile, ...
 	%decoratedAvatarWrapper svg, %avatarWrapper svg { 
 		rect[fill="black"], circle[fill="black"], circle[fill="white"], rect[fill="white"] { 
 			fill: transparent;
 		} 
 	}
-	%userModalNickname { color: $rb-text-vibrant; }
-
-	%userPopoutProfileBadges {
-		background-color: $rb-bg-secondary;
-		border-radius: $up-br-inner;
-		right: 0;
-		max-width: 170px;
-		justify-content: start;
-	}
-	
-	%userModalNote {
-		textarea, textarea::placeholder { color: $rb-text; }
-		textarea:focus { background-color: transparent !important; }
-		border: 1px solid $up-border-color;
-		border-radius: 3px;
-		padding: 5px 10px;
-	}
-	%userPopoutMessageInputContainer { border-color: $up-border-color; }
-	%userPopoutTextarea { --channel-text-area-placeholder: $rb-text !important; }
-
-	// unthemed reverts & fixes
-	&%userProfileOuterUnthemed {
-		%userPopoutInner::before { border-radius: $up-br-outer; }
-		%userPopoutProfileBadges { right: $up-spacing; }
-		%userPopoutOverlayBackground { 
-			margin: 28px $up-spacing $up-spacing $up-spacing; 
-			width: calc($up-desired-width - ($up-spacing * 2));
-		}	
-		// restore the cutout mask on color-only banners
-		// the other banners are taller, etc. i don't wanna maintain more than 1 svg cutout mask
-		// premiums/avatar decorations can go figure
-		%bannerSVGWrapper {
-			// to create this svg, i went into inkscape, made a 300*60px rectangle
-			// positioned a 80*80 circle at x:22 and y:16 (discord does)
-			// moved left & up the circle by how much i enlarged it (90*90 => x:17 y:11)
-			// selected rect & circle, path > difference
-			// resized the rectangle to 340*68 the svg has a width of 300 but a viewport-w of 340, so we have to also scale the height accordingly
-			// then i minifed and escapeURIComponent-ed the svg
-			
-			foreignObject > div:not(%userPopoutBannerPremium):not(%bitesizePopoutBanner) { 
-				mask: url("data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20width%3D%22340%22%20height%3D%2268%22%20version%3D%221.1%22%20viewBox%3D%220%200%2089.958%2017.992%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22m0.1174%200.1174v17.757h5.0414a13.494%2013.493%200%200%201-0.060909-1.0823%2013.494%2013.493%200%200%201%2013.494-13.493%2013.494%2013.493%200%200%201%2013.494%2013.493%2013.494%2013.493%200%200%201-0.060907%201.0823h57.817v-17.757z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22square%22%20stroke-width%3D%22.23479%22%2F%3E%0A%3C%2Fsvg%3E%0A")
-				
-			}
-		}
-	}
-}
-
-%userPopoutOuter:not(%bitesizePopoutOuter) {
-	%bannerSVGWrapper {
-		foreignObject { 
-			top: 0;
-			mask: unset; // temp fix for not showing banners
-		} 
-		mask { display: none !important; }
-	}
-}
-
-// new, simplified userpopout (start)
-$sup-inner-padding: 0.5rem;
-%bitesizePopoutOuter { 
-	--bg-surface-overlay: #{$rb-bg-slate};
-	--border-strong: #{$rb-bg-4};
-
-	background: $border-color !important;
-	border-radius: $up-br-outer !important; 
-	
-	// inner & banner
-	%bitesizePopoutInner, %bitesizePopoutInner::before {
-		background: $rb-bg-secondary !important;
-		border-radius: $up-br-inner !important;
-	}
-	%bitesizePopoutBanner,
-	%bitesizePopoutBannerPremium {
-		border-radius: $up-br-inner !important;
-	}
-
-	// normalize non-premium banner popouts
-	// i'll fix this later...
-	&:not(%serverGuideMessage) {
-		// box-sizing: border-box;
-		// width: $up-desired-width !important;
-		// max-width: $up-desired-width !important;
-		min-width: 0 !important;
-		// border-color:$border-color;
-		// border-style: solid;
-		// border-width: $up-spacing;
-
-
-		// %bitesizePopoutBanner {
-		// 	max-width: calc(#{$up-desired-width} - 2*#{$up-spacing});
-		// }
-	}
-	
 	%bitesizePopoutBadgeContainer {
-		background: $border-color !important;
-		border-color: transparent !important;
+		background-color: $border-color;
+		border-color: $border-color;
+		padding: 2px;
 	}
-	%bitesizeStatusBubbleOuter {
-		max-width: calc(184px - #{$up-spacing} - #{$sup-inner-padding});
-	}
+
 	%bitesizePopoutBody,
 	%bitesizePopoutFooter {
-		background-color: $rb-bg-secondary;
-		padding-inline: $sup-inner-padding;
-		padding-bottom: $sup-inner-padding;
+		background: $rb-bg-secondary;
 
-		%textSmallNormal {
-			color: $rb-text !important;
+		padding-inline: $up-padding;
+		margin-inline: $up-spacing-thin;
+	}
+	%bitesizePopoutBody {
+		margin-top: $up-padding; // so status bubble doesen't touch body
+		padding-block: $up-padding;
+		border-top-left-radius: $up-br-inner;
+		border-top-right-radius: $up-br-inner;
+
+		[class^="text-sm"] {
+			color: var(--text-normal) !important;
 		}
 	}
+	%bitesizePopoutRpcCard {
+		background-color: $rb-bg-accent !important;
+		border-radius: $up-br-inner;
+		padding: $up-padding;
+	}
+	%bitesizePopoutFooter {
+		padding-block: $up-padding;
+		border-bottom-left-radius: $up-br-inner;
+		border-bottom-right-radius: $up-br-inner;
+	}
+	%bitesizePopoutMessageInput {
+		background: $border-color !important;
+		color: var(--text-normal) !important;
+	}
+	%userPopoutTextarea { 
+		--channel-text-area-placeholder: $rb-text !important; 
+	}
+}
 
-	// rpc card and message input
-	%bitesizePopoutRpcCard, %channelTextAreaScrollable {
-		background-color: $rb-bg-slate !important;
+// nitro theme fixes
+%userProfileOuterThemed {
+	// nitro popouts are too wide because they're 300px + 4px each side
+	// and no border-box by default
+	box-sizing: border-box;
+	min-width: unset !important;
+	width: $up-desired-width !important;
+	max-width: $up-desired-width !important;
+
+	// fix premium banners overflowing after width correction & add border-radius
+	%bitesizePopoutBannerPremium {
+		overflow: hidden;
+		max-width: calc(#{$up-desired-width} - 2*#{$up-spacing-thin});
 		border-radius: $up-br-inner;
 	}
-	%channelTextAreaScrollable { 
-		background: $border-color !important; 
+	
+	// nitro popouts have a 4px border by default so we remove ours
+	%userPopoutInner {
+		padding-bottom: 0;
+
+		%bitesizePopoutBody,
+		%bitesizePopoutFooter {
+			margin-inline: 0
+		}
+	}
+}
+
+// bot userpopouts (old ones)
+%userPopoutOuter:not(%bitesizePopoutOuter) {
+	%userPopoutOverlayBackground {
+		margin: $up-spacing-thin;
+		margin-top: calc(#{$up-spacing-thin} + 1.5rem);
 	}
 }
