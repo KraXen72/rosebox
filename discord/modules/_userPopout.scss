@@ -106,7 +106,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 }
 
 // nitro theme fixes
-%userProfileOuterThemed {
+%userProfileOuterThemed:is(%bitesizePopoutOuter) {
 	// nitro popouts are too wide because they're 300px + 4px each side
 	// and no border-box by default
 	box-sizing: border-box;
