@@ -27,13 +27,6 @@
 
 @import 'tweaks';
 
-%userPopoutOuter.theme-light {
-	--interactive-active: var(--white-500);
-	--interactive-hover: var(--primary-230);
-	--interactive-muted: var(--primary-500);
-	--interactive-normal: var(--primary-330);
-}
-
 // TODO switch over to @use from @import in scss => would require namespacing all the variables?
 // TODO once finalized, update rosebox colors in the readme 
 :root, .theme-dark, .focusLock-2tveLW *, %userPopoutOuter.theme-light {
@@ -85,13 +78,21 @@
 	--background-message-highlight: #{$rb-bg-accent} !important; // reacting to bg
 	--brand-experiment-200: var(--interactive-normal) !important; // reaction text
 	--control-brand-foreground: #{$rb-fg-accent} !important; // some accents
+}
+:is(%userPopoutOuter, .custom-profile-theme) {
+	&.theme-light {
+		--interactive-active: var(--white-500);
+		--interactive-hover: var(--primary-230);
+		--interactive-muted: var(--primary-500);
+		--interactive-normal: var(--primary-330);
+	}
+	&:is(.theme-light, .theme-dark) {
+		--bg-surface-overlay: #{$rb-bg-tertiary};
+		--border-faint: rgba(255, 255, 255, 0.15);
+		--border-strong: rgba(255, 255, 255, 0.15);
+		--bg-surface-raised: #{$rb-bg-tertiary};
+	}
+}
 
-	// for light-theme user popouts
-	--border-strong: rgba(255, 255, 255, 0.18);
-	--bg-surface-raised: #{$rb-bg-tertiary};
-}
-.custom-profile-theme.theme-light {
-	--bg-surface-overlay: #{$rb-bg-tertiary};
-}
 
 ::selection { background-color: $rb-bg-accent !important; }

@@ -60,9 +60,6 @@
 .buttons_d0696b {
 	@extend %channelTextAreaButtons !optional;
 }
-.searchBar_e0840f {
-	@extend %librarySearchBar !optional;
-}
 .barButtonMain_cf58b5 {
 	@extend %jumpBarMainButton !optional;
 }
@@ -91,9 +88,6 @@
 // modal/popout
 .textAreaForUserProfile_d0696b {
 	@extend %userPopoutTextareaInput !optional;
-}
-.channelTextArea_d0696b {
-	@extend %userPopoutTextarea !optional;
 }
 .note_c90ad7 {
 	@extend %userModalNote !optional;

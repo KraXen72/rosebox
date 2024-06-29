@@ -94,7 +94,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 		background: $border-color !important;
 		color: var(--text-normal) !important;
 	}
-	%userPopoutTextarea {
+	%channelTextArea {
 		> %channelTextAreaScrollable {
 			border-radius: $up-br-inner;
 		}
