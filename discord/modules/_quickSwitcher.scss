@@ -1,11 +1,11 @@
-%quickSwitcher {
+%quickswitcher {
 	background: $rb-bg-primary;
-	%quickSwitcherInput { background-color: $rb-bg-tertiary; }
-	%quickSwitcherScroller {
+	%quickswitcherInput { background-color: $rb-bg-tertiary; }
+	%quickswitcherScroller {
 		max-height: 400px; 
 		margin-right: 0;
 		&::-webkit-scrollbar-thumb { background-color: $rb-bg-5; }
 		&::-webkit-scrollbar-track { background-color: $rb-bg-tertiary !important; } // !important is needed, discord uses it too
 	}
-	%quickSwitcherResult[aria-selected="true"] { background: $rb-bg-accent; }
+	%quickswitcherResult[aria-selected="true"] { background: $rb-bg-accent; }
 }

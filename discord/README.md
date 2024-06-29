@@ -49,7 +49,7 @@ https://kraxen72.github.io/rosebox/discord/dist/main.css
 3. recommended: install [Some Sass by Somewhat Stationery](https://marketplace.visualstudio.com/items?itemName=SomewhatStationery.some-sass) extension
 4. follow [steps on installing the userstyle](#3-usercss-userstyle-any-browser) (the local file part part)
 5. tick the `Live reload` box
-6. run the following commands: `cd scripts`, `pnpm i`, `pnpm dev`
+6. run the following commands: `cd scripts`, `pnpm i`, `pnpm dev` (node ^22 is required)
 
 the old version of this theme in vanilla css can be found [here](https://github.com/KraXen72/rosebox-discord)
 for questions contact `kraxen72` on Discord.

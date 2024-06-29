@@ -1,6 +1,6 @@
 {
   "name": "rosebox-discord-css",
-  "version": "3.16.2",
+  "version": "3.17.0",
   "description": "scripts for rosebox scss",
   "main": "watcher.js",
   "scripts": {
@@ -15,6 +15,6 @@
   "dependencies": {
     "chokidar": "^3.5.3",
     "colors": "^1.4.0",
-    "node-fetch": "^3.3.2"
+    "css-simple-parser": "^3.0.0"
   }
 }

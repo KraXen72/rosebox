@@ -1,25 +1,4 @@
 // thanks to https://syndishanx.github.io/Website/Update_Classes.html
-
-// quick switcher
-.wrapper_dc0b29.badge_f14193 {
-	@extend %quickSwitcherPingWrapper !optional;
-}
-.quickswitcher_f4e139 {
-	@extend %quickSwitcher !optional;
-}
-.input_f4e139 {
-	@extend %quickSwitcherInput !optional;
-}
-.scroller_f4e139 {
-	@extend %quickSwitcherScroller !optional;
-}
-.result_f14193 {
-	@extend %quickSwitcherResult !optional;
-}
-
-.header_f9a4c9 {
-	@extend %inviteModalHeader !optional;
-}
 .upsellButton_bb33d5 {
 	@extend %nitroUpsellButton !optional;
 }
@@ -88,9 +67,6 @@
 // modal/popout
 .textAreaForUserProfile_d0696b {
 	@extend %userPopoutTextareaInput !optional;
-}
-.note_c90ad7 {
-	@extend %userModalNote !optional;
 }
 .nickname_c9ccf6 {
 	@extend %userModalNickname !optional;
