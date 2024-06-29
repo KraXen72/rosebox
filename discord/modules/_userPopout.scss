@@ -138,6 +138,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 	}
 }
 
+// hide small line under banner
 %bitesizePopoutBanner, %bitesizePopoutBannerPremium {
 	&::before { display: none; }
 }
