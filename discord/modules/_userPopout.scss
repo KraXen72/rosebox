@@ -48,7 +48,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 	background: $border-color !important;
 	row-gap: 0;
 	&::before { background-color: transparent; }
-
+	
 	%bitesizePopoutHeader { 
 		background: $border-color; 
 	}
@@ -132,10 +132,15 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 	}
 }
 
+%bitesizePopoutBanner, %bitesizePopoutBannerPremium {
+	&::before { display: none; }
+}
+
 // bot userpopouts (old ones)
 %userPopoutOuter:not(%bitesizePopoutOuter) {
 	%userPopoutOverlayBackground {
 		margin: $up-spacing-thin;
 		margin-top: calc(#{$up-spacing-thin} + 1.5rem);
+		border-radius: $up-br-inner;
 	}
 }

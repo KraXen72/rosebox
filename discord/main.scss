@@ -79,7 +79,8 @@
 	--brand-experiment-200: var(--interactive-normal) !important; // reaction text
 	--control-brand-foreground: #{$rb-fg-accent} !important; // some accents
 }
-:is(%userPopoutOuter, .custom-profile-theme) {
+
+:is(%userPopoutOuter, %bitesizePopoutOuter.custom-profile-theme) {
 	&.theme-light {
 		--interactive-active: var(--white-500);
 		--interactive-hover: var(--primary-230);
