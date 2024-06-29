@@ -48,6 +48,12 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 	background: $border-color !important;
 	row-gap: 0;
 	&::before { background-color: transparent; }
+
+	// DMS disabled = empty footer = round body
+	&:has(%bitesizePopoutFooter:empty) { 
+		%bitesizePopoutBody { border-radius: $up-br-inner; }
+		%bitesizePopoutFooter { display: none; }
+	}
 	
 	%bitesizePopoutHeader { 
 		background: $border-color; 
