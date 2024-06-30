@@ -17,7 +17,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 	border-radius: 50px;
 	padding: 4px;
 }
-%rolePillBorder, %role { border: 1px solid $up-border-color; }
+%rolePillBorder, %role { border: 1px solid $border-color-faint !important; }
 %roleAddButton {
 	border-radius: 50px; 
 }
@@ -121,6 +121,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 	max-width: $up-desired-width !important;
 
 	// fix premium banners overflowing after width correction & add border-radius
+	%bitesizePopoutBanner,
 	%bitesizePopoutBannerPremium {
 		overflow: hidden;
 		max-width: calc(#{$up-desired-width} - 2*#{$up-spacing-thin});

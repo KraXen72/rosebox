@@ -89,8 +89,8 @@
 	}
 	&:is(.theme-light, .theme-dark) {
 		--bg-surface-overlay: #{$rb-bg-tertiary};
-		--border-faint: rgba(255, 255, 255, 0.15);
-		--border-strong: rgba(255, 255, 255, 0.15);
+		--border-faint: #{$border-color-faint};
+		--border-strong: #{$border-color-faint};
 		--bg-surface-raised: #{$rb-bg-tertiary};
 	}
 }
