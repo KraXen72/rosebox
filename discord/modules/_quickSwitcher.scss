@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 %quickswitcher {
 	background: $rb-bg-primary;
 	%quickswitcherInput { background-color: $rb-bg-tertiary; }

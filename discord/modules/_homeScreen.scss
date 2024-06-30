@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 %friendsColumn %friendsSearch { background-color: $rb-bg-5; }
 %friendsItem { border-top-color: transparent; }
 

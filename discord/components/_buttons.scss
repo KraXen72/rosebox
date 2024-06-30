@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 // buttons
 %buttonFilled, %buttonInverted {
 	background-color: $rb-fg-accent !important;

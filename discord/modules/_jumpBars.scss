@@ -1,3 +1,6 @@
+@use "../base/variables" as *;
+@use "../utils";
+
 $jump-bar-height: 26px;
 $jump-bar-gutter: 12px;
 
@@ -17,7 +20,7 @@ $jump-bar-gutter: 12px;
 }
 
 %newMessagesBar {
-	@include no-shadow;
+	@include utils.no-shadow;
 	height: $jump-bar-height;
 }
 

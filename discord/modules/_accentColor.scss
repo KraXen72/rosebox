@@ -1,4 +1,5 @@
 @use 'sass:color';
+@use "../base/variables" as *;
 
 %searchResultHighlight {
 	background-color: rgba($color: white, $alpha: 0.15) !important;

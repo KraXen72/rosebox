@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 //discord home button custom bg
 %guildChildWrapper {
 	background: $rb-bg-accent;

@@ -1,31 +1,31 @@
-@import 'base/fonts';
-@import 'base/variables';
-@import 'lib/mappings';
-@import 'lib/rbMappings';
+@use 'base/fonts';
+@use 'base/variables' as *;
+@use 'lib/mappings' as *;
+@use 'lib/rbMappings' as *;
 
-@import 'base/reset';
-@import 'utils';
+@use 'base/reset' as *;
+@use 'utils' as *;
 
-@import 'components/codeblocks';
-@import 'components/scrollbars';
-@import 'components/buttons';
+@use 'components/codeblocks' as *;
+@use 'components/scrollbars' as *;
+@use 'components/buttons' as *;
 
-@import 'layout/serverList.scss';
-@import 'layout/channelList.scss';
-@import 'layout/userAreaMsgInput';
-@import 'layout/floating';
-@import 'layout/layout';
+@use 'layout/serverList.scss' as *;
+@use 'layout/channelList.scss' as *;
+@use 'layout/userAreaMsgInput' as *;
+@use 'layout/floating' as *;
+@use 'layout/layout' as *;
 
-@import 'modules/homeScreen';
-@import 'modules/quickSwitcher';
-@import 'modules/serverBanner';
-@import 'modules/emojiPickers';
-@import 'modules/jumpBars';
-@import 'modules/accentColor';
-@import 'modules/userPopout';
-@import 'modules/settings';
+@use 'modules/homeScreen' as *;
+@use 'modules/quickSwitcher' as *;
+@use 'modules/serverBanner' as *;
+@use 'modules/emojiPickers' as *;
+@use 'modules/jumpBars' as *;
+@use 'modules/accentColor' as *;
+@use 'modules/userPopout' as *;
+@use 'modules/settings' as *;
 
-@import 'tweaks';
+@use 'tweaks' as *;
 
 // TODO switch over to @use from @import in scss => would require namespacing all the variables?
 // TODO once finalized, update rosebox colors in the readme 

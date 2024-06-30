@@ -1,8 +1,11 @@
+@use "../base/variables" as *;
+@use "../utils";
+
 // remove shadow
 %channelsHeader,
 %bannerAnimatedContainer,
 %privateChannelsSearchBar {
-	@include no-shadow;
+	@include utils.no-shadow;
 }
 
 %channelsSidebar,

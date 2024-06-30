@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 %messagesPopoutHeader,
 %searchHeader {
 	background-color: $rb-bg-tertiary;

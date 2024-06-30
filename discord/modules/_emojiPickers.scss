@@ -1,3 +1,6 @@
+@use "../base/variables" as *;
+@use "../utils";
+
 /*---------- EMOJI PICKERS ----------*/
 // 2020 - credit to emma🌺#0968 (customa creator) for the original code
 // 2022 - thanks katlyn for fixing this
@@ -14,7 +17,7 @@ $catlist-tr-y: 190px;
 /* remove nav*/
 %emojiPickerHeader,
 %gifPickerHeader {
-	@include no-shadow;
+	@include utils.no-shadow;
 	filter: none;
 	background-color: $rb-bg-secondary-d;
 }
