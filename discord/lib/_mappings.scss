@@ -444,6 +444,21 @@
 .inner_adcaac {
   @extend %connectionPanelInner !optional;
 }
+.wrapper_c721cc {
+  @extend %questPanel !optional;
+}
+.contentWrapperAccepted_c721cc {
+  @extend %questPanelAccepted !optional;
+}
+.contentWrapperExpanded_c721cc {
+  @extend %questPanelExpanded !optional;
+}
+.postEnrollmentBackground_c3427e {
+  @extend %questPanelAcceptedExpandedBackground !optional;
+}
+.questAcceptedContent_e23249 {
+  @extend %questPanelAcceptedExpandedContent !optional;
+}
 .connection_e2a436 {
   @extend %connections !optional;
 }
@@ -712,7 +727,7 @@
 .wrapper_cdfd51 {
   @extend %chatLoadingWrapper !optional;
 }
-.wrapper_b211c6 {
+.wrapper_b75bb9 {
   @extend %chatLoadingWrapperCozy !optional;
 }
 .uploadModalIn_f82cc7 {
@@ -727,19 +742,19 @@
 .inner_f82cc7 {
   @extend %uploadDropModalInner !optional;
 }
-.divider_fc5f50 {
+.divider_d5deea {
   @extend %divider !optional;
 }
-.isUnread_fc5f50 {
+.isUnread_c2654d {
   @extend %dividerUnread !optional;
 }
-.unreadPill_fc5f50 {
+.unreadPill_c2654d {
   @extend %unreadPill !optional;
 }
-.unreadPillCapStroke_fc5f50 {
+.unreadPillCapStroke_c2654d {
   @extend %unreadPillCapStroke !optional;
 }
-.content_fc5f50 {
+.content_c2654d {
   @extend %dividerDate !optional;
 }
 .header_b56bbc {
@@ -856,7 +871,7 @@
 .fakeLink_cdb578 {
   @extend %fakeLink !optional;
 }
-.operations_ed9386 {
+.operations_baf0d6 {
   @extend %operations !optional;
 }
 .wrapper_faf5ab {
@@ -1171,10 +1186,13 @@
 .path3_b6db20 {
   @extend %spinnerCirclePath3 !optional;
 }
+.spinner_eb1ca6 {
+  @extend %spinnerPulsingEllipsisPopout !optional;
+}
 .pulsingEllipsis_b6db20 {
   @extend %spinnerPulsingEllipsis !optional;
 }
-.pulsingEllipsis_b6db20 .item_b6db20 {
+.item_b6db20 {
   @extend %spinnerPulsingEllipsisItem !optional;
 }
 .container_cebd1c {
@@ -1896,7 +1914,7 @@ pre {
 .hljs {
   @extend %codeHLJS !optional;
 }
-.codeActions_d6076c {
+.codeActions_f8f345 {
   @extend %codeActions !optional;
 }
 .container_b558d0 {
@@ -2124,7 +2142,7 @@ pre {
 .message_d5deea {
   @extend %message !optional;
 }
-.wrapper_ec86aa {
+.wrapper_f9f2ca {
   @extend %messagesWrapper !optional;
 }
 .selected_d5deea {
@@ -2136,7 +2154,7 @@ pre {
 .cozyMessage_d5deea {
   @extend %messageCozy !optional;
 }
-.contents_ec86aa {
+.contents_f9f2ca {
   @extend %messageContent !optional;
 }
 .blockedSystemMessage_c09d0f {
@@ -2160,22 +2178,22 @@ pre {
 .blockedSystemMessage_c09d0f {
   @extend %messageBlockedSystemMessage !optional;
 }
-.header_ec86aa {
+.header_f9f2ca {
   @extend %messageHeader !optional;
 }
-.headerText_ec86aa {
+.headerText_f9f2ca {
   @extend %messageHeaderText !optional;
 }
-.username_ec86aa {
+.username_f9f2ca {
   @extend %messageUsername !optional;
 }
-.timestamp_ec86aa {
+.timestamp_f9f2ca {
   @extend %messageTimestamp !optional;
 }
-.timestamp_ec86aa.alt_ec86aa {
+.timestamp_f9f2ca.alt_f9f2ca {
   @extend %messageTimestampAlt !optional;
 }
-.messageContent_ec86aa {
+.messageContent_f9f2ca {
   @extend %messageContent !optional;
 }
 .container_e62b38 {
@@ -2187,28 +2205,28 @@ pre {
 .tile_ab47a1 {
   @extend %messageInvalidGift !optional;
 }
-.repliedMessage_ec86aa {
+.repliedMessage_f9f2ca {
   @extend %messageReplied !optional;
 }
-.repliedTextPreview_ec86aa {
+.repliedTextPreview_f9f2ca {
   @extend %messageRepliedTextPreview !optional;
 }
-.clickable_ec86aa {
+.clickable_f9f2ca {
   @extend %messageRepliedTextPreviewClickable !optional;
 }
-.repliedTextContent_ec86aa {
+.repliedTextContent_f9f2ca {
   @extend %messageRepliedTextContent !optional;
 }
-.repliedTextPlaceholder_ec86aa {
+.repliedTextPlaceholder_f9f2ca {
   @extend %messageRepliedTextPlaceholder !optional;
 }
-.executedCommand_ec86aa {
+.executedCommand_f9f2ca {
   @extend %messageRepliedExecutedCommand !optional;
 }
-.appLauncherOnboardingCommandName_ec86aa {
+.appLauncherOnboardingCommandName_f9f2ca {
   @extend %messageRepliedAppLauncherCommandName !optional;
 }
-.commandName_ec86aa {
+.commandName_f9f2ca {
   @extend %messageRepliedCommandName !optional;
 }
 .inlineMediaEmbed_ad0b71 {
@@ -2217,7 +2235,7 @@ pre {
 .spoilerMarkdownContent_a3d0f7 {
   @extend %messageSpoiler !optional;
 }
-.markup_d6076c {
+.markup_f8f345 {
   @extend %markup !optional;
 }
 .icon_e62b38 {
@@ -2247,7 +2265,7 @@ pre {
 .actionAnchor_e62b38 {
   @extend %anchorAction !optional;
 }
-.buttonContainer_ec86aa {
+.buttonContainer_f9f2ca {
   @extend %messageButtonContainer !optional;
 }
 .buttons_d5deea {
@@ -2277,25 +2295,25 @@ pre {
 .hidePermanently_ca33de {
   @extend %messagePublishPermanentHide !optional;
 }
-.embedCard_c6cefd {
+.embedCard_bc2461 {
   @extend %messageAutomodCard !optional;
 }
-.selected_bf4197 {
+.selected_bc2461 {
   @extend %messageAutomodCardSelected !optional;
 }
-.footerContainer_bf4197 {
+.footerContainer_bc2461 {
   @extend %messageAutomodFooterContainer !optional;
 }
-.footerAction_bf4197 {
+.footerAction_bc2461 {
   @extend %messageAutomodFooterAction !optional;
 }
-.footerIcon_bf4197 {
+.footerIcon_bc2461 {
   @extend %messageAutomodFooterIcon !optional;
 }
-.blockquoteContainer_d6076c {
+.blockquoteContainer_f8f345 {
   @extend %blockquoteContainer !optional;
 }
-.blockquoteDivider_d6076c {
+.blockquoteDivider_f8f345 {
   @extend %blockquoteDivider !optional;
 }
 .reactions_ec6b19 {
@@ -2521,7 +2539,7 @@ pre {
   @extend %userProfileDMOverlayBackground !optional;
 }
 .actionColor_fc39e7 {
-  @extend %userProfileActionColor !optional;
+  @extend %userModalActivityButton !optional;
 }
 .banner_c3e427 {
   @extend %userProfileBanner !optional;
@@ -2557,8 +2575,11 @@ pre {
 .profileCustomizationPreview_ab876d {
   @extend %userPopoutCustomizationPreview !optional;
 }
-.buttonColor_e36233 {
-  @extend %userPopoutButtonColor !optional;
+.activity_cd74cc {
+  @extend %userPopoutActivity !optional;
+}
+.buttonColor_cd74cc {
+  @extend %userPopoutActivityButton !optional;
 }
 .roles_fa2f72 {
   @extend %userPopoutRoles !optional;
@@ -2566,10 +2587,7 @@ pre {
 .note_c90ad7 {
   @extend %userPopoutNote !optional;
 }
-.messageInputContainer_f2c0a8 {
-  @extend %userPopoutMessageInputContainer !optional;
-}
-.menu_d4e7c2 {
+.menu_ad5fac {
   @extend %userPopoutMenu !optional;
 }
 .userProfileModalOuter_c69a7b {
@@ -3670,7 +3688,7 @@ pre {
 .avatar_e9f61e {
   @extend %avatarImage !optional;
 }
-.avatar_ec86aa {
+.avatar_f9f2ca {
   @extend %avatarLarge !optional;
 }
 .botTag_a02df3 {
@@ -3679,22 +3697,28 @@ pre {
 .botTagInvert_a02df3 {
   @extend %botTagInvert !optional;
 }
-.role_e4010c {
+.role_e4010c, //top is old profiles, bottom new profiles
+.role_f9575e {
   @extend %role !optional;
 }
-.roleCircle_a26d7b {
+.roleCircle_a26d7b,
+.roleCircle_f9575e {
   @extend %roleCircle !optional;
 }
-.roleRemoveIcon_e4010c {
+.roleRemoveIcon_e4010c,
+.roleRemoveIcon_f9575e {
   @extend %roleRemoveIcon !optional;
 }
-.roleRemoveButton_e4010c {
+.roleRemoveButton_e4010c,
+.roleRemoveButton_f9575e {
   @extend %roleRemoveButton !optional;
 }
-.roleName_e4010c {
+.roleName_e4010c,
+.roleName_f9575e {
   @extend %roleName !optional;
 }
-.addButton_e4010c {
+.addButton_e4010c,
+.button_edead5 {
   @extend %roleAddButton !optional;
 }
 .container_ac201b {
@@ -4326,10 +4350,10 @@ pre {
 .list_c6aa12 {
   @extend %threadModalList !optional;
 }
-.hasThread_ec86aa {
+.hasThread_f9f2ca {
   @extend %messageHasThread !optional;
 }
-.cozy_ec86aa {
+.cozy_f9f2ca {
   @extend %cozy !optional;
 }
 .emptyStateHeader_b767ed {

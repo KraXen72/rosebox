@@ -81,7 +81,8 @@
 	@extend %bannerSVGWrapper !optional;
 }
 .avatarDecoration_c51b4e, // profile
-.avatarDecoration_ec86aa  // chat
+.avatarDecoration_ec86aa,
+.avatarDecoration_f9f2ca  // chat
 {
 	@extend %avatarDecoration !optional;
 }
