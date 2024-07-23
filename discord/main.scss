@@ -69,6 +69,7 @@
 	--brand-500: #{$rb-fg-accent}; // checked checkboxes among other things
 	--brand-560: #{$rb-fg-accent}; // server context menu hover background
 	--brand-600: #{$rb-bg-accent-opaque}; // server context menu active background
+	--control-brand-foreground-new: #{$rb-fg-accent}; // spotify progress bar (vencord)
 	// discord's accent color alpha variants
 	--brand-10a: #{$rb-bg-accent25}; // hover on replying message
 	--brand-15a: #{$rb-bg-accent} !important; // reaction bg 
