@@ -393,6 +393,9 @@
 .panel_bf1a22 {
   @extend %panel !optional;
 }
+.title_b97bdb {
+  @extend %panelTitle !optional;
+}
 .button_adca65 {
   @extend %panelButton !optional;
 }
@@ -458,6 +461,9 @@
 }
 .questAcceptedContent_e23249 {
   @extend %questPanelAcceptedExpandedContent !optional;
+}
+.listeningAlong_d4626d {
+  @extend %listeningAlongPanel !optional;
 }
 .connection_e2a436 {
   @extend %connections !optional;
@@ -1308,6 +1314,9 @@
 }
 .scroller_fea3ef {
   @extend %guilds !optional;
+}
+.footer_aa1bff {
+  @extend %guildsFooter !optional;
 }
 .listItem_c96c45 {
   @extend %guild !optional;
@@ -2343,6 +2352,9 @@ pre {
 .keyboardShortcutsModal_ad95dc {
   @extend %keyboardShortcutsModal !optional;
 }
+.keybindGroup_ad95dc {
+  @extend %keybindGroup !optional;
+}
 .combo_c90023 {
   @extend %keybindCombo !optional;
 }
@@ -2501,6 +2513,9 @@ pre {
 }
 .activeIcon_e1268c {
   @extend %switchAccountsActive !optional;
+}
+.contentBackground_c5a065 {
+  @extend %botInviteModalContent !optional;
 }
 .authorize_c5a065 {
   @extend %authModal !optional;
@@ -2683,10 +2698,10 @@ pre {
 .sidebarContainer_a3a4ce {
   @extend %discoverCategory !optional;
 }
-.container_d808b0 {
+.categoryItem_c72b37 {
   @extend %discoverCategoryItem !optional;
 }
-.selected_d808b0 {
+.selectedCategoryItem_c72b37 {
   @extend %discoverCategoryItemSelected !optional;
 }
 .itemInner_c72b37 {
@@ -2802,6 +2817,9 @@ pre {
 }
 .searchBar_c6ee36 {
   @extend %emojiPickerSearchBar !optional;
+}
+.label_d1ac9b {
+  @extend %emojiPickerSuperReactionButton !optional;
 }
 .diversitySelectorOptions_cce80d {
   @extend %emojiPickerDiversitySelectorPopout !optional;
@@ -5351,11 +5369,23 @@ pre {
 .footer_fa823b {
   @extend %everyoneWarningFooter !optional;
 }
+.skuSelectModalHeader_f92df2 {
+  @extend %giftModalSelectTierHeader !optional;
+}
+.skuSelectModalContent_f92df2 {
+  @extend %giftModalSelectTier !optional;
+}
 .modalHeaderCustomGift_a27f2f {
   @extend %giftModalHeader !optional;
 }
+.customGiftBoxHighlighted_c4afc7 {
+  @extend %giftModalGiftBoxSelected !optional;
+}
+.selectedPlan_bd3462 {
+  @extend %giftModalPlanSelected !optional;
+}
 .iconBackground_e4d3f1 {
-  @extend %giftModalIconBackground !optional;
+  @extend %giftModalShopIcon !optional;
 }
 .spinner_b0f29a {
   @extend %giftModalSpinner !optional;
@@ -5572,4 +5602,13 @@ pre {
 }
 .container_c94b03 {
   @extend %clipInChatFooter !optional;
+}
+.integrationWrapper_e2a436 {
+  @extend %subEnabledServers !optional;
+}
+.header_c258fa {
+  @extend %freeBoost !optional;
+}
+.tile_b5b752 {
+  @extend %nitroTrial !optional;
 }

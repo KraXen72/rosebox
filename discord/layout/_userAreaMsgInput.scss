@@ -1,6 +1,7 @@
-// edit & message input
+// edit, message input, apps & commands button
 %autocomplete,
-%channelTextAreaScrollable { 
+%channelTextAreaScrollable,
+%appPopoutButton { 
 	border-radius: 0.5rem;
 	border: 1px solid $border-color-black;
 }

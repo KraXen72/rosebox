@@ -70,13 +70,15 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 	}
 
 	%bitesizePopoutBody,
+	%bitesizePopoutBody2,
 	%bitesizePopoutFooter {
 		background: $rb-bg-secondary;
 
 		padding-inline: $up-padding;
 		margin-inline: $up-spacing-thin;
 	}
-	%bitesizePopoutBody {
+	%bitesizePopoutBody,
+	%bitesizePopoutBody2 {
 		margin-top: $up-padding; // so status bubble doesen't touch body
 		padding-block: $up-padding;
 		border-top-left-radius: $up-br-inner;
@@ -85,6 +87,12 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 		[class^="text-sm"] {
 			color: var(--text-normal) !important;
 		}
+	}
+	%bitesizePopoutBody2 { // status picker body
+		overflow: unset !important;
+		border-radius: $up-br-inner;
+		padding-right: $up-padding !important;
+		padding-left: $up-padding !important;
 	}
 	%bitesizePopoutRpcCard {
 		background-color: $rb-bg-accent !important;
@@ -120,9 +128,8 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 	width: $up-desired-width !important;
 	max-width: $up-desired-width !important;
 
-	// fix premium banners overflowing after width correction & add border-radius
-	%bitesizePopoutBanner,
-	%bitesizePopoutBannerPremium {
+	// fix banners overflowing after width correction & add border-radius
+	%bitesizePopoutBanner {
 		overflow: hidden;
 		max-width: calc(#{$up-desired-width} - 2*#{$up-spacing-thin});
 		border-radius: $up-br-inner;
@@ -140,8 +147,9 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 }
 
 // hide small line under banner
-%bitesizePopoutBanner, %bitesizePopoutBannerPremium {
-	&::before { display: none; }
+%bitesizePopoutBanner::before { display: none !important; }
+%statusPickerSection {
+	border-radius: $up-br-inner;
 }
 
 // bot userpopouts (old ones)

@@ -97,42 +97,40 @@
 .biteSizeOuter_c69a7b {
 	@extend %bitesizePopoutOuter !optional;
 }
-.biteSizeInner_c69a7b { 
-	@extend %bitesizePopoutInner !optional;
-}
-.biteSizeBanner_c3e427 {
-	@extend %bitesizePopoutBanner !optional;
-}
-.biteSizeBannerPremium_c3e427 {
-	@extend %bitesizePopoutBannerPremium !optional;
-}
-.header_b07019 {
+.header_b8cc6d {
 	@extend %bitesizePopoutHeader !optional;
 }
-.body_b07019 {
+.banner_d5fdb1 {
+	@extend %bitesizePopoutBanner !optional;
+}
+.body_b8cc6d {
 	@extend %bitesizePopoutBody !optional;
 }
-.footer_b07019 {
+
+.footer_b8cc6d {
 	@extend %bitesizePopoutFooter !optional;
 }
-.inner_dc0b43 {
+.inner_c59af2 {
 	@extend %bitesizePopoutMessageInput !optional;
 }
-.container_e5a42d {
+.container_b64375 {
 	@extend %bitesizePopoutBadgeContainer !optional;
 }
-.activityBiteSizePopout_c1d9fd {
+.card_ae1fa2 {
 	@extend %bitesizePopoutRpcCard !optional;
 }
-.statusBubbleOuter_d0a252 {
-	@extend %bitesizeStatusBubbleOuter !optional;
+
+// stauspicker
+.body_ad5fac { // in status picker
+	@extend %bitesizePopoutBody2 !optional;
+}
+%bitesizePopoutBody2 .menuOverlay_ad5fac {
+	@extend %statusPickerSection !optional;
 }
 
 // new userpopout - role
 .role_f9575e { @extend %role !optional; }
-.roleRemoveButton_f9575e { @extend %roleRemoveButton !optional; }
 button.button_edead5, .showMoreButton_c83b44 { @extend %roleAddButton !optional; }
-.roleRemoveIcon_f9575e { @extend %roleRemoveIcon !optional; }
 
 // clan tags 
 .chipletContainerInline_d5cb59 {
