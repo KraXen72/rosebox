@@ -157,6 +157,12 @@
 .progressBarContainer_c75f85 {
   @extend %serverBoostProgressBar !optional;
 }
+.subscription_cf84f3 {
+  @extend %readyToBoostContainer !optional;
+}
+.tierPill_cf84f3 {
+  @extend %readyToBoostProgressPill !optional;
+}
 .containerDefault_a08117 {
   @extend %categoryContainerDefault !optional;
 }
@@ -1000,9 +1006,6 @@
 .lookOutlined_dd4f85 {
   @extend %buttonOutlined !optional;
 }
-.lookInverted_a299dc {
-  @extend %buttonInverted !optional;
-}
 .lookLink_dd4f85 {
   @extend %buttonLink !optional;
 }
@@ -1012,8 +1015,8 @@
 .colorBrand_dd4f85 {
   @extend %buttonColorBrand !optional;
 }
-.colorBrandNew__8872c {
-  @extend %buttonColorBrandNew !optional;
+.colorBrandInverted_dd4f85 {
+  @extend %buttonColorBrandInverted !optional;
 }
 .colorPrimary_dd4f85 {
   @extend %buttonColorPrimary !optional;
@@ -1029,9 +1032,6 @@
 }
 .colorLink_dd4f85 {
   @extend %buttonColorLink !optional;
-}
-.colorYellow__818c3 {
-  @extend %buttonColorYellow !optional;
 }
 .buttonColor_d4af21 {
   @extend %buttonCallInvite !optional;
@@ -1658,6 +1658,9 @@
 .gameIcon_f1629a {
   @extend %libraryTableGameIcon !optional;
 }
+.gameUpdates_f1035a {
+  @extend %libraryGameDownloadContainer !optional;
+}
 .nameCellInfo_f1629a {
   @extend %libraryTableNameCellInfo !optional;
 }
@@ -2214,6 +2217,9 @@ pre {
 .repliedMessage_f9f2ca {
   @extend %messageReplied !optional;
 }
+.repliedMessageSpine_f9f2ca {
+  @extend %messageRepliedSpine !optional;
+}
 .repliedTextPreview_f9f2ca {
   @extend %messageRepliedTextPreview !optional;
 }
@@ -2336,6 +2342,12 @@ pre {
 }
 .reactionCount_ec6b19 {
   @extend %reactionCount !optional;
+}
+.reactionBtn_ec6b19 {
+  @extend %reactionAdd !optional;
+}
+.forceShowLook_ec6b19 {
+  @extend %reactionAddForceShow !optional;
 }
 .spoilerMarkdownContent_aa9639 {
   @extend %spoilerMarkdownContent !optional;
@@ -2683,7 +2695,7 @@ pre {
 .searchBox_d83b4d {
   @extend %discoverSearchBox !optional;
 }
-.searchBoxInput_d83b4d{
+.searchBoxInput_d83b4d {
   @extend %discoverSearchBoxInput !optional;
 }
 .searchIcon_d83b4d {
@@ -2695,20 +2707,14 @@ pre {
 .searchPage_a3a4ce {
   @extend %discoverSearchPage !optional;
 }
-.sidebarContainer_a3a4ce {
+.container_e462a4 {
   @extend %discoverCategory !optional;
 }
-.categoryItem_c72b37 {
+.navItem_e462a4 {
   @extend %discoverCategoryItem !optional;
 }
-.selectedCategoryItem_c72b37 {
+.selected_e462a4 {
   @extend %discoverCategoryItemSelected !optional;
-}
-.itemInner_c72b37 {
-  @extend %discoverCategoryItemInner !optional;
-}
-.itemInner_f75d68 {
-  @extend %discoverCategoryQuestItemInner !optional;
 }
 .guildList_c8c448 {
   @extend %discoverGuildList !optional;
@@ -2719,13 +2725,13 @@ pre {
 .loaded_e90879 {
   @extend %discoverGuildCardLoaded !optional;
 }
-.card_e90879 {
+.card_e32e6f {
   @extend %discoverGuildCard !optional;
 }
 .container_f11cbf {
   @extend %discoverHubCard !optional;
 }
-.iconMask_e90879 {
+.iconMask_c73cee {
   @extend %discoverGuildCardIcon !optional;
 }
 .splash_e90879 {
@@ -2764,13 +2770,10 @@ pre {
 .backdrop_accde0 {
   @extend %discoverQuestHeaderBackdrop !optional;
 }
-.container_a56260 {
+.scroller_b91a2d {
   @extend %discoverQuest !optional;
 }
-.contentContainer_a56260 {
-  @extend %discoverQuestContent !optional;
-}
-.selected_bc4ee1 {
+.selected_a853ca {
   @extend %discoverQuestTabSelected !optional;
 }
 .container_a97111 {
@@ -3079,7 +3082,7 @@ pre {
 .hintValue_b0286e {
   @extend %searchPopoutHintValue !optional;
 }
-.calendarPicker_be05cd  {
+.calendarPicker_be05cd {
   @extend %calendarPicker !optional;
 }
 .react-datepicker {
@@ -3300,6 +3303,12 @@ pre {
 }
 .roleRow_a930f1 {
   @extend %guildSettingsRoleRow !optional;
+}
+.movedTable_dd2627 {
+  @extend %guildSettingsMembersMoved !optional;
+}
+.bannerContainer_cc2901 {
+  @extend %guildSettingsShowMembersInChannelList !optional;
 }
 .roleRowDisableHover_a930f1 {
   @extend %guildSettingsRoleRowDisabled !optional;
@@ -4074,6 +4083,9 @@ pre {
 .checkmark_f9902b {
   @extend %serverInviteTick !optional;
 }
+.default_a467ac {
+  @extend %serverInviteCancel !optional;
+}
 .textContainer_d8e2d0 {
   @extend %textContainer !optional;
 }
@@ -4232,6 +4244,12 @@ pre {
 }
 .emptyText_f02fcf {
   @extend %emptyActiveNowText !optional;
+}
+.wrapper_a18c91 {
+  @extend %promotedQuestActivity !optional;
+}
+.promotedTagBackground_a4a2b0 {
+  @extend %promotedQuestPill !optional;
 }
 .button_a24e84 {
   @extend %quickReactButton !optional;
@@ -4899,14 +4917,24 @@ pre {
 .intentsContainer_f6d180 {
   @extend %directoryAppIntentList !optional;
 }
+// No refresh
 .picker_cd703d {
   @extend %soundboard !optional;
 }
-.soundButton_f40049 {
+.soundButtonRefresh_f40049 {
   @extend %soundboardSound !optional;
 }
-.categoryIcon_ceda83.selected_ceda83 {
-  @extend %soundboardGuildSelected !optional;
+.soundNameRefresh_f40049 {
+  @extend %soundboardSoundName !optional;
+}
+.soundAddButtonRefresh_c06ee5 {
+  @extend %soundboardAdd !optional;
+}
+.soundAddTextRefresh_c06ee5 {
+  @extend %soundboardAddText !optional;
+}
+.secondaryButtonRefresh_f40049 {
+  @extend %soundboardSecondaryButton !optional;
 }
 .keybindHint_c66e5e {
   @extend %soundboardHint !optional;
@@ -5097,7 +5125,13 @@ pre {
   @extend %profileEffectDescriptionContainer !optional;
 }
 .shop_e77fa3 {
-  @extend %shop !optional;
+  @extend %shopAll !optional;
+}
+.shopAll_ebba41 {
+  @extend %popularPicksShopAll !optional;
+}
+.shop_ebba41 {
+  @extend %shopPreview !optional;
 }
 .shopScroll_e77fa3 {
   @extend %shopBackground !optional;
@@ -5417,7 +5451,7 @@ pre {
 .footer_cf5d0a {
   @extend %webhookFooter !optional;
 }
-.layer_cd0de5::after {
+.layer_cd0de5 {
   @extend %webhookBackground !optional;
 }
 .guildPopout_cf5d0a {
@@ -5536,9 +5570,6 @@ pre {
 }
 .elevatedPermission_f38b88 {
   @extend %modViewElevatedPermissionItem !optional;
-}
-.buttonWhite_b105e9 {
-  @extend %giftNitro !optional;
 }
 .shyButton_a25714 {
   @extend %shopNewPill !optional;
