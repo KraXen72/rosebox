@@ -5,6 +5,9 @@
 .addFriend_c2739c {
 	@extend %addFriendButton !optional;
 }
+.wrapper_a2f8f7 {
+	@extend %quickswitcherPing !optional;
+}
 
 // emoji picker stuff
 .wrapper_c6ee36 {
@@ -135,8 +138,4 @@ button.button_edead5, .showMoreButton_c83b44 { @extend %roleAddButton !optional;
 // clan tags 
 .chipletContainerInline_d5cb59 {
 	@extend %clanTag !optional;
-}
-
-.wrapper_a2f8f7 {
-	@extend %quickswitcherPing !optional;
 }
