@@ -123,7 +123,13 @@
 }
 
 #browser.linux #tabs-container {
-	font-family: system-ui, 'Noto Sans', Cantarell, sans-serif;
+	/* font-family: system-ui, 'Noto Sans', Cantarell, sans-serif; */
+	/* font-family: "Lexica Ultralegible", "Atkinson Hyperlegible", Helvetica, Arial, sans-serif; */
+	font-family: "Lexica Ultralegible", "Atkinson Hyperlegible", system-ui, 'Noto Sans', Cantarell, Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	font-weight: 400;
+	font-variant-numeric: slashed-zero;
+	font-variant-ligatures: no-common-ligatures;
 }
 /* #browser.linux,
 #browser.linux ~ div,
