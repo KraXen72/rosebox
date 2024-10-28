@@ -829,13 +829,13 @@
 .form_a7d72e {
   @extend %chatForm !optional;
 }
-.channelTextArea_d0696b {
+.channelTextArea_bdf0de {
   @extend %channelTextArea !optional;
 }
-.scrollableContainer_d0696b {
+.scrollableContainer_bdf0de {
   @extend %channelTextAreaScrollable !optional;
 }
-.inner_d0696b {
+.inner_bdf0de {
   @extend %channelTextAreaInner !optional;
 }
 .attachWrapper_f298d4 {
@@ -850,13 +850,13 @@
 .attachButtonPlus_f298d4 {
   @extend %channelTextAreaAttachButtonPlus !optional;
 }
-.textArea_d0696b {
+.textArea_bdf0de {
   @extend %textArea !optional;
 }
 .placeholder_a552a6 {
   @extend %textAreaPlaceholder !optional;
 }
-.textAreaSlate_d0696b {
+.textAreaSlate_bdf0de {
   @extend %slateTextArea !optional;
 }
 .button_f9af59 {
@@ -871,10 +871,10 @@
 .text_d7ebeb {
   @extend %channelTextAreaTypingText !optional;
 }
-.attachedBars_d0696b {
+.stackedBars_bdf0de {
   @extend %channelTextAreAttachedBar !optional;
 }
-.stackedAttachedBar_d0696b {
+.stackedAttachedBar_bdf0de {
   @extend %channelTextAreaStackedAttachedBar !optional;
 }
 .upload_df1eaf {
@@ -2788,7 +2788,7 @@ pre {
 .questName_c2d7e2 {
   @extend %discoverQuestItemName !optional;
 }
-.debugPanelStandalone_feab95 {
+.container_feab95 {
   @extend %connectionDebugPopout !optional;
 }
 .popoutText_c73c22 {
@@ -4917,9 +4917,11 @@ pre {
 .intentsContainer_f6d180 {
   @extend %directoryAppIntentList !optional;
 }
-// No refresh
 .picker_cd703d {
   @extend %soundboard !optional;
+}
+.refresh_cd703d {
+  @extend %refresh !optional;
 }
 .soundButtonRefresh_f40049 {
   @extend %soundboardSound !optional;

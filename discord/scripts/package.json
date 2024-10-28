@@ -1,6 +1,6 @@
 {
   "name": "rosebox-discord-css",
-  "version": "3.23.1",
+  "version": "3.24.0",
   "description": "scripts for rosebox scss",
   "main": "watcher.js",
   "scripts": {
