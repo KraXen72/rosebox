@@ -98,6 +98,24 @@
 			background-color: transparent;
 		}
 	}
+
+	/* custom kde plasma breeze window decorations*/
+	/* made by tweaking kde icons + tweaking the sizes & positioning */
+	.window-minimize path {
+		d: path("M 5.0000001,8.7941666 1e-7,3.7941667 0.5891668,3.205 5.0000001,7.6158332 9.4108334,3.205 9.9999999,3.7941667 Z");
+	}
+	.window-maximize {
+		.window-maximize-glyph path {
+			d: path("M 5.0000001,2.3 1e-7,7.2999999 0.5891668,7.8891666 5.0000001,3.4783334 9.4108334,7.8891666 9.9999999,7.2999999 Z");
+		}
+		.window-restore-glyph path {
+			d: path("M 5,0.25 0.25,5 5,9.75 9.75,5 Z M 5,1.1214805 8.8785196,5 5,8.8785196 1.1214805,5 Z");
+		}
+	}
+	.window-close path {
+		d: path("M 10,0.67307692 9.3269231,0 5,4.3269231 0.67307692,0 0,0.67307692 4.3269231,5 0,9.3269231 0.67307692,10 5,5.6730769 9.3269231,10 10,9.3269231 5.6730769,5");
+	}
+
 	button.window-minimize,
 	button.window-maximize {
 		&:hover::before {
@@ -126,11 +144,3 @@
 	/* font-variant-numeric: slashed-zero; */
 	/* font-variant-ligatures: no-common-ligatures; */
 }
-/* #browser.linux,
-#browser.linux ~ div,
-#browser.linux button,
-#browser.linux input,
-#browser.linux select,
-#browser.linux textarea {
-	font-family: system-ui, "Noto Sans", "Cantarell", sans-serif;
-} */
