@@ -55,18 +55,13 @@
 }
 
 /* workspace switcher css */
-.ToolbarButton-Button[title="Workspaces"],
-.button-toolbar.button-menu > button.ToolbarButton-Button[title="Workspaces"]:not(.button-textonly) {
-	padding: 0 3px !important;
-}
-.ToolbarButton-Button[title="Workspaces"] .button-icon {
-	margin: 0 3px 0 6px;
-}
-.ToolbarButton-Button[title="Workspaces"] .button-title {
-	padding-left: 6px;
-}
-.ToolbarButton-Button[title="Workspaces"] .button-toolbar-menu-indicator {
-	display: none;
+.button-toolbar.workspace-popup.tabbar-workspace-button {
+	.button-toolbar-menu-indicator { /* workspace-switcher: down-arrow */
+		display: none;
+	}
+	button[name="WorkspaceButton"] {
+		max-width: 30px !important;
+	}
 }
 
 /* linux fixes */
