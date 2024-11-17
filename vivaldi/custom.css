@@ -15,6 +15,11 @@
 #tabs-container .tab .favicon {
 	filter: grayscale(30%) !important;
 }
+/* fix the fluid corner before & after positioning*/
+.tabs-top .tab.active:not(.marked, .tab-mini, .tab-in-accordion):after,
+.tabs-top .tab.active:not(.marked, .tab-mini, .tab-in-accordion):before {
+	bottom: -1px;
+}
 
 .tab:not(.active) .tab-header .title {
 	color: var(--colorFg);
@@ -56,7 +61,8 @@
 
 /* workspace switcher css */
 .button-toolbar.workspace-popup.tabbar-workspace-button {
-	.button-toolbar-menu-indicator { /* workspace-switcher: down-arrow */
+	.button-toolbar-menu-indicator {
+		/* workspace-switcher: down-arrow */
 		display: none;
 	}
 	button[name="WorkspaceButton"] {
@@ -100,20 +106,25 @@
 	}
 
 	/* custom kde plasma breeze window decorations*/
-	/* made by tweaking kde icons + tweaking the sizes & positioning */
+	/* please trust me when i tell you not to worry about how long this took */
 	.window-minimize path {
 		d: path("M 5.0000001,8.7941666 1e-7,3.7941667 0.5891668,3.205 5.0000001,7.6158332 9.4108334,3.205 9.9999999,3.7941667 Z");
 	}
+	.window-close path {
+		d: path("M 10,0.67307692 9.3269231,0 5,4.3269231 0.67307692,0 0,0.67307692 4.3269231,5 0,9.3269231 0.67307692,10 5,5.6730769 9.3269231,10 10,9.3269231 5.6730769,5");
+	}
 	.window-maximize {
+		overflow: visible;
 		.window-maximize-glyph path {
 			d: path("M 5.0000001,2.3 1e-7,7.2999999 0.5891668,7.8891666 5.0000001,3.4783334 9.4108334,7.8891666 9.9999999,7.2999999 Z");
 		}
-		.window-restore-glyph path {
-			d: path("M 5,0.25 0.25,5 5,9.75 9.75,5 Z M 5,1.1214805 8.8785196,5 5,8.8785196 1.1214805,5 Z");
+		.window-restore-glyph {
+			transform-origin: 50% 50%;
+			transform: scale(1.125) !important;
+			path {
+				d: path("M 5.0000002,-1.2e-7 4.6898547,0.3092692 2e-8,4.9999999 5.0000002,10 10,4.9999999 Z m 0,0.73900012 L 9.261,5 5,9.161 0.639,5 Z");
+			}
 		}
-	}
-	.window-close path {
-		d: path("M 10,0.67307692 9.3269231,0 5,4.3269231 0.67307692,0 0,0.67307692 4.3269231,5 0,9.3269231 0.67307692,10 5,5.6730769 9.3269231,10 10,9.3269231 5.6730769,5");
 	}
 
 	button.window-minimize,
