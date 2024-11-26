@@ -54,19 +54,21 @@
 	height: 0px;
 }
 
+/* workspace switcher css */
+:is(.tabs-top, .tabs-bottom) 
+.button-toolbar.workspace-popup.tabbar-workspace-button {
+	button[name="WorkspaceButton"] {
+		max-width: 30px !important;
+	}
+}
+
 #app .button-toolbar.workspace-popup button[title="Workspaces"] {
 	padding-left: 4px !important;
 	padding-right: 4px !important;
-}
-
-/* workspace switcher css */
-.button-toolbar.workspace-popup.tabbar-workspace-button {
+	
+	/* workspace-switcher: down-arrow */
 	.button-toolbar-menu-indicator {
-		/* workspace-switcher: down-arrow */
 		display: none;
-	}
-	button[name="WorkspaceButton"] {
-		max-width: 30px !important;
 	}
 }
 
