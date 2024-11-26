@@ -1,0 +1,135 @@
+/*
+ v *ersion: 1.0.5
+ variant: Auto Hide Tabbar
+ update: 2024.11.03
+ vivaldi version: v7.0
+
+ modified from VivalArc by KraXen72
+ */
+/* AutoHide Tabbar by @Zettry*/
+
+:root{
+    --window-border:4px; /* window border, recommend 4px~16px */
+    --addressbar-height:36px;
+    --tab-padding:calc(var(--window-border) / 2);
+    --colorToviTransparent:transparent;
+    --webview-shadow-light:0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 0px var(--window-border) 0px rgba(0, 0, 0, 0.10);
+    --webview-shadow-dark:0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 2px 8px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 1.2px #ffffff18;
+
+    --tabbar-size: 32px;
+    --tabbar-anim-duration: 40ms;
+}
+
+/*tabbarButton*/
+/* #browser:not(.tabs-top):not(.tabs-bottom) .toolbar-tabbar>.button-toolbar>button{
+ *   opacity:0.4;
+ } *
+
+ #browser:not(.tabs-top):not(.tabs-bottom) .toolbar-tabbar>.button-toolbar>button:hover{
+ opacity:0.8;
+ } */
+
+/*tabbar left & tabbar right*/
+
+/* #browser #tabs-tabbar-container.left  ::-webkit-scrollbar,
+ # *browser #tabs-tabbar-container.right  ::-webkit-scrollbar{
+display: none;
+} */
+
+/*rounded webview*/
+/* #main, #main > .inner{
+ *   overflow:visible;
+ } *
+ #browser:not(.tabs-top):not(.tabs-bottom):not(.fullscreen) #webpage-stack{
+ border-radius:var(--radiusCap);
+ }
+
+ #browser:not(.tabs-top):not(.tabs-bottom):not(.fullscreen).theme-light #webpage-stack{
+ box-shadow: var(--webview-shadow-light);
+ }
+ #browser:not(.tabs-top):not(.tabs-bottom):not(.fullscreen).theme-dark #webpage-stack{
+ box-shadow: var(--webview-shadow-dark);
+ }
+
+ #browser:not(.tabs-top):not(.tabs-bottom):not(.fullscreen) #webpage-stack:has(.tiled .visible),
+ #browser:not(.tabs-top):not(.tabs-bottom):not(.fullscreen) #webpage-stack:has(.mosaic .visible){
+ box-shadow: none;
+ } */
+
+/* workspace switcher button */
+.inner .button-toolbar.workspace-popup.tabbar-workspace-button.button-menu {
+    :is(.button-icon:not(.override), .button-toolbar-menu-indicator) {
+        position: absolute;
+        left: 5px;
+    }
+    .button-title {
+        position: absolute;
+        left: calc(var(--tabbar-size) + var(--densityGap)) !important;
+    }
+}
+
+/* tabbar container */
+.inner > .tabbar-wrapper,
+.inner > .tabbar-wrapper > .tabbar-wrapper {
+    will-change: width;
+    transition: width var(--tabbar-anim-duration);
+}
+
+.inner > :is(
+    .tabbar-wrapper,
+    .tabbar-wrapper > .tabbar-wrapper,
+) {
+    :is(
+        #tabs-tabbar-container,
+        #tabs-tabbar-container .resize,
+        .button-toolbar.workspace-popup.tabbar-workspace-button
+    ) {
+        will-change: width;
+        transition: width var(--tabbar-anim-duration) !important;
+
+        /* z-index: 1; */
+        /* left: 0; */
+    }
+
+    &:not(:hover) :is(
+        #tabs-tabbar-container,
+        #tabs-tabbar-container .resize,
+        .button-toolbar.workspace-popup.tabbar-workspace-button
+    ) {
+        width: calc(var(--tabbar-size) + var(--densityGap)) !important;
+        /* background: green !important;
+         *       border: 1px solid green; */
+    }
+
+    /* &:hover :is(
+     *       #tabs-tabbar-container,
+     *       #tabs-tabbar-container .resize,
+     *       .button-toolbar.workspace-popup.tabbar-workspace-button
+     *   ) {
+     *       background: red !important;
+     *       border: 1px solid red;
+} */
+}
+
+.tabbar-wrapper .tab-strip {
+    -webkit-app-region: unset !important;
+}
+
+.inner > .tabbar-wrapper {
+    position: relative;
+    width: calc(var(--tabbar-size) + var(--densityGap));
+    box-sizing: border-box;
+    z-index: 1;
+
+}
+
+.inner > .tabbar-wrapper > .tabbar-wrapper {
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+}
+
+#browser.linux:not(.is-settingspage):not(.tabs-top):not(.tabs-bottom) .window-buttongroup{
+    right: calc(1px / var(--uiZoomLevel));
+    top: calc(1px / var(--uiZoomLevel));
+}

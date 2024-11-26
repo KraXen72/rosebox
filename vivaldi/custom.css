@@ -37,9 +37,9 @@
 	.button-toolbar.profile-popup {
 		margin-right: 12px;
 	}
-	#tabs-container .tab-strip {
+	/* #tabs-container .tab-strip {
 		-webkit-app-region: drag;
-	}
+	} */
 
 	&.maximized {
 		.toolbar:has(.window-buttongroup.on-mainbar) {
