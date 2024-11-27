@@ -120,16 +120,8 @@ display: none;
 } */
 }
 
-:is(.tabbar-wrapper, .tabbar-wrapper .tab-strip, 
-#tabs-tabbar-container .resize,
-#tabs-tabbar-container, #tabs-container):not(:hover) {
-	&::-webkit-scrollbar,
-	&::-webkit-scrollbar-track,
-	&::-webkit-scrollbar-thumb {
-		display: none !important;
-	}
-}
 
+/* scrollbar */
 .tabbar-wrapper, .tabbar-wrapper .tab-strip, 
 #tabs-tabbar-container .resize,
 #tabs-tabbar-container, #tabs-container {
@@ -137,7 +129,7 @@ display: none;
 	--autotab-sb-thumb-color: #6baf8d;
     --autotab-sb-thumb-color: var(--colorHighlightBgDark);
 	--autotab-sb-size: 8px;
-
+	
     -webkit-app-region: unset !important;
     
 	&::-webkit-scrollbar {
@@ -159,6 +151,17 @@ display: none;
 	}
 }
 
+/* hide scrollbar unless hovered */
+:is(.tabbar-wrapper, .tabbar-wrapper .tab-strip, 
+#tabs-tabbar-container .resize,
+#tabs-tabbar-container, #tabs-container):not(:hover) {
+	&::-webkit-scrollbar,
+	&::-webkit-scrollbar-track,
+	&::-webkit-scrollbar-thumb {
+		display: none !important;
+	}
+}
+
 :is(.tabs-left, .tabs-right) .inner > .tabbar-wrapper {
     position: relative;
     width: calc(var(--tabbar-size) + var(--densityGap));
@@ -177,4 +180,8 @@ display: none;
     right: calc(1px / var(--uiZoomLevel)) !important;
     top: calc(1px / var(--uiZoomLevel)) !important;
 	opacity: 1;
+}
+
+.tabs-left .tab-strip:not(.overflow) .button-toolbar.newtab {
+    left: 1px !important;
 }
