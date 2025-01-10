@@ -148,6 +148,14 @@
 	}
 }
 
+/* fix blurry tabs until vivaldi-stable 7.1 */
+#tabs-container .tab .title {
+    /* -webkit-font-smoothing: antialiased; */
+    /* text-rendering: optimizeLegibility; */
+    backface-visibility: hidden;
+    /* transform: translateZ(0); */
+}
+
 #browser.linux #tabs-container {
 	font-family: system-ui, 'Noto Sans', Cantarell, sans-serif;
 	/* font-family: "Lexica Ultralegible", "Atkinson Hyperlegible", Helvetica, Arial, sans-serif; */
@@ -156,4 +164,8 @@
 	font-weight: 400;
 	/* font-variant-numeric: slashed-zero; */
 	/* font-variant-ligatures: no-common-ligatures; */
+}
+
+.UrlFragment-Wrapper, .UrlBar-UrlField, #urlFieldInput {
+	font-size: 13.5px
 }
