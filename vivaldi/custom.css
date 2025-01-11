@@ -169,3 +169,6 @@
 .UrlFragment-Wrapper, .UrlBar-UrlField, #urlFieldInput {
 	font-size: 13.5px
 }
+.UrlBar-UrlField, #urlFieldInput {
+	height: min-content;
+}
