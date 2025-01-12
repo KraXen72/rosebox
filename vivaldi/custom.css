@@ -170,5 +170,6 @@
 	font-size: 13.5px
 }
 .UrlBar-UrlField, #urlFieldInput {
-	height: min-content;
+    height: min-content !important;
+    line-height: 1.35;
 }
