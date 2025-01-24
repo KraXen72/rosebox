@@ -155,10 +155,6 @@
     height: unset !important;
     line-height: 1.3 !important;
 
-	backface-visibility: hidden !important;
-	will-change: contents;
-	text-rendering: auto;
-
 	/* just in case */
 	mask-image: -webkit-linear-gradient(180deg, transparent 0, #fff 12px) !important;
 	mask-position: top right !important;
@@ -177,7 +173,9 @@
 	/* font-variant-ligatures: no-common-ligatures; */
 }
 
-.UrlFragment-Wrapper, .UrlBar-UrlField, #urlFieldInput {
+/* slightly larger text in url input / display (for laptop) */
+.UrlFragment-Wrapper, .UrlBar-UrlField, 
+#urlFieldInput {
 	font-size: 13.5px
 }
 .UrlBar-UrlField, #urlFieldInput {
