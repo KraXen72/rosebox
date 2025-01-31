@@ -23,6 +23,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 }
 %roleRemoveButton { position: static; }
 %role %roleCircle:not([class*="popoutRoleCircle-"]) {
+	margin: 0px 4px 0px 0px;
 	&::after {
 		content: "";
 		inset: 0;
@@ -32,7 +33,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 	}
 }
 // normalize old margins with new ones
-%role > %roleRemoveButton > %roleCircle { margin: 0px 4px 0px 1px; }
+%role > %roleRemoveButton > %roleCircle { margin: 0px 4px 0px 0px; }
 %roleRemoveIcon { left: 11px; }
 
 // userPopout attempt 3 or 4 idk
@@ -63,7 +64,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 			fill: transparent;
 		} 
 	}
-	%bitesizePopoutBadgeContainer {
+	%userProfileBadgeList {
 		background-color: $border-color;
 		border-color: $border-color;
 		padding: 2px;
@@ -104,7 +105,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 		border-bottom-left-radius: $up-br-inner;
 		border-bottom-right-radius: $up-br-inner;
 	}
-	%bitesizePopoutMessageInput {
+	%userProfileMessage {
 		background: $border-color !important;
 		color: var(--text-normal) !important;
 	}
@@ -129,7 +130,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 	max-width: $up-desired-width !important;
 
 	// fix banners overflowing after width correction & add border-radius
-	%bitesizePopoutBanner {
+	%userProfileBanner {
 		overflow: hidden;
 		max-width: calc(#{$up-desired-width} - 2*#{$up-spacing-thin});
 		border-radius: $up-br-inner;
@@ -147,7 +148,7 @@ $up-br-inner: calc($up-br-outer - $up-spacing-thin);
 }
 
 // hide small line under banner
-%bitesizePopoutBanner::before { display: none !important; }
+%userProfileBanner::before { display: none !important; }
 %statusPickerSection {
 	border-radius: $up-br-inner;
 }

@@ -20,7 +20,7 @@
     --webview-shadow-light: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 0px var(--window-border) 0px rgba(0, 0, 0, 0.10);
     --webview-shadow-dark: 0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 2px 8px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 1.2px #ffffff18;
 
-    --tabbar-size: 32px; /* 32px */
+    --tabbar-size: 64px; /* 32px */
     --tabbar-anim-duration: 0ms;
 }
 
@@ -65,7 +65,7 @@ display: none;
 	.button-toolbar-menu-indicator { display: none; }
     .button-icon:not(.override) {
         position: absolute;
-        left: 5px;
+        left: 3px;
     }
 	.button-icon.override {
 		position: absolute;
@@ -87,20 +87,12 @@ display: none;
 		transition: width var(--tabbar-anim-duration);
 	}
 
-	/* different workspace playing audio */
-	span.button-icon.audio {
-		box-sizing: border-box;
-		left: 12px !important;
-		bottom: 2px;
-	
-		background: var(--colorBg);
-		border-radius: 100%;
-	}
-	span.button-icon.audio > canvas {
-		transform: scale(0.5) translateX(4px);
+	.overflow.tab-strip {
+		min-width: unset !important;
 	}
 }	
 
+/* width changing on hover */
 .tabs-left .inner > :is(
     .tabbar-wrapper,
     .tabbar-wrapper > .tabbar-wrapper,
@@ -121,6 +113,14 @@ display: none;
     ) {
         width: calc(var(--tabbar-size) + var(--densityGap)) !important;
     }
+}
+
+/* tab fixes */
+.tabs-left {
+	.tab .tab-header {
+		padding-left: 6px !important;
+		border-left-width: 1px !important;
+	}
 }
 
 
@@ -184,6 +184,7 @@ display: none;
 	opacity: 1;
 }
 
-.tabs-left .tab-strip:not(.overflow) .button-toolbar.newtab {
+.tabs-left .tab-strip:not(.overflow) 
+.button-toolbar.newtab {
     left: 1px !important;
 }

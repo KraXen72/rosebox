@@ -1,60 +1,60 @@
 // thanks to https://syndishanx.github.io/Website/Update_Classes.html
-.upsellButton_bb33d5 {
+.upsellButton_c0eeaa {
 	@extend %nitroUpsellButton !optional;
 }
-.addFriend_c2739c {
+.addFriend__133bf {
 	@extend %addFriendButton !optional;
 }
-.wrapper_a2f8f7 {
+.wrapper__8b9fc {
 	@extend %quickswitcherPing !optional;
 }
 
 // emoji picker stuff
-.wrapper_c6ee36 {
+.wrapper_c0e32c {
 	@extend %reactionEmojiPickerContentWrapper !optional;
 }
-.nav_af5dbb, .nav__2aafa { // normal, reaction
+.nav__08434, .nav__2aafa { // normal, reaction
 	@extend %emojiPickerNav !optional;
 }
-.navList_af5dbb, .navList__8438b { // normal, reaction
+.navList__08434, .navList__8438b { // normal, reaction
 	@extend %emojiPickerNavList !optional;
 }
-.inner_effbe2 { // also %groupInvitePopoutSearchBarInner
+.inner_fea832 { // also %groupInvitePopoutSearchBarInner
 	@extend %emojiPickerSearchBarInner !optional;
 }
-.positionContainerOnlyEmoji_af5dbb {
+.positionContainerOnlyEmoji__08434 {
 	@extend %editEmojiPickerContainer !optional;
 }
-.emoji_f48b14 {
+.emoji__045fa {
 	@extend %emojiPreview !optional;
 }
-.resizeHandle_af5dbb {
+.resizeHandle__08434 {
 	@extend %emojiPickerResizeHandle !optional;
 }
-.emojiListRowMediumSize_fbfedd {
+.emojiListRowMediumSize_fc7141 {
 	@extend %emojiPickerRowMedium !optional;
 }
-.diversitySelector_c6ee36 {
+.diversitySelector_c0e32c {
 	@extend %emojiPickerSkintoneButton !optional;
 }
 
 
-.buttons_d0696b {
+.buttons__74017 {
 	@extend %channelTextAreaButtons !optional;
 }
-.barButtonMain_cf58b5 {
+.barButtonMain__0f481 {
 	@extend %jumpBarMainButton !optional;
 }
-.barButtonAlt_cf58b5 {
+.barButtonAlt__0f481 {
 	@extend %jumpBarAltButton !optional;
 }
-.clipContainer_b11c5e {
+.clipContainer__841c8 {
 	@extend %replyBarClipContainer !optional;
 }
-.content_e62b38 a {
+.content__235ca a {
 	@extend %systemMessageUsernameAnchor !optional;
 }
-.communityInfoContainer_fd6364 {
+.communityInfoContainer_f37cb1 {
 	@extend %serverHeaderPublicPill !optional;
 }
 .cardPrimary_cb7a0e {
@@ -63,18 +63,18 @@
 .rolePillBorder_fa2f72 {
 	@extend %rolePillBorder !optional;
 }
-.timestamp_d6076c {
+.timestamp__75297 {
 	@extend %markdownTimestamp !optional;
 }
 
 // modal/popout
-.textAreaForUserProfile_d0696b {
+.textAreaForUserProfile__74017 {
 	@extend %userPopoutTextareaInput !optional;
 }
 .nickname_c9ccf6 {
 	@extend %userModalNickname !optional;
 }
-.profileEffects_f867f9 {
+.profileEffects__01370 {
 	@extend %profileEffects !optional;
 }
 .avatarWrapper_f89da9 {
@@ -83,9 +83,9 @@
 .bannerSVGWrapper_b32cc2 {
 	@extend %bannerSVGWrapper !optional;
 }
-.avatarDecoration_c51b4e, // profile
-.avatarDecoration_ec86aa,
-.avatarDecoration_f9f2ca  // chat
+.avatarDecoration__44b0c, // profile
+.avatarDecoration_c19a55,
+.avatarDecoration_c19a55  // chat
 {
 	@extend %avatarDecoration !optional;
 }
@@ -100,42 +100,35 @@
 .biteSizeOuter_c69a7b {
 	@extend %bitesizePopoutOuter !optional;
 }
-.header_b8cc6d {
+.header__5be3e {
 	@extend %bitesizePopoutHeader !optional;
 }
-.banner_d5fdb1 {
-	@extend %bitesizePopoutBanner !optional;
-}
-.body_b8cc6d {
+.body__5be3e {
 	@extend %bitesizePopoutBody !optional;
 }
 
-.footer_b8cc6d {
+.footer__5be3e {
 	@extend %bitesizePopoutFooter !optional;
 }
-.inner_c59af2 {
-	@extend %bitesizePopoutMessageInput !optional;
-}
-.container_b64375 {
+.container__8061a {
 	@extend %bitesizePopoutBadgeContainer !optional;
 }
-.card_ae1fa2 {
+.card__39ec2 {
 	@extend %bitesizePopoutRpcCard !optional;
 }
 
 // stauspicker
-.body_ad5fac { // in status picker
+.body_af7fb7 { // in status picker
 	@extend %bitesizePopoutBody2 !optional;
 }
-%bitesizePopoutBody2 .menuOverlay_ad5fac {
+%bitesizePopoutBody2 .menuOverlay_af7fb7 {
 	@extend %statusPickerSection !optional;
 }
 
 // new userpopout - role
-.role_f9575e { @extend %role !optional; }
-button.button_edead5, .showMoreButton_c83b44 { @extend %roleAddButton !optional; }
+button.button__7d7f7, .showMoreButton_c83b44 { @extend %roleAddButton !optional; }
 
 // clan tags 
-.chipletContainerInline_d5cb59 {
+.chipletContainerInline__4a25c {
 	@extend %clanTag !optional;
 }

@@ -72,7 +72,32 @@
 	}
 }
 
+.button-popup::before {
+	filter: none;
+}
+
+/* different workspace playing audio */
+span.button-icon.audio {
+	position: absolute;
+	/* box-sizing: border-box; */
+	left: 8px !important;
+	bottom: 2px;
+	height:20px !important;
+	width: 20px !important;
+	padding: 0 !important;
+
+	background: var(--colorBg);
+	border-radius: 100%;
+}
+span.button-icon.audio > canvas {
+	transform: scale(0.45) translateX(4px);
+}
+
 /* linux fixes */
+#browser.linux.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar) {
+    min-height: calc(32px / var(--uiZoomLevel));
+}
+
 #browser.linux .window-buttongroup {
 	height: 100%;
 	top: 0;
