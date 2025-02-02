@@ -20,7 +20,7 @@
     --webview-shadow-light: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 0px var(--window-border) 0px rgba(0, 0, 0, 0.10);
     --webview-shadow-dark: 0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 2px 8px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 1.2px #ffffff18;
 
-    --tabbar-size: 64px; /* 32px */
+    --tabbar-size: 32px; /* 32px */
     --tabbar-anim-duration: 0ms;
 }
 
