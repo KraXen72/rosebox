@@ -182,7 +182,7 @@ span.button-icon.audio > canvas {
 
 	/* just in case */
 	mask-image: -webkit-linear-gradient(180deg, transparent 0, #fff 12px) !important;
-	mask-position: top right !important;
+	/* mask-position: top right !important; */
 }
 .tab-position {
 	will-change: auto;

@@ -61,7 +61,7 @@ display: none;
  } */
 
 /* workspace switcher button */
-.tabs-left .inner .button-toolbar.workspace-popup.tabbar-workspace-button.button-menu {
+.tabs-right .inner .button-toolbar.workspace-popup.tabbar-workspace-button.button-menu {
 	.button-toolbar-menu-indicator { display: none; }
     .button-icon:not(.override) {
         position: absolute;
@@ -79,7 +79,7 @@ display: none;
 }
 
 
-.tabs-left {
+.tabs-right {
 	/* tabbar container */
 	.inner > .tabbar-wrapper,
 	.inner > .tabbar-wrapper > .tabbar-wrapper {
@@ -93,7 +93,7 @@ display: none;
 }	
 
 /* width changing on hover */
-.tabs-left .inner > :is(
+.tabs-right .inner > :is(
     .tabbar-wrapper,
     .tabbar-wrapper > .tabbar-wrapper,
 ) {
@@ -116,7 +116,7 @@ display: none;
 }
 
 /* tab fixes */
-.tabs-left {
+.tabs-right {
 	.tab .tab-header {
 		padding-left: 6px !important;
 		border-left-width: 1px !important;
@@ -165,14 +165,14 @@ display: none;
 	}
 }
 
-.tabs-left .inner > .tabbar-wrapper {
+.tabs-right .inner > .tabbar-wrapper {
     position: relative;
     width: calc(var(--tabbar-size) + var(--densityGap));
     box-sizing: border-box;
     z-index: 1;
 }
 
-.tabs-left .inner > .tabbar-wrapper > .tabbar-wrapper {
+.tabs-right .inner > .tabbar-wrapper > .tabbar-wrapper {
     box-sizing: border-box;
     position: absolute;
     overflow: hidden;
@@ -184,7 +184,7 @@ display: none;
 	opacity: 1;
 }
 
-.tabs-left .tab-strip:not(.overflow) 
+.tabs-right .tab-strip:not(.overflow) 
 .button-toolbar.newtab {
     left: 1px !important;
 }
