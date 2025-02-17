@@ -13,15 +13,15 @@
 /* TODO a tiny bit of padding around tabs */
 
 :root{
-    --window-border:4px; /* window border, recommend 4px~16px */
-    --addressbar-height:36px;
-    --tab-padding:calc(var(--window-border) / 2);
-    --colorToviTransparent:transparent;
-    --webview-shadow-light: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 0px var(--window-border) 0px rgba(0, 0, 0, 0.10);
-    --webview-shadow-dark: 0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 2px 8px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 1.2px #ffffff18;
+	--window-border:4px; /* window border, recommend 4px~16px */
+	--addressbar-height:36px;
+	--tab-padding:calc(var(--window-border) / 2);
+	--colorToviTransparent:transparent;
+	--webview-shadow-light: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 0px var(--window-border) 0px rgba(0, 0, 0, 0.10);
+	--webview-shadow-dark: 0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 2px 8px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 1.2px #ffffff18;
 
-    --tabbar-size: 32px; /* 32px */
-    --tabbar-anim-duration: 0ms;
+	--tabbar-size: 32px; /* 32px */
+	--tabbar-anim-duration: 0ms;
 }
 
 /*tabbarButton*/
@@ -61,25 +61,25 @@ display: none;
  } */
 
 /* workspace switcher button */
-.tabs-right .inner .button-toolbar.workspace-popup.tabbar-workspace-button.button-menu {
+.tabs-left .inner .button-toolbar.workspace-popup.tabbar-workspace-button.button-menu {
 	.button-toolbar-menu-indicator { display: none; }
-    .button-icon:not(.override) {
-        position: absolute;
-        left: 3px;
-    }
+	.button-icon:not(.override) {
+		position: absolute;
+		left: 3px;
+	}
 	.button-icon.override {
 		position: absolute;
 		left: 2px;
 	}
-    .button-title {
-        position: relative;
+	.button-title {
+		position: relative;
 		top: 2px;
-        left: calc(var(--tabbar-size) + var(--densityGap)) !important;
-    }
+		left: calc(var(--tabbar-size) + var(--densityGap)) !important;
+	}
 }
 
 
-.tabs-right {
+.tabs-left {
 	/* tabbar container */
 	.inner > .tabbar-wrapper,
 	.inner > .tabbar-wrapper > .tabbar-wrapper {
@@ -93,30 +93,30 @@ display: none;
 }	
 
 /* width changing on hover */
-.tabs-right .inner > :is(
-    .tabbar-wrapper,
-    .tabbar-wrapper > .tabbar-wrapper,
+.tabs-left .inner > :is(
+	.tabbar-wrapper,
+	.tabbar-wrapper > .tabbar-wrapper,
 ) {
-    :is(
-        #tabs-tabbar-container,
-        #tabs-tabbar-container .resize,
-        .button-toolbar.workspace-popup.tabbar-workspace-button
-    ) {
-        will-change: width;
-        transition: width var(--tabbar-anim-duration) !important;
-    }
+	:is(
+		#tabs-tabbar-container,
+		#tabs-tabbar-container .resize,
+		.button-toolbar.workspace-popup.tabbar-workspace-button
+	) {
+		will-change: width;
+		transition: width var(--tabbar-anim-duration) !important;
+	}
 
-    &:not(:hover) :is(
-        #tabs-tabbar-container,
-        #tabs-tabbar-container .resize,
-        .button-toolbar.workspace-popup.tabbar-workspace-button
-    ) {
-        width: calc(var(--tabbar-size) + var(--densityGap)) !important;
-    }
+	&:not(:hover) :is(
+		#tabs-tabbar-container,
+		#tabs-tabbar-container .resize,
+		.button-toolbar.workspace-popup.tabbar-workspace-button
+	) {
+		width: calc(var(--tabbar-size) + var(--densityGap)) !important;
+	}
 }
 
 /* tab fixes */
-.tabs-right {
+.tabs-left {
 	.tab .tab-header {
 		padding-left: 6px !important;
 		border-left-width: 1px !important;
@@ -130,11 +130,11 @@ display: none;
 #tabs-tabbar-container, #tabs-container {
 	--autotab-sb-track-color: var(--colorTabBar, transparent);
 	--autotab-sb-thumb-color: #6baf8d;
-    --autotab-sb-thumb-color: var(--colorHighlightBgDark);
+	--autotab-sb-thumb-color: var(--colorHighlightBgDark);
 	--autotab-sb-size: 16px;
 	
-    -webkit-app-region: unset !important;
-    
+	-webkit-app-region: unset !important;
+	
 	&::-webkit-scrollbar {
 		box-sizing: border-box;
 		width: var(--autotab-sb-size) !important;
@@ -165,26 +165,26 @@ display: none;
 	}
 }
 
-.tabs-right .inner > .tabbar-wrapper {
-    position: relative;
-    width: calc(var(--tabbar-size) + var(--densityGap));
-    box-sizing: border-box;
-    z-index: 1;
+.tabs-left .inner > .tabbar-wrapper {
+	position: relative;
+	width: calc(var(--tabbar-size) + var(--densityGap));
+	box-sizing: border-box;
+	z-index: 1;
 }
 
-.tabs-right .inner > .tabbar-wrapper > .tabbar-wrapper {
-    box-sizing: border-box;
-    position: absolute;
-    overflow: hidden;
+.tabs-left .inner > .tabbar-wrapper > .tabbar-wrapper {
+	box-sizing: border-box;
+	position: absolute;
+	overflow: hidden;
 }
 
 #browser.linux:not(.is-settingspage):not(.tabs-top):not(.tabs-bottom) .window-buttongroup{
-    right: calc(1px / var(--uiZoomLevel)) !important;
-    top: calc(1px / var(--uiZoomLevel)) !important;
+	right: calc(1px / var(--uiZoomLevel)) !important;
+	top: calc(1px / var(--uiZoomLevel)) !important;
 	opacity: 1;
 }
 
-.tabs-right .tab-strip:not(.overflow) 
+.tabs-left .tab-strip:not(.overflow) 
 .button-toolbar.newtab {
-    left: 1px !important;
+	left: 1px !important;
 }
