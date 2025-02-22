@@ -178,7 +178,8 @@ span.button-icon.audio > canvas {
     mask: inherit !important;
 	display: flex !important;
     height: unset !important;
-    line-height: 1.3 !important;
+    line-height: 1.35 !important;
+	font-size: 13px !important;
 
 	/* just in case */
 	mask-image: -webkit-linear-gradient(180deg, transparent 0, #fff 12px) !important;
@@ -200,8 +201,9 @@ span.button-icon.audio > canvas {
 
 /* slightly larger text in url input / display (for laptop) */
 .UrlFragment-Wrapper, .UrlBar-UrlField, 
-#urlFieldInput {
-	font-size: 13.5px
+#urlFieldInput,
+.OmniDropdown {
+	font-size: 14px
 }
 .UrlBar-UrlField, #urlFieldInput {
     height: min-content !important;
