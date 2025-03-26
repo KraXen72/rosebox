@@ -1,6 +1,10 @@
 # rosebox
-> rosebox is a color theme inspired by gruvbox, but with the main focus on **being easy on the eyes**  
-
+> rosebox is a color theme inspired by gruvbox, but with the main focus on **being easy on the eyes**
+  
+> note: discord theme is broken due to big updates from discord. sorry for the inconvenience.  
+> no eta on when it will be fixed as i'm busy with uni  
+> feel free to submit a pr fixing it - a good starting point is running "updateSelectors" in scripts  
+  
 ![vim and term](_screenshots/vim_and_term.png)
 ![discord3](_screenshots/discord2024.png)
 ![overal rosebox](_screenshots/atidyshirt_rice.png)
