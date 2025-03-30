@@ -118,7 +118,7 @@ span.button-icon.audio > canvas {
 		&::before {
 			z-index: -1;
 			position: absolute;
-			top: 6px;
+			top: 5px;
 			box-sizing: border-box;
 			border-radius: 100%;
 			content: '';
