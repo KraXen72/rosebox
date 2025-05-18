@@ -178,7 +178,7 @@ span.button-icon.audio > canvas {
     mask: inherit !important;
 	display: flex !important;
     height: unset !important;
-    line-height: 1.35 !important;
+    line-height: 1.45 !important;
 	font-size: 13px !important;
 
 	/* just in case */
