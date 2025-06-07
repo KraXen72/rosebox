@@ -21,44 +21,8 @@
 	--webview-shadow-dark: 0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 2px 8px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 1.2px #ffffff18;
 
 	--tabbar-size: 32px; /* 32px */
-	--tabbar-anim-duration: 0ms;
+	--tabbar-anim-duration: 50ms;
 }
-
-/*tabbarButton*/
-/* #browser:not(.tabs-top):not(.tabs-bottom) .toolbar-tabbar>.button-toolbar>button{
- *   opacity:0.4;
- } *
-
- #browser:not(.tabs-top):not(.tabs-bottom) .toolbar-tabbar>.button-toolbar>button:hover{
- opacity:0.8;
- } */
-
-/*tabbar left & tabbar right*/
-
-/* #browser #tabs-tabbar-container.left  ::-webkit-scrollbar,
- # *browser #tabs-tabbar-container.right  ::-webkit-scrollbar{
-display: none;
-} */
-
-/*rounded webview*/
-/* #main, #main > .inner{
- *   overflow:visible;
- } *
- #browser:not(.tabs-top):not(.tabs-bottom):not(.fullscreen) #webpage-stack{
- border-radius:var(--radiusCap);
- }
-
- #browser:not(.tabs-top):not(.tabs-bottom):not(.fullscreen).theme-light #webpage-stack{
- box-shadow: var(--webview-shadow-light);
- }
- #browser:not(.tabs-top):not(.tabs-bottom):not(.fullscreen).theme-dark #webpage-stack{
- box-shadow: var(--webview-shadow-dark);
- }
-
- #browser:not(.tabs-top):not(.tabs-bottom):not(.fullscreen) #webpage-stack:has(.tiled .visible),
- #browser:not(.tabs-top):not(.tabs-bottom):not(.fullscreen) #webpage-stack:has(.mosaic .visible){
- box-shadow: none;
- } */
 
 /* workspace switcher button */
 .tabs-left .inner .button-toolbar.workspace-popup.tabbar-workspace-button.button-menu {
@@ -66,6 +30,7 @@ display: none;
 	.button-icon:not(.override) {
 		position: absolute;
 		left: 3px;
+		
 	}
 	.button-icon.override {
 		position: absolute;
@@ -78,9 +43,7 @@ display: none;
 	}
 }
 
-
 .tabs-left {
-	/* tabbar container */
 	.inner > .tabbar-wrapper,
 	.inner > .tabbar-wrapper > .tabbar-wrapper {
 		will-change: width;
