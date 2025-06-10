@@ -93,6 +93,22 @@ span.button-icon.audio > canvas {
 	transform: scale(0.45) translateX(4px);
 }
 
+/* small window - collapse extensions unless hovered */
+@media screen and (max-width: 900px) {
+   .toolbar-extensions {
+        overflow: hidden;
+    }
+    
+    .toolbar-extensions:not(:hover) {
+        width: 0px;
+        width: var(--tabbar-size);
+
+        .extensionPopupIcons {
+            order: -1;
+        }
+    }
+}
+
 /* linux fixes */
 #browser.linux.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar) {
     min-height: calc(32px / var(--uiZoomLevel));

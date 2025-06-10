@@ -1,7 +1,7 @@
 /*
- v *ersion: 1.0.5
+ version: 1.0.7
  variant: Auto Hide Tabbar
- update: 2024.11.03
+ update: 2025.06.10
  vivaldi version: v7.0
 
  modified from VivalArc by KraXen72
@@ -21,7 +21,8 @@
 	--webview-shadow-dark: 0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 2px 8px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 1.2px #ffffff18;
 
 	--tabbar-size: 32px; /* 32px */
-	--tabbar-anim-duration: 50ms;
+	--tabbar-anim-duration: 100ms;
+	--ttf: cubic-bezier(0.48, 0.1, 0.89, 0.03);
 }
 
 /* workspace switcher button */
@@ -47,7 +48,8 @@
 	.inner > .tabbar-wrapper,
 	.inner > .tabbar-wrapper > .tabbar-wrapper {
 		will-change: width;
-		transition: width var(--tabbar-anim-duration);
+		transition: width var(--tabbar-anim-duration) !important;
+		transition-timing-function: var(--ttf);
 	}
 
 	.overflow.tab-strip {
@@ -67,6 +69,7 @@
 	) {
 		will-change: width;
 		transition: width var(--tabbar-anim-duration) !important;
+		transition-timing-function: var(--ttf);
 	}
 
 	&:not(:hover) :is(
