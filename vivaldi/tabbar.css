@@ -1,12 +1,15 @@
 /*
  version: 1.0.7
  variant: Auto Hide Tabbar
- update: 2025.06.10
- vivaldi version: v7.0
+ update: 2025.07.07
+ vivaldi version: v7.5
 
- modified from VivalArc by KraXen72
+ initially based on:
+ 	VivalArc
+	AutoHide Tabbar by @Zettry
+
+ almost completely rewritten by KraXen72
  */
-/* AutoHide Tabbar by @Zettry*/
 
 /* TODO auto-hide tabbar fully? + hinting as you approach edge */
 /* TODO uniform bg when tabs left */
@@ -140,10 +143,12 @@
 }
 
 /* workspace switcher button*/
+/* all tabbar orientations */
 #browser .toolbar .button-toolbar.workspace-popup.tabbar-workspace-button {
 	.button-toolbar-menu-indicator { display: none; }
 }
 
+/* horizontal tabs */
 #browser:is(.tabs-top, .tabs-bottom) .toolbar .button-toolbar.workspace-popup.tabbar-workspace-button {
 	button[name="WorkspaceButton"] {
 		max-width: var(--pinned-tab-width);
@@ -152,13 +157,8 @@
 	}
 }
 
+/* vertical tabs */
 #browser:is(.tabs-left, .tabs-right) .toolbar .button-toolbar.workspace-popup.tabbar-workspace-button {
-	place-self: start;
-	
-	button[name="WorkspaceButton"] {
-		justify-content: start;
-	}
-	
 	/* svg icon */
 	button[name="WorkspaceButton"]:has(> .button-icon.override) {
 		gap: 0px;
@@ -183,6 +183,7 @@
 	}
 }
 
+/* so that the new tab and workspace icons don't jump around when resizing the side tabbar */
 #browser.tabs-left .toolbar.toolbar-large:is(.toolbar-tabbar-before, .toolbar-tabbar-after) {
 	justify-content: start;
 }
