@@ -147,6 +147,13 @@
 #browser .toolbar .button-toolbar.workspace-popup.tabbar-workspace-button {
 	.button-toolbar-menu-indicator { display: none; }
 }
+#browser .toolbar .button-toolbar.workspace-popup.tabbar-workspace-button {
+	button[name="WorkspaceButton"] {
+		box-sizing: border-box;
+		position: relative;
+		left: 0;
+	}
+}
 
 /* horizontal tabs */
 #browser:is(.tabs-top, .tabs-bottom) .toolbar .button-toolbar.workspace-popup.tabbar-workspace-button {
@@ -171,13 +178,14 @@
 
 	/* emoji icon */
 	button[name="WorkspaceButton"]:has(> .button-icon:not(.override)) {
+		justify-content: start;
 		gap: 5px;
-		margin: 0px;
+		margin: 0px !important;
 		padding-inline: var(--tabbar-side-offset);
 		
 		.button-icon:not(.override) {
-			padding: 0px;
-			margin: 0px;
+			padding: 0px !important;
+			margin: 0px !important;
 			max-width: var(--tab-icon-size);
 		}
 	}
