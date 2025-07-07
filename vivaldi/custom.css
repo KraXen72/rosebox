@@ -54,44 +54,6 @@
 	height: 0px;
 }
 
-/* workspace switcher css */
-:is(.tabs-top, .tabs-bottom) 
-.button-toolbar.workspace-popup.tabbar-workspace-button {
-	button[name="WorkspaceButton"] {
-		max-width: 30px !important;
-	}
-}
-
-#app .button-toolbar.workspace-popup button[title="Workspaces"] {
-	padding-left: 4px !important;
-	padding-right: 4px !important;
-	
-	/* workspace-switcher: down-arrow */
-	.button-toolbar-menu-indicator {
-		display: none;
-	}
-}
-
-.button-popup::before {
-	filter: none;
-}
-
-/* different workspace playing audio */
-span.button-icon.audio {
-	position: absolute;
-	/* box-sizing: border-box; */
-	left: 8px !important;
-	bottom: 2px;
-	height:20px !important;
-	width: 20px !important;
-	padding: 0 !important;
-
-	background: var(--colorBg);
-	border-radius: 100%;
-}
-span.button-icon.audio > canvas {
-	transform: scale(0.45) translateX(4px);
-}
 
 /* small window - collapse extensions unless hovered */
 @media screen and (max-width: 900px) {

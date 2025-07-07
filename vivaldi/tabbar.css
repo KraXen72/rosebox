@@ -21,27 +21,13 @@
 	--webview-shadow-dark: 0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 2px 8px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 1.2px #ffffff18;
 
 	--tabbar-size: 32px; /* 32px */
+	--tabbar-side-offset: 6px;
+	--tab-icon-size: 18px; /* 16px */
+	--pinned-tab-width: 30px;
+	
 	--tabbar-anim-duration: 100ms;
+	/* --tabbar-anim-duration: 1500ms; */
 	--ttf: cubic-bezier(0.48, 0.1, 0.89, 0.03);
-}
-
-/* workspace switcher button */
-.tabs-left .inner .button-toolbar.workspace-popup.tabbar-workspace-button.button-menu {
-	.button-toolbar-menu-indicator { display: none; }
-	.button-icon:not(.override) {
-		position: absolute;
-		left: 3px;
-		
-	}
-	.button-icon.override {
-		position: absolute;
-		left: 2px;
-	}
-	.button-title {
-		position: relative;
-		top: 2px;
-		left: calc(var(--tabbar-size) + var(--densityGap)) !important;
-	}
 }
 
 .tabs-left {
@@ -54,6 +40,9 @@
 
 	.overflow.tab-strip {
 		min-width: unset !important;
+	}
+	.tab-strip {
+		height: min-content !important;
 	}
 }	
 
@@ -84,11 +73,11 @@
 /* tab fixes */
 .tabs-left {
 	.tab .tab-header {
-		padding-left: 6px !important;
+		padding-left: var(--tabbar-side-offset) !important;
 		border-left-width: 1px !important;
 	}
+	
 }
-
 
 /* scrollbar */
 .tabbar-wrapper, .tabbar-wrapper .tab-strip, 
@@ -150,7 +139,50 @@
 	opacity: 1;
 }
 
-.tabs-left .tab-strip:not(.overflow) 
-.button-toolbar.newtab {
-	left: 1px !important;
+/* workspace switcher button*/
+#browser .toolbar .button-toolbar.workspace-popup.tabbar-workspace-button {
+	.button-toolbar-menu-indicator { display: none; }
+}
+
+#browser:is(.tabs-top, .tabs-bottom) .toolbar .button-toolbar.workspace-popup.tabbar-workspace-button {
+	button[name="WorkspaceButton"] {
+		max-width: var(--pinned-tab-width);
+		max-height: var(--pinned-tab-width);
+		padding: 0px;
+	}
+}
+
+#browser:is(.tabs-left, .tabs-right) .toolbar .button-toolbar.workspace-popup.tabbar-workspace-button {
+	place-self: start;
+	
+	button[name="WorkspaceButton"] {
+		justify-content: start;
+	}
+	
+	/* svg icon */
+	button[name="WorkspaceButton"]:has(> .button-icon.override) {
+		gap: 0px;
+		
+		.button-title {
+			position: relative;
+			left: -1px;
+		}
+	}
+
+	/* emoji icon */
+	button[name="WorkspaceButton"]:has(> .button-icon:not(.override)) {
+		gap: 5px;
+		margin: 0px;
+		padding-inline: var(--tabbar-side-offset);
+		
+		.button-icon:not(.override) {
+			padding: 0px;
+			margin: 0px;
+			max-width: var(--tab-icon-size);
+		}
+	}
+}
+
+#browser.tabs-left .toolbar.toolbar-large:is(.toolbar-tabbar-before, .toolbar-tabbar-after) {
+	justify-content: start;
 }
