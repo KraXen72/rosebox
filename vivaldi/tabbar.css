@@ -33,6 +33,7 @@
 	--ttf: cubic-bezier(0.48, 0.1, 0.89, 0.03);
 }
 
+/* width changing on hover & related css properties + fixes */
 .tabs-left {
 	.inner > .tabbar-wrapper,
 	.inner > .tabbar-wrapper > .tabbar-wrapper {
@@ -49,7 +50,6 @@
 	}
 }	
 
-/* width changing on hover */
 .tabs-left .inner > :is(
 	.tabbar-wrapper,
 	.tabbar-wrapper > .tabbar-wrapper,
@@ -73,13 +73,24 @@
 	}
 }
 
-/* tab fixes */
 .tabs-left {
 	.tab .tab-header {
 		padding-left: var(--tabbar-side-offset) !important;
 		border-left-width: 1px !important;
 	}
-	
+} 
+
+.tabs-left .inner > .tabbar-wrapper {
+	position: relative;
+	width: calc(var(--tabbar-size) + var(--densityGap));
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+.tabs-left .inner > .tabbar-wrapper > .tabbar-wrapper {
+	box-sizing: border-box;
+	position: absolute;
+	overflow: hidden;
 }
 
 /* scrollbar */
@@ -123,19 +134,6 @@
 	}
 }
 
-.tabs-left .inner > .tabbar-wrapper {
-	position: relative;
-	width: calc(var(--tabbar-size) + var(--densityGap));
-	box-sizing: border-box;
-	z-index: 1;
-}
-
-.tabs-left .inner > .tabbar-wrapper > .tabbar-wrapper {
-	box-sizing: border-box;
-	position: absolute;
-	overflow: hidden;
-}
-
 #browser.linux:not(.is-settingspage):not(.tabs-top):not(.tabs-bottom) .window-buttongroup{
 	right: calc(1px / var(--uiZoomLevel)) !important;
 	top: calc(1px / var(--uiZoomLevel)) !important;
@@ -152,6 +150,18 @@
 		box-sizing: border-box;
 		position: relative;
 		left: 0;
+	}
+	.button-icon.audio {
+		position: absolute;
+		box-sizing: border-box;
+		bottom: -8px;
+		left: 6px;
+		
+		:first-child {
+			background: var(--colorBg);
+			border-radius: 100%;
+			padding: 2px;
+		}
 	}
 }
 
