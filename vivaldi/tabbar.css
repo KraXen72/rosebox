@@ -158,7 +158,7 @@
 		left: 6px;
 		
 		:first-child {
-			background: var(--colorBg);
+			background: var(--colorBg, black);
 			border-radius: 100%;
 			padding: 2px;
 		}
