@@ -65,7 +65,8 @@
         width: 0px;
         width: var(--tabbar-size);
 
-        .extensionPopupIcons {
+        .extensionPopupIcons,
+		.button-toolbar:not(.extensionId):last-of-type {
             order: -1;
         }
     }
