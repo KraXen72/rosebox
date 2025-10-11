@@ -34,7 +34,7 @@
 }
 
 /* width changing on hover & related css properties + fixes */
-.tabs-left {
+/* .tabs-left {
 	.inner > .tabbar-wrapper,
 	.inner > .tabbar-wrapper > .tabbar-wrapper {
 		will-change: width;
@@ -91,7 +91,7 @@
 	box-sizing: border-box;
 	position: absolute;
 	overflow: hidden;
-}
+} */
 
 /* scrollbar */
 .tabbar-wrapper, .tabbar-wrapper .tab-strip, 

@@ -25,10 +25,6 @@
 	color: var(--colorFg);
 }
 
-#browser.tabs-top .sync-and-trash-container {
-	display: none;
-}
-
 /* vertical tabs overrides */
 :is(#browser.address-top.tabs-left, #browser.address-top.tabs-right, #browser.address-top.tabs-off) {
 	.UrlBar-AddressField {
@@ -164,18 +160,19 @@
 	mask-image: -webkit-linear-gradient(180deg, transparent 0, #fff 12px) !important;
 	/* mask-position: top right !important; */
 }
-.tab-position {
-	will-change: auto;
+
+:is(#browser.tabs-left, #browser.tabs-right) 
+#tabs-container 
+.tab:is(.tab-small, .tab-small.tab-mini):not(.pinned) 
+.tab-header {
+    justify-content: start;
+    padding-left: 6px;
+	border-left-width: 0px;
+	border-right-width: 0px;
 }
 
 #browser.linux #tabs-container {
 	font-family: system-ui, 'Noto Sans', Cantarell, sans-serif;
-	/* font-family: "Lexica Ultralegible", "Atkinson Hyperlegible", Helvetica, Arial, sans-serif; */
-	/* font-family: "Lexica Ultralegible", "Atkinson Hyperlegible", system-ui, 'Noto Sans', Cantarell, Helvetica, Arial, sans-serif; */
-	/* font-size: 100%; */
-	/* font-weight: 400; */
-	/* font-variant-numeric: slashed-zero; */
-	/* font-variant-ligatures: no-common-ligatures; */
 }
 
 /* slightly larger text in url input / display (for laptop) */
@@ -187,4 +184,9 @@
 .UrlBar-UrlField, #urlFieldInput {
     height: min-content !important;
     line-height: 1.35;
+}
+
+/* better highlight selected tab in tab button */
+.TabButtonPopup .quick-commands > .VivaldiList .quick-command[data-selected] {
+	background-color: var(--colorHighlightBgDark);
 }
